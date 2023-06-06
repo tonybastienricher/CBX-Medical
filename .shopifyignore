@@ -1,0 +1,9 @@
+node_modules
+.vscode
+resources
+package.json
+package-lock.json
+mix-manifest.json
+tailwind.config.js
+webpack.mix.js
+.github

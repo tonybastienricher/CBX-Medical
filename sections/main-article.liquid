@@ -4,13 +4,13 @@
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
-        <div class="page-width page-width--narrow">
+        <div class="cbx-container-test cbx-container-test--narrow">
           {% render block %}
         </div>
       {%- when 'featured_image' -%}
         {%- if article.image -%}
           <div
-            class="article-template__hero-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+            class="article-template__hero-container"
             {{ block.shopify_attributes }}
           >
             <div
@@ -44,7 +44,7 @@
 
       {%- when 'title' -%}
         <header
-          class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="cbx-container-test cbx-container-test--narrow"
           {{ block.shopify_attributes }}
         >
           <h1
@@ -67,7 +67,7 @@
 
       {%- when 'content' -%}
         <div
-          class="article-template__content page-width page-width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__content cbx-container-test cbx-container-test--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
@@ -76,7 +76,7 @@
 
       {%- when 'share' -%}
         <div
-          class="article-template__social-sharing page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="article-template__social-sharing cbx-container-test cbx-container-test--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           {% assign share_url = request.origin | append: article.url %}
@@ -95,7 +95,7 @@
     <div class="article-template__comment-wrapper background-secondary">
       <div
         id="comments"
-        class="page-width page-width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        class="cbx-container-test cbx-container-test--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       >
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}

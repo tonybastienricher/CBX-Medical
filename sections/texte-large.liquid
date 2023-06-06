@@ -1,0 +1,36 @@
+<div class="cbx-container-test cbx-flex cbx-flex-col cbx-pb-7">
+    <span class='lg:cbx-indent-96 cbx-text-green3 cbx-pb-8'>
+      {{ section.settings.sur_titre }}
+    </span>
+    <h3 class="cbx-font-display cbx-text-green2 lg:cbx-text-5xl cbx-font-light lg:cbx-indent-96" style='line-height: 115%;'>
+        {{ section.settings.texte }}
+    </h3>
+</div>
+
+{% schema %}
+{
+  "name": "Texte Large",
+  "class": "text-large",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sur_titre",
+      "label": "Sur titre",
+      "default": "CBX MEDICAL",
+      "placeholder": "CBX MEDICAL"
+    },
+    {
+      "type": "textarea",
+      "id": "texte",
+      "label": "Texte",
+      "default": "Nous sommes tous convaincus que le cannabis offre des alternatives naturelles et complémentaires à la médecine traditionnelle. Nous pensons profondément que le cannabis doit revenir dans les mains des professionnels de la santé."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Texte Large"
+    }
+  ]
+}
+{% endschema %}

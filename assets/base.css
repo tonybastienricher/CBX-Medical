@@ -93,63 +93,8 @@ html.no-js .no-js-hidden {
   display: none !important;
 }
 
-.page-width {
-  max-width: var(--page-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
 body:has(.section-header .drawer-menu) .announcement-bar-section slideshow-component {
   max-width: 100%;
-}
-
-.page-width.drawer-menu {
-  max-width: 100%;
-}
-
-.page-width-desktop {
-  padding: 0;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 750px) {
-  .page-width {
-    padding: 0 5rem;
-  }
-
-  .header.page-width {
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
-  }
-
-  .page-width--narrow {
-    padding: 0 9rem;
-  }
-
-  .page-width-desktop {
-    padding: 0;
-  }
-
-  .page-width-tablet {
-    padding: 0 5rem;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .page-width--narrow {
-    max-width: 72.6rem;
-    padding: 0;
-  }
-
-  .page-width-desktop {
-    max-width: var(--page-width);
-    padding: 0 5rem;
-  }
 }
 
 .isolate {
@@ -169,12 +114,6 @@ body:has(.section-header .drawer-menu) .announcement-bar-section slideshow-compo
 
 .element-margin-top {
   margin-top: 5rem;
-}
-
-@media screen and (min-width: 750px) {
-  .element-margin {
-    margin-top: calc(5rem + var(--page-width-margin));
-  }
 }
 
 .background-secondary {
@@ -250,51 +189,30 @@ body:has(.section-header .drawer-menu) .announcement-bar-section slideshow-compo
 }
 
 .text-body {
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.06rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-.h0,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
-  color: rgb(var(--color-foreground));
-  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
-  word-break: break-word;
-}
-
 .hxl {
-  font-size: calc(var(--font-heading-scale) * 5rem);
+  font-size: 3.25rem;
 }
 
 @media only screen and (min-width: 750px) {
   .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
+    font-size: 6.2rem;
   }
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: 4rem;
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: 5.2rem;
   }
 }
 
@@ -306,31 +224,31 @@ h1,
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: 4rem;
   }
 }
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: 2rem;
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: 1.7rem;
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: 1.8rem;
   }
 }
 
@@ -338,18 +256,18 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: 1.5rem;
 }
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 750px) {
   h5,
   .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    font-size: 1.3rem;
   }
 }
 
@@ -381,7 +299,7 @@ blockquote {
 
 @media screen and (min-width: 750px) {
   .caption {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -393,12 +311,12 @@ blockquote {
 }
 
 .caption-with-letter-spacing--medium {
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: 0.16rem;
 }
 
 .caption-with-letter-spacing--large {
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: 0.18rem;
 }
 
@@ -408,7 +326,7 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.04rem;
 }
@@ -420,7 +338,7 @@ blockquote {
 table:not([class]) {
   table-layout: fixed;
   border-collapse: collapse;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-style: hidden;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
   /* draws the table border  */
@@ -496,7 +414,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: inherit;
 }
 
@@ -510,7 +428,7 @@ h6:empty {
 
 .link-with-icon {
   display: inline-flex;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
   text-decoration: none;
@@ -861,19 +779,19 @@ summary::-webkit-details-marker {
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
 }
 
 .subtitle--small {
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
 }
 
 .subtitle--medium {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 0.08rem;
 }
 
@@ -1232,7 +1150,7 @@ button.shopify-payment-button__button--unbranded {
   padding: 0 3rem;
   cursor: pointer;
   font: inherit;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
@@ -1319,13 +1237,13 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 
 .button--tertiary {
-  font-size: 1.2rem;
+  font-size: .8rem;
   padding: 1rem 1.5rem;
   min-width: calc(9rem + var(--buttons-border-width) * 2);
   min-height: calc(3.5rem + var(--buttons-border-width) * 2);
@@ -1394,13 +1312,13 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .share-button__button {
-  font-size: 1.4rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   color: rgb(var(--color-link));
   margin-left: 0;
   padding-left: 0;
-  min-height: 4.4rem;
+  min-height: 2.5rem;
 }
 
 details[open] > .share-button__fallback {
@@ -1469,8 +1387,8 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0;
   flex-shrink: 0;
   display: flex;
@@ -1576,7 +1494,7 @@ details[open] > .share-button__fallback {
   appearance: none;
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
-  font-size: 1.6rem;
+  font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
@@ -1629,7 +1547,7 @@ details[open] > .share-button__fallback {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
+  font-size: .8rem;
   color: rgba(var(--color-foreground), 0.75);
 }
 
@@ -1725,7 +1643,7 @@ details[open] > .share-button__fallback {
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   left: calc(var(--inputs-border-width) + 2rem);
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
@@ -1743,7 +1661,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus ~ label,
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
-  font-size: 1rem;
+  font-size: .6rem;
   top: calc(var(--inputs-border-width) + 0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
   letter-spacing: 0.04rem;
@@ -1776,14 +1694,14 @@ details[open] > .share-button__fallback {
   color: currentColor;
   cursor: pointer;
   display: flex;
-  height: 4.4rem;
+  height: 2.5rem;
   justify-content: center;
   overflow: hidden;
   padding: 0;
   position: absolute;
   right: 0;
   top: 0;
-  width: 4.4rem;
+  width: 2.5rem;
 }
 
 .field__button > svg {
@@ -1823,17 +1741,17 @@ input[type='checkbox'] {
 .form__message {
   align-items: center;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1rem;
   line-height: 1;
   margin-top: 1rem;
 }
 
 .form__message--large {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
 }
 
 .customer .field .form__message {
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -1858,7 +1776,7 @@ input[type='checkbox'] {
 
 .form-status {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
 }
 
 .form-status-list {
@@ -1916,7 +1834,7 @@ input[type='checkbox'] {
 
 .quantity__input {
   color: currentColor;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 500;
   opacity: 0.85;
   text-align: center;
@@ -1932,7 +1850,7 @@ input[type='checkbox'] {
 .quantity__button {
   width: calc(4.5rem / var(--font-body-scale));
   flex-shrink: 0;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -1994,7 +1912,7 @@ input[type='checkbox'] {
 .quantity__rules {
   margin-top: 1.2rem;
   position: relative;
-  font-size: 1.2rem;
+  font-size: .8rem;
 }
 
 .quantity__rules .caption {
@@ -2055,8 +1973,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
   justify-content: center;
   align-items: center;
   padding: 0rem;
-  height: 4.4rem;
-  width: 4.4rem;
+  height: 2.5rem;
+  width: 2.5rem;
   background-color: transparent;
 }
 
@@ -2101,7 +2019,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.5rem;
   bottom: 0.8rem;
   left: 2.2rem;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
@@ -2410,8 +2328,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icons .shopify-app-block {
-  max-width: 4.4rem;
-  max-height: 4.4rem;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
   overflow: hidden;
 }
 
@@ -2440,16 +2358,16 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1.4rem;
+  width: 1.4rem;
   fill: none;
   vertical-align: middle;
 }
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 4.4rem;
-  width: 4.4rem;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0;
 }
 
@@ -2807,7 +2725,7 @@ details-disclosure > details {
   border: 1px solid transparent;
   border-radius: var(--badge-corner-radius);
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: .9rem;
   letter-spacing: 0.1rem;
   line-height: 1;
   padding: 0.5rem 1.3rem 0.6rem 1.3rem;
@@ -3192,127 +3110,5 @@ details-disclosure > details {
     to {
       opacity: 1;
     }
-  }
-}
-
-/* Element Hovers: 3d Lift */
-
-@media (prefers-reduced-motion: no-preference) and (hover: hover) {
-  .animate--hover-3d-lift .card-wrapper .card--card,
-  .animate--hover-3d-lift .card-wrapper .card--standard .card__inner,
-  .animate--hover-3d-lift .button:not(.button--tertiary),
-  .animate--hover-3d-lift .shopify-challenge__button,
-  .animate--hover-3d-lift .customer button,
-  .animate--hover-3d-lift .shopify-payment-button__button,
-  .animate--hover-3d-lift .deferred-media .deferred-media__poster-button {
-    transition: transform var(--duration-long) ease, box-shadow var(--duration-long) ease;
-    transform-origin: center;
-  }
-
-  .animate--hover-3d-lift .card-wrapper:hover .card--card,
-  .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__inner,
-  .animate--hover-3d-lift .button:not(.button--tertiary):not([disabled]):hover,
-  .animate--hover-3d-lift .shopify-challenge__button:not([disabled]):hover,
-  .animate--hover-3d-lift .customer button:not([disabled]):hover,
-  .animate--hover-3d-lift .shopify-payment-button__button:hover,
-  .animate--hover-3d-lift .deferred-media:hover .deferred-media__poster-button {
-    transition: transform var(--duration-extended) ease, box-shadow var(--duration-long) ease; /* Slow the card transition speed while hover is active. */
-    transform: rotate(1deg);
-    box-shadow: -1rem -1rem 1rem -1rem rgba(0, 0, 0, 0.05), 1rem 1rem 1rem -1rem rgba(0, 0, 0, 0.05),
-      0 0 0.5rem 0 rgba(255, 255, 255, 0), 0 2rem 3.5rem -2rem rgba(0, 0, 0, 0.5);
-  }
-
-  .animate--hover-3d-lift .deferred-media:hover .deferred-media__poster-button {
-    transform: translate(-50%, -50%) scale(1.05); /* Apply a specialized transform to the video play button. */
-  }
-
-  .animate--hover-3d-lift .collage__item .card-wrapper:hover .card--card,
-  .animate--hover-3d-lift .collage__item .card-wrapper:hover .card--standard .card__inner {
-    transform: rotate(0.5deg); /* Less intense rotation for collage items. */
-  }
-
-  .animate--hover-3d-lift .product-grid .grid__item:hover,
-  .animate--hover-3d-lift .collection-list .grid__item:hover,
-  .animate--hover-3d-lift .collage__item:hover,
-  .animate--hover-3d-lift .blog-articles .article:hover,
-  .animate--hover-3d-lift .complementary-slide li:hover {
-    z-index: 2; /* Make sure the hovered card is the topmost card. */
-  }
-
-  .animate--hover-3d-lift .product-grid {
-    isolation: isolate; /* Ensure z-index changes here don't negatively effect other UI stacking. */
-  }
-
-  .animate--hover-3d-lift .card-wrapper .card--shape.card--standard:not(.card--text) .card__inner {
-    box-shadow: none;
-    transition: transform var(--duration-long) ease, filter var(--duration-long) ease;
-  }
-
-  .animate--hover-3d-lift .card-wrapper:hover .card--shape.card--standard:not(.card--text) .card__inner {
-    transition: transform calc(2 * var(--duration-extended)) ease, filter var(--duration-long) ease; /* Slow the card transition speed while hover is active. */
-    filter: drop-shadow(0rem 2rem 2rem rgba(0, 0, 0, 0.15)) drop-shadow(0rem 1rem 1rem rgba(0, 0, 0, 0.15));
-  }
-
-  .animate--hover-3d-lift .card-wrapper:hover .card--card:after,
-  .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__inner:after,
-  .animate--hover-3d-lift
-    .card-wrapper:hover
-    .card--shape.card--standard:not(.card--text)
-    .card__inner
-    .card__media:before {
-    background-image: var(--easter-egg);
-    background-size: 250px 250px;
-    mix-blend-mode: color-dodge;
-    pointer-events: none;
-    z-index: 2;
-  }
-
-  .animate--hover-3d-lift
-    .card-wrapper:hover
-    .card--shape.card--standard:not(.card--text)
-    .card__inner
-    .card__media:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .animate--hover-3d-lift .card-wrapper .card--card:before,
-  .animate--hover-3d-lift .card-wrapper .card--standard .card__media:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: background-position calc(2 * var(--duration-extended)) ease, opacity var(--duration-default) ease;
-    mix-blend-mode: overlay;
-    background-size: 400% 100%;
-    background-position: 90% 0;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0) 45%,
-      rgba(255, 255, 255, 1) 50%,
-      rgba(255, 255, 255, 0) 55%
-    );
-  }
-
-  .animate--hover-3d-lift .card-wrapper:hover .card--card:before,
-  .animate--hover-3d-lift .card-wrapper:hover .card--standard .card__media:after {
-    opacity: 0.2;
-    transition: background-position 6s ease, opacity var(--duration-long) ease;
-    background-position: left;
-    z-index: 2;
-  }
-
-  :root {
-    --easter-egg: none;
-    --sparkle: url('./sparkle.gif');
   }
 }

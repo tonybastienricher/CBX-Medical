@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "KH Teka TRIAL";
+    src: url(KHTekaTRIAL-Black.woff2);
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "KH Teka TRIAL";
+    src: url(KHTekaTRIAL-Bold.woff2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "KH Teka TRIAL";
+    src: url(KHTekaTRIAL-Medium.woff2);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "KH Teka TRIAL";
+    src: url(KHTekaTRIAL-Regular.woff2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "KH Teka TRIAL";
+    src: url(KHTekaTRIAL-Light.woff2);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@tailwind base;
+
+@layer base {
+    html {
+        @apply cbx-scroll-smooth cbx-h-full cbx-text-green2;
+    }
+
+    h1, h2, h3, h4, h5 {
+        @apply cbx-font-display;
+    }
+
+    .cbx-container-test {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+    }
+
+    .cbx-btn {
+        /* Auto layout */
+        padding: 12px;
+        border-radius: 54px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 130%;
+        leading-trim: both;
+        text-edge: cap;
+        text-align: center;
+        color: #1E271D;
+        text-transform: uppercase;
+    }
+
+    .cbx-btn-white {
+        background: #FFFFFF;
+    }
+
+    .cbx-btn-beige {
+        /* Beige */
+        background: #ECE4D5;
+        /* Beige Light */
+        border: 1px solid #F5F2EB;
+        border-radius: 54px;
+    }
+
+    .cbx-btn-vert {
+        background: #1E271D;
+        width: 100%;
+        color: white;
+    }
+}
+
+body.locomotive-active {
+    overflow: hidden;
+}
+
+@tailwind components;
+
+@layer components {
+}
+
+@tailwind utilities;
+
+@layer utilities {
+
+}
