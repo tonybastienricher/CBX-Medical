@@ -39,7 +39,7 @@
   width: 100%;
   background-color: rgb(var(--color-background));
   overflow: hidden;
-  max-width: var(--cbx-container-test);
+  max-width: var(--cbx-container-site);
   width: calc(100% - 3rem);
 }
 
@@ -180,7 +180,7 @@ quick-add-modal .product__column-sticky {
   }
 }
 
-quick-add-modal .cbx-container-test {
+quick-add-modal .cbx-container-site {
   padding: 0;
 }
 

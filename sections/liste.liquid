@@ -1,0 +1,47 @@
+<div class='cbx-container-site cbx-flex cbx-flex-wrap cbx-items-center cbx-justify-center cbx-gap-7 cbx-mb-7'>
+    {%- for block in section.blocks -%}
+        <div class='cbx-flex cbx-items-center'>
+            {%- case block.type -%}
+                {%- when 'liste' -%}
+                    <div class='cbx-w-3 cbx-h-3 cbx-bg-green5 cbx-rounded-sm'></div>
+                    <span class='cbx-pl-4 cbx-font-medium cbx-uppercase cbx-text-xs cbx-tracking-widest'>{{ block.settings.texte }}</span>
+            {%- endcase -%}
+        </div>
+    {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Liste",
+  "class": "liste",
+  "max_blocks": 5,
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Liste",
+      "type": "liste",
+      "settings": [
+        {
+          "type": "text",
+          "id": "texte",
+          "label": "Texte",
+          "default": "Cannabinoides 100% naturels",
+          "placeholder": "Cannabinoides 100% naturels"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Liste"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

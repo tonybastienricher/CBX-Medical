@@ -22,12 +22,17 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'display': ['KH Teka TRIAL']
+        'display': ['KH Teka TRIAL'],
+        body: ['Roboto']
       },
       colors: {
+        'offWhite': '#EFEFEF',
         'green': '#1E271D',
         'green2': '#202918',
-        'green3': '#464F43'
+        'green3': '#464F43',
+        'green4': '#6C7668',
+        'green5': '#9EA89A',
+        'green6': '#DFE1DE'
       }
     }
   },

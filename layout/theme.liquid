@@ -105,8 +105,8 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-        --cbx-container-test: {{ settings.page_width | divided_by: 10 }}rem;
-        --cbx-container-test-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+        --cbx-container-site: {{ settings.page_width | divided_by: 10 }}rem;
+        --cbx-container-site-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
         --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
         --product-card-corner-radius: {{ settings.card_corner_radius | divided_by: 10.0 }}rem;
@@ -262,8 +262,7 @@
     </script>
 </head>
 
-<body data-scroll-container
-      class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+<body data-scroll-container class="">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ 'accessibility.skip_to_text' | t }}
 </a>

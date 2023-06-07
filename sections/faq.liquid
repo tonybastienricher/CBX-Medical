@@ -1,0 +1,99 @@
+<div class='cbx-bg-green cbx-text-green6 cbx-bg-noise cbx-rounded'>
+    <div class='cbx-container-site cbx-pt-14 cbx-pb-40'>
+        <div class='cbx-h-full cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-border-t cbx-border-green3 cbx-pt-5'>
+            <!-- Titre -->
+            <div class='cbx-relative'>
+                <div class='cbx-flex cbx-flex-col cbx-sticky cbx-top-10'>
+
+                    <span class='cbx-uppercase cbx-text-xs cbx-font-medium'>{{ section.settings.sur_titre }}</span>
+
+                    <h2 class='lg:cbx-text-5xl cbx-pt-4'>
+                        {{ section.settings.titre }}
+                    </h2>
+                </div>
+            </div>
+            <!-- FAQ -->
+            <div x-data="{ open: 1 }" class="faq-container cbx-pb-60">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+
+                        {%- when 'faq' -%}
+                            <div @click="open = {{ forloop.index }}"
+                                 class="question cbx-flex cbx-justify-between cbx-text-xl cbx-border-b cbx-border-green3 cbx-gap-7 cbx-pb-4 cbx-pt-2.5 cbx-cursor-pointer">
+                                <span class=''>{{ block.settings.question }}</span>
+
+                                <div class='cbx-w-3.5 cbx-h-3.5'>
+                                    <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
+                                              fill="#DFE1DE" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div x-show="open == {{ forloop.index }}"
+                                 class="answer cbx-text-green3 cbx-text-sm cbx-py-5 cbx-duration-200"
+                                 {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
+                                <p style='line-height: 160%;'>
+                                    {{ block.settings.rponse }}
+                                </p>
+                            </div>
+                    {%- endcase -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "faq",
+  "class": "faq",
+  "max_blocks": 10,
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sur_titre",
+      "label": "Sur titre",
+      "default": "Pour les curieux"
+    },
+    {
+      "type": "text",
+      "id": "titre",
+      "label": "Titre",
+      "default": "Pour les curieux."
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Le CBD est-il légal? "
+        },
+        {
+          "type": "textarea",
+          "id": "rponse",
+          "label": "Réponse",
+          "default": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "faq"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

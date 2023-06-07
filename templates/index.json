@@ -1,68 +1,153 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "76a5e5d7-58e5-4fed-89d9-620cc17e4a52": {
+      "type": "hero",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "2ebf8fc8-9154-4136-a87f-905648190af9": {
+          "type": "titre",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "titre_hero": "From seed to patient"
           }
         },
-        "text": {
-          "type": "text",
+        "f237118e-7a1a-4799-8fa8-01936296094a": {
+          "type": "texte",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "texte_hero": "Nous exploitons le plein potentiel de la plante pour\naméliorer votre quotidien."
           }
         },
-        "button": {
-          "type": "buttons",
+        "4353fcb2-7069-49a9-aea0-8eb8cbe1c74e": {
+          "type": "bouton",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "titre_du_bouton": "Découvrez nos produits",
+            "url_du_bouton": ""
+          }
+        },
+        "ad73d985-d76f-4a28-a3da-3d2b905c13db": {
+          "type": "reviews",
+          "settings": {
+            "activer_laffichage": true
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "2ebf8fc8-9154-4136-a87f-905648190af9",
+        "f237118e-7a1a-4799-8fa8-01936296094a",
+        "4353fcb2-7069-49a9-aea0-8eb8cbe1c74e",
+        "ad73d985-d76f-4a28-a3da-3d2b905c13db"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "alignement": "droite",
+        "disposition": "5050",
+        "image_hero": "shopify:\/\/shop_images\/hero.jpg"
+      }
+    },
+    "32729055-b5cd-476e-a14d-5c9ab9c6c295": {
+      "type": "liste",
+      "blocks": {
+        "09c5021a-ee6a-4adf-a84b-57c7e0eff400": {
+          "type": "liste",
+          "settings": {
+            "texte": "Cannabinoides 100% naturels"
+          }
+        },
+        "42dedf9d-e313-4088-8a1b-98917ffd8a91": {
+          "type": "liste",
+          "settings": {
+            "texte": "TracabilitE totale"
+          }
+        },
+        "d5e1eb54-464a-400b-a50e-45ca4cac2f31": {
+          "type": "liste",
+          "settings": {
+            "texte": "DElivrEs et prescrits par les professionnels"
+          }
+        },
+        "ca153c95-24e1-4f25-bf23-db1ad5a0d068": {
+          "type": "liste",
+          "settings": {
+            "texte": "FabriquEs 100% en Europe"
+          }
+        }
+      },
+      "block_order": [
+        "09c5021a-ee6a-4adf-a84b-57c7e0eff400",
+        "42dedf9d-e313-4088-8a1b-98917ffd8a91",
+        "d5e1eb54-464a-400b-a50e-45ca4cac2f31",
+        "ca153c95-24e1-4f25-bf23-db1ad5a0d068"
+      ],
+      "settings": {
       }
     },
     "video": {
       "type": "video",
       "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "heading": "Nous exploitons le plein potentiel de la \nplante pour améliorer votre quotidien.",
+        "texte_du_bouton": "Découvrez nos produits",
+        "lien_du_bouton": "shopify:\/\/collections\/all",
         "heading_size": "h1",
         "enable_video_looping": true,
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
+      }
+    },
+    "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b": {
+      "type": "texte-large",
+      "settings": {
+        "sur_titre": "CBX MEDICAL",
+        "texte": "Nous sommes tous convaincus que le cannabis offre des alternatives naturelles et complémentaires à la médecine traditionnelle. Nous pensons profondément que le cannabis doit revenir dans les mains des professionnels de la santé."
+      }
+    },
+    "f46c7595-d507-41f4-8f94-5b197b5ddfe9": {
+      "type": "image_gauche_droite",
+      "settings": {
+        "image_gauche": "shopify:\/\/shop_images\/image_droite.jpg",
+        "lgende_de_limage_gauche": "Legend image and dolorem text about brands, values and behind the scene.",
+        "image_droite": "shopify:\/\/shop_images\/image_gauche.jpg",
+        "lgende_de_limage_droite": "Legend image and dolorem text about brands, \nvalues and behind the scene."
+      }
+    },
+    "0fbe5799-3511-42ba-a261-20a13db70f71": {
+      "type": "faq",
+      "blocks": {
+        "63392352-98b1-4095-ac34-0626ac15cf65": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal? ",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "488d3a7d-8145-4686-95f3-6ec6e8b08e67": {
+          "type": "faq",
+          "settings": {
+            "question": "Les cannabinoides utilisés dans les produits CBX Medical sont-ils addictifs? ",
+            "rponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+          }
+        },
+        "8128c509-e148-4930-b86b-434786052391": {
+          "type": "faq",
+          "settings": {
+            "question": "Comment fonctionnent les cannabisnoides?",
+            "rponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+          }
+        }
+      },
+      "block_order": [
+        "63392352-98b1-4095-ac34-0626ac15cf65",
+        "488d3a7d-8145-4686-95f3-6ec6e8b08e67",
+        "8128c509-e148-4930-b86b-434786052391"
+      ],
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
       }
     }
   },
   "order": [
-    "image_banner",
-    "video"
+    "76a5e5d7-58e5-4fed-89d9-620cc17e4a52",
+    "32729055-b5cd-476e-a14d-5c9ab9c6c295",
+    "video",
+    "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
+    "f46c7595-d507-41f4-8f94-5b197b5ddfe9",
+    "0fbe5799-3511-42ba-a261-20a13db70f71"
   ]
 }

@@ -402,7 +402,7 @@
 /* Account/Order */
 :is(.account, .order) {
   margin: 0 auto;
-  max-width: var(--cbx-container-test);
+  max-width: var(--cbx-container-site);
   padding-left: 2rem;
   padding-right: 2rem;
 }

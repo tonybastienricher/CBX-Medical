@@ -1,0 +1,187 @@
+{%- liquid
+    assign isFullscreen = section.settings.disposition
+    assign isRight = section.settings.alignement
+    assign video_id = section.settings.video.id | default: section.settings.video_url.id
+    assign video_alt = section.settings.video.alt | default: section.settings.description
+    assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+-%}
+
+
+<div class='cbx-container-site {% if isFullscreen == '5050' %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2{% endif %} cbx-mb-7 cbx-aspect-video'>
+
+    <!-- Image / vidéo -->
+    <div class='cbx-relative cbx-w-full cbx-h-full cbx-bg-gray-50 cbx-rounded cbx-overflow-hidden {% if isRight == 'droite' %}lg:cbx-order-2{% endif %}'>
+
+        {% if isFullscreen != '5050' %}
+            <!-- overlay -->
+            <div class='cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-bg-black/30 cbx-z-10'></div>
+        {% endif %}
+
+        {% if section.settings.video == null %}
+            <!-- Image -->
+            {%- assign image_hero = section.settings.image_hero -%}
+            {% if image_hero != blank %}
+                {{ image_hero | image_url: width: 1200 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+            {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+            {% endif %}
+        {% else %}
+            <!-- Vidéo -->
+            {{ section.settings.video | video_tag: image_size: '1100x', autoplay: true, loop: section.settings.enable_video_looping, controls: true, muted: true }}
+        {%- endif -%}
+
+    </div>
+
+    <!-- Content -->
+    <div class='cbx-flex cbx-flex-col cbx-gap-4 cbx-w-full cbx-h-full cbx-items-center cbx-justify-center {% if isFullscreen != '5050' %} cbx-absolute cbx-inset-0 cbx-z-10 cbx-text-white{% endif %} {% if isRight == 'droite' %}lg:cbx-order-1{% endif %}'>
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+
+                {%- when 'titre' -%}
+                    <h2 class='cbx-font-display cbx-text-center lg:cbx-text-5xl'>
+                        {{ block.settings.titre_hero }}
+                    </h2>
+
+                {%- when 'texte' -%}
+                    <p class='cbx-text-center'>
+                        {{ block.settings.texte_hero | newline_to_br }}
+                    </p>
+                {%- when 'bouton' -%}
+                    <div class='cbx-flex'>
+                        <a href='{{ section.settings.url_du_bouton }}' class="cbx-btn cbx-btn-white">
+                            {{ block.settings.titre_du_bouton }}
+                        </a>
+                    </div>
+                {%- when 'reviews' -%}
+                    {%- if block.settings.activer_laffichage -%}
+                        <span class='cbx-uppercase cbx-pt-3'>Excellent • ★★★★★ • <a href='#' class='cbx-underline'>2522 reviews</a></span>
+                    {%- endif -%}
+            {%- endcase -%}
+        {%- endfor -%}
+    </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "hero",
+  "class": "hero",
+  "max_blocks": 4,
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "alignement",
+      "label": "Alignement",
+      "options": [
+        {
+          "value": "gauche",
+          "label": "Gauche"
+        },
+        {
+          "value": "droite",
+          "label": "Droite"
+        }
+      ],
+      "default": "droite"
+    },
+    {
+      "type": "select",
+      "id": "disposition",
+      "label": "Disposition",
+      "options": [
+        {
+          "value": "fullscreen",
+          "label": "Fullscreen"
+        },
+        {
+          "value": "5050",
+          "label": "50/50"
+        }
+      ],
+      "default": "5050"
+    },
+    {
+      "type": "header",
+      "content": "Médias du hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_hero",
+      "label": "Image hero"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.video.settings.header__1.content"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:sections.video.settings.video.label"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Titre",
+      "type": "titre",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titre_hero",
+          "label": "Titre hero",
+          "default": "From seed to patient",
+          "placeholder": "From seed to patient"
+        }
+      ]
+    },
+    {
+      "name": "Texte",
+      "type": "texte",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "texte_hero",
+          "label": "Texte hero",
+          "default": "Nous exploitons le plein potentiel de la plante pour\naméliorer votre quotidien.",
+          "placeholder": "Texte hero"
+        }
+      ]
+    },
+    {
+      "name": "Bouton",
+      "type": "bouton",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titre_du_bouton",
+          "label": "Titre du bouton",
+          "default": "Découvrez nos produits",
+          "placeholder": "Découvrez nos produits"
+        },
+        {
+          "type": "url",
+          "id": "url_du_bouton",
+          "label": "URL du bouton"
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "type": "reviews",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "activer_laffichage",
+          "label": "Activer l'affichage",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero"
+    }
+  ]
+}
+{% endschema %}

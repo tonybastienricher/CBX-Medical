@@ -65,7 +65,7 @@
     padding: 0 5rem;
   }
 
-  .collection slider-component:not(.cbx-container-test-desktop) {
+  .collection slider-component:not(.cbx-container-site-desktop) {
     padding: 0;
   }
 

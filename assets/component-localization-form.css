@@ -235,7 +235,6 @@ noscript .localization-selector.link {
 
 .header__icons--localization {
   align-items: center;
-  min-height: 4.4rem;
 }
 
 .js .header__icons--localization .localization-form__select {

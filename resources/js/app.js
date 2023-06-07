@@ -4,8 +4,7 @@ window.Alpine = Alpine;
 Alpine.plugin(collapse);
 Alpine.start();
 
-/*
-//LOCOMOTIVE
+/*//LOCOMOTIVE
 import LocomotiveScroll from 'locomotive-scroll';
 document.addEventListener("DOMContentLoaded", function() {
   if (typeof Shopify === 'undefined' || !Shopify.designMode) {

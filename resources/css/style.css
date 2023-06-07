@@ -3,6 +3,7 @@
     src: url(KHTekaTRIAL-Black.woff2);
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
     src: url(KHTekaTRIAL-Bold.woff2);
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
     src: url(KHTekaTRIAL-Medium.woff2);
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
     src: url(KHTekaTRIAL-Regular.woff2);
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -37,36 +41,34 @@
 
 @layer base {
     html {
-        @apply cbx-scroll-smooth cbx-h-full cbx-text-green2;
+        @apply cbx-scroll-smooth cbx-h-full;
+    }
+
+    body {
+        @apply cbx-font-body cbx-text-green cbx-bg-offWhite;
     }
 
     h1, h2, h3, h4, h5 {
         @apply cbx-font-display;
     }
 
-    .cbx-container-test {
+    .cbx-container-site {
         padding-left: 20px;
         padding-right: 20px;
         margin: auto;
+        max-width: 1880px;
     }
 
     .cbx-btn {
+        @apply cbx-font-medium cbx-rounded-full cbx-text-xs cbx-text-center cbx-text-green;
         /* Auto layout */
         padding: 12px;
-        border-radius: 54px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 130%;
         leading-trim: both;
         text-edge: cap;
-        text-align: center;
-        color: #1E271D;
-        text-transform: uppercase;
     }
 
     .cbx-btn-white {
-        background: #FFFFFF;
+        @apply cbx-bg-white;
     }
 
     .cbx-btn-beige {
@@ -81,6 +83,24 @@
         background: #1E271D;
         width: 100%;
         color: white;
+    }
+
+    .cbx-bg-noise {
+        background-image: url("noise.png");
+        background-repeat: repeat;
+        background-position: 0 0;
+    }
+
+    .faq span {
+        line-height: 130%;
+        leading-trim: both;
+        text-edge: cap;
+        letter-spacing: .05em;
+    }
+
+    .faq h2 {
+        line-height: 130%;
+        letter-spacing: -0.02em;
     }
 }
 

@@ -16,7 +16,7 @@
 -%}
 
 <div class="cbx-pb-7">
-    <div class="video-section isolate cbx-container-test">
+    <div class="video-section isolate cbx-container-site">
         <noscript>
             <div class="video-section__media" {% if poster != null %} style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
                 {%- if section.settings.video == null and section.settings.video_url != null -%}
@@ -45,7 +45,7 @@
             </div>
         </noscript>
         <deferred-media
-                class="cbx-aspect-video cbx-relative deferred-media no-js-hidden cbx-rounded-xl cbx-overflow-hidden"
+                class="cbx-aspect-video cbx-relative deferred-media no-js-hidden cbx-rounded cbx-overflow-hidden"
                 data-media-id="{{ video_id }}"
                 {% if poster != null %}style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
 
@@ -62,12 +62,10 @@
                 {% endif %}
             </div>
 
-            <button
-                    id="Deferred-Poster-Modal-{{ video_id }}"
+            <button id="Deferred-Poster-Modal-{{ video_id }}"
                     class="video-section__poster media deferred-media__poster media--landscape"
                     type="button"
-                    aria-label="{{ alt }}"
-            >
+                    aria-label="{{ alt }}">
                 {%- if poster != null -%}
                     {{
                     poster

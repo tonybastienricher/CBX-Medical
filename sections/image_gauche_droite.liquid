@@ -1,0 +1,92 @@
+{% liquid
+    assign image_droite = section.settings.image_droite
+    assign image_gauche = section.settings.image_gauche
+
+    if image_droite and image_gauche
+        assign both = true
+        assign alignement = 'cbx-justify-between'
+    else
+        assign both = false
+        assign alignement = 'cbx-justify-center'
+    endif
+
+%}
+
+<div class='cbx-container-site cbx-mt-7 cbx-mb-20 cbx-flex {{ alignement }}'>
+
+    {% if image_gauche %}
+        <!-- Image 1 -->
+        <div class='lg:cbx-w-[380px]'>
+            <div class='cbx-rounded overflow-hidden cbx-relative lg:cbx-w-full lg:cbx-h-[504px]'>
+                {{ image_gauche | image_url: width: 550 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+            </div>
+            <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                {{ section.settings.lgende_de_limage_gauche | newline_to_br }}
+            </p>
+        </div>
+    {% endif %}
+
+    {% if image_droite %}
+        <!-- Image 2-->
+        <div class='lg:cbx-w-[537px]'>
+            <div class='cbx-rounded overflow-hidden cbx-relative lg:cbx-w-full lg:cbx-h-[713px]'>
+                {{ image_droite | image_url: width: 800 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+            </div>
+            <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                {{ section.settings.lgende_de_limage_droite | newline_to_br }}
+            </p>
+        </div>
+    {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Image gauche / droite",
+  "class": "gauche_droite",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image gauche"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_gauche",
+      "label": "Image gauche"
+    },
+    {
+      "type": "textarea",
+      "id": "lgende_de_limage_gauche",
+      "label": "Légende de l'image gauche",
+      "default": "Legend image and dolorem text about brands, values and behind the scene."
+    },
+    {
+      "type": "header",
+      "content": "Image droite"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_droite",
+      "label": "Image droite"
+    },
+    {
+      "type": "textarea",
+      "id": "lgende_de_limage_droite",
+      "label": "Légende de l'image droite",
+      "default": "Legend image and dolorem text about brands, values and behind the scene."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image gauche / droite"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
