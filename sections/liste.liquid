@@ -4,7 +4,7 @@
             {%- case block.type -%}
                 {%- when 'liste' -%}
                     <div class='cbx-w-3 cbx-h-3 cbx-bg-green5 cbx-rounded-sm'></div>
-                    <span class='cbx-pl-4 cbx-font-medium cbx-uppercase cbx-text-xs cbx-tracking-widest'>{{ block.settings.texte }}</span>
+                    <span class='cbx-pl-4 cbx-font-medium cbx-uppercase cbx-text-xs cbx-tracking-widest' {{ block.shopify_attributes }}>{{ block.settings.texte }}</span>
             {%- endcase -%}
         </div>
     {%- endfor -%}

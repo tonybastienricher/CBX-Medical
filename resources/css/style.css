@@ -102,10 +102,23 @@
         line-height: 130%;
         letter-spacing: -0.02em;
     }
+
+    .stack-cards__item {
+        position: sticky;
+        top: 20px;
+        height: 0;
+        -webkit-transform-origin: center top;
+        transform-origin: center top;
+    }
 }
 
 body.locomotive-active {
     overflow: hidden;
+}
+
+
+.stack-cards {
+    --stack-cards-gap: 20px;
 }
 
 @tailwind components;

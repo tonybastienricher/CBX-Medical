@@ -1,10 +1,10 @@
 //js("resources/js/app.js", "public/js")
 
 let mix = require('laravel-mix');
-/*
+
 mix.copyDirectory('node_modules/swiper/swiper-bundle.min.js', 'assets');
 mix.copyDirectory('node_modules/swiper/swiper-bundle.min.css', 'assets');
-*/
+
 
 mix.js('resources/js/app.js', 'assets')
   .copy('resources/fonts/KH_Teka_Trial/KHTekaTRIAL-Black.woff2', 'assets/KHTekaTRIAL-Black.woff2')

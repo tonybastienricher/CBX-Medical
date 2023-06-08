@@ -38,23 +38,23 @@
             {%- case block.type -%}
 
                 {%- when 'titre' -%}
-                    <h2 class='cbx-font-display cbx-text-center lg:cbx-text-5xl'>
+                    <h2 class='cbx-font-display cbx-text-center lg:cbx-text-5xl' {{ block.shopify_attributes }}>
                         {{ block.settings.titre_hero }}
                     </h2>
 
                 {%- when 'texte' -%}
-                    <p class='cbx-text-center'>
+                    <p class='cbx-text-center' {{ block.shopify_attributes }}>
                         {{ block.settings.texte_hero | newline_to_br }}
                     </p>
                 {%- when 'bouton' -%}
                     <div class='cbx-flex'>
-                        <a href='{{ section.settings.url_du_bouton }}' class="cbx-btn cbx-btn-white">
+                        <a href='{{ section.settings.url_du_bouton }}' class="cbx-btn cbx-btn-white" {{ block.shopify_attributes }}>
                             {{ block.settings.titre_du_bouton }}
                         </a>
                     </div>
                 {%- when 'reviews' -%}
                     {%- if block.settings.activer_laffichage -%}
-                        <span class='cbx-uppercase cbx-pt-3'>Excellent • ★★★★★ • <a href='#' class='cbx-underline'>2522 reviews</a></span>
+                        <span class='cbx-uppercase cbx-pt-3' {{ block.shopify_attributes }}>Excellent • ★★★★★ • <a href='#' class='cbx-underline'>2522 reviews</a></span>
                     {%- endif -%}
             {%- endcase -%}
         {%- endfor -%}

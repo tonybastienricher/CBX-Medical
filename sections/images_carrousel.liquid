@@ -1,31 +1,36 @@
-<div class='cbx-container-site cbx-mt-7 cbx-mb-20 cbx-flex cbx-gap-2'>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 
-
-    {%- for block in section.blocks -%}
-        {%- case block.type -%}
-
-            {%- when 'image' -%}
-                {%- assign image = block.settings.image -%}
-                <div class='lg:cbx-w-[537px]'>
-                    <div class='cbx-rounded overflow-hidden cbx-relative lg:cbx-w-full lg:cbx-h-[713px]'>
-                        {% if image %}
-                            {{ image | image_url: width: 800 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
-                        {% else %}
-                          {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
-                        {% endif %}
-                    </div>
-                    <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
-                        {{ section.settings.lgende | newline_to_br }}
-                    </p>
-                </div>
-        {%- endcase -%}
-    {%- endfor -%}
+<div class='cbx-mt-7 cbx-mb-20 cbx-flex cbx-gap-2'>
+    <div class="cbx-container-site swiper-container cbx-w-full" style='box-sizing: border-box; overflow: visible;'>
+        <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+                {% assign slideNumber = forloop.index %}
+                {%- case block.type -%}
+                    {%- when 'image' -%}
+                        {%- assign image = block.settings.image -%}
+                        <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
+                            <div class='cbx-rounded overflow-hidden cbx-relative lg:cbx-h-[713px]'>
+                                {% if image %}
+                                    {{ image | image_url: width: 800 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                                {% else %}
+                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                                {% endif %}
+                            </div>
+                            <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                                {{ block.settings.lgende | newline_to_br }}
+                            </p>
+                        </div>
+                {%- endcase -%}
+            {%- endfor -%}
+        </div>
+    </div>
 </div>
 
 {% schema %}
 {
   "name": "Images Carrousel",
-  "class": "images_carrousel",
+  "class": "images_carrousel cbx-overflow-hidden",
   "max_blocks": 10,
   "tag": "section",
   "settings": [],
@@ -64,8 +69,46 @@
 }
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
-
 {% javascript %}
+var swiperHero = new Swiper('.swiper-container', {
+slidesPerView: 1,
+spaceBetween: 10,
+grabCursor: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+breakpoints: {
+768: {
+slidesPerView: 2.5,
+spaceBetween: 20,
+},
+}
+});
+
+if (Shopify.designMode) {
+// Détecter la sélection d'un bloc
+document.addEventListener('shopify:block:select', function(event) {
+// Vérifier si le bloc sélectionné est lié au slider
+if (event.target.closest('.swiper-container')) {
+// Récupérer le numéro de diapositive à partir des données de l'élément
+var slide = event.target.dataset.slidenumber;
+slide = slide - 1;
+// Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
+if (swiperHero) {
+swiperHero.slideTo(slide);
+}
+}
+});
+
+document.addEventListener('shopify:block:select', function(event) {
+// Recharger le slider SwiperJS ici
+if (swiperHero) {
+swiperHero.update();
+}
+});
+
+}
+
+
 {% endjavascript %}

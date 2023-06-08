@@ -1,6 +1,8 @@
 {
     "/assets/app.js": "/assets/app.js",
     "/assets/style.css": "/assets/style.css",
+    "/assets/swiper-bundle.min.js": "/assets/swiper-bundle.min.js",
+    "/assets/swiper-bundle.min.css": "/assets/swiper-bundle.min.css",
     "/assets/KHTekaTRIAL-Black.woff2": "/assets/KHTekaTRIAL-Black.woff2",
     "/assets/KHTekaTRIAL-Bold.woff2": "/assets/KHTekaTRIAL-Bold.woff2",
     "/assets/KHTekaTRIAL-Light.woff2": "/assets/KHTekaTRIAL-Light.woff2",

@@ -1,0 +1,150 @@
+<script src="{{ 'script_card_stack.js' | asset_url }}" defer></script>
+
+<div>
+    <div class='cbx-container-site cbx-mb-40'>
+
+        <!-- Title -->
+        <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12'>
+            <span class='cbx-text-green5 lg:cbx-hidden'>{{ section.settings.sur_titre }}</span>
+            <h2 class='cbx-text-5xl cbx-font-display cbx-text-green6 lg:cbx-text-green2 lg:cbx-text-center'>
+                {{ section.settings.titre | newline_to_br }}
+            </h2>
+        </div>
+
+        <ul class="stack-cards js-stack-cards">
+            {%- for block in section.blocks -%}
+
+                {% case forloop.index %}
+                    {% when 1 %}
+                        {% assign color = 'cbx-bg-green6 cbx-text-green4' %}
+                    {% when 2 %}
+                        {% assign color = 'cbx-bg-green5 cbx-text-green6' %}
+                    {% else %}
+                        {% assign color = 'cbx-bg-green4 cbx-text-green6' %}
+                {% endcase %}
+
+                <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[90vh] cbx-rounded {{ color }}">
+                    {%- case block.type -%}
+                    {%- when 'cartes' -%}
+                    <div class='lg:cbx-px-16 lg:cbx-py-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-5'>
+                        <div class='cbx-flex cbx-flex-col lg:cbx-col-span-2'>
+                            <span class='cbx-text-sm cbx-pb-2.5'>{{ forloop.index | prepend: '0' }} /</span>
+                            <h3 class='cbx-text-5xl'>{{ block.settings.titre }}</h3>
+                        </div>
+                        <div class='cbx-flex cbx-flex-col lg:cbx-col-span-3'>
+
+                            {% if block.settings.sous_titre != blank %}
+                                <span class='cbx-text-sm cbx-pb-2.5'>{{ block.settings.sous_titre }}</span>
+                            {% endif %}
+
+                            {% if block.settings.description != blank %}
+                                <p class='cbx-font-display cbx-text-xl cbx-leading-7'>
+                                    {{ block.settings.description }}
+                                </p>
+                            {% endif %}
+
+                            {%- assign produits = block.settings.produits -%}
+                            {% if produits.count > 0 %}
+                                <div class='cbx-flex cbx-flex-col cbx-pt-10'>
+                                    <span class='cbx-text-sm cbx-pb-2.5'>Produits associés ({{ produits.count }})</span>
+                                    <ul class='cbx-flex'>
+                                        {%- for product in produits -%}
+                                            <a href='{{ product.url }}'>
+
+                                                <img srcset="
+                  {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+                                                     src="{{ product.featured_media | image_url: width: 533 }}"
+                                                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                                                     alt="{{ product.featured_media.alt | escape }}"
+                                                     class="motion-reduce cbx-pb-1.5"
+                                                        {% unless lazy_load == false %}
+                                                            loading="lazy"
+                                                        {% endunless %}
+                                                     width="{{ product.featured_media.width }}"
+                                                     height="{{ product.featured_media.height }}">
+
+                                                <h4>{{ product.title }}</h4>
+                                            </a>
+                                        {%- endfor -%}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        </div>
+                        {%- endcase -%}
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Pile de cartes",
+  "class": "card_stack",
+  "max_blocks": 5,
+  "tag": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "titre",
+      "label": "Titre",
+      "default": "Comment cbx peut vous aider au quotidien ?"
+    },
+    {
+      "type": "text",
+      "id": "sur_titre",
+      "label": "Sur titre",
+      "default": "Au Quotidien"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Cartes",
+      "type": "cartes",
+      "settings": [
+        {
+          "type": "text",
+          "id": "titre",
+          "label": "Titre",
+          "default": "Se relaxer"
+        },
+        {
+          "type": "text",
+          "id": "sous_titre",
+          "label": "Sous titre",
+          "default": "Détails"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur."
+        },
+        {
+          "type": "product_list",
+          "id": "produits",
+          "label": "Produits",
+          "limit": 2
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pile de cartes"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

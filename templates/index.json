@@ -106,6 +106,99 @@
         "lgende_de_limage_droite": "Legend image and dolorem text about brands, \nvalues and behind the scene."
       }
     },
+    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
+      "type": "pile_de_cartes",
+      "blocks": {
+        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
+            "produits": [
+              "flex"
+            ]
+          }
+        },
+        "f22f5ad9-b76a-4f1f-b668-870d40d64936": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
+            "produits": [
+
+            ]
+          }
+        },
+        "ccc7be5f-a35a-492e-bfa1-56f80530f0de": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
+            "produits": [
+
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0",
+        "f22f5ad9-b76a-4f1f-b668-870d40d64936",
+        "ccc7be5f-a35a-492e-bfa1-56f80530f0de"
+      ],
+      "settings": {
+        "titre": "Comment cbx peut vous \naider au quotidien ?",
+        "sur_titre": "Au Quotidien"
+      }
+    },
+    "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
+      "type": "images_carrousel",
+      "blocks": {
+        "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_gauche.jpg",
+            "lgende": "legend image and dolorem text about brands, \nvalues and behind the scene."
+          }
+        },
+        "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_droite.jpg",
+            "lgende": "legend image and dolorem text about brands, values and behind the scene."
+          }
+        },
+        "54493309-2b41-4ea4-b714-4615e7f7c6eb": {
+          "type": "image",
+          "settings": {
+            "lgende": "legend image and dolorem text about brands, values and behind the scene."
+          }
+        },
+        "a0a947a1-dfb2-4176-9116-b802c2f7c5f8": {
+          "type": "image",
+          "settings": {
+            "lgende": "legend image and dolorem text about brands, values and behind the scene."
+          }
+        },
+        "e0d94064-71d8-4286-a84f-65082273e509": {
+          "type": "image",
+          "settings": {
+            "lgende": "legend image and dolorem text about brands, values and behind the scene."
+          }
+        }
+      },
+      "block_order": [
+        "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0",
+        "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1",
+        "54493309-2b41-4ea4-b714-4615e7f7c6eb",
+        "a0a947a1-dfb2-4176-9116-b802c2f7c5f8",
+        "e0d94064-71d8-4286-a84f-65082273e509"
+      ],
+      "settings": {
+      }
+    },
     "0fbe5799-3511-42ba-a261-20a13db70f71": {
       "type": "faq",
       "blocks": {
@@ -148,6 +241,8 @@
     "video",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
     "f46c7595-d507-41f4-8f94-5b197b5ddfe9",
+    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
+    "90482c4c-b245-4068-8fa2-6f47ff93eb5a",
     "0fbe5799-3511-42ba-a261-20a13db70f71"
   ]
 }
