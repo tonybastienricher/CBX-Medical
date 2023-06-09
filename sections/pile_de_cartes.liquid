@@ -1,7 +1,7 @@
 <script src="{{ 'script_card_stack.js' | asset_url }}" defer></script>
 
 <div>
-    <div class='cbx-container-site cbx-mb-40'>
+    <div class='cbx-container-site cbx-mb-28 cbx-mt-20'>
 
         <!-- Title -->
         <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12'>
@@ -23,7 +23,7 @@
                         {% assign color = 'cbx-bg-green4 cbx-text-green6' %}
                 {% endcase %}
 
-                <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[90vh] cbx-rounded {{ color }}">
+                <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[80vh] cbx-rounded {{ color }}" {{ block.shopify_attributes }}>
                     {%- case block.type -%}
                     {%- when 'cartes' -%}
                     <div class='lg:cbx-px-16 lg:cbx-py-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-5'>
@@ -46,30 +46,16 @@
                             {%- assign produits = block.settings.produits -%}
                             {% if produits.count > 0 %}
                                 <div class='cbx-flex cbx-flex-col cbx-pt-10'>
-                                    <span class='cbx-text-sm cbx-pb-2.5'>Produits associés ({{ produits.count }})</span>
-                                    <ul class='cbx-flex'>
+                                    <span class='cbx-text-sm cbx-pb-7'>Produits associés ({{ produits.count }})</span>
+                                    <ul class='cbx-flex cbx-gap-3'>
                                         {%- for product in produits -%}
                                             <a href='{{ product.url }}'>
 
-                                                <img srcset="
-                  {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
-                                                     src="{{ product.featured_media | image_url: width: 533 }}"
-                                                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                                                     alt="{{ product.featured_media.alt | escape }}"
-                                                     class="motion-reduce cbx-pb-1.5"
-                                                        {% unless lazy_load == false %}
-                                                            loading="lazy"
-                                                        {% endunless %}
-                                                     width="{{ product.featured_media.width }}"
-                                                     height="{{ product.featured_media.height }}">
+                                                <div class='cbx-relative cbx-w-[140px] cbx-h-[200px] cbx-rounded cbx-overflow-hidden'>
+                                                    {{ product.featured_media | image_url: width: 400 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                                                </div>
 
-                                                <h4>{{ product.title }}</h4>
+                                                <h4 class='cbx-text-xs cbx-uppercase cbx-pt-2.5'>{{ product.title }}</h4>
                                             </a>
                                         {%- endfor -%}
                                     </ul>

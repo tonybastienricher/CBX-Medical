@@ -37,6 +37,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ModelStandard_SemiMono_Variable';
+    src: url("ModelStandard_SemiMono_Variable.woff2");
+}
+
 @tailwind base;
 
 @layer base {
@@ -105,7 +110,7 @@
 
     .stack-cards__item {
         position: sticky;
-        top: 20px;
+        top: 35px;
         height: 0;
         -webkit-transform-origin: center top;
         transform-origin: center top;
@@ -116,9 +121,22 @@ body.locomotive-active {
     overflow: hidden;
 }
 
-
 .stack-cards {
-    --stack-cards-gap: 20px;
+    --stack-cards-gap: 35px;
+}
+
+.swiper-pagination {
+    position: initial !important;
+    text-align: left !important;
+    padding-top: 10px;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #1E271D !important;
 }
 
 @tailwind components;

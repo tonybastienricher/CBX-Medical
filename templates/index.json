@@ -90,6 +90,68 @@
         "description": ""
       }
     },
+    "1d3c3eb6-0507-4517-8e18-c5afad6fe640": {
+      "type": "produits_en_vedette",
+      "settings": {
+        "produits_en_vedette": [
+          "flex",
+          "move",
+          "reduction",
+          "super",
+          "test"
+        ]
+      }
+    },
+    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
+      "type": "pile_de_cartes",
+      "blocks": {
+        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
+            "produits": [
+              "flex",
+              "move"
+            ]
+          }
+        },
+        "f22f5ad9-b76a-4f1f-b668-870d40d64936": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
+            "produits": [
+              "flex",
+              "move"
+            ]
+          }
+        },
+        "ccc7be5f-a35a-492e-bfa1-56f80530f0de": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
+            "produits": [
+              "flex",
+              "move"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0",
+        "f22f5ad9-b76a-4f1f-b668-870d40d64936",
+        "ccc7be5f-a35a-492e-bfa1-56f80530f0de"
+      ],
+      "settings": {
+        "titre": "Comment cbx peut vous \naider au quotidien ?",
+        "sur_titre": "Au Quotidien"
+      }
+    },
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b": {
       "type": "texte-large",
       "settings": {
@@ -106,51 +168,12 @@
         "lgende_de_limage_droite": "Legend image and dolorem text about brands, \nvalues and behind the scene."
       }
     },
-    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
-      "type": "pile_de_cartes",
-      "blocks": {
-        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0": {
-          "type": "cartes",
-          "settings": {
-            "titre": "Se relaxer",
-            "sous_titre": "Détails",
-            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
-            "produits": [
-              "flex"
-            ]
-          }
-        },
-        "f22f5ad9-b76a-4f1f-b668-870d40d64936": {
-          "type": "cartes",
-          "settings": {
-            "titre": "Se relaxer",
-            "sous_titre": "Détails",
-            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
-            "produits": [
-
-            ]
-          }
-        },
-        "ccc7be5f-a35a-492e-bfa1-56f80530f0de": {
-          "type": "cartes",
-          "settings": {
-            "titre": "Se relaxer",
-            "sous_titre": "Détails",
-            "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
-            "produits": [
-
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0",
-        "f22f5ad9-b76a-4f1f-b668-870d40d64936",
-        "ccc7be5f-a35a-492e-bfa1-56f80530f0de"
-      ],
+    "fdc94a2f-7840-4318-822f-b660169be414": {
+      "type": "produits_en_vedette",
       "settings": {
-        "titre": "Comment cbx peut vous \naider au quotidien ?",
-        "sur_titre": "Au Quotidien"
+        "produits_en_vedette": [
+
+        ]
       }
     },
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
@@ -239,9 +262,11 @@
     "76a5e5d7-58e5-4fed-89d9-620cc17e4a52",
     "32729055-b5cd-476e-a14d-5c9ab9c6c295",
     "video",
+    "1d3c3eb6-0507-4517-8e18-c5afad6fe640",
+    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
     "f46c7595-d507-41f4-8f94-5b197b5ddfe9",
-    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
+    "fdc94a2f-7840-4318-822f-b660169be414",
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a",
     "0fbe5799-3511-42ba-a261-20a13db70f71"
   ]

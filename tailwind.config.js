@@ -23,7 +23,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'display': ['KH Teka TRIAL'],
-        body: ['Roboto']
+        body: ['ModelStandard_SemiMono_Variable', 'Roboto']
       },
       colors: {
         'offWhite': '#EFEFEF',
