@@ -10,7 +10,7 @@
                     {%- when 'image' -%}
                         {%- assign image = block.settings.image -%}
                         <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
-                            <div class='cbx-rounded overflow-hidden cbx-relative lg:cbx-h-[713px]'>
+                            <div class='cbx-rounded overflow-hidden cbx-relative lg:cbx-h-[90vh]'>
                                 {% if image %}
                                     {{ image | image_url: width: 800 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
                                 {% else %}
