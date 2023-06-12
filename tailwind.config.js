@@ -18,12 +18,18 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '20px'
+      padding: {
+        DEFAULT: '10px',
+        lg: '20px'
+      }
     },
     extend: {
       fontFamily: {
-        'display': ['KH Teka TRIAL'],
+        'display': ['KH Teka'],
         body: ['ModelStandard_SemiMono_Variable', 'Roboto']
+      },
+      fontSize: {
+        'xss': ['10px', '16px']
       },
       colors: {
         'offWhite': '#EFEFEF',

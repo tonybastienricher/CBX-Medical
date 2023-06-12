@@ -51,7 +51,7 @@
                                         {%- for product in produits -%}
                                             <a href='{{ product.url }}'>
 
-                                                <div class='cbx-relative cbx-w-[140px] cbx-h-[200px] cbx-rounded cbx-overflow-hidden'>
+                                                <div class='cbx-relative cbx-w-[190px] cbx-h-[300px] cbx-rounded cbx-overflow-hidden'>
                                                     {{ product.featured_media | image_url: width: 400 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
                                                 </div>
 

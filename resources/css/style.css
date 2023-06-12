@@ -1,38 +1,38 @@
 @font-face {
-    font-family: "KH Teka TRIAL";
-    src: url(KHTekaTRIAL-Black.woff2);
+    font-family: "KH Teka";
+    src: url(KHTeka-Black.woff2);
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "KH Teka TRIAL";
-    src: url(KHTekaTRIAL-Bold.woff2);
+    font-family: "KH Teka";
+    src: url(KHTeka-Bold.woff2);
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "KH Teka TRIAL";
-    src: url(KHTekaTRIAL-Medium.woff2);
+    font-family: "KH Teka";
+    src: url(KHTeka-Medium.woff2);
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "KH Teka TRIAL";
-    src: url(KHTekaTRIAL-Regular.woff2);
+    font-family: "KH Teka";
+    src: url(KHTeka-Regular.woff2);
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "KH Teka TRIAL";
-    src: url(KHTekaTRIAL-Light.woff2);
+    font-family: "KH Teka";
+    src: url(KHTeka-Light.woff2);
     font-weight: 300;
     font-style: normal;
 }
@@ -58,10 +58,7 @@
     }
 
     .cbx-container-site {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: auto;
-        max-width: 1880px;
+        @apply cbx-m-auto cbx-px-[10px] lg:cbx-px-[20px] cbx-max-w-[1880px];
     }
 
     .cbx-btn {

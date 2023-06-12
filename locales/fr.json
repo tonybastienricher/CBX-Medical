@@ -58,7 +58,7 @@
     }
   },
   "newsletter": {
-    "label": "E-mail",
+    "label": "mon email",
     "success": "Merci de votre inscription",
     "button_label": "S'inscrire"
   },
