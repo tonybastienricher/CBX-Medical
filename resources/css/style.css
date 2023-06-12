@@ -112,6 +112,10 @@
         -webkit-transform-origin: center top;
         transform-origin: center top;
     }
+
+    .header_position {
+        @apply cbx-w-full cbx-hidden lg:cbx-flex cbx-justify-center lg:cbx-relative;
+    }
 }
 
 body.locomotive-active {
@@ -145,4 +149,61 @@ body.locomotive-active {
 
 @layer utilities {
 
+}
+
+/* PRICE */
+.price > * {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.price.price--unavailable {
+    visibility: hidden;
+}
+
+.price--end {
+    text-align: right;
+}
+
+.price .price-item {
+    display: inline-block;
+}
+
+.price__regular .price-item--regular {
+    margin-right: 0;
+}
+
+.price:not(.price--show-badge) .price-item--last:last-of-type {
+    margin: 0;
+}
+
+@media screen and (min-width: 750px) {
+    .price {
+        margin-bottom: 0;
+    }
+}
+
+
+.price--sold-out .price__availability,
+.price__regular {
+    display: block;
+}
+
+.price__sale,
+.price__availability,
+.price .price__badge-sale,
+.price .price__badge-sold-out,
+.price--on-sale .price__regular,
+.price--on-sale .price__availability {
+    display: none;
+}
+
+.price--sold-out .price__badge-sold-out,
+.price--on-sale .price__badge-sale {
+    display: inline-block;
+}
+
+.price--on-sale .price__sale {
+    display: initial;
 }

@@ -86,14 +86,14 @@
         <div class='cbx-grid cbx-grid-cols-2 cbx-py-8 lg:cbx-order-2 lg:cbx-border lg:cbx-border-green4 lg:cbx-py-20 lg:cbx-px-10 lg:cbx-items-center lg:cbx-mx-auto lg:cbx-w-full lg:!cbx-border-t-0'>
             {%- for block in section.blocks -%}
                 {% if block.settings.emplacement == 'box1' %}
-                    <div>
+                    <div {{ block.shopify_attributes }}>
                         {%- if block.settings.heading != blank -%}
                             <h2 class="cbx-text-xs cbx-text-green4 cbx-pb-3 lg:cbx-text-xss lg:cbx-text-green6 lg:cbx-uppercase">{{- block.settings.heading -}}</h2>
                         {%- endif -%}
                         {%- case block.type -%}
                             {%- when 'link_list' -%}
                                 {%- if block.settings.menu != blank -%}
-                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1">
+                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1 hover:cbx-text-green4">
                                         {%- for link in block.settings.menu.links -%}
                                             <li>
                                                 <a href="{{ link.url }}" class="{% if link.active %} active{% endif %}">
@@ -113,14 +113,14 @@
         <div class='cbx-grid cbx-grid-cols-2 lg:cbx-grid-cols-4 lg:cbx-col-span-2 cbx-pb-8 !cbx-border-0 cbx-gap-y-9 lg:cbx-order-4 lg:cbx-p-20  lg:!cbx-border-t lg:!cbx-border-l lg:cbx-border-green4'>
             {%- for block in section.blocks -%}
                 {% if block.settings.emplacement == 'box2' %}
-                    <div>
+                    <div {{ block.shopify_attributes }}>
                         {%- if block.settings.heading != blank -%}
                             <h2 class="cbx-text-xs cbx-text-green4 cbx-pb-3 lg:cbx-text-xss lg:cbx-text-green6 lg:cbx-uppercase">{{- block.settings.heading -}}</h2>
                         {%- endif -%}
                         {%- case block.type -%}
                             {%- when 'link_list' -%}
                                 {%- if block.settings.menu != blank -%}
-                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1">
+                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1 hover:cbx-text-green4">
                                         {%- for link in block.settings.menu.links -%}
                                             <li>
                                                 <a href="{{ link.url }}" class="{% if link.active %} active{% endif %}">
