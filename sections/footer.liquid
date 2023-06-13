@@ -93,10 +93,10 @@
                         {%- case block.type -%}
                             {%- when 'link_list' -%}
                                 {%- if block.settings.menu != blank -%}
-                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1 hover:cbx-text-green4">
+                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1">
                                         {%- for link in block.settings.menu.links -%}
                                             <li>
-                                                <a href="{{ link.url }}" class="{% if link.active %} active{% endif %}">
+                                                <a href="{{ link.url }}" class="hover:cbx-text-green4 {% if link.active %} active{% endif %}">
                                                     {{ link.title }}
                                                 </a>
                                             </li>
@@ -120,10 +120,10 @@
                         {%- case block.type -%}
                             {%- when 'link_list' -%}
                                 {%- if block.settings.menu != blank -%}
-                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1 hover:cbx-text-green4">
+                                    <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1">
                                         {%- for link in block.settings.menu.links -%}
                                             <li>
-                                                <a href="{{ link.url }}" class="{% if link.active %} active{% endif %}">
+                                                <a href="{{ link.url }}" class="hover:cbx-text-green4 {% if link.active %} active{% endif %}">
                                                     {{ link.title }}
                                                 </a>
                                             </li>

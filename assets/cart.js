@@ -64,23 +64,23 @@ class CartItems extends HTMLElement {
       {
         id: 'main-cart-items',
         section: document.getElementById('main-cart-items').dataset.id,
-        selector: '.js-contents',
+        selector: '.js-contents'
       },
       {
-        id: 'cart-icon-bubble',
-        section: 'cart-icon-bubble',
-        selector: '.shopify-section',
+        id: 'cart-item_count',
+        section: 'cart-item_count',
+        selector: '.shopify-section'
       },
       {
         id: 'cart-live-region-text',
         section: 'cart-live-region-text',
-        selector: '.shopify-section',
+        selector: '.shopify-section'
       },
       {
         id: 'main-cart-footer',
         section: document.getElementById('main-cart-footer').dataset.id,
-        selector: '.js-contents',
-      },
+        selector: '.js-contents'
+      }
     ];
   }
 
@@ -91,7 +91,7 @@ class CartItems extends HTMLElement {
       line,
       quantity,
       sections: this.getSectionsToRender().map((section) => section.section),
-      sections_url: window.location.pathname,
+      sections_url: window.location.pathname
     });
 
     fetch(`${routes.cart_change_url}`, { ...fetchConfig(), ...{ body } })
@@ -118,13 +118,22 @@ class CartItems extends HTMLElement {
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
         this.getSectionsToRender().forEach((section) => {
-          const elementToReplace =
-            document.getElementById(section.id).querySelector(section.selector) || document.getElementById(section.id);
-          elementToReplace.innerHTML = this.getSectionInnerHTML(
-            parsedState.sections[section.section],
-            section.selector
-          );
+          const elementsToReplace =
+            document.querySelectorAll('#' + section.id);
+
+          if (elementsToReplace.length > 0) {
+            elementsToReplace.forEach(element => {
+              const selectedElement = element.querySelector(section.selector) || element;
+              console.log(parsedState.sections[section.section]);
+              console.log(section.selector);
+              selectedElement.innerHTML = this.getSectionInnerHTML(
+                parsedState.sections[section.section],
+                section.selector
+              );
+            });
+          }
         });
+
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
         let message = '';
         if (items.length === parsedState.items.length && updatedValue !== parseInt(quantityElement.value)) {
@@ -149,9 +158,9 @@ class CartItems extends HTMLElement {
         }
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items' });
       })
-      .catch(() => {
-        this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
+      .catch((e) => {
         const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+        console.log(e);
         errors.textContent = window.cartStrings.error;
       })
       .finally(() => {

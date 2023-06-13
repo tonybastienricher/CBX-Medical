@@ -93,6 +93,10 @@
         background-position: 0 0;
     }
 
+    .btn {
+        @apply cbx-btn cbx-btn-beige;
+    }
+
     .faq span {
         line-height: 130%;
         leading-trim: both;
@@ -138,6 +142,20 @@ body.locomotive-active {
 
 .swiper-pagination-bullet-active {
     background: #1E271D !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+quantity-input input::-webkit-outer-spin-button,
+quantity-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+quantity-input input[type=number] {
+    -moz-appearance: textfield;
+    width: 10px;
+    text-align: center;
 }
 
 @tailwind components;

@@ -5,7 +5,7 @@
         <!-- Header -->
         <div class='cbx-bg-white cbx-rounded cbx-mb-2.5 cbx-flex cbx-w-full cbx-relative cbx-z-20'>
 
-            <div class='cbx-flex cbx-items-center cbx-justify-between cbx-py-4 cbx-px-2 lg:cbx-px-6 cbx-text-sm  cbx-w-full cbx-gap-2.5'>
+            <div class='cbx-flex cbx-items-center cbx-justify-between cbx-py-4 cbx-px-2 lg:cbx-px-6 cbx-text-xs  cbx-w-full cbx-gap-2.5'>
                 <!-- Menu 1 -->
                 <div class='cbx-font-display cbx-flex cbx-items-center cbx-text-green3 cbx-cursor-pointer'
                      @click='menuMobile = !menuMobile'>
@@ -33,8 +33,10 @@
                 </svg>
 
                 <!-- Menu 2 + Panier -->
-                <div class='cbx-font-display cbx-text-green3'>
-                    Panier (<span>0</span>)
+                <div class='cbx-font-display cbx-text-green3' id='cart-item_count'>
+                    {%- if cart.item_count < 100 -%}
+                        Panier (<span>{{ cart.item_count }}</span>)
+                    {%- endif -%}
                 </div>
             </div>
         </div>
@@ -50,12 +52,13 @@
             <ul class='cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite'>
                 {% for link in section.settings.menu.links %}
                     <li>
-                        <a  href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6' aria-current="page">
+                        <a href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6'
+                           aria-current="page">
                             <!-- Image -->
                             <div class='cbx-rounded cbx-bg-green6 cbx-w-12 cbx-h-12'></div>
                             <!-- Title -->
                             <div>
-                                <h4 class='cbx-text-sm cbx-font-display cbx-text-green2'>
+                                <h4 class='cbx-text-xs cbx-font-display cbx-text-green2'>
                                     {{ link.title | escape }}
                                 </h4>
                                 <p class='cbx-text-xs cbx-text-green4'>Tous nos produits</p>
@@ -576,6 +579,8 @@ customElements.define('sticky-header', StickyHeader);
 
 
 
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -592,6 +597,8 @@ customElements.define('sticky-header', StickyHeader);
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
 
 
 

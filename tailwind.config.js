@@ -29,7 +29,8 @@ module.exports = {
         body: ['ModelStandard_SemiMono_Variable', 'Roboto']
       },
       fontSize: {
-        'xss': ['10px', '16px']
+        'xss': ['10px', '16px'],
+        '11': ['11px', '14px']
       },
       colors: {
         'offWhite': '#EFEFEF',
