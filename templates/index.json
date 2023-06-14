@@ -86,7 +86,8 @@
         "lien_du_bouton": "shopify:\/\/collections\/all",
         "heading_size": "h1",
         "enable_video_looping": true,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=usaUsPjXm38",
+        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4",
+        "video_url": "",
         "description": ""
       }
     },
