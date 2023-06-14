@@ -43,6 +43,7 @@ class CartDrawer extends HTMLElement {
       { once: true }
     );
 
+    window.dispatchEvent(new Event('cart-update'))
   }
 
   close() {
