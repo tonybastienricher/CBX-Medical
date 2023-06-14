@@ -79,6 +79,18 @@
       "settings": {
       }
     },
+    "1d3c3eb6-0507-4517-8e18-c5afad6fe640": {
+      "type": "produits_en_vedette",
+      "settings": {
+        "produits_en_vedette": [
+          "flex",
+          "move",
+          "reduction",
+          "super",
+          "test"
+        ]
+      }
+    },
     "video": {
       "type": "video",
       "settings": {
@@ -90,18 +102,6 @@
         "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4",
         "video_url": "",
         "description": ""
-      }
-    },
-    "1d3c3eb6-0507-4517-8e18-c5afad6fe640": {
-      "type": "produits_en_vedette",
-      "settings": {
-        "produits_en_vedette": [
-          "flex",
-          "move",
-          "reduction",
-          "super",
-          "test"
-        ]
       }
     },
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
@@ -254,8 +254,8 @@
   "order": [
     "76a5e5d7-58e5-4fed-89d9-620cc17e4a52",
     "32729055-b5cd-476e-a14d-5c9ab9c6c295",
-    "video",
     "1d3c3eb6-0507-4517-8e18-c5afad6fe640",
+    "video",
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
     "fdc94a2f-7840-4318-822f-b660169be414",
