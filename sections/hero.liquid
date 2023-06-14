@@ -27,7 +27,17 @@
             {% endif %}
         {% else %}
             <!-- Vidéo -->
-            {{ section.settings.video | video_tag: image_size: '1100x', autoplay: true, loop: section.settings.enable_video_looping, controls: true, muted: true }}
+            {{
+            section.settings.video
+            | video_tag:
+            image_size: '1100x',
+            autoplay: true,
+            loop: true,
+            controls: false,
+            muted: false,
+            class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full',
+            style: 'z-index:-1'
+            }}
         {%- endif -%}
 
     </div>
@@ -48,13 +58,15 @@
                     </p>
                 {%- when 'bouton' -%}
                     <div class='cbx-flex'>
-                        <a href='{{ section.settings.url_du_bouton }}' class="cbx-btn cbx-btn-white" {{ block.shopify_attributes }}>
+                        <a href='{{ section.settings.url_du_bouton }}'
+                           class="cbx-btn cbx-btn-white" {{ block.shopify_attributes }}>
                             {{ block.settings.titre_du_bouton }}
                         </a>
                     </div>
                 {%- when 'reviews' -%}
                     {%- if block.settings.activer_laffichage -%}
-                        <span class='cbx-uppercase cbx-pt-3' {{ block.shopify_attributes }}>Excellent • ★★★★★ • <a href='#' class='cbx-underline'>2522 reviews</a></span>
+                        <span class='cbx-uppercase cbx-pt-3' {{ block.shopify_attributes }}>Excellent • ★★★★★ • <a
+                                    href='#' class='cbx-underline'>2522 reviews</a></span>
                     {%- endif -%}
             {%- endcase -%}
         {%- endfor -%}
