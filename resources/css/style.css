@@ -87,6 +87,10 @@
         color: white;
     }
 
+    .cbx-btn-green6 {
+        @apply cbx-bg-green6 cbx-w-full cbx-text-green2;
+    }
+
     .cbx-bg-noise {
         background-image: url("noise.png");
         background-repeat: repeat;

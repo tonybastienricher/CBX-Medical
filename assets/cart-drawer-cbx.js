@@ -73,9 +73,13 @@ class CartDrawer extends HTMLElement {
       const elementsToReplace =
         document.querySelectorAll('#' + section.id);
 
+
       if (elementsToReplace.length > 0) {
         elementsToReplace.forEach(element => {
           const selectedElement = element.querySelector(section.selector) || element;
+          console.log(selectedElement);
+          console.log(section);
+          console.log(parsedState.sections);
           selectedElement.innerHTML = this.getSectionInnerHTML(
             parsedState.sections[section.section],
             section.selector
@@ -95,11 +99,6 @@ class CartDrawer extends HTMLElement {
 
   getSectionsToRender() {
     return [
-      {
-        id: 'CartDrawer',
-        section: 'cart-drawer',
-        selector: '.drawer__inner'
-      },
       {
         id: 'cart-item_count',
         section: 'cart-item_count',
@@ -123,14 +122,14 @@ class CartDrawerItems extends CartItems {
   getSectionsToRender() {
     return [
       {
-        id: 'CartDrawer',
-        section: 'cart-drawer',
-        selector: '.drawer__inner'
-      },
-      {
         id: 'cart-item_count',
         section: 'cart-item_count',
         selector: '.shopify-section'
+      },
+      {
+        id: 'CartDrawer',
+        section: 'cart-drawer',
+        selector: '.drawer__inner'
       }
     ];
   }
