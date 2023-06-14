@@ -118,10 +118,15 @@
                                         </cart-remove-button>
 
                                         <!-- Prix -->
-                                        <quantity-input class="">
-                                            <button class="quantity__button no-js-hidden" name="minus" type="button">
+                                        <quantity-input class="cbx-flex cbx-gap-x-2">
+                                            <button class="quantity__button no-js-hidden" name="minus"
+                                                    type="button">
                                                 <span class="visually-hidden">{{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}</span>
-                                                -
+                                                <svg width="8" height="2" viewBox="0 0 8 2" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.605957 1L7.39418 1" stroke="#464F43"
+                                                          stroke-width="0.8" />
+                                                </svg>
                                             </button>
                                             [
                                             <input class=""
@@ -143,7 +148,11 @@
                                             ]
                                             <button class="quantity__button no-js-hidden" name="plus" type="button">
                                                 <span class="visually-hidden">{{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}</span>
-                                                +
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4.0001 0.605957V7.39418M0.605957 4L7.39418 4"
+                                                          stroke="#464F43" stroke-width="0.8" />
+                                                </svg>
                                             </button>
                                         </quantity-input>
                                     </div>
@@ -163,7 +172,7 @@
                     <div id="CartDrawer-CartErrors" role="alert"></div>
                 </form>
             </cart-drawer-items>
-            <div class="drawer__footer">
+            <div class="drawer__footer cbx-pt-5 cbx-text-xss cbx-uppercase cbx-font-medium">
                 {% comment %}{%- if settings.show_cart_note -%}
                     <details id="Details-CartDrawer">
                         <summary>
@@ -188,28 +197,9 @@
                 <!-- Start blocks -->
                 <!-- Subtotals -->
 
-                <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
-                    <div class="totals" role="status">
-                        <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-                        <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
-                    </div>
+                <div class="cart-drawer__footer cbx-flex cbx-flex-col cbx-divide-y cbx-divide-green5 cbx-border-b cbx-border-green5" {{ block.shopify_attributes }}>
 
-                    <div>
-                        {%- if cart.cart_level_discount_applications.size > 0 -%}
-                            <ul class="discounts list-unstyled" role="list"
-                                aria-label="{{ 'customer.order.discount' | t }}">
-                                {%- for discount in cart.cart_level_discount_applications -%}
-                                    <li class="discounts__discount discounts__discount--end">
-                                        {%- render 'icon-discount' -%}
-                                        {{ discount.title }}
-                                        (-{{ discount.total_allocated_amount | money }})
-                                    </li>
-                                {%- endfor -%}
-                            </ul>
-                        {%- endif -%}
-                    </div>
-
-                    <small class="tax-note caption-large rte">
+                    <div class="tax-note cbx-flex cbx-justify-between cbx-py-2.5">
                         {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                             {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
                         {%- elsif cart.taxes_included -%}
@@ -219,12 +209,32 @@
                         {%- else -%}
                             {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
                         {%- endif -%}
-                    </small>
+                    </div>
+
+                    <div class="totals cbx-flex cbx-justify-between cbx-py-2.5" role="status">
+                        <h2 class="totals__subtotal cbx-text-xss cbx-uppercase cbx-font-body">{{ 'sections.cart.subtotal' | t }}</h2>
+                        <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                    </div>
+
+                    {% comment %} <div>
+                         {%- if cart.cart_level_discount_applications.size > 0 -%}
+                             <ul class="discounts list-unstyled" role="list"
+                                 aria-label="{{ 'customer.order.discount' | t }}">
+                                 {%- for discount in cart.cart_level_discount_applications -%}
+                                     <li class="discounts__discount discounts__discount--end">
+                                         {%- render 'icon-discount' -%}
+                                         {{ discount.title }}
+                                         (-{{ discount.total_allocated_amount | money }})
+                                     </li>
+                                 {%- endfor -%}
+                             </ul>
+                         {%- endif -%}
+                     </div>{% endcomment %}
                 </div>
 
                 <!-- CTAs -->
 
-                <div class="cart__ctas" {{ block.shopify_attributes }}>
+                <div class="cart__ctas cbx-flex cbx-flex-col cbx-gap-y-2.5 cbx-pt-3.5" {{ block.shopify_attributes }}>
                     <noscript>
                         <button type="submit" class="cart__update-button button button--secondary"
                                 form="CartDrawer-Form">
@@ -232,16 +242,15 @@
                         </button>
                     </noscript>
 
-                    <button
-                            type="submit"
-                            id="CartDrawer-Checkout"
-                            class="cart__checkout-button button"
-                            name="checkout"
-                            form="CartDrawer-Form"
-                            {% if cart == empty %}
-                                disabled
-                            {% endif %}
-                    >
+                    <button type="submit" id="CartDrawer-Checkout"
+                            class="cbx-btn cbx-btn-vert cbx-w-full cbx-uppercase"
+                            name="checkout" form="CartDrawer-Form" {% if cart == empty %} disabled{% endif %}>
+                        {{ 'sections.cart.checkout' | t }}
+                    </button>
+
+                    <button type="submit" id="CartDrawer-Checkout"
+                            class="cbx-btn cbx-btn-green6 cbx-w-full cbx-uppercase"
+                            name="checkout" form="CartDrawer-Form" {% if cart == empty %} disabled{% endif %}>
                         {{ 'sections.cart.checkout' | t }}
                     </button>
                 </div>
@@ -249,7 +258,6 @@
         </div>
     </div>
 </cart-drawer>
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

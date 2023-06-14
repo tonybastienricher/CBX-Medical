@@ -113,9 +113,10 @@
                     | video_tag:
                     image_size: '1100x',
                     autoplay: true,
-                    loop: section.settings.enable_video_looping,
+                    loop: true,
                     controls: true,
-                    muted: false
+                    muted: false,
+                    class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full'
                     }}
                 {%- endif -%}
             </template>

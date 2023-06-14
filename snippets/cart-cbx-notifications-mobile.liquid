@@ -1,12 +1,12 @@
-<div x-show="cartNotification && !megaMenu" style="display: none"
-     x-transition:enter="cbx-ease-out cbx-duration-300"
-     x-transition:enter-start="cbx-opacity-0 cbx-translate-y-10"
+<div x-show="cartNotificationMobile && !menuMobile" style="display: none"
+     x-transition:enter="cbx-delay-200 cbx-ease-out cbx-duration-300"
+     x-transition:enter-start="cbx-opacity-0 -cbx-translate-y-20"
      x-transition:enter-end="cbx-opacity-100 cbx-translate-y-0"
      x-transition:leave="cbx-ease-in cbx-duration-150"
      x-transition:leave-start="cbx-opacity-100 cbx-translate-y-0"
-     x-transition:leave-end="cbx-opacity-0 cbx-translate-y-10"
+     x-transition:leave-end="cbx-opacity-0 -cbx-translate-y-20"
      id='shopify-section-cart-drawer'
-     class='cbx-bg-white cbx-rounded cbx-absolute cbx-right-0 cbx-top-11 cbx-max-h-[87vh] cbx-overflow-y-scroll cbx-min-w-[421px] cbx-max-w-[421px] cbx-w-full lg:cbx-w-auto shopify-section'>
+     class='cbx-bg-white cbx-rounded cbx-w-full cbx-max-h-[87vh] cbx-overflow-y-scroll'>
 
     {% render 'cart-drawer' %}
 </div>

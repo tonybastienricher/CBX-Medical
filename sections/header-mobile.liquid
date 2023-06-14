@@ -1,6 +1,6 @@
 <!-- Menu mobile -->
 <div class='cbx-container-site cbx-pt-5 cbx-pb-2.5 cbx-w-full lg:cbx-w-auto cbx-flex lg:cbx-absolute'
-     x-data='{menuMobile: false}'>
+     x-data='{menuMobile: false, cartNotificationMobile: false}'>
     <header id="menuMobile" class='cbx-duration-300 cbx-w-full lg:cbx-w-auto lg:cbx-opacity-0 lg:-cbx-translate-y-20'>
         <!-- Header -->
         <div class='cbx-bg-white cbx-rounded cbx-mb-2.5 cbx-flex cbx-w-full cbx-relative cbx-z-20'>
@@ -8,7 +8,7 @@
             <div class='cbx-flex cbx-items-center cbx-justify-between cbx-py-4 cbx-px-2 lg:cbx-px-6 cbx-text-xs  cbx-w-full cbx-gap-2.5'>
                 <!-- Menu 1 -->
                 <div class='cbx-font-display cbx-flex cbx-items-center cbx-text-green3 cbx-cursor-pointer'
-                     @click='menuMobile = !menuMobile'>
+                     @click='menuMobile = !menuMobile; cartNotificationMobile = false'>
                     <div>
                         {% render 'hamburger' %}
                     </div>
@@ -33,7 +33,8 @@
                 </svg>
 
                 <!-- Menu 2 + Panier -->
-                <div class='cbx-font-display cbx-text-green3' id='cart-item_count'>
+                <div class='cbx-font-display cbx-text-green3 cbx-cursor-pointer cbx-select-none' id='cart-item_count'
+                     @click='cartNotificationMobile = !cartNotificationMobile; menuMobile = false'>
                     {%- if cart.item_count < 100 -%}
                         Panier (<span>{{ cart.item_count }}</span>)
                     {%- endif -%}
@@ -41,8 +42,8 @@
             </div>
         </div>
         <!-- modal Mobile -->
-        <div x-show='menuMobile' style='display: none'
-             x-transition:enter="cbx-ease-out cbx-duration-300"
+        <div x-show='menuMobile && !cartNotificationMobile' style='display: none'
+             x-transition:enter="cbx-delay-200 cbx-ease-out cbx-duration-300"
              x-transition:enter-start="cbx-opacity-0 -cbx-translate-y-20"
              x-transition:enter-end="cbx-opacity-100 cbx-translate-y-0"
              x-transition:leave="cbx-ease-in cbx-duration-150"
@@ -68,6 +69,10 @@
                 {% endfor %}
             </ul>
         </div>
+
+        <!-- Cart Notification mobile -->
+        {% render 'cart-cbx-notifications-mobile' %}
+
     </header>
 </div>
 
@@ -581,6 +586,9 @@ customElements.define('sticky-header', StickyHeader);
 
 
 
+
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -597,6 +605,9 @@ customElements.define('sticky-header', StickyHeader);
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
+
 
 
 
