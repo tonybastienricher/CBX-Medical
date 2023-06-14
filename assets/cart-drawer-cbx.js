@@ -70,14 +70,21 @@ class CartDrawer extends HTMLElement {
     this.querySelector('.drawer__inner').classList.remove('is-empty');
     this.productId = parsedState.id;
     this.getSectionsToRender().forEach((section) => {
-      const sectionElement = section.selector
-        ? document.querySelector(section.selector)
-        : document.getElementById(section.id);
-      sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
+      const elementsToReplace =
+        document.querySelectorAll('#' + section.id);
+
+      if (elementsToReplace.length > 0) {
+        elementsToReplace.forEach(element => {
+          const selectedElement = element.querySelector(section.selector) || element;
+          selectedElement.innerHTML = this.getSectionInnerHTML(
+            parsedState.sections[section.section],
+            section.selector
+          );
+        });
+      }
     });
 
     setTimeout(() => {
-      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
     });
   }
@@ -89,11 +96,14 @@ class CartDrawer extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'cart-drawer',
-        selector: '#CartDrawer'
+        id: 'CartDrawer',
+        section: 'cart-drawer',
+        selector: '.drawer__inner'
       },
       {
-        id: 'cart-icon-bubble'
+        id: 'cart-item_count',
+        section: 'cart-item_count',
+        selector: '.shopify-section'
       }
     ];
   }

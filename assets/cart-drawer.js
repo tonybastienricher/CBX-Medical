@@ -96,6 +96,11 @@ class CartDrawer extends HTMLElement {
         selector: '#CartDrawer',
       },
       {
+        id: 'cart-item_count',
+        section: 'cart-item_count',
+        selector: '.shopify-section'
+      },
+      {
         id: 'cart-icon-bubble',
       },
     ];
@@ -119,6 +124,11 @@ class CartDrawerItems extends CartItems {
         id: 'CartDrawer',
         section: 'cart-drawer',
         selector: '.drawer__inner',
+      },
+      {
+        id: 'cart-item_count',
+        section: 'cart-item_count',
+        selector: '.shopify-section'
       },
       {
         id: 'cart-icon-bubble',

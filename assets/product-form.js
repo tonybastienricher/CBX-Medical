@@ -29,6 +29,9 @@ if (!customElements.get('product-form')) {
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
 
+        console.log(this.cart);
+        console.log(this.cart.getSectionsToRender());
+
         const formData = new FormData(this.form);
         if (this.cart) {
           formData.append(

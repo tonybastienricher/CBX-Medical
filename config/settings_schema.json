@@ -4,8 +4,8 @@
     "theme_name": "CBX Medical",
     "theme_version": "1.0.1",
     "theme_author": "Tony RICHER",
-    "theme_documentation_url": "https://tonyricher.fr/",
-    "theme_support_url": "https://tonyricher.fr/"
+    "theme_documentation_url": "https:\/\/tonyricher.fr\/",
+    "theme_support_url": "https:\/\/tonyricher.fr\/"
   },
   {
     "name": "t:settings_schema.logo.name",

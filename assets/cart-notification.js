@@ -47,10 +47,16 @@ class CartNotification extends HTMLElement {
   }
 
   getSectionsToRender() {
+    console.log('render cart notifications');
     return [
       {
         id: 'cart-notification-product',
         selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
+      },
+      {
+        id: 'cart-item_count',
+        section: 'cart-item_count',
+        selector: '.shopify-section'
       },
       {
         id: 'cart-notification-button',

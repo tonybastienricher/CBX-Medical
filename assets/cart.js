@@ -43,6 +43,10 @@ class CartItems extends HTMLElement {
   }
 
   onChange(event) {
+    const opacity = document.getElementById(`CartItem-${event.target.dataset.index}`);
+    if (opacity) {
+      opacity.style.opacity = '0.6';
+    }
     this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
   }
 
@@ -124,8 +128,6 @@ class CartItems extends HTMLElement {
           if (elementsToReplace.length > 0) {
             elementsToReplace.forEach(element => {
               const selectedElement = element.querySelector(section.selector) || element;
-              console.log(parsedState.sections[section.section]);
-              console.log(section.selector);
               selectedElement.innerHTML = this.getSectionInnerHTML(
                 parsedState.sections[section.section],
                 section.selector
@@ -160,7 +162,6 @@ class CartItems extends HTMLElement {
       })
       .catch((e) => {
         const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
-        console.log(e);
         errors.textContent = window.cartStrings.error;
       })
       .finally(() => {
