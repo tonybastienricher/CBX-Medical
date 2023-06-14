@@ -37,7 +37,7 @@
       ],
       "settings": {
         "alignement": "droite",
-        "disposition": "fullscreen",
+        "disposition": "5050",
         "image_hero": "shopify:\/\/shop_images\/hero.jpg"
       }
     },
