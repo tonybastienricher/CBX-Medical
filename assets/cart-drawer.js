@@ -3,7 +3,6 @@ class CartDrawer extends HTMLElement {
     super();
 
     this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-    this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
   }
 
@@ -44,7 +43,6 @@ class CartDrawer extends HTMLElement {
       { once: true }
     );
 
-    document.body.classList.add('overflow-hidden');
   }
 
   close() {
@@ -70,17 +68,21 @@ class CartDrawer extends HTMLElement {
 
   renderContents(parsedState) {
     this.querySelector('.drawer__inner').classList.contains('is-empty') &&
-      this.querySelector('.drawer__inner').classList.remove('is-empty');
+    this.querySelector('.drawer__inner').classList.remove('is-empty');
     this.productId = parsedState.id;
     this.getSectionsToRender().forEach((section) => {
-      const sectionElement = section.selector
-        ? document.querySelector(section.selector)
+
+      const sectionElements = section.selector
+        ? document.querySelectorAll(section.selector)
         : document.getElementById(section.id);
-      sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
+
+      sectionElements.forEach((sectionElement) => {
+        sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
+      });
+
     });
 
     setTimeout(() => {
-      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
     });
   }
@@ -93,16 +95,13 @@ class CartDrawer extends HTMLElement {
     return [
       {
         id: 'cart-drawer',
-        selector: '#CartDrawer',
+        selector: '#CartDrawer'
       },
       {
         id: 'cart-item_count',
         section: 'cart-item_count',
-        selector: '.shopify-section'
-      },
-      {
-        id: 'cart-icon-bubble',
-      },
+        selector: '#cart-item_count'
+      }
     ];
   }
 
@@ -123,18 +122,13 @@ class CartDrawerItems extends CartItems {
       {
         id: 'CartDrawer',
         section: 'cart-drawer',
-        selector: '.drawer__inner',
+        selector: '.drawer__inner'
       },
       {
         id: 'cart-item_count',
         section: 'cart-item_count',
-        selector: '.shopify-section'
-      },
-      {
-        id: 'cart-icon-bubble',
-        section: 'cart-icon-bubble',
-        selector: '.shopify-section',
-      },
+        selector: '#cart-item_count'
+      }
     ];
   }
 }

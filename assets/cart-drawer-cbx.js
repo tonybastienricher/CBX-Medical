@@ -50,36 +50,32 @@ class CartDrawer extends HTMLElement {
     document.body.classList.remove('overflow-hidden');
   }
 
-  setSummaryAccessibility(cartDrawerNote) {
-    cartDrawerNote.setAttribute('role', 'button');
-    cartDrawerNote.setAttribute('aria-expanded', 'false');
+  renderContents(parsedState) {
 
-    if (cartDrawerNote.nextElementSibling.getAttribute('id')) {
-      cartDrawerNote.setAttribute('aria-controls', cartDrawerNote.nextElementSibling.id);
+    // Sélectionner tous les éléments avec la classe ".drawer__inner"
+    var elements = document.querySelectorAll('.drawer__inner');
+
+    // Parcourir la liste des éléments et effectuer les modifications nécessaires
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+
+      // Vérifier si l'élément contient la classe "is-empty"
+      if (element.classList.contains('is-empty')) {
+        // Supprimer la classe "is-empty"
+        element.classList.remove('is-empty');
+      }
     }
 
-    cartDrawerNote.addEventListener('click', (event) => {
-      event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
-    });
-
-    cartDrawerNote.parentElement.addEventListener('keyup', onKeyUpEscape);
-  }
-
-  renderContents(parsedState) {
-    this.querySelector('.drawer__inner').classList.contains('is-empty') &&
-    this.querySelector('.drawer__inner').classList.remove('is-empty');
     this.productId = parsedState.id;
-    this.getSectionsToRender().forEach((section) => {
-      const elementsToReplace =
-        document.querySelectorAll('#' + section.id);
 
+    this.getSectionsToRender().forEach((section) => {
+      let elementsToReplace =
+        document.querySelectorAll('.' + section.id);
 
       if (elementsToReplace.length > 0) {
         elementsToReplace.forEach(element => {
+          // Ajoutez cette vérification
           const selectedElement = element.querySelector(section.selector) || element;
-          console.log(selectedElement);
-          console.log(section);
-          console.log(parsedState.sections);
           selectedElement.innerHTML = this.getSectionInnerHTML(
             parsedState.sections[section.section],
             section.selector
@@ -87,6 +83,7 @@ class CartDrawer extends HTMLElement {
         });
       }
     });
+
 
     setTimeout(() => {
       this.open();
@@ -103,6 +100,10 @@ class CartDrawer extends HTMLElement {
         id: 'cart-item_count',
         section: 'cart-item_count',
         selector: '.shopify-section'
+      },
+      {
+        id: 'cart-drawer',
+        selector: '#CartDrawer'
       }
     ];
   }

@@ -3,18 +3,20 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
+test
+
+<div class="cbx-container-site{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
   <div>
     <div class="cart__footer">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
           <textarea
-                  class="text-area field__input"
-                  name="note"
-                  form="cart"
-                  id="Cart-note"
-                  placeholder="{{ 'sections.cart.note' | t }}"
+            class="text-area field__input"
+            name="note"
+            form="cart"
+            id="Cart-note"
+            placeholder="{{ 'sections.cart.note' | t }}"
           >{{ cart.note }}</textarea>
         </cart-note>
       {%- endif -%}
@@ -66,14 +68,14 @@
                 </noscript>
 
                 <button
-                        type="submit"
-                        id="checkout"
-                        class="cart__checkout-button button"
-                        name="checkout"
-                        {% if cart == empty %}
-                          disabled
-                        {% endif %}
-                        form="cart"
+                  type="submit"
+                  id="checkout"
+                  class="cart__checkout-button button"
+                  name="checkout"
+                  {% if cart == empty %}
+                    disabled
+                  {% endif %}
+                  form="cart"
                 >
                   {{ 'sections.cart.checkout' | t }}
                 </button>

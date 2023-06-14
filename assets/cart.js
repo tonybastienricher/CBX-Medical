@@ -43,10 +43,6 @@ class CartItems extends HTMLElement {
   }
 
   onChange(event) {
-    const opacity = document.getElementById(`CartItem-${event.target.dataset.index}`);
-    if (opacity) {
-      opacity.style.opacity = '0.6';
-    }
     this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'));
   }
 
@@ -72,8 +68,7 @@ class CartItems extends HTMLElement {
       },
       {
         id: 'cart-item_count',
-        section: 'cart-item_count',
-        selector: '.shopify-section'
+        section: '#cart-item_count'
       },
       {
         id: 'cart-live-region-text',
@@ -122,18 +117,16 @@ class CartItems extends HTMLElement {
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
         this.getSectionsToRender().forEach((section) => {
-          const elementsToReplace =
-            document.querySelectorAll('#' + section.id);
+          const elementToReplaces =
+            document.querySelectorAll(section.selector) || document.getElementById(section.id);
 
-          if (elementsToReplace.length > 0) {
-            elementsToReplace.forEach(element => {
-              const selectedElement = element.querySelector(section.selector) || element;
-              selectedElement.innerHTML = this.getSectionInnerHTML(
-                parsedState.sections[section.section],
-                section.selector
-              );
-            });
-          }
+          elementToReplaces.forEach((elementToReplace) => {
+            elementToReplace.innerHTML = this.getSectionInnerHTML(
+              parsedState.sections[section.section],
+              section.selector
+            );
+          });
+
         });
 
         const updatedValue = parsedState.items[line - 1] ? parsedState.items[line - 1].quantity : undefined;
@@ -160,7 +153,8 @@ class CartItems extends HTMLElement {
         }
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items' });
       })
-      .catch((e) => {
+      .catch(() => {
+        this.querySelectorAll('.loading-overlay').forEach((overlay) => overlay.classList.add('hidden'));
         const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
         errors.textContent = window.cartStrings.error;
       })

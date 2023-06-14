@@ -10,10 +10,8 @@
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
     <div id="CartDrawer" class="cart-drawer cbx-p-3 cbx-pt-0 cbx-text-green3">
         <div class="drawer__inner"
-             role="dialog"
-             aria-modal="true"
-             aria-label="{{ 'sections.cart.title' | t }}"
-             tabindex="-1">
+             role="dialog" aria-modal="true"
+             aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1">
             {%- if cart == empty -%}
                 <div class="drawer__inner-empty cbx-flex cbx-flex-col cbx-gap-2.5 cbx-pt-5 cbx-justify-center">
                     <h2 class="cbx-font-body cbx-uppercase cbx-text-sm cbx-text-center">
@@ -24,6 +22,7 @@
                     </a>
                 </div>
             {%- endif -%}
+
             <cart-drawer-items {% if cart == empty %}class="is-empty"{% endif %}>
                 <form action="{{ routes.cart_url }}" id="CartDrawer-Form" class="" method="post">
                     <div id="CartDrawer-CartItems"

@@ -33,7 +33,7 @@
                 </svg>
 
                 <!-- Menu 2 + Panier -->
-                <div class='cbx-font-display cbx-text-green3 cbx-cursor-pointer cbx-select-none' id='cart-item_count'
+                <div class='cbx-font-display cbx-text-green3 cbx-cursor-pointer cbx-select-none cart-item_count' id='cart-item_count'
                      @click='cartNotificationMobile = !cartNotificationMobile; menuMobile = false'>
                     {%- if cart.item_count < 100 -%}
                         Panier (<span>{{ cart.item_count }}</span>)
@@ -578,17 +578,6 @@ customElements.define('sticky-header', StickyHeader);
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-
-
-
-
-
-
-
-
-
-
-
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -605,15 +594,6 @@ customElements.define('sticky-header', StickyHeader);
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-
-
-
-
-
-
-
-
-
 
     </script>
 {%- endif -%}

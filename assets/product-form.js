@@ -29,9 +29,6 @@ if (!customElements.get('product-form')) {
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
 
-        console.log(this.cart);
-        console.log(this.cart.getSectionsToRender());
-
         const formData = new FormData(this.form);
         if (this.cart) {
           formData.append(
@@ -46,7 +43,6 @@ if (!customElements.get('product-form')) {
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
-            console.log(response);
             if (response.status) {
               publish(PUB_SUB_EVENTS.cartError, {
                 source: 'product-form',

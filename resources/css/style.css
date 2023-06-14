@@ -162,6 +162,17 @@ quantity-input input[type=number] {
     text-align: center;
 }
 
+cart-drawer:not(.is-empty) .drawer__inner-empty,
+cart-drawer.is-empty #CartDrawer-Checkout {
+    display: none;
+}
+
+cart-drawer #CartDrawer-Checkout {
+    display: flex;
+    justify-content: center;
+}
+
+
 @tailwind components;
 
 @layer components {
