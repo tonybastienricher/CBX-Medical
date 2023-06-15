@@ -7,77 +7,109 @@
 -%}
 
 
-<div class='cbx-container-site {% if isFullscreen == '5050' %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2{% endif %} cbx-mb-7 cbx-min-h-[82vh]'>
+<div class='cbx-container-site cbx-mb-7'>
+    <div class='cbx-w-full cbx-relative {% if isFullscreen == '5050' %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2{% else %}cbx-min-h-[calc(100vh-110px)]{% endif %} cbx-overflow-hidden'>
 
-    <!-- Image / vidéo -->
-    <div class='cbx-relative cbx-w-full cbx-h-full cbx-bg-gray-50 cbx-rounded cbx-overflow-hidden {% if isRight == 'droite' %}lg:cbx-order-2{% endif %}'>
+
+        <div class="{% if isFullscreen != '5050' %}cbx-absolute cbx-min-h-[calc(100vh-90px)]{% else %}cbx-relative cbx-min-h-[50vh]{% endif %} lg:cbx-min-h-[82vh] cbx-w-full cbx-h-full cbx-bg-offWhite cbx-rounded cbx-overflow-hidden {% if isRight == 'droite' and isFullscreen == '5050' %}lg:cbx-order-2{% endif %}">
+            {%- assign image_hero = section.settings.image_hero -%}
+            {% if section.settings.video == null %}
+                <!-- Image -->
+                {% if image_hero != blank %}
+                    {{ image_hero | image_url: width: 1200 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                {% endif %}
+            {% else %}
+                <noscript>
+                    <div class="video-section__media" {% if image_hero != null %} style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
+                        {%- if section.settings.video != null -%}
+                            {{
+                            section.settings.video
+                            | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
+                            }}
+                        {%- endif -%}
+                    </div>
+                </noscript>
+                <deferred-media
+                        class="cbx-aspect-video cbx-relative deferred-media no-js-hidden cbx-h-full cbx-w-full"
+                        data-media-id="{{ video_id }}"
+                        {% if image_hero != null %}style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
+
+
+                    <button id="Deferred-Poster-Modal-{{ video_id }}"
+                            class="video-section__poster media deferred-media__poster media--landscape"
+                            type="button"
+                            aria-label="{{ alt }}">
+                        {%- if image_hero != null -%}
+                            {{
+                            image_hero
+                            | image_url: width: 1200
+                            | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+                            }}
+                        {%- else -%}
+                            {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                        {%- endif -%}
+                        {% comment %}<span class="deferred-media__poster-button motion-reduce">{%- render 'icon-play' -%}</span>{% endcomment %}
+                    </button>
+
+                    <template>
+                        {%- if section.settings.video != null -%}
+                            {{
+                            section.settings.video
+                            | video_tag:
+                            image_size: '1100x',
+                            autoplay: true,
+                            loop: true,
+                            controls: false,
+                            muted: false,
+                            class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full'
+                            }}
+                        {%- endif -%}
+                    </template>
+                </deferred-media>
+            {%- endif -%}
+        </div>
 
         {% if isFullscreen != '5050' %}
-            <!-- overlay -->
-            <div class='cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-bg-black/30 cbx-z-10'></div>
+            <div class='cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/20'></div>
         {% endif %}
 
-        {% if section.settings.video == null %}
-            <!-- Image -->
-            {%- assign image_hero = section.settings.image_hero -%}
-            {% if image_hero != blank %}
-                {{ image_hero | image_url: width: 1200 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
-            {% else %}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
-            {% endif %}
-        {% else %}
-            <!-- Vidéo -->
-            {{
-            section.settings.video
-            | video_tag:
-            image_size: '1100x',
-            autoplay: true,
-            loop: true,
-            controls: false,
-            muted: false,
-            class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full',
-            style: 'z-index:-1'
-            }}
-        {%- endif -%}
+        <div class='{% if isFullscreen != '5050' %}cbx-px-4 lg:cbx-px-0 cbx-pb-10{% else %}cbx-pt-5 cbx-pb-8{% endif %} cbx-flex cbx-flex-col cbx-max-w-lg cbx-mx-auto cbx-gap-y-5 lg:cbx-gap-4 cbx-w-full cbx-h-full cbx-items-center cbx-justify-end lg:cbx-justify-center lg:cbx-py-5 {% if isFullscreen != '5050' %}cbx-absolute cbx-inset-0 cbx-z-20 cbx-text-white{% else %}cbx-text-green3 lg:cbx-text-green{% endif %} {% if isRight == 'droite' %}lg:cbx-order-1{% endif %}'>
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
 
+                    {%- when 'titre' -%}
+                        <h2 class='cbx-font-display cbx-text-center cbx-text-4xl lg:cbx-text-5xl' {{ block.shopify_attributes }}>
+                            {{ block.settings.titre_hero }}
+                        </h2>
+
+                    {%- when 'texte' -%}
+                        <p class='cbx-text-sm cbx-text-center cbx-font-medium' {{ block.shopify_attributes }}>
+                            {{ block.settings.texte_hero | newline_to_br }}
+                        </p>
+                    {%- when 'bouton' -%}
+                        <div class='cbx-flex'>
+                            <a href='{{ section.settings.url_du_bouton }}'
+                               class="cbx-btn cbx-btn-white" {{ block.shopify_attributes }}>
+                                {{ block.settings.titre_du_bouton }}
+                            </a>
+                        </div>
+                    {%- when 'reviews' -%}
+                        {%- if block.settings.activer_laffichage -%}
+                            <span class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-pt-3' {{ block.shopify_attributes }}>Excellent • ★★★★★ • <a
+                                        href='#' class='cbx-underline'>2522 reviews</a></span>
+                        {%- endif -%}
+                {%- endcase -%}
+            {%- endfor -%}
+        </div>
     </div>
-
-    <!-- Content -->
-    <div class='cbx-flex cbx-flex-col cbx-gap-4 cbx-w-full cbx-h-full cbx-items-center cbx-justify-center {% if isFullscreen != '5050' %} cbx-absolute cbx-inset-0 cbx-z-10 cbx-text-white{% endif %} {% if isRight == 'droite' %}lg:cbx-order-1{% endif %}'>
-        {%- for block in section.blocks -%}
-            {%- case block.type -%}
-
-                {%- when 'titre' -%}
-                    <h2 class='cbx-font-display cbx-text-center lg:cbx-text-5xl' {{ block.shopify_attributes }}>
-                        {{ block.settings.titre_hero }}
-                    </h2>
-
-                {%- when 'texte' -%}
-                    <p class='cbx-text-center' {{ block.shopify_attributes }}>
-                        {{ block.settings.texte_hero | newline_to_br }}
-                    </p>
-                {%- when 'bouton' -%}
-                    <div class='cbx-flex'>
-                        <a href='{{ section.settings.url_du_bouton }}'
-                           class="cbx-btn cbx-btn-white" {{ block.shopify_attributes }}>
-                            {{ block.settings.titre_du_bouton }}
-                        </a>
-                    </div>
-                {%- when 'reviews' -%}
-                    {%- if block.settings.activer_laffichage -%}
-                        <span class='cbx-uppercase cbx-pt-3' {{ block.shopify_attributes }}>Excellent • ★★★★★ • <a
-                                    href='#' class='cbx-underline'>2522 reviews</a></span>
-                    {%- endif -%}
-            {%- endcase -%}
-        {%- endfor -%}
-    </div>
-
 </div>
 
 {% schema %}
 {
   "name": "hero",
-  "class": "hero",
+  "class": "cbx-hero cbx-relative cbx-z-0",
   "max_blocks": 4,
   "tag": "section",
   "settings": [

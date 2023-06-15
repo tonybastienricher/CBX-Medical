@@ -45,21 +45,27 @@
             </div>
         </noscript>
         <deferred-media
-                class="cbx-aspect-video cbx-relative deferred-media no-js-hidden cbx-rounded cbx-overflow-hidden"
+                class="cbx-w-full cbx-min-h-[calc(100vh-110px)] lg:cbx-aspect-video cbx-relative deferred-media no-js-hidden cbx-rounded cbx-overflow-hidden"
                 data-media-id="{{ video_id }}"
                 {% if poster != null %}style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
 
-            <div class="cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/30 cbx-flex cbx-flex-col cbx-justify-center cbx-items-center">
-                {% if section.settings.heading != blank %}
-                    <h2 class='cbx-text-white cbx-text-4xl cbx-text-center cbx-pb-4'>
-                        {{ section.settings.heading | newline_to_br }}
-                    </h2>
-                {% endif %}
-                {% if section.settings.lien_du_bouton and section.settings.texte_du_bouton %}
-                    <a href='{{ section.settings.lien_du_bouton }}' class="cbx-btn cbx-btn-beige cbx-normal-case">
-                        {{ section.settings.texte_du_bouton }}
-                    </a>
-                {% endif %}
+            <div class="cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/30"></div>
+
+            <div class="cbx-absolute cbx-w-full cbx-h-full cbx-flex cbx-justify-end lg:cbx-justify-center lg:cbx-items-center cbx-px-5 cbx-py-10">
+                <div class='cbx-max-w-2xl cbx-mx-auto cbx-flex cbx-flex-col cbx-justify-end lg:cbx-justify-center lg:cbx-items-center'>
+                    {% if section.settings.heading != blank %}
+                        <h2 class='cbx-text-beigeLight leading-8 cbx-text-xls cbx-font-light lg:cbx-text-4xl lg:cbx-font-normal lg:cbx-text-center cbx-pb-4'>
+                            {{ section.settings.heading | newline_to_br }}
+                        </h2>
+                    {% endif %}
+                    {% if section.settings.lien_du_bouton and section.settings.texte_du_bouton %}
+                        <div class='cbx-flex'>
+                            <a href='{{ section.settings.lien_du_bouton }}' class="cbx-btn cbx-btn-white">
+                                {{ section.settings.texte_du_bouton }}
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
 
             <button id="Deferred-Poster-Modal-{{ video_id }}"
@@ -69,15 +75,15 @@
                 {%- if poster != null -%}
                     {{
                     poster
-                    | image_url: width: 3840
+                    | image_url: width: 1200
                     | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
                     }}
                 {%- else -%}
                     {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                 {%- endif -%}
-                <span class="deferred-media__poster-button motion-reduce">
-          {%- render 'icon-play' -%}
-        </span>
+                {% comment %}<span class="deferred-media__poster-button motion-reduce">
+                {%- render 'icon-play' -%}
+                </span>{% endcomment %}
             </button>
 
             <template>

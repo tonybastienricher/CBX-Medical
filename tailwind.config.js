@@ -30,10 +30,13 @@ module.exports = {
       },
       fontSize: {
         'xss': ['10px', '16px'],
-        '11': ['11px', '14px']
+        '11': ['11px', '14px'],
+        'xls': ['22px', '33px'],
+        '5xls': ['44px', '42px']
       },
       colors: {
         'offWhite': '#EFEFEF',
+        'beigeLight': '#F5F2EB',
         'green': '#1E271D',
         'green2': '#202918',
         'green3': '#464F43',

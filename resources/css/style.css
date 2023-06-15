@@ -1,3 +1,17 @@
+:root {
+    /*
+    --swiper-pagination-color: var(--swiper-theme-color);
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    */
+    --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
 @font-face {
     font-family: "KH Teka";
     src: url(KHTeka-Black.woff2);
@@ -40,6 +54,7 @@
 @font-face {
     font-family: 'ModelStandard_SemiMono_Variable';
     src: url("ModelStandard_SemiMono_Variable.woff2");
+    ascent-override: 90%;
 }
 
 @tailwind base;
@@ -62,9 +77,8 @@
     }
 
     .cbx-btn {
-        @apply cbx-font-medium cbx-rounded-full cbx-text-xs cbx-text-center cbx-text-green;
+        @apply cbx-font-medium cbx-p-3 cbx-rounded-full cbx-text-xss cbx-text-center cbx-text-green cbx-uppercase;
         /* Auto layout */
-        padding: 12px;
         leading-trim: both;
         text-edge: cap;
     }
@@ -89,12 +103,6 @@
 
     .cbx-btn-green6 {
         @apply cbx-bg-green6 cbx-w-full cbx-text-green2;
-    }
-
-    .cbx-bg-noise {
-        background-image: url("noise.png");
-        background-repeat: repeat;
-        background-position: 0 0;
     }
 
     .btn {

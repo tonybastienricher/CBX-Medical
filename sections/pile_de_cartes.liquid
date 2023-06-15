@@ -1,92 +1,159 @@
 <script src="{{ 'script_card_stack.js' | asset_url }}" defer></script>
 
-<div>
-    <div class='cbx-container-site cbx-mb-28 cbx-mt-20'>
+<div class='cbx-container-site cbx-mb-28 cbx-mt-20 cbx-hidden lg:cbx-flex lg:cbx-flex-col'>
 
-        <!-- Title -->
-        <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12'>
-            <span class='cbx-text-green5 lg:cbx-hidden'>{{ section.settings.sur_titre }}</span>
-            <h2 class='cbx-text-5xl cbx-font-display cbx-text-green6 lg:cbx-text-green2 lg:cbx-text-center'>
-                {{ section.settings.titre | newline_to_br }}
-            </h2>
-        </div>
+    <!-- Title -->
+    <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12'>
+        <span class='cbx-text-green5 cbx-pb-2.5'>{{ section.settings.sur_titre }}</span>
+        <h2 class='cbx-text-5xls cbx-font-display cbx-text-green6 lg:cbx-text-green2 lg:cbx-text-center'>
+            {{ section.settings.titre | newline_to_br }}
+        </h2>
+    </div>
 
-        <ul class="stack-cards js-stack-cards">
-            {%- for block in section.blocks -%}
+    <ul class="stack-cards js-stack-cards">
+        {%- for block in section.blocks -%}
 
-                {% case forloop.index %}
-                    {% when 1 %}
-                        {% assign color = 'cbx-bg-green6 cbx-text-green4' %}
-                    {% when 2 %}
-                        {% assign color = 'cbx-bg-green5 cbx-text-green6' %}
-                    {% else %}
-                        {% assign color = 'cbx-bg-green4 cbx-text-green6' %}
-                {% endcase %}
+            {% case forloop.index %}
+                {% when 1 %}
+                    {% assign color = 'cbx-bg-green6 cbx-text-green4' %}
+                {% when 2 %}
+                    {% assign color = 'cbx-bg-green5 cbx-text-green6' %}
+                {% else %}
+                    {% assign color = 'cbx-bg-green4 cbx-text-green6' %}
+            {% endcase %}
 
-                <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[80vh] cbx-rounded {{ color }}" {{ block.shopify_attributes }}>
-                    {%- case block.type -%}
+            <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[80vh] cbx-rounded {{ color }}" {{ block.shopify_attributes }}>
+                {%- case block.type -%}
                     {%- when 'cartes' -%}
-                    <div class='lg:cbx-px-16 lg:cbx-py-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-5'>
-                        <div class='cbx-flex cbx-flex-col lg:cbx-col-span-2'>
-                            <span class='cbx-text-sm cbx-pb-2.5'>{{ forloop.index | prepend: '0' }} /</span>
-                            <h3 class='cbx-text-5xl'>{{ block.settings.titre }}</h3>
+                        <div class='lg:cbx-px-16 lg:cbx-py-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-5'>
+                            <div class='cbx-flex cbx-flex-col lg:cbx-col-span-2'>
+                                <span class='cbx-text-sm cbx-pb-2.5'>{{ forloop.index | prepend: '0' }} /</span>
+                                <h3 class='cbx-text-5xls'>{{ block.settings.titre }}</h3>
+                            </div>
+                            <div class='cbx-flex cbx-flex-col lg:cbx-col-span-3'>
+
+                                {% if block.settings.sous_titre != blank %}
+                                    <span class='cbx-text-sm cbx-pb-2.5'>{{ block.settings.sous_titre }}</span>
+                                {% endif %}
+
+                                {% if block.settings.description != blank %}
+                                    <p class='cbx-font-display cbx-text-xl cbx-leading-7 cbx-font-light'>
+                                        {{ block.settings.description }}
+                                    </p>
+                                {% endif %}
+
+                                {%- assign produits = block.settings.produits -%}
+                                {% if produits.count > 0 %}
+                                    <div class='cbx-flex cbx-flex-col cbx-pt-10'>
+                                        <span class='cbx-text-sm cbx-pb-7'>Produits associés ({{ produits.count }})</span>
+                                        <ul class='cbx-flex cbx-gap-3'>
+                                            {%- for product in produits -%}
+                                                <a href='{{ product.url }}'>
+
+                                                    <div class='cbx-relative lg:cbx-w-[190px] lg:cbx-h-[300px] cbx-rounded cbx-overflow-hidden'>
+                                                        {{ product.featured_media | image_url: width: 400 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                                                    </div>
+
+                                                    <h4 class='cbx-text-xs cbx-uppercase cbx-pt-2.5'>{{ product.title }}</h4>
+                                                </a>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                            </div>
                         </div>
-                        <div class='cbx-flex cbx-flex-col lg:cbx-col-span-3'>
+                {%- endcase -%}
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>
 
-                            {% if block.settings.sous_titre != blank %}
-                                <span class='cbx-text-sm cbx-pb-2.5'>{{ block.settings.sous_titre }}</span>
-                            {% endif %}
+<div class='cbx-bg-green cbx-text-green6 lg:cbx-mb-0 lg:cbx-hidden'>
+    <div class='cbx-container-site cbx-py-10 lg:cbx-py-14'>
+        <div class='cbx-h-full cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5'>
+            <!-- Titre -->
+            <div class='cbx-relative lg:cbx-text-green6'>
+                <div class='cbx-flex cbx-flex-col cbx-sticky cbx-top-10'>
 
-                            {% if block.settings.description != blank %}
-                                <p class='cbx-font-display cbx-text-xl cbx-leading-7 cbx-font-light'>
-                                    {{ block.settings.description }}
-                                </p>
-                            {% endif %}
+                    <span class='cbx-uppercase cbx-text-xs cbx-font-medium cbx-text-green5 lg:cbx-text-green6'>{{ section.settings.sur_titre }}</span>
 
-                            {%- assign produits = block.settings.produits -%}
-                            {% if produits.count > 0 %}
-                                <div class='cbx-flex cbx-flex-col cbx-pt-10'>
-                                    <span class='cbx-text-sm cbx-pb-7'>Produits associés ({{ produits.count }})</span>
-                                    <ul class='cbx-flex cbx-gap-3'>
-                                        {%- for product in produits -%}
-                                            <a href='{{ product.url }}'>
+                    <h2 class='cbx-text-5xls cbx-pt-4'>
+                        {{ section.settings.titre | newline_to_br }}
+                    </h2>
+                </div>
+            </div>
+            <!-- FAQ -->
+            <div x-data="{ open: 1 }" class="faq-container cbx-py-5 lg:cbx-pt-0">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
 
-                                                <div class='cbx-relative lg:cbx-w-[190px] lg:cbx-h-[300px] cbx-rounded cbx-overflow-hidden'>
-                                                    {{ product.featured_media | image_url: width: 400 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
-                                                </div>
+                        {%- when 'cartes' -%}
+                            <div class='cbx-pt-2.5 lg:cbx-hidden'>
+                                <span class='cbx-text-sm cbx-pb-2.5 cbx-text-green3'>{{ forloop.index | prepend: '0' }} /</span>
+                            </div>
+                            <div @click="open = {{ forloop.index }}"
+                                 class="question cbx-flex cbx-justify-between cbx-text-xl cbx-border-b cbx-border-green3 cbx-gap-7 lg:cbx-pb-4 cbx-py-2.5 cbx-cursor-pointer">
+                                <span class='cbx-font-display'>{{ block.settings.titre }}</span>
 
-                                                <h4 class='cbx-text-xs cbx-uppercase cbx-pt-2.5'>{{ product.title }}</h4>
-                                            </a>
-                                        {%- endfor -%}
-                                    </ul>
+                                <div class='cbx-w-3.5 cbx-h-3.5'>
+                                    <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
+                                              fill="#DFE1DE" />
+                                    </svg>
                                 </div>
-                            {% endif %}
-                        </div>
-                        {%- endcase -%}
-                </li>
-            {%- endfor -%}
-        </ul>
+                            </div>
+                            <div x-show="open == {{ forloop.index }}"
+                                 class="answer cbx-text-green5 cbx-text-sm cbx-py-5 cbx-duration-200"
+                                 {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
+
+                                <span class='cbx-text-green4'>Détails</span>
+                                {% if block.settings.description != blank %}
+                                    <p class='cbx-font-display cbx-text-sm cbx-pt-2.5' style='line-height: 160%;'>
+                                        {{ block.settings.description }}
+                                    </p>
+                                {% endif %}
+                                {%- assign produits = block.settings.produits -%}
+                                {% if produits.count > 0 %}
+                                    <div class='cbx-pt-5 cbx-flex cbx-flex-col'>
+                                        <span class='cbx-text-sm cbx-pb-2.5 cbx-col-span-2 cbx-text-green4'>Produits associés ({{ produits.count }})</span>
+                                        <ul class='cbx-grid cbx-grid-cols-2 cbx-gap-3'>
+                                            {%- for product in produits -%}
+                                                <a class='cbx-w-full' href='{{ product.url }}'>
+                                                    <div class='cbx-relative cbx-w-full cbx-h-full cbx-rounded cbx-overflow-hidden cbx-aspect-[3/5]'>
+                                                        {{ product.featured_media | image_url: width: 400 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                                                    </div>
+                                                </a>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                            </div>
+                    {%- endcase -%}
+                {%- endfor -%}
+            </div>
+        </div>
     </div>
 </div>
 
 {% schema %}
 {
   "name": "Pile de cartes",
-  "class": "card_stack",
+  "class": "card_stack cbx-mb-7",
   "max_blocks": 5,
   "tag": "section",
   "settings": [
-    {
-      "type": "textarea",
-      "id": "titre",
-      "label": "Titre",
-      "default": "Comment cbx peut vous aider au quotidien ?"
-    },
     {
       "type": "text",
       "id": "sur_titre",
       "label": "Sur titre",
       "default": "Au Quotidien"
+    },
+    {
+      "type": "textarea",
+      "id": "titre",
+      "label": "Titre",
+      "default": "Comment cbx peut vous aider au quotidien ?"
     }
   ],
   "blocks": [

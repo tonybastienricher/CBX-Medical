@@ -1,26 +1,29 @@
-<div class='cbx-bg-green cbx-text-green6 cbx-bg-noise cbx-mb-11 lg:cbx-mb-0'>
-    <div class='cbx-container-site cbx-pt-14 cbx-pb-40'>
-        <div class='cbx-h-full cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-border-t cbx-border-green3 cbx-pt-5'>
+<div class='cbx-bg-green cbx-text-green6 lg:cbx-mb-0'>
+    <div class='cbx-container-site cbx-py-10 lg:cbx-py-14'>
+        <div class='cbx-h-full cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5'>
             <!-- Titre -->
-            <div class='cbx-relative'>
+            <div class='cbx-relative lg:cbx-text-green6'>
                 <div class='cbx-flex cbx-flex-col cbx-sticky cbx-top-10'>
 
-                    <span class='cbx-uppercase cbx-text-xs cbx-font-medium'>{{ section.settings.sur_titre }}</span>
+                    <span class='cbx-uppercase cbx-text-xs cbx-font-medium cbx-text-green5 lg:cbx-text-green6'>{{ section.settings.sur_titre }}</span>
 
-                    <h2 class='lg:cbx-text-5xl cbx-pt-4'>
+                    <h2 class='cbx-text-5xls cbx-pt-4'>
                         {{ section.settings.titre }}
                     </h2>
                 </div>
             </div>
             <!-- FAQ -->
-            <div x-data="{ open: 1 }" class="faq-container cbx-pb-60">
+            <div x-data="{ open: 1 }" class="faq-container cbx-py-5 lg:cbx-pt-0">
                 {%- for block in section.blocks -%}
                     {%- case block.type -%}
 
                         {%- when 'faq' -%}
+                            <div class='cbx-pt-2.5 lg:cbx-hidden'>
+                                <span class='cbx-text-sm cbx-pb-2.5 cbx-text-green3'>{{ forloop.index | prepend: '0' }} /</span>
+                            </div>
                             <div @click="open = {{ forloop.index }}"
-                                 class="question cbx-flex cbx-justify-between cbx-text-xl cbx-border-b cbx-border-green3 cbx-gap-7 cbx-pb-4 cbx-pt-2.5 cbx-cursor-pointer">
-                                <span class=''>{{ block.settings.question }}</span>
+                                 class="question cbx-flex cbx-justify-between cbx-text-xl cbx-border-b cbx-border-green3 cbx-gap-7 lg:cbx-pb-4 cbx-py-2.5 cbx-cursor-pointer">
+                                <span class='cbx-font-display'>{{ block.settings.question }}</span>
 
                                 <div class='cbx-w-3.5 cbx-h-3.5'>
                                     <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
@@ -31,7 +34,7 @@
                                 </div>
                             </div>
                             <div x-show="open == {{ forloop.index }}"
-                                 class="answer cbx-text-green3 cbx-text-sm cbx-py-5 cbx-duration-200"
+                                 class="answer cbx-text-green5 cbx-text-sm cbx-py-5 cbx-duration-200"
                                  {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
                                 <p style='line-height: 160%;'>
                                     {{ block.settings.rponse }}

@@ -1,7 +1,7 @@
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(
-      "summary, a[href], button:enabled, [tabindex]:not([tabindex^='-']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe"
+      'summary, a[href], button:enabled, [tabindex]:not([tabindex^=\'-\']), [draggable], area, input:not([type=hidden]):enabled, select:enabled, textarea:enabled, object, iframe'
     )
   );
 }
@@ -37,11 +37,11 @@ function trapFocus(container, elementToFocus = container) {
     document.addEventListener('keydown', trapFocusHandlers.keydown);
   };
 
-  trapFocusHandlers.focusout = function () {
+  trapFocusHandlers.focusout = function() {
     document.removeEventListener('keydown', trapFocusHandlers.keydown);
   };
 
-  trapFocusHandlers.keydown = function (event) {
+  trapFocusHandlers.keydown = function(event) {
     if (event.code.toUpperCase() !== 'TAB') return; // If not TAB key
     // On the last focusable element and tab forward, focus the first element.
     if (event.target === last && !event.shiftKey) {
@@ -90,7 +90,7 @@ function focusVisiblePolyfill() {
     'HOME',
     'END',
     'PAGEUP',
-    'PAGEDOWN',
+    'PAGEDOWN'
   ];
   let currentFocusedElement = null;
   let mouseClick = null;
@@ -193,12 +193,12 @@ class QuantityInput extends HTMLElement {
     const value = parseInt(this.input.value);
     if (this.input.min) {
       const min = parseInt(this.input.min);
-      const buttonMinus = this.querySelector(".quantity__button[name='minus']");
+      const buttonMinus = this.querySelector('.quantity__button[name=\'minus\']');
       buttonMinus.classList.toggle('disabled', value <= min);
     }
     if (this.input.max) {
       const max = parseInt(this.input.max);
-      const buttonPlus = this.querySelector(".quantity__button[name='plus']");
+      const buttonPlus = this.querySelector('.quantity__button[name=\'plus\']');
       buttonPlus.classList.toggle('disabled', value >= max);
     }
   }
@@ -217,7 +217,7 @@ function debounce(fn, wait) {
 function fetchConfig(type = 'json') {
   return {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', Accept: `application/${type}` },
+    headers: { 'Content-Type': 'application/json', Accept: `application/${type}` }
   };
 }
 
@@ -229,13 +229,13 @@ if (typeof window.Shopify == 'undefined') {
   window.Shopify = {};
 }
 
-Shopify.bind = function (fn, scope) {
-  return function () {
+Shopify.bind = function(fn, scope) {
+  return function() {
     return fn.apply(scope, arguments);
   };
 };
 
-Shopify.setSelectorByValue = function (selector, value) {
+Shopify.setSelectorByValue = function(selector, value) {
   for (var i = 0, count = selector.options.length; i < count; i++) {
     var option = selector.options[i];
     if (value == option.value || value == option.innerHTML) {
@@ -245,13 +245,13 @@ Shopify.setSelectorByValue = function (selector, value) {
   }
 };
 
-Shopify.addListener = function (target, eventName, callback) {
+Shopify.addListener = function(target, eventName, callback) {
   target.addEventListener
     ? target.addEventListener(eventName, callback, false)
     : target.attachEvent('on' + eventName, callback);
 };
 
-Shopify.postLink = function (path, options) {
+Shopify.postLink = function(path, options) {
   options = options || {};
   var method = options['method'] || 'post';
   var params = options['parameters'] || {};
@@ -272,7 +272,7 @@ Shopify.postLink = function (path, options) {
   document.body.removeChild(form);
 };
 
-Shopify.CountryProvinceSelector = function (country_domid, province_domid, options) {
+Shopify.CountryProvinceSelector = function(country_domid, province_domid, options) {
   this.countryEl = document.getElementById(country_domid);
   this.provinceEl = document.getElementById(province_domid);
   this.provinceContainer = document.getElementById(options['hideElement'] || province_domid);
@@ -284,20 +284,20 @@ Shopify.CountryProvinceSelector = function (country_domid, province_domid, optio
 };
 
 Shopify.CountryProvinceSelector.prototype = {
-  initCountry: function () {
+  initCountry: function() {
     var value = this.countryEl.getAttribute('data-default');
     Shopify.setSelectorByValue(this.countryEl, value);
     this.countryHandler();
   },
 
-  initProvince: function () {
+  initProvince: function() {
     var value = this.provinceEl.getAttribute('data-default');
     if (value && this.provinceEl.options.length > 0) {
       Shopify.setSelectorByValue(this.provinceEl, value);
     }
   },
 
-  countryHandler: function (e) {
+  countryHandler: function(e) {
     var opt = this.countryEl.options[this.countryEl.selectedIndex];
     var raw = opt.getAttribute('data-provinces');
     var provinces = JSON.parse(raw);
@@ -317,20 +317,20 @@ Shopify.CountryProvinceSelector.prototype = {
     }
   },
 
-  clearOptions: function (selector) {
+  clearOptions: function(selector) {
     while (selector.firstChild) {
       selector.removeChild(selector.firstChild);
     }
   },
 
-  setOptions: function (selector, values) {
+  setOptions: function(selector, values) {
     for (var i = 0, count = values.length; i < values.length; i++) {
       var opt = document.createElement('option');
       opt.value = values[i];
       opt.innerHTML = values[i];
       selector.appendChild(opt);
     }
-  },
+  }
 };
 
 class MenuDrawer extends HTMLElement {
@@ -503,10 +503,10 @@ class HeaderDrawer extends MenuDrawer {
 
   onResize = () => {
     this.header &&
-      document.documentElement.style.setProperty(
-        '--header-bottom-position',
-        `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
-      );
+    document.documentElement.style.setProperty(
+      '--header-bottom-position',
+      `${parseInt(this.header.getBoundingClientRect().bottom - this.borderOffset)}px`
+    );
     document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
   };
 }
@@ -555,6 +555,7 @@ class ModalDialog extends HTMLElement {
     window.pauseAllMedia();
   }
 }
+
 customElements.define('modal-dialog', ModalDialog);
 
 class ModalOpener extends HTMLElement {
@@ -570,35 +571,55 @@ class ModalOpener extends HTMLElement {
     });
   }
 }
+
 customElements.define('modal-opener', ModalOpener);
 
 class DeferredMedia extends HTMLElement {
   constructor() {
     super();
-    const poster = this.querySelector('[id^="Deferred-Poster-"]');
-    if (!poster) return;
-    poster.addEventListener('click', this.loadContent.bind(this));
-    this.loadContent(false);
+    this.observer = new IntersectionObserver(this.handleIntersection.bind(this));
   }
 
-  loadContent(focus = true) {
-    window.pauseAllMedia();
-    if (!this.getAttribute('loaded')) {
-      const content = document.createElement('div');
-      content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
+  connectedCallback() {
+    const poster = this.querySelector('[id^="Deferred-Poster-"]');
+    if (!poster) return;
 
-      this.setAttribute('loaded', true);
-      const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
-      if (focus) deferredElement.focus();
-      if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
-        // force autoplay for safari
-        deferredElement.play();
+    this.observer.observe(this);
+
+    const content = document.createElement('div');
+    content.appendChild(this.querySelector('template').content.cloneNode(true));
+
+    const deferredElement = content.querySelector('video, model-viewer, iframe');
+    if (deferredElement) {
+      this.appendChild(deferredElement);
+    }
+  }
+
+  handleIntersection(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.loadContent();
+        this.observer.unobserve(this);
       }
+    });
+  }
+
+  loadContent() {
+    if (!this.getAttribute('loaded')) {
+      const deferredElement = this.querySelector('video, model-viewer, iframe');
+      if (deferredElement && deferredElement.nodeName === 'VIDEO' && deferredElement.getAttribute('autoplay') !== null) {
+        // Force autoplay for Safari
+        deferredElement.play().catch(error => {
+          console.error('Autoplay failed:', error);
+        });
+      }
+      this.setAttribute('loaded', true);
     }
   }
 }
 
 customElements.define('deferred-media', DeferredMedia);
+
 
 class SliderComponent extends HTMLElement {
   constructor() {
@@ -656,8 +677,8 @@ class SliderComponent extends HTMLElement {
         new CustomEvent('slideChanged', {
           detail: {
             currentPage: this.currentPage,
-            currentElement: this.sliderItemsToShow[this.currentPage - 1],
-          },
+            currentElement: this.sliderItemsToShow[this.currentPage - 1]
+          }
         })
       );
     }
@@ -690,7 +711,7 @@ class SliderComponent extends HTMLElement {
         ? this.slider.scrollLeft + step * this.sliderItemOffset
         : this.slider.scrollLeft - step * this.sliderItemOffset;
     this.slider.scrollTo({
-      left: this.slideScrollPosition,
+      left: this.slideScrollPosition
     });
   }
 }
@@ -728,7 +749,7 @@ class SlideshowComponent extends SliderComponent {
       [this.prevButton, this.nextButton].forEach((button) => {
         button.addEventListener('click', () => {
           this.announcementBarArrowButtonWasClicked = true;
-        }, {once: true});
+        }, { once: true });
       });
     }
 
@@ -766,7 +787,7 @@ class SlideshowComponent extends SliderComponent {
       this.slideScrollPosition = 0;
     }
     this.slider.scrollTo({
-      left: this.slideScrollPosition,
+      left: this.slideScrollPosition
     });
   }
 
@@ -843,7 +864,7 @@ class SlideshowComponent extends SliderComponent {
         ? 0
         : this.slider.scrollLeft + this.slider.querySelector('.slideshow__slide').clientWidth;
     this.slider.scrollTo({
-      left: slideScrollPosition,
+      left: slideScrollPosition
     });
   }
 
@@ -873,9 +894,9 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
-      left: slideScrollPosition,
+      left: slideScrollPosition
     });
   }
 }
@@ -1057,8 +1078,8 @@ class VariantSelects extends HTMLElement {
           data: {
             sectionId,
             html,
-            variant: this.currentVariant,
-          },
+            variant: this.currentVariant
+          }
         });
       });
   }

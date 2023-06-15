@@ -33,7 +33,7 @@
              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
              alt="{{ card_product.featured_media.alt | escape }}"
              class="motion-reduce cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full"
-             {% comment %}loading="lazy"{% endcomment %}
+                {% comment %}loading="lazy"{% endcomment %}
              width="{{ card_product.featured_media.width }}"
              height="{{ card_product.featured_media.height }}">
 
@@ -68,16 +68,18 @@
 
         <!-- Titre -->
         <div class='cbx-flex cbx-flex-col cbx-gap-2 cbx-z-10'>
-            <div>
-                <h3 class="cbx-font-display cbx-text-xl" id="title-{{ section_id }}-{{ card_product.id }}">
+            <div class='cbx-flex cbx-flex-col cbx-justify-center lg:cbx-justify-start'>
+                <h3 class="cbx-font-display cbx-text-xl cbx-text-center lg:cbx-text-left cbx-uppercase cbx-font-medium"
+                    id="title-{{ section_id }}-{{ card_product.id }}">
                     {{ card_product.title | escape }}
                 </h3>
-                <p class='cbx-uppercase' style='font-size: 10px'>Gel chauffant au CBG pour le sport</p>
+                <p class='cbx-uppercase cbx-text-center lg:cbx-text-left' style='font-size: 10px'>
+                    Gel chauffant au CBG pour le sport</p>
             </div>
 
-            <div class='cbx-w-full cbx-hidden cbx-delay-100 cbx-translate-y-6 group-hover:cbx-translate-y-0 group-hover:cbx-flex cbx-duration-200'>
+            <div class='cbx-w-full cbx-flex lg:cbx-hidden cbx-delay-100 lg:cbx-translate-y-6 group-hover:cbx-translate-y-0 group-hover:cbx-flex cbx-duration-200'>
                 <a href="{{ card_product.url }}"
-                   class='cbx-btn cbx-btn-white cbx-uppercase cbx-flex cbx-justify-center cbx-w-full'>
+                   class='cbx-btn cbx-btn-white cbx-uppercase cbx-flex cbx-justify-center cbx-w-full cbx-py-2 lg:cbx-py-3'>
                     Découvrir {{ card_product.title | escape }}
                 </a>
             </div>
@@ -86,22 +88,14 @@
 
 {%- else -%}
     <div class="product-card-wrapper card-wrapper underline-links-hover">
-        <div
-                class="
-        card
-        card--{{ settings.card_style }}
-        card--text
+        <div class="
+        card card--{{ settings.card_style }} card--text
         {% if extend_height %} card--extend-height{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
-        {{ horizontal_class }}
-      "
-                style="--ratio-percent: 100%;"
-        >
-            <div
-                    class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}"
-                    style="--ratio-percent: 100%;"
-            >
+        {{ horizontal_class }}" style="--ratio-percent: 100%;">
+            <div class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}"
+                 style="--ratio-percent: 100%;">
                 <div class="card__content">
                     <div class="card__information">
                         <h3 class="card__heading">
