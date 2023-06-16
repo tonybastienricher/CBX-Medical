@@ -92,6 +92,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Nous exploitons le plein potentiel de la \nplante pour améliorer votre quotidien.",
         "texte_du_bouton": "Découvrez nos produits",
