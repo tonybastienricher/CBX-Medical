@@ -36,9 +36,9 @@
         "ad73d985-d76f-4a28-a3da-3d2b905c13db"
       ],
       "settings": {
-        "alignement": "droite",
-        "disposition": "5050",
-        "image_hero": "shopify:\/\/shop_images\/Selfnamed_Sample_Sets_Eye_Care_Frontal.jpg"
+        "alignement": "gauche",
+        "disposition": "fullscreen",
+        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4"
       }
     },
     "32729055-b5cd-476e-a14d-5c9ab9c6c295": {
@@ -149,8 +149,8 @@
         "ccc7be5f-a35a-492e-bfa1-56f80530f0de"
       ],
       "settings": {
-        "titre": "Comment cbx peut vous \naider au quotidien ?",
-        "sur_titre": "Au Quotidien"
+        "sur_titre": "Au Quotidien",
+        "titre": "Comment cbx peut vous \naider au quotidien ?"
       }
     },
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b": {
@@ -175,6 +175,9 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_gauche.jpg",
+            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
+            "texte_du_bouton": "Découvrez nos produits",
+            "lien_du_bouton": "",
             "lgende": "legend image and dolorem text about brands, \nvalues and behind the scene."
           }
         },
@@ -182,24 +185,36 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_droite.jpg",
+            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
+            "texte_du_bouton": "Découvrez nos produits",
+            "lien_du_bouton": "",
             "lgende": "legend image and dolorem text about brands, values and behind the scene."
           }
         },
         "54493309-2b41-4ea4-b714-4615e7f7c6eb": {
           "type": "image",
           "settings": {
+            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
+            "texte_du_bouton": "Découvrez nos produits",
+            "lien_du_bouton": "",
             "lgende": "legend image and dolorem text about brands, values and behind the scene."
           }
         },
         "a0a947a1-dfb2-4176-9116-b802c2f7c5f8": {
           "type": "image",
           "settings": {
+            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
+            "texte_du_bouton": "Découvrez nos produits",
+            "lien_du_bouton": "",
             "lgende": "legend image and dolorem text about brands, values and behind the scene."
           }
         },
         "e0d94064-71d8-4286-a84f-65082273e509": {
           "type": "image",
           "settings": {
+            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
+            "texte_du_bouton": "Découvrez nos produits",
+            "lien_du_bouton": "",
             "lgende": "legend image and dolorem text about brands, values and behind the scene."
           }
         }
