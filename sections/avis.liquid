@@ -1,0 +1,162 @@
+<div class='cbx-container-site cbx-mb-28 cbx-mt-20 cbx-flex cbx-flex-col'>
+
+    <!-- Title -->
+    <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12 cbx-max-w-xl cbx-mx-auto'>
+        <span class='cbx-text-green5 cbx-pb-2.5'>{{ section.settings.sur_titre }}</span>
+        <h2 class='cbx-text-4xl lg:cbx-text-5xls cbx-font-display cbx-text-green2 cbx-text-center'>
+            {{ section.settings.titre | newline_to_br }}
+        </h2>
+    </div>
+
+    <div class="swiper-container-avis cbx-w-full" style='box-sizing: border-box; overflow: visible;'>
+        <div class="swiper-wrapper lg:cbx-pl-[9vw]">
+            {%- for block in section.blocks -%}
+                {% assign slideNumber = forloop.index %}
+                {%- case block.type -%}
+                    {%- when 'avis' -%}
+                        <div class='swiper-slide cbx-px-8 cbx-py-20 cbx-bg-white cbx-rounded cbx-my-auto'
+                             data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
+
+                            <!-- Citation -->
+                            <div class='cbx-text-center cbx-font-display cbx-text-sm cbx-text-green4 cbx-pb-2.5'
+                                 style='line-height: 180%;'>
+                                <p>
+                                    {{ block.settings.citation }}
+                                </p>
+                            </div>
+
+                            <div class='cbx-flex cbx-flex-col cbx-items-center cbx-text-black cbx-gap-1'>
+                                {% if block.settings.auteur != blank %}
+                                    <div class='cbx-text-center cbx-font-medium cbx-text-sm'>
+                                        <span>{{ block.settings.auteur }}</span>
+                                    </div>
+                                {% endif %}
+
+                                {% if block.settings.job != blank %}
+                                    <div class='cbx-text-center cbx-text-xs'>
+                                        <span>{{ block.settings.job }}</span>
+                                    </div>
+                                {% endif %}
+                                {% if block.settings.lien != blank %}
+                                    <div class='cbx-text-center cbx-text-green4 cbx-text-xs'>
+                                        {{ block.settings.lien }}
+                                    </div>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                {%- endcase -%}
+            {%- endfor -%}
+        </div>
+        <div class='swiper-pagination'></div>
+    </div>
+</div>
+
+
+{% javascript %}
+
+  var swiperAvis = new Swiper('.swiper-container-avis', {
+    slidesPerView: 1.05,
+    spaceBetween: 10,
+    autoplay: true,
+    loop: true,
+    initialSlide: 1,
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 20
+      }
+    }
+  });
+
+  if (Shopify.designMode) {
+// Détecter la sélection d'un bloc
+    document.addEventListener('shopify:block:select', function(event) {
+// Vérifier si le bloc sélectionné est lié au slider
+      if (event.target.closest('.swiper-container')) {
+// Récupérer le numéro de diapositive à partir des données de l'élément
+        var slide = event.target.dataset.slidenumber;
+        slide = slide - 1;
+// Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
+        if (swiperAvis) {
+          swiperAvis.slideTo(slide);
+        }
+      }
+    });
+
+    document.addEventListener('shopify:block:select', function(event) {
+// Recharger le slider SwiperJS ici
+      if (swiperAvis) {
+        swiperAvis.update();
+      }
+    });
+
+  }
+
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "avis",
+  "class": "avis cbx-overflow-hidden",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sur_titre",
+      "label": "Sur titre",
+      "default": "Press & Reviews"
+    },
+    {
+      "type": "textarea",
+      "id": "titre",
+      "label": "Titre",
+      "default": "Les professionels de la santé en parlent",
+      "placeholder": "Les professionels de la santé en parlent"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Avis",
+      "type": "avis",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "citation",
+          "label": "Citation",
+          "default": "“I was so surprised to find that it held so many wonderful items that I never knew I needed. From magical crystals to a wand, it was a truly magical experience that I will never forget.”"
+        },
+        {
+          "type": "text",
+          "id": "auteur",
+          "label": "Auteur",
+          "default": "Maxime Van Santen"
+        },
+        {
+          "type": "text",
+          "id": "job",
+          "label": "Job",
+          "default": "UCL Scientist & General Manage Cadence",
+          "placeholder": "UCL Scientist & General Manage Cadence"
+        },
+        {
+          "type": "richtext",
+          "id": "lien",
+          "label": "Lien"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "avis"
+    }
+  ]
+}
+{% endschema %}
