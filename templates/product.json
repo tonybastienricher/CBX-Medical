@@ -3,28 +3,42 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
           }
         },
-        "caption": {
-          "type": "text",
+        "59abd3db-bb7f-45e2-af6b-ece656034d41": {
+          "type": "description",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
           }
         },
-        "price": {
-          "type": "price",
+        "c62c4cac-e956-4702-9df5-61365c8a4ab8": {
+          "type": "information",
           "settings": {
+            "text_gauche": "Contenant",
+            "text_droite": "40 MG CBD"
+          }
+        },
+        "35195ec4-e684-43d1-862b-5195c77a1061": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Quantité",
+            "text_droite": "125ml"
+          }
+        },
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Type",
+            "text_droite": "Gel refroidissant"
+          }
+        },
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e9": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Avis",
+            "text_droite": "★★★★★ <a href=\"https:\/\/google.fr\" title=\"https:\/\/google.fr\">2522 reviews<\/a>"
           }
         },
         "variant_picker": {
@@ -33,95 +47,126 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20": {
+          "type": "text",
           "settings": {
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
+            "text": "Commandez aujourd'hui, livré demain",
+            "show_border": false,
+            "text_style": "uppercase"
           }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "caption",
-        "price",
+        "59abd3db-bb7f-45e2-af6b-ece656034d41",
+        "c62c4cac-e956-4702-9df5-61365c8a4ab8",
+        "35195ec4-e684-43d1-862b-5195c77a1061",
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e9",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
       ],
       "settings": {
         "enable_sticky_info": true,
         "media_size": "large",
         "constrain_to_viewport": true,
+        "media_fit": "contain",
         "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
       }
+    },
+    "2d5b7091-607b-47ba-b651-9699bb120112": {
+      "type": "texte-large",
+      "settings": {
+        "sur_titre": "",
+        "texte": "CanFlex Forte est le gel le plus concentré en CBD disponible en pharmacie. Il est fait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi que les personnes âgées ayant envie de faciliter leurs mouvements."
+      }
+    },
+    "description": {
+      "type": "description",
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "sur_titre": "Press & Reviews",
+        "titre": "Les professionels de la santé en parlent"
+      }
+    },
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
+      "type": "faq",
+      "blocks": {
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "86f62e39-8086-49f5-a976-09d4c070c26a": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "636880b9-a708-42f4-98a0-a0f075755083": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        }
+      },
+      "block_order": [
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45",
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2",
+        "86f62e39-8086-49f5-a976-09d4c070c26a",
+        "636880b9-a708-42f4-98a0-a0f075755083",
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78"
+      ],
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "2d5b7091-607b-47ba-b651-9699bb120112",
+    "description",
+    "related-products",
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
   ]
 }

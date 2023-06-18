@@ -3,7 +3,7 @@
 <div class='cbx-container-site swiper-container-produits cbx-w-full cbx-mb-7 cbx-relative'>
 
     <div class='cbx-flex lg:cbx-hidden cbx-pb-5'>
-        <span class='cbx-text-green3 cbx-text-sm'>Les produits du moment</span>
+        <span class='cbx-text-green3 cbx-text-sm'>{{ section.settings.sur_titre }}</span>
     </div>
 
     <div class="swiper-wrapper">
@@ -30,6 +30,12 @@
   "class": "produits_vedette cbx-overflow-hidden",
   "tag": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "sur_titre",
+      "label": "Sur titre",
+      "default": "Les produits du moment"
+    },
     {
       "type": "product_list",
       "id": "produits_en_vedette",

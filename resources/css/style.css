@@ -132,6 +132,22 @@
     .header_position {
         @apply cbx-w-full cbx-hidden lg:cbx-flex cbx-justify-center lg:cbx-relative;
     }
+
+    .product__description h1,
+    .product__description h2,
+    .product__description h3,
+    .product__description h4 {
+        @apply cbx-text-sm;
+
+    }
+
+    .product__description p {
+        @apply cbx-text-xs cbx-pt-2;
+    }
+
+    .product_cbx_information a {
+        @apply cbx-underline;
+    }
 }
 
 body.locomotive-active {
@@ -172,6 +188,28 @@ quantity-input input[type=number] {
 
 cart-drawer-items.is-empty + .drawer__footer {
     display: none;
+}
+
+button.loading span {
+    display: none;
+}
+
+.button.loading > .loading-overlay__spinner {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.button.loading > .loading-overlay__spinner .spinner {
+    width: fit-content;
+}
+
+.button.loading > .loading-overlay__spinner .path {
+    stroke: rgb(var(--color-button-text));
 }
 
 @tailwind components;
