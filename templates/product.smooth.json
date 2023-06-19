@@ -238,7 +238,7 @@
     "ca96c47f-ad27-45a6-aa32-39d8c7e8f878": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
