@@ -6,13 +6,13 @@
         "2ebf8fc8-9154-4136-a87f-905648190af9": {
           "type": "titre",
           "settings": {
-            "titre_hero": "From seed to patient"
+            "titre_hero": "De la graine au patient."
           }
         },
         "f237118e-7a1a-4799-8fa8-01936296094a": {
           "type": "texte",
           "settings": {
-            "texte_hero": "Nous exploitons le plein potentiel de la plante pour\naméliorer votre quotidien."
+            "texte_hero": "Une approche collaborative de la recherche, exploitant pleinement le pouvoir de la plante de cannabis au service de votre santé."
           }
         },
         "4353fcb2-7069-49a9-aea0-8eb8cbe1c74e": {
@@ -25,7 +25,7 @@
         "ad73d985-d76f-4a28-a3da-3d2b905c13db": {
           "type": "reviews",
           "settings": {
-            "activer_laffichage": true
+            "activer_laffichage": false
           }
         }
       },
@@ -47,25 +47,25 @@
         "09c5021a-ee6a-4adf-a84b-57c7e0eff400": {
           "type": "liste",
           "settings": {
-            "texte": "Cannabinoides 100% naturels"
+            "texte": "Cannabinoïdes 100% naturels"
           }
         },
         "42dedf9d-e313-4088-8a1b-98917ffd8a91": {
           "type": "liste",
           "settings": {
-            "texte": "TracabilitE totale"
+            "texte": "Traçabilité totale"
           }
         },
         "d5e1eb54-464a-400b-a50e-45ca4cac2f31": {
           "type": "liste",
           "settings": {
-            "texte": "DElivrEs et prescrits par les professionnels"
+            "texte": "Délivré et prescrit par des professionnels de la santé"
           }
         },
         "ca153c95-24e1-4f25-bf23-db1ad5a0d068": {
           "type": "liste",
           "settings": {
-            "texte": "FabriquEs 100% en Europe"
+            "texte": "Fabriqué 100% en Europe"
           }
         }
       },
@@ -115,8 +115,8 @@
             "sous_titre": "Détails",
             "description": "Détendez-vous et apaisez votre esprit. Qu'il s'agisse de soulager une journée bien remplie ou de favoriser un sommeil réparateur, les cannabinoïdes tels que le CBD, le CBG, le CBN, le CBC et les autres, vous aident à retrouver l'équilibre intérieur dont vous avez besoin en interagissant avec votre corps. Ces composés pourraient réduire le stress, l'anxiété et favoriser une sensation de calme et de détente.",
             "produits": [
-              "flex",
-              "move"
+              "sleep",
+              "reduction"
             ]
           }
         },
@@ -152,7 +152,7 @@
       ],
       "settings": {
         "sur_titre": "Au Quotidien",
-        "titre": "Comment cbx peut vous \naider au quotidien ?"
+        "titre": "Comment CBX peut améliorer votre quotidien?"
       }
     },
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b": {
