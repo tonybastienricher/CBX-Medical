@@ -91,6 +91,36 @@
         "padding_bottom": 12
       }
     },
+    "8e4646a6-d62a-439e-a54f-98e3b1e2e398": {
+      "type": "liste",
+      "blocks": {
+        "b4314a42-a4e9-41f9-af90-88ff0979c88c": {
+          "type": "liste",
+          "settings": {
+            "texte": "Usage chronique"
+          }
+        },
+        "e8c11bc4-7790-43fc-8ba8-ac9d8ce9a816": {
+          "type": "liste",
+          "settings": {
+            "texte": "4 plantes"
+          }
+        },
+        "8f0259ed-4e46-419a-b41e-3c0b056d0781": {
+          "type": "liste",
+          "settings": {
+            "texte": "Gel refroidissant"
+          }
+        }
+      },
+      "block_order": [
+        "b4314a42-a4e9-41f9-af90-88ff0979c88c",
+        "e8c11bc4-7790-43fc-8ba8-ac9d8ce9a816",
+        "8f0259ed-4e46-419a-b41e-3c0b056d0781"
+      ],
+      "settings": {
+      }
+    },
     "2d5b7091-607b-47ba-b651-9699bb120112": {
       "type": "texte-large",
       "settings": {
@@ -203,6 +233,7 @@
   },
   "order": [
     "main",
+    "8e4646a6-d62a-439e-a54f-98e3b1e2e398",
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
     "related-products",
