@@ -17,14 +17,14 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "Multi"
+            "text_droite": "500mg CBD & 500 mg CBG"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
           "type": "information",
           "settings": {
             "text_gauche": "Type",
-            "text_droite": "Huile naturelle de CBD"
+            "text_droite": "Huile de CBD + CBG"
           }
         },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
@@ -45,7 +45,7 @@
           "type": "information",
           "settings": {
             "text_gauche": "CNK",
-            "text_droite": "4424990"
+            "text_droite": "4550257"
           }
         },
         "buy_buttons": {
@@ -132,7 +132,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Flex Forte est la solution idéale pour les sportifs et personnes actives confrontés à des difficultés de récupération après l'effort, ainsi que pour les seniors souhaitant améliorer leur mobilité."
+        "texte": "Redécouvrez le plaisir de bouger avec notre huile All Natural CBD Broad Spectrum enrichie au CBG, une solution naturelle qui offre un équilibre parfait entre le CBD et le CBG, chacun présent à une concentration de 5%."
       }
     },
     "description": {
@@ -142,7 +142,7 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Éveillez votre bien-être avec notre huile All Natural CBD Broad Spectrum, fabriquée en respectant les normes de production les plus strictes. Dénuée de tout agent psychotrope et sans risque de dépendance, elle vous offre une solution naturelle pour améliorer votre qualité de vie au quotidien.\n\nLe cannabidiol (CBD), un phytocannabinoïde précieusement extrait de la plante de cannabis sativa, agit en douceur sur votre système endocannabinoïde - un réseau intercellulaire essentiel à votre organisme - sans engendrer d'effets psychotropes ou narcotiques.\n\nChaque flacon contient 10ml de notre formule révolutionnaire à base de CBD. Faites l'expérience du bien-être au naturel et donnez un coup de pouce sain et sûr à votre routine quotidienne."
+            "reponse": "Redécouvrez le plaisir de bouger avec notre huile All Natural CBD Broad Spectrum enrichie au CBG, une solution naturelle qui offre un équilibre parfait entre le CBD et le CBG, chacun présent à une concentration de 5%. \n\nSans aucun agent psychotrope ni risque de dépendance, notre huile harmonise votre bien-être en agissant efficacement sur votre système endocannabinoïde, un réseau intercellulaire vital de votre organisme. Le cannabigérol (CBG), un phytocannabinoïde précieusement extrait de la plante de cannabis sativa, apporte ses bienfaits sans provoquer d'effets psychotropes ou narcotiques.\n\nChaque flacon de Drop CBG + CBD contient 10 ml de cette formule révolutionnaire. Faites l'expérience du bien-être naturel avec Drop CBG + CBD, une solution sûre et équilibrée pour une vie dynamique et épanouie."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
