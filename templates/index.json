@@ -185,19 +185,10 @@
             "lgende": "Photographie Macro"
           }
         },
-        "54493309-2b41-4ea4-b714-4615e7f7c6eb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_7339.jpg",
-            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
-            "texte_du_bouton": "Découvrez nos produits",
-            "lien_du_bouton": "",
-            "lgende": "legend image and dolorem text about brands, values and behind the scene."
-          }
-        },
         "a0a947a1-dfb2-4176-9116-b802c2f7c5f8": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/JUB3108-15.jpg",
             "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
             "texte_du_bouton": "Découvrez nos produits",
             "lien_du_bouton": "",
@@ -217,7 +208,6 @@
       "block_order": [
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0",
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1",
-        "54493309-2b41-4ea4-b714-4615e7f7c6eb",
         "a0a947a1-dfb2-4176-9116-b802c2f7c5f8",
         "e0d94064-71d8-4286-a84f-65082273e509"
       ],
