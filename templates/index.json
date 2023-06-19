@@ -204,13 +204,24 @@
             "lien_du_bouton": "",
             "lgende": "Labo"
           }
+        },
+        "2e12dce0-1d6e-444d-b2ac-1d9460bba512": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+            "description": "",
+            "texte_du_bouton": "",
+            "lien_du_bouton": "",
+            "lgende": "Labo"
+          }
         }
       },
       "block_order": [
         "a0a947a1-dfb2-4176-9116-b802c2f7c5f8",
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0",
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1",
-        "e0d94064-71d8-4286-a84f-65082273e509"
+        "e0d94064-71d8-4286-a84f-65082273e509",
+        "2e12dce0-1d6e-444d-b2ac-1d9460bba512"
       ],
       "settings": {
       }
