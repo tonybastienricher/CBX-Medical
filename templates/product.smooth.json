@@ -1,0 +1,240 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "59abd3db-bb7f-45e2-af6b-ece656034d41": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "c62c4cac-e956-4702-9df5-61365c8a4ab8": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Contenant",
+            "text_droite": "100Mg CBD"
+          }
+        },
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Type",
+            "text_droite": "Gel refroidissant"
+          }
+        },
+        "110b2d8a-933d-4c39-a58e-19e9eb0dbbf2": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4280871"
+          }
+        },
+        "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
+          "type": "liste",
+          "settings": {
+            "liste": "Cannabinoides 100% naturels\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20": {
+          "type": "text",
+          "settings": {
+            "text": "Commandez aujourd'hui, livré demain",
+            "mobile_visible": false,
+            "show_border": false,
+            "text_style": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "59abd3db-bb7f-45e2-af6b-ece656034d41",
+        "c62c4cac-e956-4702-9df5-61365c8a4ab8",
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
+        "110b2d8a-933d-4c39-a58e-19e9eb0dbbf2",
+        "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
+        "variant_picker",
+        "buy_buttons",
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "c1799eff-e8e5-4dbd-b6a5-d03e2e624529": {
+      "type": "liste",
+      "blocks": {
+        "5c37f702-bdc7-493e-9164-a9c324561d2a": {
+          "type": "liste",
+          "settings": {
+            "texte": "Usage chronique"
+          }
+        },
+        "96f791d0-b4b7-4f86-bb5e-96187217c459": {
+          "type": "liste",
+          "settings": {
+            "texte": "4 plantes"
+          }
+        },
+        "dc2ebe69-c395-416e-bfb8-21550542998b": {
+          "type": "liste",
+          "settings": {
+            "texte": "Gel refroidissant"
+          }
+        }
+      },
+      "block_order": [
+        "5c37f702-bdc7-493e-9164-a9c324561d2a",
+        "96f791d0-b4b7-4f86-bb5e-96187217c459",
+        "dc2ebe69-c395-416e-bfb8-21550542998b"
+      ],
+      "settings": {
+      }
+    },
+    "2d5b7091-607b-47ba-b651-9699bb120112": {
+      "type": "texte-large",
+      "settings": {
+        "sur_titre": "",
+        "texte": "Flex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
+      }
+    },
+    "description": {
+      "type": "description",
+      "blocks": {
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
+          "type": "information",
+          "settings": {
+            "question": "Description",
+            "reponse": "Découvrez Flex, notre gel refroidissant unique composé de cannabidiol (CBD - 100 mg), d'arnica, de menthe et d'eucalyptus. Cette formule développée par CBX Medical offre une sensation de fraîcheur revitalisante aux muscles et aux articulations fatigués.\n\nFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
+          }
+        },
+        "bc58eff4-5c02-4300-a790-79e97bab67c4": {
+          "type": "information",
+          "settings": {
+            "question": "Conseil d'application",
+            "reponse": "Appliquez une fine couche de gel refroidissant sur les zones concernées après vos séances sportives pour favoriser une souplesse optimale des muscles et des articulations. Massez légèrement pour une meilleure absorption.\n\nCe produit contenant du CBD (cannabidiol) est 100% légal, non addictif et non psycho-actif. Disponible dans les pharmacies."
+          }
+        },
+        "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
+          "type": "information",
+          "settings": {
+            "question": "Ingrédients clés",
+            "reponse": "Cannabidiol, Arnica Montana Flower Extract, Mentha Arvensis Leaf Oil, Eucalyptus Globulus Leaf Oil."
+          }
+        },
+        "7a25d582-8819-4428-be22-996b435de475": {
+          "type": "information",
+          "disabled": true,
+          "settings": {
+            "question": "Posologie",
+            "reponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+          }
+        }
+      },
+      "block_order": [
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
+        "bc58eff4-5c02-4300-a790-79e97bab67c4",
+        "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb",
+        "7a25d582-8819-4428-be22-996b435de475"
+      ],
+      "settings": {
+        "alignement": "droite"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "sur_titre": "Press & Reviews",
+        "titre": "Les professionels de la santé en parlent"
+      }
+    },
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
+      "type": "faq",
+      "disabled": true,
+      "blocks": {
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "86f62e39-8086-49f5-a976-09d4c070c26a": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "636880b9-a708-42f4-98a0-a0f075755083": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        }
+      },
+      "block_order": [
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45",
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2",
+        "86f62e39-8086-49f5-a976-09d4c070c26a",
+        "636880b9-a708-42f4-98a0-a0f075755083",
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78"
+      ],
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c1799eff-e8e5-4dbd-b6a5-d03e2e624529",
+    "2d5b7091-607b-47ba-b651-9699bb120112",
+    "description",
+    "related-products",
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
+  ]
+}
