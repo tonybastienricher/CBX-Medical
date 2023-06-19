@@ -179,10 +179,10 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_droite.jpg",
-            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
-            "texte_du_bouton": "Découvrez nos produits",
+            "description": "",
+            "texte_du_bouton": "",
             "lien_du_bouton": "",
-            "lgende": "legend image and dolorem text about brands, values and behind the scene."
+            "lgende": "Photographie Macro"
           }
         },
         "54493309-2b41-4ea4-b714-4615e7f7c6eb": {
