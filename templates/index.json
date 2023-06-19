@@ -177,6 +177,7 @@
         },
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/image_gauche.jpg",
             "description": "",
