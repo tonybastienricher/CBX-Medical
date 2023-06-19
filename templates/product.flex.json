@@ -117,12 +117,13 @@
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Ingrédients clés",
+            "reponse": "Cannabidiol, Arnica Montana Flower Extract, Mentha Arvensis Leaf Oil, Eucalyptus Globulus Leaf Oil."
           }
         },
         "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
           "type": "information",
+          "disabled": true,
           "settings": {
             "question": "Conseils d’utilisation",
             "reponse": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une guérison holistique et un soulagement. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement."
@@ -130,6 +131,7 @@
         },
         "7a25d582-8819-4428-be22-996b435de475": {
           "type": "information",
+          "disabled": true,
           "settings": {
             "question": "Posologie",
             "reponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
@@ -143,7 +145,7 @@
         "7a25d582-8819-4428-be22-996b435de475"
       ],
       "settings": {
-        "illustration_section": "shopify:\/\/shop_images\/IMG_7365.jpg",
+        "illustration_section": "shopify:\/\/shop_images\/jocelyn-morales-JiqTLjzEH18-unsplash.jpg",
         "alignement": "droite"
       }
     },
@@ -156,6 +158,7 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
+      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
