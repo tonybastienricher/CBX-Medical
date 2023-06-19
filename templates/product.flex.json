@@ -107,6 +107,13 @@
     "description": {
       "type": "description",
       "blocks": {
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
+          "type": "information",
+          "settings": {
+            "question": "Description",
+            "reponse": "Découvrez Flex, notre gel refroidissant unique composé de cannabidiol (CBD - 100 mg), d'arnica, de menthe et d'eucalyptus. Cette formule développée par CBX Medical offre une sensation de fraîcheur revitalisante aux muscles et aux articulations fatigués.\n\nFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
+          }
+        },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
@@ -121,14 +128,6 @@
             "reponse": "Cannabidiol, Arnica Montana Flower Extract, Mentha Arvensis Leaf Oil, Eucalyptus Globulus Leaf Oil."
           }
         },
-        "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
-          "type": "information",
-          "disabled": true,
-          "settings": {
-            "question": "Conseils d’utilisation",
-            "reponse": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une guérison holistique et un soulagement. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement."
-          }
-        },
         "7a25d582-8819-4428-be22-996b435de475": {
           "type": "information",
           "disabled": true,
@@ -139,13 +138,12 @@
         }
       },
       "block_order": [
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
         "bc58eff4-5c02-4300-a790-79e97bab67c4",
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb",
-        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
         "7a25d582-8819-4428-be22-996b435de475"
       ],
       "settings": {
-        "illustration_section": "shopify:\/\/shop_images\/jocelyn-morales-JiqTLjzEH18-unsplash.jpg",
         "alignement": "droite"
       }
     },
