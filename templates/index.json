@@ -81,6 +81,7 @@
     "1d3c3eb6-0507-4517-8e18-c5afad6fe640": {
       "type": "produits_en_vedette",
       "settings": {
+        "sur_titre": "Les produits du moment",
         "produits_en_vedette": [
           "flex",
           "move",
@@ -168,8 +169,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/image_gauche.jpg",
-            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
-            "texte_du_bouton": "Découvrez nos produits",
+            "description": "",
+            "texte_du_bouton": "",
             "lien_du_bouton": "",
             "lgende": "legend image and dolorem text about brands, \nvalues and behind the scene."
           }
@@ -224,6 +225,7 @@
     },
     "0fbe5799-3511-42ba-a261-20a13db70f71": {
       "type": "faq",
+      "disabled": true,
       "blocks": {
         "63392352-98b1-4095-ac34-0626ac15cf65": {
           "type": "faq",
