@@ -17,28 +17,14 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "40 MG CBD"
-          }
-        },
-        "35195ec4-e684-43d1-862b-5195c77a1061": {
-          "type": "information",
-          "settings": {
-            "text_gauche": "Quantité",
-            "text_droite": "125ml"
+            "text_droite": "20Mg de CBD"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
           "type": "information",
           "settings": {
             "text_gauche": "Type",
-            "text_droite": "Gel refroidissant"
-          }
-        },
-        "bf44daa8-d56e-4199-bfa4-a5e552a406e9": {
-          "type": "information",
-          "settings": {
-            "text_gauche": "Avis",
-            "text_droite": "★★★★★ <a href=\"https:\/\/google.fr\" title=\"https:\/\/google.fr\">2522 reviews<\/a>"
+            "text_droite": "Patch au CBD"
           }
         },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
@@ -68,19 +54,25 @@
             "show_border": false,
             "text_style": "uppercase"
           }
+        },
+        "b2cc343c-74bf-4d93-b512-56b772c78fb1": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4307476"
+          }
         }
       },
       "block_order": [
         "title",
         "59abd3db-bb7f-45e2-af6b-ece656034d41",
         "c62c4cac-e956-4702-9df5-61365c8a4ab8",
-        "35195ec4-e684-43d1-862b-5195c77a1061",
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
-        "bf44daa8-d56e-4199-bfa4-a5e552a406e9",
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
         "variant_picker",
         "buy_buttons",
-        "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20",
+        "b2cc343c-74bf-4d93-b512-56b772c78fb1"
       ],
       "settings": {
         "enable_sticky_info": true,
