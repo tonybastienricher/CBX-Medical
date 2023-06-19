@@ -27,6 +27,13 @@
             "text_droite": "Gel refroidissant"
           }
         },
+        "110b2d8a-933d-4c39-a58e-19e9eb0dbbf2": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4280871"
+          }
+        },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
           "type": "liste",
           "settings": {
@@ -61,6 +68,7 @@
         "59abd3db-bb7f-45e2-af6b-ece656034d41",
         "c62c4cac-e956-4702-9df5-61365c8a4ab8",
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
+        "110b2d8a-933d-4c39-a58e-19e9eb0dbbf2",
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
         "variant_picker",
         "buy_buttons",
