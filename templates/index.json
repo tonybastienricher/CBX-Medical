@@ -165,6 +165,16 @@
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
       "type": "images_carrousel",
       "blocks": {
+        "a0a947a1-dfb2-4176-9116-b802c2f7c5f8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JUB3108-15hd-2.jpg",
+            "description": "Flore, Lionel et Jonathan. Fondateurs CBX Medical",
+            "texte_du_bouton": "",
+            "lien_du_bouton": "",
+            "lgende": ""
+          }
+        },
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0": {
           "type": "image",
           "settings": {
@@ -185,16 +195,6 @@
             "lgende": "Photographie Macro"
           }
         },
-        "a0a947a1-dfb2-4176-9116-b802c2f7c5f8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/JUB3108-15hd-2.jpg",
-            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
-            "texte_du_bouton": "Découvrez nos produits",
-            "lien_du_bouton": "",
-            "lgende": "legend image and dolorem text about brands, values and behind the scene."
-          }
-        },
         "e0d94064-71d8-4286-a84f-65082273e509": {
           "type": "image",
           "settings": {
@@ -206,9 +206,9 @@
         }
       },
       "block_order": [
+        "a0a947a1-dfb2-4176-9116-b802c2f7c5f8",
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0",
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1",
-        "a0a947a1-dfb2-4176-9116-b802c2f7c5f8",
         "e0d94064-71d8-4286-a84f-65082273e509"
       ],
       "settings": {
