@@ -17,14 +17,14 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "100Mg CBD"
+            "text_droite": "Multi"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
           "type": "information",
           "settings": {
             "text_gauche": "Type",
-            "text_droite": "Gel refroidissant"
+            "text_droite": "Huile naturelle de CBD"
           }
         },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
@@ -45,7 +45,7 @@
           "type": "information",
           "settings": {
             "text_gauche": "CNK",
-            "text_droite": "4508750"
+            "text_droite": "4424990"
           }
         },
         "buy_buttons": {
@@ -91,32 +91,39 @@
         "padding_bottom": 12
       }
     },
-    "8e4646a6-d62a-439e-a54f-98e3b1e2e398": {
+    "87f6092e-7d85-4aa1-867f-e35d05425e92": {
       "type": "liste",
       "blocks": {
-        "b4314a42-a4e9-41f9-af90-88ff0979c88c": {
+        "b404f806-9e1f-4522-98af-4841d5323fa9": {
           "type": "liste",
           "settings": {
-            "texte": "Usage chronique"
+            "texte": "Usage quotidien"
           }
         },
-        "e8c11bc4-7790-43fc-8ba8-ac9d8ce9a816": {
+        "7494885b-394f-427d-b822-cbdff1dd8f12": {
           "type": "liste",
           "settings": {
-            "texte": "4 plantes"
+            "texte": "100% naturel"
           }
         },
-        "8f0259ed-4e46-419a-b41e-3c0b056d0781": {
+        "0b2e3e7d-6ef5-4d23-8ed9-35651fcdb2f4": {
           "type": "liste",
           "settings": {
-            "texte": "Gel refroidissant"
+            "texte": "Effet entourage"
+          }
+        },
+        "c7f649d0-75aa-470a-872d-2d72a176f607": {
+          "type": "liste",
+          "settings": {
+            "texte": "Non psychotrope"
           }
         }
       },
       "block_order": [
-        "b4314a42-a4e9-41f9-af90-88ff0979c88c",
-        "e8c11bc4-7790-43fc-8ba8-ac9d8ce9a816",
-        "8f0259ed-4e46-419a-b41e-3c0b056d0781"
+        "b404f806-9e1f-4522-98af-4841d5323fa9",
+        "7494885b-394f-427d-b822-cbdff1dd8f12",
+        "0b2e3e7d-6ef5-4d23-8ed9-35651fcdb2f4",
+        "c7f649d0-75aa-470a-872d-2d72a176f607"
       ],
       "settings": {
       }
@@ -135,21 +142,21 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Le gel refroidissant Flex Forte, développé par CBX Medical, est une formule unique enrichie en cannabidiol (CBD - 1 000 mg), en arnica, en menthe et en eucalyptus. Spécialement conçu pour rafraîchir les muscles et les articulations fatiguées, il s'agit du gel le plus concentré en CBD disponible en pharmacie.\n\nFlex Forte est la solution idéale pour les sportifs et personnes actives confrontés à des difficultés de récupération après l'effort, ainsi que pour les seniors souhaitant améliorer leur mobilité.\n\nPour optimiser la souplesse des muscles et des articulations, il est recommandé d'appliquer ce gel sur les zones concernées après l'effort.\n\nCe produit contenant du CBD (cannabidiol) est 100% légal, non-psychotrope et non-addictif, offrant une alternative sûre et non-addictive."
+            "reponse": "Éveillez votre bien-être avec notre huile All Natural CBD Broad Spectrum, fabriquée en respectant les normes de production les plus strictes. Dénuée de tout agent psychotrope et sans risque de dépendance, elle vous offre une solution naturelle pour améliorer votre qualité de vie au quotidien.\n\nLe cannabidiol (CBD), un phytocannabinoïde précieusement extrait de la plante de cannabis sativa, agit en douceur sur votre système endocannabinoïde - un réseau intercellulaire essentiel à votre organisme - sans engendrer d'effets psychotropes ou narcotiques.\n\nChaque flacon contient 10ml de notre formule révolutionnaire à base de CBD. Faites l'expérience du bien-être au naturel et donnez un coup de pouce sain et sûr à votre routine quotidienne."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
-            "question": "Conseil d'application",
-            "reponse": "Appliquez une fine couche de gel refroidissant Flex Forte après vos séances de sport sur les zones souhaitées pour améliorer la souplesse de vos muscles et de vos articulations. Massez doucement la zone pour permettre au gel de pénétrer. Évitez d'appliquer le gel sur des plaies ou des zones de peau irritée afin d'éviter toute irritation supplémentaire. Ce gel contient du CBD. Profitez des bienfaits du CBD en toute tranquillité et assurez-vous une récupération optimale."
+            "question": "Conseil d'utilisation",
+            "reponse": "Usage externe."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
           "type": "information",
           "settings": {
             "question": "Ingrédients clés",
-            "reponse": "Cannabidiol, Arnica, Montana flower extract, Mentha Arvensis Leaf Oil, Eucalyptus Globulus Leaf Oil"
+            "reponse": "MCT COCONUT OIL, CANNABIS SATIVA LEAF EXTRACT"
           }
         },
         "7a25d582-8819-4428-be22-996b435de475": {
@@ -233,7 +240,7 @@
   },
   "order": [
     "main",
-    "8e4646a6-d62a-439e-a54f-98e3b1e2e398",
+    "87f6092e-7d85-4aa1-867f-e35d05425e92",
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
     "related-products",
