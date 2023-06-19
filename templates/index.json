@@ -159,7 +159,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "CBX MEDICAL",
-        "texte": "Nous sommes tous convaincus que le cannabis offre des alternatives naturelles et complémentaires à la médecine traditionnelle. Nous pensons profondément que le cannabis doit revenir dans les mains des professionnels de la santé."
+        "texte": "Chez CBX, nous collaborons étroitement avec les universités pour vous offrir le meilleur de la plante. Nous nous engageons à fournir des produits de qualité supérieure. Tous nos produits sont dispensés et prescrits par des professionnels de la santé qualifiés.\n\n\nChaque production est systématiquement soumise à des analyses rigoureuses effectuées par un laboratoire indépendant pour garantir la pureté, la sécurité et une concentration précise en cannabinoïdes."
       }
     },
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
@@ -188,6 +188,7 @@
         "54493309-2b41-4ea4-b714-4615e7f7c6eb": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_7339.jpg",
             "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
             "texte_du_bouton": "Découvrez nos produits",
             "lien_du_bouton": "",
