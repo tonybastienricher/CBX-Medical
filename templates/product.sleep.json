@@ -27,6 +27,13 @@
             "text_droite": "Patch au CBD"
           }
         },
+        "b2cc343c-74bf-4d93-b512-56b772c78fb1": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4307476"
+          }
+        },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
           "type": "liste",
           "settings": {
@@ -54,13 +61,6 @@
             "show_border": false,
             "text_style": "uppercase"
           }
-        },
-        "b2cc343c-74bf-4d93-b512-56b772c78fb1": {
-          "type": "information",
-          "settings": {
-            "text_gauche": "CNK",
-            "text_droite": "4307476"
-          }
         }
       },
       "block_order": [
@@ -68,11 +68,11 @@
         "59abd3db-bb7f-45e2-af6b-ece656034d41",
         "c62c4cac-e956-4702-9df5-61365c8a4ab8",
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
+        "b2cc343c-74bf-4d93-b512-56b772c78fb1",
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
         "variant_picker",
         "buy_buttons",
-        "3ed467b4-b76c-414a-a9a5-51d81ca24f20",
-        "b2cc343c-74bf-4d93-b512-56b772c78fb1"
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -89,11 +89,48 @@
         "padding_bottom": 12
       }
     },
+    "fc842ad3-b908-4e3e-81db-1d71703b0647": {
+      "type": "liste",
+      "blocks": {
+        "50496418-8efb-40a5-8070-560bd006dfdd": {
+          "type": "liste",
+          "settings": {
+            "texte": "Usage chronique"
+          }
+        },
+        "b0eabd3b-9d80-4472-ab34-577865d90e11": {
+          "type": "liste",
+          "settings": {
+            "texte": "100% naturel"
+          }
+        },
+        "80355b01-0f57-4177-ba05-e5dca76b01e0": {
+          "type": "liste",
+          "settings": {
+            "texte": "+18 ans"
+          }
+        },
+        "84a0826b-0286-460e-a991-1eb97fcb624c": {
+          "type": "liste",
+          "settings": {
+            "texte": "Effet 24h"
+          }
+        }
+      },
+      "block_order": [
+        "50496418-8efb-40a5-8070-560bd006dfdd",
+        "b0eabd3b-9d80-4472-ab34-577865d90e11",
+        "80355b01-0f57-4177-ba05-e5dca76b01e0",
+        "84a0826b-0286-460e-a991-1eb97fcb624c"
+      ],
+      "settings": {
+      }
+    },
     "2d5b7091-607b-47ba-b651-9699bb120112": {
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "CanFlex Forte est le gel le plus concentré en CBD disponible en pharmacie. Il est fait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi que les personnes âgées ayant envie de faciliter leurs mouvements."
+        "texte": "Le patch SLEEP avec 20 mg de CBD vous accompagne pour une une nuit paisible et régénératrice."
       }
     },
     "description": {
@@ -103,36 +140,28 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "CanFlex Forte est un gel refroidissant composé de cannabidiol (CBD - 100mg), arnica, menthe et eucalyptus. Son effet apaisant est dû à l’action du menthol et à la combinaison d’extraits végétaux (eucalyptus et menthe) qui augmentent la sensation de froid et réduisent la fatigue musculaire. Le gel refroidissant CanFlex Forte est idéal après la pratique d’un exercice physique, lors de tension pour réduire la fatigue articulaire et favoriser la souplesse.\n\nCette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements.\n\nLe gel refroidissant va faciliter la récupération après un effort sportif important par le biais d’un massage qui va alléger les zones chargées et vous permettre d’accéder de nouveau à un bien-être musculaire."
+            "reponse": "Le patch SLEEP avec 20 mg de CBD vous accompagne pour une une nuit paisible et régénératrice. Conçu sur une base scientifique pour une transition paisible à travers les différentes étapes de votre nuit, chaque patch facilite un processus de réveil revitalisé et énergisé. Le patch SLEEP peut être appliqué sur toute surface de peau sèche et exposée, telle que l'intérieur de votre bras ou l'arrière de votre nuque.\n\nPour un résultat optimale, il est conseillé d'appliquer le patch environ 2 heures avant l'heure du coucher et de maintenir son application pour une durée de 24 heures. Reproduisez ce protocole nocturne sur une période de 14 jours pour expérimenter pleinement les bienfaits Sleep de CBX.\n\nChaque lot contient 14 unités offrant deux semaines de sommeil tranquille et non interrompu. \n\nLe patch Sleep au CBD de CBX Medical représente une solution efficace et sécure. Il contient du CBD (cannabidiol), une composante totalement légale, et exempt de propriétés addictives."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Conseils d’utilisation",
+            "reponse": "Pour une utilisation optimale, placez un patch sur une zone dégagée de votre corps comme l'intérieur du bras ou la nuque, et laissez-le diffuser ses bienfaits pendant une durée de 24 heures.\n\nAu bout de ce délai, privilégiez une nouvelle zone de peau pour la pose d'un autre patch, permettant ainsi à votre peau de respirer et de se régénérer.\n\nSi vous notez des résidus d'adhésif, ils peuvent être aisément retirés avec un peu d'eau tiède savonneuse.\n\nDestiné exclusivement à une clientèle adulte, âgée de 18 ans et plus."
           }
         },
         "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
           "type": "information",
           "settings": {
-            "question": "Conseils d’utilisation",
-            "reponse": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une guérison holistique et un soulagement. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement."
-          }
-        },
-        "7a25d582-8819-4428-be22-996b435de475": {
-          "type": "information",
-          "settings": {
-            "question": "Posologie",
-            "reponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+            "question": "Ingrédients principaux",
+            "reponse": "Cannabidiol Isolate (20 mg\/patch). 14 patchs par boîte."
           }
         }
       },
       "block_order": [
         "bc58eff4-5c02-4300-a790-79e97bab67c4",
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb",
-        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
-        "7a25d582-8819-4428-be22-996b435de475"
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef"
       ],
       "settings": {
         "alignement": "droite"
@@ -199,6 +228,7 @@
   },
   "order": [
     "main",
+    "fc842ad3-b908-4e3e-81db-1d71703b0647",
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
     "related-products",
