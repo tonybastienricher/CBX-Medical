@@ -199,6 +199,43 @@
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
       }
+    },
+    "d95fcd0f-5c8a-497b-9197-8cd84ef73e36": {
+      "type": "liste",
+      "blocks": {
+        "cb79edd7-c8fd-4342-9c40-12a2580baffc": {
+          "type": "liste",
+          "settings": {
+            "texte": "Usage chronique"
+          }
+        },
+        "03c3577e-a1ba-4d44-b794-5d0b50447e4d": {
+          "type": "liste",
+          "settings": {
+            "texte": "4 plantes"
+          }
+        },
+        "7c0ad136-8792-46cf-a78b-740be0fec09b": {
+          "type": "liste",
+          "settings": {
+            "texte": "CBG agriculture Bio"
+          }
+        },
+        "ece3ff55-274c-4493-aa00-32e6191918d0": {
+          "type": "liste",
+          "settings": {
+            "texte": "Cannabinoides 100% naturels"
+          }
+        }
+      },
+      "block_order": [
+        "cb79edd7-c8fd-4342-9c40-12a2580baffc",
+        "03c3577e-a1ba-4d44-b794-5d0b50447e4d",
+        "7c0ad136-8792-46cf-a78b-740be0fec09b",
+        "ece3ff55-274c-4493-aa00-32e6191918d0"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -206,6 +243,7 @@
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
     "related-products",
-    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217",
+    "d95fcd0f-5c8a-497b-9197-8cd84ef73e36"
   ]
 }
