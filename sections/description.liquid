@@ -27,8 +27,10 @@
                                 <div class='cbx-pt-2.5 lg:cbx-hidden'>
                                     <span class='cbx-text-sm cbx-pb-2.5 cbx-text-green3'>{{ forloop.index | prepend: '0' }} /</span>
                                 </div>
-                                <div @click="open = {{ forloop.index }}"
-                                     class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-py-2.5 {% if illustration_section == blank and forloop.index == 1 %}cbx-border-b lg:cbx-border-t lg:cbx-border-b-0 lg:cbx-pb-0{% else %}cbx-border-b{% endif %} cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
+                                <div {% if illustration_section == blank and forloop.index == 1 %}
+                                    @click="open = {{ forloop.index }}"
+                                        {% endif %}
+                                        class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-py-2.5 {% if illustration_section == blank and forloop.index == 1 %}cbx-border-b lg:cbx-border-t lg:cbx-border-b-0 lg:cbx-pb-0{% else %}cbx-border-b{% endif %} cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
                                     {% if illustration_section == blank and forloop.index == 1 %}
                                         <span class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-text-xs'>{{ block.settings.question }}</span>
                                         <div class='cbx-flex cbx-justify-between cbx-items-center cbx-w-full lg:cbx-hidden'>
