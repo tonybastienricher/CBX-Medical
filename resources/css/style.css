@@ -164,6 +164,11 @@ body.locomotive-active {
     padding-top: 10px;
 }
 
+.swiper-container-product-list .swiper-pagination {
+    text-align: center !important;
+    padding-top: 0;
+}
+
 .swiper-pagination-bullet {
     border-radius: 0 !important;
 }
@@ -210,6 +215,36 @@ button.loading span {
 
 .button.loading > .loading-overlay__spinner .path {
     stroke: rgb(var(--color-button-text));
+}
+
+price-range input:focus-visible {
+    outline: none;
+}
+
+select {
+    @apply cbx-bg-green6 cbx-border cbx-border-green6 cbx-text-green4 cbx-text-sm cbx-rounded cbx-w-full cbx-p-2.5;
+}
+
+textarea {
+    @apply cbx-block cbx-p-2.5 cbx-w-full cbx-text-sm cbx-text-green4 cbx-rounded cbx-border cbx-border-green6;
+}
+
+@media screen and (min-width: 1024px) {
+
+    ul.list-product {
+        list-style: none;
+    }
+
+    ul.list-product li:before {
+        content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: #9EA89A; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-right: 16px;
+    }
+
+
 }
 
 @tailwind components;

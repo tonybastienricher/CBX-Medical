@@ -10,7 +10,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 document.addEventListener("DOMContentLoaded", function() {
   if (typeof Shopify === 'undefined' || !Shopify.designMode) {
     const scroll = new LocomotiveScroll({
-      el: document.querySelector('body'),
+      el: document.querySelector('.smooth-scroll'),
       smooth: true
     });
     document.body.classList.add('locomotive-active');
