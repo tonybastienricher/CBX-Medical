@@ -3,11 +3,14 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 9
+        "products_per_page": 9,
+        "enable_filtering": true,
+        "enable_sorting": true
       }
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
+      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
