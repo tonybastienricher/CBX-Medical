@@ -198,10 +198,11 @@
         "e0d94064-71d8-4286-a84f-65082273e509": {
           "type": "image",
           "settings": {
-            "description": "Nous exploitons le plein potentiel de la plante pour améliorer votre quotidien.",
-            "texte_du_bouton": "Découvrez nos produits",
+            "image": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+            "description": "",
+            "texte_du_bouton": "",
             "lien_du_bouton": "",
-            "lgende": "legend image and dolorem text about brands, values and behind the scene."
+            "lgende": "Labo"
           }
         }
       },
