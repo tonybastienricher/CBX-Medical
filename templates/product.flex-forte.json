@@ -29,14 +29,23 @@
         },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
           "type": "liste",
+          "disabled": true,
           "settings": {
             "liste": "Cannabinoides 100% naturels\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
           }
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button"
+          }
+        },
+        "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4508750"
           }
         },
         "buy_buttons": {
@@ -63,6 +72,7 @@
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
         "variant_picker",
+        "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f",
         "buy_buttons",
         "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
       ],
