@@ -3,46 +3,65 @@
     assign illustration_section = section.settings.illustration_section
 -%}
 
-<div class='cbx-text-green2 lg:cbx-mb-0'>
-    <div class='cbx-container-site cbx-py-10 lg:cbx-py-14 cbx-border-t cbx-border-green5'>
-        <div class='cbx-h-full cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5 cbx-gap-x-4'>
-            <!-- Image -->
-            <div class="cbx-relative cbx-min-h-[50vh] lg:cbx-min-h-[82vh] cbx-w-full cbx-h-full cbx-bg-offWhite cbx-rounded cbx-overflow-hidden {% if isRight == 'droite' %}lg:cbx-order-2{% endif %}">
+<div class='cbx-text-green2'>
+    <div class='cbx-container-site cbx-py-10'>
+        <div class='cbx-h-full {% if illustration_section != blank %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2{% endif %} cbx-gap-x-4'>
+            {% if illustration_section != blank %}
                 <!-- Image -->
-                {% if illustration_section != blank %}
+                <div class="cbx-relative cbx-min-h-[50vh] lg:cbx-min-h-[82vh] cbx-w-full cbx-h-full cbx-bg-offWhite cbx-rounded cbx-overflow-hidden {% if isRight == 'droite' %}lg:cbx-order-2{% endif %}">
+                    <!-- Image -->
                     {{ illustration_section | image_url: width: 920 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', sizes: '(min-width: 1840px) calc(100vw / 2), calc((100vw))', loading: 'lazy' }}
-                {% else %}
-                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
-                {% endif %}
-            </div>
+                </div>
+            {% endif %}
             <!-- Description -->
             <div x-data="{ open: 1 }"
-                 class="description-container cbx-py-5 lg:cbx-pt-0 {% if isRight == 'droite' %}lg:cbx-order-1{% endif %}">
+                 class="description-container cbx-py-5 lg:cbx-pt-0 {% if illustration_section == blank %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2{% endif %} {% if isRight == 'droite' %}lg:cbx-order-1{% endif %}">
                 {%- for block in section.blocks -%}
                     {%- case block.type -%}
 
                         {%- when 'information' -%}
-                            <div class='cbx-pt-2.5 lg:cbx-hidden'>
-                                <span class='cbx-text-sm cbx-pb-2.5 cbx-text-green3'>{{ forloop.index | prepend: '0' }} /</span>
-                            </div>
-                            <div @click="open = {{ forloop.index }}"
-                                 class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-border-b cbx-border-green5 cbx-gap-7 cbx-py-2.5 lg:cbx-py-3.5 cbx-cursor-pointer">
-                                <span class='cbx-font-display'>{{ block.settings.question }}</span>
-
-                                <div class='cbx-w-3.5 cbx-h-3.5'>
-                                    <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
-                                              fill="currentColor" />
-                                    </svg>
+                            {% if illustration_section == blank and forloop.index != 1 %}
+                                <div class='cbx-hidden lg:cbx-flex'></div>
+                            {% endif %}
+                            <div class='cbx-flex cbx-flex-col {% if illustration_section == blank and forloop.index == 1 %}lg:cbx-col-span-2{% endif %}' {{ block.shopify_attributes }}>
+                                <div class='cbx-pt-2.5 lg:cbx-hidden'>
+                                    <span class='cbx-text-sm cbx-pb-2.5 cbx-text-green3'>{{ forloop.index | prepend: '0' }} /</span>
                                 </div>
-                            </div>
-                            <div x-show="open == {{ forloop.index }}"
-                                 class="answer cbx-text-green3 cbx-text-sm cbx-py-5 cbx-duration-200 cbx-font-display"
-                                 {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
-                                <p style='line-height: 160%;'>
-                                    {{ block.settings.reponse | newline_to_br }}
-                                </p>
+                                <div @click="open = {{ forloop.index }}"
+                                     class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-py-2.5 {% if illustration_section == blank and forloop.index == 1 %}cbx-border-b lg:cbx-border-t lg:cbx-pb-0{% else %}cbx-border-b{% endif %} cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
+                                    {% if illustration_section == blank and forloop.index == 1 %}
+                                        <span class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-text-xs'>{{ block.settings.question }}</span>
+                                        <div class='cbx-flex cbx-justify-between cbx-items-center cbx-w-full lg:cbx-hidden'>
+                                            <span class='cbx-font-display'>{{ block.settings.question }}</span>
+                                            <div class='cbx-w-3.5 cbx-h-3.5'>
+                                                <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
+                                                          fill="currentColor" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <span class='cbx-font-display'>{{ block.settings.question }}</span>
+                                        <div class='cbx-w-3.5 cbx-h-3.5'>
+                                            <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div x-show="open == {{ forloop.index }}"
+                                     class="answer cbx-text-green3 cbx-text-sm cbx-py-5 cbx-duration-200 cbx-font-display {% if illustration_section == blank and forloop.index == 1 %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 lg:cbx-pt-0 {% endif %}"
+                                     {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
+                                    {% if illustration_section == blank and forloop.index == 1 %}
+                                        <div></div>
+                                    {% endif %}
+                                    <p style='line-height: 160%;'>
+                                        {{ block.settings.reponse | newline_to_br }}
+                                    </p>
+                                </div>
                             </div>
                     {%- endcase -%}
                 {%- endfor -%}
@@ -58,18 +77,6 @@
   "max_blocks": 10,
   "tag": "section",
   "settings": [
-    {
-      "type": "text",
-      "id": "sur_titre",
-      "label": "Sur titre",
-      "default": "Pour les curieux"
-    },
-    {
-      "type": "text",
-      "id": "titre",
-      "label": "Titre",
-      "default": "Pour les curieux."
-    },
     {
       "type": "image_picker",
       "id": "illustration_section",
