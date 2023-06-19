@@ -17,21 +17,21 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "100Mg CBD"
+            "text_droite": "400Mg CBD"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
           "type": "information",
           "settings": {
             "text_gauche": "Type",
-            "text_droite": "Gel refroidissant"
+            "text_droite": "Crème dermatologique"
           }
         },
         "110b2d8a-933d-4c39-a58e-19e9eb0dbbf2": {
           "type": "information",
           "settings": {
             "text_gauche": "CNK",
-            "text_droite": "4280871"
+            "text_droite": "4395968"
           }
         },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
@@ -95,26 +95,33 @@
         "5c37f702-bdc7-493e-9164-a9c324561d2a": {
           "type": "liste",
           "settings": {
-            "texte": "Usage chronique"
+            "texte": "Peau seche"
           }
         },
         "96f791d0-b4b7-4f86-bb5e-96187217c459": {
           "type": "liste",
           "settings": {
-            "texte": "4 plantes"
+            "texte": "Usage quotidien"
           }
         },
         "dc2ebe69-c395-416e-bfb8-21550542998b": {
           "type": "liste",
           "settings": {
-            "texte": "Gel refroidissant"
+            "texte": "CBD Agriculture Bio"
+          }
+        },
+        "78a5b443-dab4-4026-a86f-40bf106fcc3b": {
+          "type": "liste",
+          "settings": {
+            "texte": "Enfants + 12 ans"
           }
         }
       },
       "block_order": [
         "5c37f702-bdc7-493e-9164-a9c324561d2a",
         "96f791d0-b4b7-4f86-bb5e-96187217c459",
-        "dc2ebe69-c395-416e-bfb8-21550542998b"
+        "dc2ebe69-c395-416e-bfb8-21550542998b",
+        "78a5b443-dab4-4026-a86f-40bf106fcc3b"
       ],
       "settings": {
       }
@@ -133,21 +140,21 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Découvrez Flex, notre gel refroidissant unique composé de cannabidiol (CBD - 100 mg), d'arnica, de menthe et d'eucalyptus. Cette formule développée par CBX Medical offre une sensation de fraîcheur revitalisante aux muscles et aux articulations fatigués.\n\nFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
+            "reponse": "Revitalisez votre peau avec Smooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons. Associé à l'Urée à 10%, le CBD offre une protection et un apaisement optimaux aux problèmes cutanés, rendant votre peau plus douce et plus lisse. L’absence de cortisone et son format généreux vous permet une utilisation quotidienne sans compromis. Smooth est un soin sain et récurrent."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
             "question": "Conseil d'application",
-            "reponse": "Appliquez une fine couche de gel refroidissant sur les zones concernées après vos séances sportives pour favoriser une souplesse optimale des muscles et des articulations. Massez légèrement pour une meilleure absorption.\n\nCe produit contenant du CBD (cannabidiol) est 100% légal, non addictif et non psycho-actif. Disponible dans les pharmacies."
+            "reponse": "Appliquez-la une ou plusieurs fois par jour, selon vos besoins. Étalez délicatement la crème sur votre peau et massez doucement jusqu'à absorption complète pour un effet nourrissant optimal. Veillez à éviter l'application sur des plaies ouvertes ou sur les muqueuses."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
           "type": "information",
           "settings": {
             "question": "Ingrédients clés",
-            "reponse": "Cannabidiol, Arnica Montana Flower Extract, Mentha Arvensis Leaf Oil, Eucalyptus Globulus Leaf Oil."
+            "reponse": "Cannabidiol, Aqua, Urea"
           }
         },
         "7a25d582-8819-4428-be22-996b435de475": {
