@@ -139,8 +139,8 @@
             "sous_titre": "Détails",
             "description": "Prenez soin de votre peau grâce à nos crèmes à base de cannabinoïdes. Sans cortisone, elles offrent une solution saine contre les irritations, les crevasses, les démangeaisons, les rougeurs et autres symptômes liés à la peau sèche. L’absence de corticoïde dans nos crèmes en font des solutions naturelles et adéquates avec une utilisation quotidienne. Choisissez le produit qui répond le mieux à vos besoins et profitez d'une régénération complète.",
             "produits": [
-              "flex",
-              "move"
+              "super",
+              "smooth"
             ]
           }
         }
