@@ -15,7 +15,7 @@
             {%- endif -%}{% endcomment %}
 
 <!-- Menu desktop -->
-<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {% if template contains 'product' %}cbx-absolute{% else %}cbx-relative{% endif %}'>
+<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {% if template contains 'product' or template contains 'login' %}cbx-absolute{% else %}cbx-relative{% endif %}'>
 
     <div class='cbx-flex cbx-items-center cbx-justify-between cbx-text-xs cbx-w-full cbx-gap-2.5 cbx-relative'
          x-data='{megaMenu : false, cartNotification : false}' @mousemove.away="megaMenu = false">

@@ -316,7 +316,6 @@ blockquote {
 .caption-large,
 .customer .field input,
 .customer select,
-.field__input,
 .form__label,
 .select__select {
   font-size: 1rem;
@@ -606,12 +605,6 @@ summary::-webkit-details-marker {
 *:focus {
   outline: 0;
   box-shadow: none;
-}
-
-*:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
@@ -1455,27 +1448,6 @@ details[open] > .share-button__fallback {
   transition: none;
 }
 
-.share-button__fallback .field__input:focus,
-.share-button__fallback .field__input:-webkit-autofill {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.1rem;
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-}
-
-.share-button__fallback .field__input {
-  box-shadow: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  filter: none;
-  min-width: auto;
-  min-height: auto;
-}
-
-.share-button__fallback .field__input:hover {
-  box-shadow: none;
-}
-
 .share-button__fallback .icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -1496,7 +1468,6 @@ details[open] > .share-button__fallback {
 }
 
 /* component-form */
-.field__input,
 .select__select,
 .customer .field input,
 .customer select {
@@ -1517,7 +1488,6 @@ details[open] > .share-button__fallback {
 }
 
 .field:before,
-.select:before,
 .customer .field:before,
 .customer select:before,
 .localization-form__select:before {
@@ -1535,7 +1505,6 @@ details[open] > .share-button__fallback {
 }
 
 .field:after,
-.select:after,
 .customer .field:after,
 .customer select:after,
 .localization-form__select:after {
@@ -1573,7 +1542,6 @@ details[open] > .share-button__fallback {
   border-radius: var(--inputs-radius);
 }
 
-.field__input:focus-visible,
 .select__select:focus-visible,
 .customer .field input:focus-visible,
 .customer select:focus-visible,
@@ -1583,7 +1551,6 @@ details[open] > .share-button__fallback {
   border-radius: var(--inputs-radius);
 }
 
-.field__input:focus,
 .select__select:focus,
 .customer .field input:focus,
 .customer select:focus,
@@ -1642,7 +1609,6 @@ details[open] > .share-button__fallback {
   flex-wrap: wrap;
 }
 
-.field__input,
 .customer .field input {
   flex-grow: 1;
   text-align: left;

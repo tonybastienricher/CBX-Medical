@@ -20,17 +20,26 @@
                     {%- case block.type -%}
 
                         {%- when 'information' -%}
+                            {% if illustration_section == blank and forloop.index == 1 %}
+                                <div class='lg:cbx-col-span-2 cbx-border-b lg:cbx-border-t lg:cbx-border-b-0 lg:cbx-pb-0 cbx-border-green5 cbx-hidden lg:cbx-grid lg:cbx-grid-cols-2 cbx-pt-3.5'>
+                                    <span class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-text-xs'>{{ block.settings.question }}</span>
+                                    <div class="answer cbx-hidden lg:cbx-flex cbx-text-green3 cbx-text-sm cbx-py-5 cbx-duration-200 cbx-font-display">
+                                        <p style='line-height: 160%;'>
+                                            {{ block.settings.reponse | newline_to_br }}
+                                        </p>
+                                    </div>
+                                </div>
+                            {% endif %}
+
                             {% if illustration_section == blank and forloop.index != 1 %}
                                 <div class='cbx-hidden lg:cbx-flex'></div>
                             {% endif %}
-                            <div class='cbx-flex cbx-flex-col {% if illustration_section == blank and forloop.index == 1 %}lg:cbx-col-span-2{% endif %}' {{ block.shopify_attributes }}>
+                            <div class='cbx-flex cbx-flex-col {% if illustration_section == blank and forloop.index == 1 %}lg:cbx-hidden{% endif %}' {{ block.shopify_attributes }}>
                                 <div class='cbx-pt-2.5 lg:cbx-hidden'>
                                     <span class='cbx-text-sm cbx-pb-2.5 cbx-text-green3'>{{ forloop.index | prepend: '0' }} /</span>
                                 </div>
-                                <div {% if illustration_section == blank and forloop.index != 1 %}
-                                    @click="open = {{ forloop.index }}"
-                                        {% endif %}
-                                        class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-py-2.5 {% if illustration_section == blank and forloop.index == 1 %}cbx-border-b lg:cbx-border-t lg:cbx-border-b-0 lg:cbx-pb-0{% else %}cbx-border-b{% endif %} cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
+                                <div @click="open = {{ forloop.index }}"
+                                     class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-py-2.5 cbx-border-b cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
                                     {% if illustration_section == blank and forloop.index == 1 %}
                                         <span class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-text-xs'>{{ block.settings.question }}</span>
                                         <div class='cbx-flex cbx-justify-between cbx-items-center cbx-w-full lg:cbx-hidden'>

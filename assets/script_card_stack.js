@@ -109,6 +109,7 @@ if ( typeof window.CustomEvent !== "function" ) {
   window.CustomEvent = CustomEvent;
 }
 
+
 /* 
 	Animation curves
 */
