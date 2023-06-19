@@ -161,14 +161,6 @@
         "texte": "Nous sommes tous convaincus que le cannabis offre des alternatives naturelles et complémentaires à la médecine traditionnelle. Nous pensons profondément que le cannabis doit revenir dans les mains des professionnels de la santé."
       }
     },
-    "fdc94a2f-7840-4318-822f-b660169be414": {
-      "type": "produits_en_vedette",
-      "settings": {
-        "produits_en_vedette": [
-
-        ]
-      }
-    },
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
       "type": "images_carrousel",
       "blocks": {
@@ -273,7 +265,6 @@
     "video",
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
-    "fdc94a2f-7840-4318-822f-b660169be414",
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a",
     "0fbe5799-3511-42ba-a261-20a13db70f71"
   ]
