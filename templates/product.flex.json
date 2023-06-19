@@ -17,7 +17,7 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "40 MG CBD"
+            "text_droite": "100Mg CBD"
           }
         },
         "35195ec4-e684-43d1-862b-5195c77a1061": {
@@ -101,7 +101,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "CanFlex Forte est le gel le plus concentré en CBD disponible en pharmacie. Il est fait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi que les personnes âgées ayant envie de faciliter leurs mouvements."
+        "texte": "Découvrez Flex, notre gel refroidissant unique composé de cannabidiol (CBD - 100 mg), d'arnica, de menthe et d'eucalyptus. Cette formule développée par CBX Medical offre une sensation de fraîcheur revitalisante aux muscles et aux articulations fatigués.\n\nFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
       }
     },
     "description": {
@@ -110,8 +110,8 @@
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
-            "question": "Description",
-            "reponse": "CanFlex Forte est un gel refroidissant composé de cannabidiol (CBD - 100mg), arnica, menthe et eucalyptus. Son effet apaisant est dû à l’action du menthol et à la combinaison d’extraits végétaux (eucalyptus et menthe) qui augmentent la sensation de froid et réduisent la fatigue musculaire. Le gel refroidissant CanFlex Forte est idéal après la pratique d’un exercice physique, lors de tension pour réduire la fatigue articulaire et favoriser la souplesse.\n\nCette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements.\n\nLe gel refroidissant va faciliter la récupération après un effort sportif important par le biais d’un massage qui va alléger les zones chargées et vous permettre d’accéder de nouveau à un bien-être musculaire."
+            "question": "Conseil d'application",
+            "reponse": "Appliquez une fine couche de gel refroidissant sur les zones concernées après vos séances sportives pour favoriser une souplesse optimale des muscles et des articulations. Massez légèrement pour une meilleure absorption.\n\nCe produit contenant du CBD (cannabidiol) est 100% légal, non addictif et non psycho-actif. Disponible dans les pharmacies."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
@@ -143,6 +143,7 @@
         "7a25d582-8819-4428-be22-996b435de475"
       ],
       "settings": {
+        "illustration_section": "shopify:\/\/shop_images\/IMG_7365.jpg",
         "alignement": "droite"
       }
     },
