@@ -19,12 +19,16 @@
                 {{ block.shopify_attributes }}>
             {%- for option in product.options_with_values -%}
                 <fieldset class="js product-form__input">
-                    <legend class="cbx-uppercase cbx-text-green2 cbx-text-xss cbx-font-medium cbx-pb-2">Choisissez votre quantité de {{ option.name }}</legend>
+                    <legend class="cbx-uppercase cbx-text-green2 cbx-text-xss cbx-font-medium cbx-pb-2">
+                        {{- 'products.product.choose_quantity' | t: nameOption: option.name -}}
+                    </legend>
                     {% render 'product-variant-options', product: product, option: option, block: block %}
                 </fieldset>
             {%- endfor -%}
             <script type="application/json">
         {{ product.variants | json }}
+
+
 
             </script>
         </variant-radios>

@@ -15,9 +15,9 @@
             {%- endif -%}{% endcomment %}
 
 <!-- Menu desktop -->
-<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {% if template contains 'product' or template contains 'login' or template contains 'register' %}cbx-absolute{% else %}cbx-relative{% endif %}'>
+<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {% if template contains 'product' or template contains 'login' or template contains 'register' or template contains 'contact' %}cbx-absolute{% else %}cbx-relative{% endif %}'>
 
-    <div class='cbx-flex cbx-items-center cbx-justify-between cbx-text-xs cbx-w-full cbx-gap-2.5 cbx-relative {% if template contains 'product' or template contains 'login' or template contains 'register' %}cbx-text-white{% else %}cbx-text-green{% endif %}'
+    <div class='cbx-flex cbx-items-center cbx-justify-between cbx-text-xs cbx-w-full cbx-gap-2.5 cbx-relative {% if template contains 'login' or template contains 'register' %}cbx-text-white{% else %}cbx-text-green{% endif %}'
          x-data='{megaMenu : false, cartNotification : false}' @mousemove.away="megaMenu = false">
         <!-- Menu 1 -->
         <div class='cbx-font-display cbx-flex cbx-items-center cbx-cursor-pointer cbx-relative cbx-z-10'>
@@ -209,6 +209,7 @@
 
 
 
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -225,6 +226,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
 
 
 

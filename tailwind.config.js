@@ -37,6 +37,7 @@ module.exports = {
       colors: {
         'offWhite': '#EFEFEF',
         'beigeLight': '#F5F2EB',
+        'beige': '#ECE4D5',
         'green': '#1E271D',
         'green2': '#202918',
         'green3': '#464F43',

@@ -1,136 +1,141 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+<div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-min-h-screen'>
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
+    <!-- Image -->
+    <div class='cbx-w-full cbx-h-full cbx-bg-white cbx-relative'>
+        {% if section.settings.image_bg %}
+            {{ section.settings.image_bg | image_url: width: '4000' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full', sizes: '100vw' }}
+        {% endif %}
+    </div>
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact cbx-container-site cbx-container-site--narrow section-{{ section.id }}-padding">
-    {%- if section.settings.heading != blank -%}
-      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        {{ section.settings.heading }}
-      </h2>
-    {%- else -%}
-      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
-    {%- endif -%}
-    {%- liquid
-      assign contact_form_class = 'isolate'
-      if settings.animations_reveal_on_scroll
-        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
-      endif
-    -%}
-    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
-      {%- if form.posted_successfully? -%}
-        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
-          {% render 'icon-success' %}
-          {{ 'templates.contact.form.post_success' | t }}
-        </h2>
-      {%- elsif form.errors -%}
-        <div class="form__message">
-          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
-            {% render 'icon-error' %}
-            {{ 'templates.contact.form.error_heading' | t }}
-          </h2>
-        </div>
-        <ul class="form-status-list caption-large" role="list">
-          <li>
-            <a href="#ContactForm-email" class="link">
-              {{ form.errors.translated_fields.email | capitalize }}
-              {{ form.errors.messages.email }}
-            </a>
-          </li>
-        </ul>
-      {%- endif -%}
-      <div class="contact__fields">
-        <div class="field">
-          <input
-            class="field__input"
-            autocomplete="name"
-            type="text"
-            id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
-            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-            placeholder="{{ 'templates.contact.form.name' | t }}"
-          >
-          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
-        </div>
-        <div class="field field--with-error">
-          <input
-            autocomplete="email"
-            type="email"
-            id="ContactForm-email"
-            class="field__input"
-            name="contact[email]"
-            spellcheck="false"
-            autocapitalize="off"
-            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-            aria-required="true"
-            {% if form.errors contains 'email' %}
-              aria-invalid="true"
-              aria-describedby="ContactForm-email-error"
+    <!-- content -->
+    <div class="cbx-bg-beige cbx-flex cbx-justify-center cbx-items-center">
+        <div class="contact cbx-container-site cbx-max-w-2xl">
+            {%- if section.settings.heading != blank -%}
+                <h2 class="cbx-text-3xl cbx-text-green2">{{ section.settings.heading }}</h2>
+            {%- else -%}
+                <h2 class="cbx-text-3xl cbx-text-green2">{{ 'templates.contact.form.title' | t }}</h2>
+            {%- endif -%}
+            {%- if section.settings.description != blank -%}
+                <p class='cbx-font-display cbx-text-sm cbx-text-green3 cbx-pt-5'>{{ section.settings.description }}</p>
             {% endif %}
-            placeholder="{{ 'templates.contact.form.email' | t }}"
-          >
-          <label class="field__label" for="ContactForm-email">
-            {{- 'templates.contact.form.email' | t }}
-            <span aria-hidden="true">*</span></label
-          >
-          {%- if form.errors contains 'email' -%}
-            <small class="contact__field-error" id="ContactForm-email-error">
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-              <span class="form__message">
-                {%- render 'icon-error' -%}
-                {{- form.errors.translated_fields.email | capitalize }}
-                {{ form.errors.messages.email -}}
-              </span>
-            </small>
-          {%- endif -%}
+
+            {%- form 'contact', id: 'ContactForm', class: 'cbx-pt-5 cbx-flex cbx-flex-col cbx-gap-2' -%}
+                {%- if form.posted_successfully? -%}
+                    <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+                        {{ 'templates.contact.form.post_success' | t }}
+                    </h2>
+                {%- elsif form.errors -%}
+                    <div class="form__message">
+                        <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+                            {{ 'templates.contact.form.error_heading' | t }}
+                        </h2>
+                    </div>
+                    <ul class="form-status-list caption-large" role="list">
+                        <li>
+                            <a href="#ContactForm-email" class="link">
+                                {{ form.errors.translated_s.email | capitalize }}
+                                {{ form.errors.messages.email }}
+                            </a>
+                        </li>
+                    </ul>
+                {%- endif -%}
+                {%- assign words = section.settings.liste | newline_to_br | split: '<br />' -%}
+                {% if words.size > 0 %}
+                    <div>
+                        <h3 class="cbx-font-medium cbx-text-xs">
+                            {{ 'templates.contact.form.praticien' | t }}
+                        </h3>
+                        <ul class="cbx-flex cbx-items-center cbx-w-full cbx-text-sm cbx-font-medium cbx-gap-2 cbx-pt-2">
+                            {% for word in words %}
+                                <li class="">
+                                    <div class="cbx-flex cbx-items-center">
+                                        <input id="{{ word | append: '_praticien' }}" type="checkbox" value="{{ word }}"
+                                               name="contact[praticien][]"
+                                               class="cbx-w-4 cbx-h-4 cbx-rounded-none">
+                                        <label for="{{ word | append: '_praticien' }}"
+                                               class="cbx-w-full cbx-ml-2">
+                                            {{ word }}
+                                        </label>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                <div class="">
+                    <label class="__label" for="ContactForm-name">
+                        {{ 'templates.contact.form.name' | t }} <span aria-hidden="true">*</span>
+                    </label>
+                    <input class="__input"
+                           autocomplete="name"
+                           type="text"
+                           aria-required="true"
+                           id="ContactForm-name"
+                           name="contact[{{ 'templates.contact.form.name' | t }}]"
+                           value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                           placeholder="{{ 'templates.contact.form.name' | t }}">
+                </div>
+                <div class="">
+                    <label class="" for="ContactForm-email">
+                        {{- 'templates.contact.form.email' | t }}
+                        <span aria-hidden="true">*</span>
+                    </label>
+                    <input autocomplete="email"
+                           type="email"
+                           id="ContactForm-email"
+                           class="__input"
+                           name="contact[email]"
+                           spellcheck="false"
+                           autocapitalize="off"
+                           value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                           aria-required="true"
+                            {% if form.errors contains 'email' %}
+                                aria-invalid="true"
+                                aria-describedby="ContactForm-email-error"
+                            {% endif %}
+                           placeholder="{{ 'templates.contact.form.email' | t }}">
+                    {%- if form.errors contains 'email' -%}
+                        <small class="contact__-error" id="ContactForm-email-error">
+                            <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                            <span class="form__message">
+                                {{- form.errors.translated_s.email | capitalize }}
+                                {{ form.errors.messages.email -}}</span>
+                        </small>
+                    {%- endif -%}
+                </div>
+                {% comment %}<div class="">
+                    <label class="__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+                    <input
+                            type="tel"
+                            id="ContactForm-phone"
+                            class="__input"
+                            autocomplete="tel"
+                            name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                            pattern="[0-9\-]*"
+                            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                            placeholder="{{ 'templates.contact.form.phone' | t }}"
+                    >
+                </div>{% endcomment %}
+                <div class="">
+                    <label class="" for="ContactForm-body">
+                        {{- 'templates.contact.form.comment' | t -}}
+                    </label>
+                    <textarea rows="10"
+                              id="ContactForm-body"
+                              class="text-area __input"
+                              name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                              placeholder="{{ 'templates.contact.form.comment' | t }}">{{- form.body -}}</textarea>
+                </div>
+                <div class="cbx-flex cbx-pt-4">
+                    <button type="submit" class="cbx-btn cbx-btn-vert lg:cbx-w-auto cbx-px-8">
+                        {{ 'templates.contact.form.send' | t }}
+                    </button>
+                </div>
+            {%- endform -%}
         </div>
-      </div>
-      <div class="field">
-        <input
-          type="tel"
-          id="ContactForm-phone"
-          class="field__input"
-          autocomplete="tel"
-          name="contact[{{ 'templates.contact.form.phone' | t }}]"
-          pattern="[0-9\-]*"
-          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-          placeholder="{{ 'templates.contact.form.phone' | t }}"
-        >
-        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
-      </div>
-      <div class="field">
-        <textarea
-          rows="10"
-          id="ContactForm-body"
-          class="text-area field__input"
-          name="contact[{{ 'templates.contact.form.comment' | t }}]"
-          placeholder="{{ 'templates.contact.form.comment' | t }}"
-        >
-          {{- form.body -}}
-        </textarea>
-        <label class="form__label field__label" for="ContactForm-body">
-          {{- 'templates.contact.form.comment' | t -}}
-        </label>
-      </div>
-      <div class="contact__button">
-        <button type="submit" class="button">
-          {{ 'templates.contact.form.send' | t }}
-        </button>
-      </div>
-    {%- endform -%}
-  </div>
+    </div>
 </div>
 
 {% schema %}
@@ -139,64 +144,34 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_bg",
+      "label": "Image background"
+    },
     {
       "type": "inline_richtext",
       "id": "heading",
       "default": "Contact form",
-      "label": "Heading"
+      "label": "Titre"
     },
     {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "type": "inline_richtext",
+      "id": "description",
+      "default": "Lorem ipsum Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis",
+      "label": "Description"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "background-1"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "textarea",
+      "id": "liste",
+      "default": "Pharmacien",
+      "label": "Liste des praticiens"
     }
   ],
   "presets": [

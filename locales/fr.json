@@ -158,6 +158,7 @@
       "shipping_policy_html": "<a href=\"{{ link }}\">Frais d'expédition<\/a> calculés à l'étape de paiement.",
       "choose_options": "Choisir des options",
       "choose_product_options": "Choisir des options pour {{ product_name }}",
+      "choose_quantity": "Choisissez votre quantité de {{ nameOption }}",
       "value_unavailable": "{{ option_value }} – indisponible",
       "variant_sold_out_or_unavailable": "Variante épuisée ou indisponible",
       "inventory_in_stock": "En stock",
@@ -250,6 +251,7 @@
         "phone": "Numéro de téléphone",
         "comment": "Commentaire",
         "send": "Envoyer",
+        "praticien": "Qui êtes vous ?",
         "post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
         "error_heading": "Veuillez ajuster les éléments suivants :",
         "title": "Formulaire de contact"

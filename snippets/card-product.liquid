@@ -18,11 +18,11 @@
   {% render 'card-product' %}
 {% endcomment %}
 {%- if card_product and card_product != empty -%}
+    <a href="{{ card_product.url }}">
+        <div class='cbx-group card-product {% if collection %}cbx-aspect-[4/5]{% else %}cbx-aspect-[3/5]{% endif %} cbx-rounded cbx-py-2.5 cbx-px-3 cbx-flex cbx-flex-col cbx-justify-between cbx-relative cbx-overflow-hidden {% if border %}cbx-border cbx-border-green{% endif %}'>
 
-    <div class='cbx-group card-product {% if collection %}cbx-aspect-[4/5]{% else %}cbx-aspect-[3/5]{% endif %} cbx-rounded cbx-py-2.5 cbx-px-3 cbx-flex cbx-flex-col cbx-justify-between cbx-relative cbx-overflow-hidden {% if border %}cbx-border cbx-border-green{% endif %}'>
-
-        <!-- Media -->
-        <img srcset="
+            <!-- Media -->
+            <img srcset="
                   {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
@@ -30,16 +30,16 @@
                   {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 1840 -%}{{ card_product.featured_media | image_url: width: 1840 }} 1840w,{%- endif -%}
                   {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w"
-             src="{{ card_product.featured_media | image_url: width: 700 }}"
-             sizes="(min-width: 1840px) {{ 1840 | divided_by: 3 }}px, calc((100vw))"
-             alt="{{ card_product.featured_media.alt | escape }}"
-             class="motion-reduce cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full"
-                {% comment %}loading="lazy"{% endcomment %}
-             width="{{ card_product.featured_media.width }}"
-             height="{{ card_product.featured_media.height }}">
+                 src="{{ card_product.featured_media | image_url: width: 700 }}"
+                 sizes="(min-width: 1840px) {{ 1840 | divided_by: 3 }}px, calc((100vw))"
+                 alt="{{ card_product.featured_media.alt | escape }}"
+                 class="motion-reduce cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full"
+                    {% comment %}loading="lazy"{% endcomment %}
+                 width="{{ card_product.featured_media.width }}"
+                 height="{{ card_product.featured_media.height }}">
 
-        {%- if card_product.metafields.custom.echantillon != null -%}
-            <img srcset="
+            {%- if card_product.metafields.custom.echantillon != null -%}
+                <img srcset="
                     {%- if card_product.metafields.custom.echantillon.width >= 165 -%}{{ card_product.metafields.custom.echantillon | image_url: width: 165 }} 165w,{%- endif -%}
                     {%- if card_product.metafields.custom.echantillon.width >= 360 -%}{{ card_product.metafields.custom.echantillon | image_url: width: 360 }} 360w,{%- endif -%}
                     {%- if card_product.metafields.custom.echantillon.width >= 533 -%}{{ card_product.metafields.custom.echantillon | image_url: width: 533 }} 533w,{%- endif -%}
@@ -47,49 +47,48 @@
                     {%- if card_product.metafields.custom.echantillon.width >= 940 -%}{{ card_product.metafields.custom.echantillon | image_url: width: 940 }} 940w,{%- endif -%}
                     {%- if card_product.metafields.custom.echantillon.width >= 1840 -%}{{ card_product.metafields.custom.echantillon | image_url: width: 1840 }} 1840w,{%- endif -%}
                     {{ card_product.metafields.custom.echantillon | image_url }} {{ card_product.metafields.custom.echantillon.width }}w"
-                 src="{{ card_product.metafields.custom.echantillon | image_url: width: 700 }}"
-                 sizes="(min-width: 1840px) {{ 1840 | divided_by: 3 }}px, calc((100vw))"
-                 alt=""
-                 class="cbx-opacity-0 group-hover:cbx-opacity-100 cbx-duration-200 motion-reduce cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full"
-                 loading="lazy"
-                 width="{{ card_product.metafields.custom.echantillon.width }}"
-                 height="{{ card_product.metafields.custom.echantillon.height }}">
-        {%- endif -%}
+                     src="{{ card_product.metafields.custom.echantillon | image_url: width: 700 }}"
+                     sizes="(min-width: 1840px) {{ 1840 | divided_by: 3 }}px, calc((100vw))"
+                     alt=""
+                     class="cbx-opacity-0 group-hover:cbx-opacity-100 cbx-duration-200 motion-reduce cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full"
+                     loading="lazy"
+                     width="{{ card_product.metafields.custom.echantillon.width }}"
+                     height="{{ card_product.metafields.custom.echantillon.height }}">
+            {%- endif -%}
 
-        <!-- Infos -->
-        <div class='cbx-flex cbx-justify-between cbx-uppercase cbx-font-medium cbx-text-xs cbx-z-0'>
-            <!-- Concentration -->
-            <div class='cbx-w-full'>
-                <span>{{ card_product.metafields.custom.quantite }}</span>
+            <!-- Infos -->
+            <div class='cbx-flex cbx-justify-between cbx-uppercase cbx-font-medium cbx-text-xs cbx-z-0'>
+                <!-- Concentration -->
+                <div class='cbx-w-full'>
+                    <span>{{ card_product.metafields.custom.quantite }}</span>
+                </div>
+
+                <!-- Prix -->
+                {% render 'price', product: card_product, price_class: '' %}
             </div>
 
-            <!-- Prix -->
-            {% render 'price', product: card_product, price_class: '' %}
-        </div>
+            <!-- Titre -->
+            <div class='cbx-flex cbx-flex-col cbx-gap-2 cbx-z-0'>
+                <div class='cbx-flex cbx-flex-col cbx-justify-center lg:cbx-justify-start'>
+                    <h3 class="cbx-font-display cbx-text-xl cbx-text-center lg:cbx-text-left cbx-uppercase cbx-font-medium"
+                        id="title-{{ section_id }}-{{ card_product.id }}">
+                        {{ card_product.title | escape }}
+                    </h3>
+                    {% if card_product.metafields.custom.baseline != blank %}
+                        <p class='cbx-uppercase cbx-text-center lg:cbx-text-left' style='font-size: 10px'>
+                            {{ card_product.metafields.custom.baseline }}
+                        </p>
+                    {% endif %}
+                </div>
 
-        <!-- Titre -->
-        <div class='cbx-flex cbx-flex-col cbx-gap-2 cbx-z-0'>
-            <div class='cbx-flex cbx-flex-col cbx-justify-center lg:cbx-justify-start'>
-                <h3 class="cbx-font-display cbx-text-xl cbx-text-center lg:cbx-text-left cbx-uppercase cbx-font-medium"
-                    id="title-{{ section_id }}-{{ card_product.id }}">
-                    {{ card_product.title | escape }}
-                </h3>
-                {% if card_product.metafields.custom.baseline != blank %}
-                    <p class='cbx-uppercase cbx-text-center lg:cbx-text-left' style='font-size: 10px'>
-                        {{ card_product.metafields.custom.baseline }}
-                    </p>
-                {% endif %}
-            </div>
-
-            <div class='cbx-w-full cbx-flex lg:cbx-hidden cbx-delay-100 lg:cbx-translate-y-6 group-hover:cbx-translate-y-0 group-hover:cbx-flex cbx-duration-200'>
-                <a href="{{ card_product.url }}"
-                   class='cbx-btn cbx-btn-white cbx-uppercase cbx-flex cbx-justify-center cbx-w-full cbx-py-2 lg:cbx-py-3'>
+                <div class='cbx-w-full cbx-flex lg:cbx-hidden cbx-delay-100 lg:cbx-translate-y-6 group-hover:cbx-translate-y-0 group-hover:cbx-flex cbx-duration-200'>
+                <span class='cbx-btn cbx-btn-white cbx-uppercase cbx-flex cbx-justify-center cbx-w-full cbx-py-2 lg:cbx-py-3'>
                     Découvrir {{ card_product.title | escape }}
-                </a>
+                </span>
+                </div>
             </div>
         </div>
-    </div>
-
+    </a>
 {%- else -%}
     <div class="product-card-wrapper card-wrapper underline-links-hover">
         <div class="

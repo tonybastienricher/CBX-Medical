@@ -251,6 +251,7 @@ textarea {
 
 /* login / recover */
 
+#ContactForm input,
 .register-cbx input,
 .login-cbx input {
     @apply cbx-p-2.5 placeholder:cbx-text-green cbx-rounded cbx-text-11 cbx-w-full;
@@ -260,6 +261,10 @@ textarea {
 .register-cbx label,
 .login-cbx label {
     display: none;
+}
+
+#ContactForm label {
+    @apply cbx-font-display cbx-text-xs cbx-font-medium;
 }
 
 @tailwind components;

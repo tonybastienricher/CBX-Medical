@@ -180,6 +180,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "sur_titre": "Press & Reviews",
         "titre": "Les professionels de la santé en parlent"

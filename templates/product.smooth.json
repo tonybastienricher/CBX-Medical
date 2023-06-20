@@ -178,6 +178,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "sur_titre": "Press & Reviews",
         "titre": "Les professionels de la santé en parlent"
@@ -243,7 +244,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "frontpage",
+        "collection": "homepage",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
