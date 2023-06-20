@@ -8,8 +8,8 @@
         "7fe3f97c-3394-4f73-bd37-9999ed4ecdad": {
           "type": "image_du_header_mobile",
           "settings": {
-            "baseline": "",
-            "nom_du_menu": "accueil",
+            "baseline": "CBX Medical",
+            "nom_du_menu": "Accueil",
             "image": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg"
           }
         },
