@@ -19,7 +19,7 @@
           "type": "bouton",
           "settings": {
             "titre_du_bouton": "Découvrez nos produits",
-            "url_du_bouton": ""
+            "url_du_bouton": "shopify:\/\/collections\/frontpage"
           }
         },
         "ad73d985-d76f-4a28-a3da-3d2b905c13db": {
