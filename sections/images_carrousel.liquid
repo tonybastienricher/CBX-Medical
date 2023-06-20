@@ -12,7 +12,7 @@
                         <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
                             <div class='cbx-group cbx-rounded overflow-hidden cbx-relative cbx-h-[90vh]'>
                                 {% if image %}
-                                    {{ image | image_url: width: 800 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                                    {{ image | image_url: width: 4000 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', sizes: '(min-width:1024px) 90vh, (min-width: 750px) 90vh, 100vw', loading: 'lazy' }}
                                 {% else %}
                                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
                                 {% endif %}
