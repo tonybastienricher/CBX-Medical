@@ -60,7 +60,7 @@
         <div class='cbx-flex cbx-justify-between cbx-uppercase cbx-font-medium cbx-text-xs cbx-z-0'>
             <!-- Concentration -->
             <div class='cbx-w-full'>
-                <span>50 MG : cbd</span>
+                <span>{{ card_product.metafields.custom.quantite }}</span>
             </div>
 
             <!-- Prix -->
@@ -74,8 +74,11 @@
                     id="title-{{ section_id }}-{{ card_product.id }}">
                     {{ card_product.title | escape }}
                 </h3>
-                <p class='cbx-uppercase cbx-text-center lg:cbx-text-left' style='font-size: 10px'>
-                    Gel chauffant au CBG pour le sport</p>
+                {% if card_product.metafields.custom.baseline != blank %}
+                    <p class='cbx-uppercase cbx-text-center lg:cbx-text-left' style='font-size: 10px'>
+                        {{ card_product.metafields.custom.baseline }}
+                    </p>
+                {% endif %}
             </div>
 
             <div class='cbx-w-full cbx-flex lg:cbx-hidden cbx-delay-100 lg:cbx-translate-y-6 group-hover:cbx-translate-y-0 group-hover:cbx-flex cbx-duration-200'>

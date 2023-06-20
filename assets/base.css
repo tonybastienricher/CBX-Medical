@@ -1487,7 +1487,6 @@ details[open] > .share-button__fallback {
   border: 0;
 }
 
-.field:before,
 .customer .field:before,
 .customer select:before,
 .localization-form__select:before {

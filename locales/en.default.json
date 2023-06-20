@@ -380,7 +380,8 @@
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",
-      "create_account": "Create account",
+      "create_account": "New customer ? Create account",
+      "already_account": "Already customer ? Login",
       "email": "Email",
       "forgot_password": "Forgot your password?",
       "guest_continue": "Continue",

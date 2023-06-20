@@ -390,7 +390,8 @@
     "log_out": "Déconnexion",
     "login_page": {
       "cancel": "Annuler",
-      "create_account": "Créer un compte",
+      "create_account": "Nouveau ? Créer un compte maintenant",
+      "already_account": "Déjà client ? Connexion",
       "email": "E-mail",
       "forgot_password": "Mot de passe oublié ?",
       "guest_continue": "Continuer",

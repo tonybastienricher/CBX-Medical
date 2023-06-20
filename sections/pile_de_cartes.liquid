@@ -3,7 +3,7 @@
 <div class='cbx-container-site cbx-mb-28 cbx-mt-20 cbx-hidden lg:cbx-flex lg:cbx-flex-col'>
 
     <!-- Title -->
-    <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12'>
+    <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12 cbx-max-w-xl cbx-mx-auto'>
         <span class='cbx-text-green5 cbx-pb-2.5'>{{ section.settings.sur_titre }}</span>
         <h2 class='cbx-text-5xls cbx-font-display cbx-text-green6 lg:cbx-text-green2 lg:cbx-text-center'>
             {{ section.settings.titre | newline_to_br }}
@@ -22,7 +22,8 @@
                     {% assign color = 'cbx-bg-green4 cbx-text-green6' %}
             {% endcase %}
 
-            <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[80vh] cbx-rounded {{ color }}" {{ block.shopify_attributes }} data-scroll-sticky>
+            <li class="stack-cards__item js-stack-cards__item cbx-h-full cbx-min-h-[80vh] cbx-rounded {{ color }}" {{ block.shopify_attributes }}
+                data-scroll-sticky>
                 {%- case block.type -%}
                     {%- when 'cartes' -%}
                         <div class='lg:cbx-px-16 lg:cbx-py-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-5'>

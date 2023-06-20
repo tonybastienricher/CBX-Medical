@@ -15,18 +15,18 @@
             {%- endif -%}{% endcomment %}
 
 <!-- Menu desktop -->
-<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {% if template contains 'product' or template contains 'login' %}cbx-absolute{% else %}cbx-relative{% endif %}'>
+<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {% if template contains 'product' or template contains 'login' or template contains 'register' %}cbx-absolute{% else %}cbx-relative{% endif %}'>
 
-    <div class='cbx-flex cbx-items-center cbx-justify-between cbx-text-xs cbx-w-full cbx-gap-2.5 cbx-relative'
+    <div class='cbx-flex cbx-items-center cbx-justify-between cbx-text-xs cbx-w-full cbx-gap-2.5 cbx-relative {% if template contains 'product' or template contains 'login' or template contains 'register' %}cbx-text-white{% else %}cbx-text-green{% endif %}'
          x-data='{megaMenu : false, cartNotification : false}' @mousemove.away="megaMenu = false">
         <!-- Menu 1 -->
-        <div class='cbx-font-display cbx-flex cbx-items-center cbx-text-green3 cbx-cursor-pointer cbx-relative cbx-z-10'>
+        <div class='cbx-font-display cbx-flex cbx-items-center cbx-cursor-pointer cbx-relative cbx-z-10'>
             <ul class='cbx-flex cbx-gap-x-5'>
                 {% for link in section.settings.menu_gauche.links %}
                     {% assign indexMenu = '1' | append: forloop.index %}
                     <li>
                         <a href="{{ link.url }}"
-                           class='cbx-text-xs cbx-font-display cbx-text-green cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1'
+                           class='cbx-text-xs cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1'
                            aria-current="page"
                            {%- if link.links != blank -%}@mouseenter="megaMenu = {{ indexMenu }}"
                            {% else %}@mouseenter="megaMenu = false"{% endif %}>
@@ -93,13 +93,13 @@
         </div>
 
         <!-- Menu 2 + Panier -->
-        <div class='cbx-font-display cbx-text-green cbx-text-xs cbx-relative cbx-z-10'>
+        <div class='cbx-font-display cbx-text-xs cbx-relative cbx-z-10'>
             <ul class='cbx-flex cbx-gap-x-5'>
                 {% for link in section.settings.menu_droite.links %}
                     {% assign indexMenu = '2' | append: forloop.index %}
                     <li>
                         <a href="{{ link.url }}"
-                           class='cbx-text-xs cbx-font-display cbx-text-green cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1'
+                           class='cbx-text-xs cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1'
                            aria-current="page"
                            {%- if link.links != blank -%}@mouseenter="megaMenu = {{ indexMenu }}"
                            {% else %}@mouseenter="megaMenu = false"{% endif %}>
@@ -117,7 +117,7 @@
                         </a>
                     </li>
                 {% endfor %}
-                <li class='cbx-text-xs cbx-font-display cbx-text-green cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer'
+                <li class='cbx-text-xs cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer'
                     id="cart-notif"
                     @click='cartNotification = !cartNotification;'>
                     <div id='cart-item_count' class='cart-item_count'>
@@ -129,7 +129,7 @@
                          :class="{'cbx-rotate-180' : cartNotification}">
                         <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 0.5L4 3.5L7 0.5" stroke="#1E271D" />
+                            <path d="M1 0.5L4 3.5L7 0.5" stroke="currentColor" />
                         </svg>
                     </div>
                 </li>
@@ -207,6 +207,8 @@
 
 
 
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -223,6 +225,8 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
 
 
 

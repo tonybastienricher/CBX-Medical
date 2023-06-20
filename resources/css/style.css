@@ -133,6 +133,10 @@
         @apply cbx-w-full cbx-hidden lg:cbx-flex cbx-justify-center lg:cbx-relative;
     }
 
+    .product__description {
+        @apply cbx-gap-y-2;
+    }
+
     .product__description h1,
     .product__description h2,
     .product__description h3,
@@ -142,7 +146,7 @@
     }
 
     .product__description p {
-        @apply cbx-text-xs cbx-pt-2;
+        @apply cbx-text-xs;
     }
 
     .product_cbx_information a {
@@ -243,8 +247,19 @@ textarea {
         width: 1em; /* Also needed for space (tweak if needed) */
         margin-right: 16px;
     }
+}
 
+/* login / recover */
 
+.register-cbx input,
+.login-cbx input {
+    @apply cbx-p-2.5 placeholder:cbx-text-green cbx-rounded cbx-text-11 cbx-w-full;
+    border: 1px solid #DBDBDB;
+}
+
+.register-cbx label,
+.login-cbx label {
+    display: none;
 }
 
 @tailwind components;

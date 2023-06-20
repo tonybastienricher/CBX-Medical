@@ -100,7 +100,6 @@
                         <p class="product__text inline-richtext {% if block.settings.mobile_visible %}cbx-hidden lg:cbx-flex{% endif %} cbx-pt-4{% if block.settings.text_style == 'uppercase' %} cbx-text-xss cbx-uppercase cbx-text-center cbx-font-medium{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {% unless block.settings.show_border %} !cbx-border-0{% endunless %}" {{ block.shopify_attributes }}>
                             {{- block.settings.text -}}
                         </p>
-
                     {%- when 'title' -%}
                         <div class='cbx-flex cbx-justify-between cbx-items-end cbx-py-2.5 lg:cbx-py-5'>
                             <div class="product__title" {{ block.shopify_attributes }}>
