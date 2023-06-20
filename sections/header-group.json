@@ -25,7 +25,7 @@
           "type": "image_du_header_mobile",
           "settings": {
             "baseline": "Nous contacter",
-            "nom_du_menu": "Contact",
+            "nom_du_menu": "contact",
             "image": "shopify:\/\/shop_images\/JUB0709-27.jpg"
           }
         }
