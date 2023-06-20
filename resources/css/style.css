@@ -267,6 +267,10 @@ textarea {
     @apply cbx-font-display cbx-text-xs cbx-font-medium;
 }
 
+.shopify-policy__container {
+    @apply cbx-container-site cbx-py-12 cbx-text-center;
+}
+
 @tailwind components;
 
 @layer components {
