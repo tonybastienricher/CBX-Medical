@@ -79,6 +79,13 @@
         "padding_bottom": 12
       }
     },
+    "2d5b7091-607b-47ba-b651-9699bb120112": {
+      "type": "texte-large",
+      "settings": {
+        "sur_titre": "",
+        "texte": "Revitalisez votre peau avec Smooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons."
+      }
+    },
     "c1799eff-e8e5-4dbd-b6a5-d03e2e624529": {
       "type": "liste",
       "blocks": {
@@ -114,13 +121,6 @@
         "78a5b443-dab4-4026-a86f-40bf106fcc3b"
       ],
       "settings": {
-      }
-    },
-    "2d5b7091-607b-47ba-b651-9699bb120112": {
-      "type": "texte-large",
-      "settings": {
-        "sur_titre": "",
-        "texte": "Revitalisez votre peau avec Smooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons."
       }
     },
     "description": {
@@ -257,8 +257,8 @@
   },
   "order": [
     "main",
-    "c1799eff-e8e5-4dbd-b6a5-d03e2e624529",
     "2d5b7091-607b-47ba-b651-9699bb120112",
+    "c1799eff-e8e5-4dbd-b6a5-d03e2e624529",
     "description",
     "related-products",
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217",
