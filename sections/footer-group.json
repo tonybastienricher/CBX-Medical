@@ -8,39 +8,23 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Nos produits",
             "emplacement": "box1",
-            "menu": "footer"
-          }
-        },
-        "d8931733-a12d-48d0-aa21-013497be3428": {
-          "type": "link_list",
-          "settings": {
-            "heading": "A propos de CBX",
-            "emplacement": "box1",
-            "menu": "footer"
+            "menu": "nos-produits"
           }
         },
         "46889b8d-8103-4082-8537-e13ee4246620": {
           "type": "link_list",
           "settings": {
-            "heading": "Produit 2",
+            "heading": "Legals",
             "emplacement": "box2",
-            "menu": "footer"
-          }
-        },
-        "af5f8c2b-3c18-4b9d-9d28-4a76571e07ba": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Produit 3",
-            "emplacement": "box2",
-            "menu": "footer"
+            "menu": "legals"
           }
         },
         "01aaae93-2037-45f7-a785-ca5dd0a8c7f2": {
           "type": "link_list",
           "settings": {
-            "heading": "Produit 3",
+            "heading": "Nous trouver",
             "emplacement": "box2",
             "menu": "footer"
           }
@@ -48,9 +32,7 @@
       },
       "block_order": [
         "footer-0",
-        "d8931733-a12d-48d0-aa21-013497be3428",
         "46889b8d-8103-4082-8537-e13ee4246620",
-        "af5f8c2b-3c18-4b9d-9d28-4a76571e07ba",
         "01aaae93-2037-45f7-a785-ca5dd0a8c7f2"
       ],
       "settings": {

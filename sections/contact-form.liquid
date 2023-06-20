@@ -1,16 +1,16 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
-<div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-min-h-screen'>
+<div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 lg:cbx-min-h-screen'>
 
     <!-- Image -->
-    <div class='cbx-w-full cbx-h-full cbx-bg-white cbx-relative'>
+    <div class='cbx-hidden lg:cbx-flex cbx-w-full cbx-h-full cbx-bg-white cbx-relative'>
         {% if section.settings.image_bg %}
             {{ section.settings.image_bg | image_url: width: '4000' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full', sizes: '100vw' }}
         {% endif %}
     </div>
 
     <!-- content -->
-    <div class="cbx-bg-beige cbx-flex cbx-justify-center cbx-items-center">
+    <div class="cbx-bg-beige cbx-flex cbx-justify-center cbx-items-center cbx-py-12">
         <div class="contact cbx-container-site cbx-max-w-2xl">
             {%- if section.settings.heading != blank -%}
                 <h2 class="cbx-text-3xl cbx-text-green2">{{ section.settings.heading }}</h2>

@@ -4,6 +4,37 @@
   "sections": {
     "header-mobile": {
       "type": "header-mobile",
+      "blocks": {
+        "7fe3f97c-3394-4f73-bd37-9999ed4ecdad": {
+          "type": "image_du_header_mobile",
+          "settings": {
+            "baseline": "",
+            "nom_du_menu": "accueil",
+            "image": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg"
+          }
+        },
+        "046f59de-602e-4e09-987f-f28185004c13": {
+          "type": "image_du_header_mobile",
+          "settings": {
+            "baseline": "Tous nos produits",
+            "nom_du_menu": "catalogue",
+            "image": "shopify:\/\/shop_images\/Flex_bd2e1236-1eda-46ce-bd4c-f506a3d5779c.jpg"
+          }
+        },
+        "f6a72ef8-b08f-4d23-91dd-aa2e392b27de": {
+          "type": "image_du_header_mobile",
+          "settings": {
+            "baseline": "",
+            "nom_du_menu": "contact",
+            "image": "shopify:\/\/shop_images\/JUB0709-27.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "7fe3f97c-3394-4f73-bd37-9999ed4ecdad",
+        "046f59de-602e-4e09-987f-f28185004c13",
+        "f6a72ef8-b08f-4d23-91dd-aa2e392b27de"
+      ],
       "settings": {
         "menu": "main-menu"
       }

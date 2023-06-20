@@ -46,7 +46,7 @@
                                 {%- assign produits = block.settings.produits -%}
                                 {% if produits.count > 0 %}
                                     <div class='cbx-flex cbx-flex-col cbx-pt-10'>
-                                        <span class='cbx-text-sm cbx-pb-11'>Produits associés ({{ produits.count }})</span>
+                                        <span class='cbx-text-sm cbx-pb-5'>Produits associés ({{ produits.count }})</span>
                                         <ul class='cbx-flex cbx-gap-3'>
                                             {%- for product in produits -%}
                                                 <a href='{{ product.url }}'>

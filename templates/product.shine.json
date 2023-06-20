@@ -54,15 +54,6 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
-        },
-        "3ed467b4-b76c-414a-a9a5-51d81ca24f20": {
-          "type": "text",
-          "settings": {
-            "text": "Commandez aujourd'hui, livré demain",
-            "mobile_visible": false,
-            "show_border": false,
-            "text_style": "uppercase"
-          }
         }
       },
       "block_order": [
@@ -73,8 +64,7 @@
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
         "variant_picker",
         "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f",
-        "buy_buttons",
-        "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": true,

@@ -1,7 +1,10 @@
 {
   "sections": {
     "main": {
-      "type": "main-login"
+      "type": "main-login",
+      "settings": {
+        "image_bg": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg"
+      }
     }
   },
   "order": [

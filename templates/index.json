@@ -111,7 +111,7 @@
           "settings": {
             "titre": "Bouger",
             "sous_titre": "Détails",
-            "description": "Expérimentez un nouvel élan de liberté, profitez de votre corps, de toute sa mobilité et sa souplesse grâce à nos solutions innovantes à base de cannabinoïdes naturels. Soutenant vos performances physiques et stimulant votre énergie, nos produits pouraient soulager les situations douloureuses. Ils sont idéaux pour les athlètes et tous ceux désirant maintenir un mode de vie actif. Des solutions naturelles pour performer et redécouvrir le plaisir de la mobilité sans contrainte.",
+            "description": "Expérimentez un nouvel élan de liberté, profitez de votre corps, de toute sa mobilité et sa souplesse grâce à nos solutions innovantes avec cannabinoïdes naturels. Soutenant vos performances physiques et stimulant votre énergie, nos produits pouraient soulager les situations douloureuses. Ils sont idéaux pour les athlètes et tous ceux désirant maintenir un mode de vie actif. Des solutions naturelles pour performer et redécouvrir le plaisir de la mobilité sans contrainte.",
             "produits": [
               "canflex-forte",
               "canmove"
@@ -123,7 +123,7 @@
           "settings": {
             "titre": "Régénérer",
             "sous_titre": "Détails",
-            "description": "Prenez soin de votre peau grâce à nos crèmes à base de cannabinoïdes. Sans cortisone, elles offrent une solution saine contre les irritations, les crevasses, les démangeaisons, les rougeurs et autres symptômes liés à la peau sèche. L’absence de corticoïde dans nos crèmes en font des solutions naturelles et adéquates avec une utilisation quotidienne. Choisissez le produit qui répond le mieux à vos besoins et profitez d'une régénération complète.",
+            "description": "Prenez soin de votre peau grâce à nos crèmes avec cannabinoïdes. Sans cortisone, elles offrent une solution saine contre les irritations, les crevasses, les démangeaisons, les rougeurs et autres symptômes liés à la peau sèche. L’absence de corticoïde dans nos crèmes en font des solutions naturelles et adéquates avec une utilisation quotidienne. Choisissez le produit qui répond le mieux à vos besoins et profitez d'une régénération complète.",
             "produits": [
               "canshine",
               "cansmooth"
@@ -193,8 +193,8 @@
         },
         "2e12dce0-1d6e-444d-b2ac-1d9460bba512": {
           "type": "image",
-          "disabled": true,
           "settings": {
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
             "description": "",
             "texte_du_bouton": "",
             "lien_du_bouton": "",

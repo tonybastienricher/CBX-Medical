@@ -1,5 +1,6 @@
 <!-- Menu mobile -->
-<div class='cbx-absolute cbx-top-0 cbx-container-site cbx-pt-5 cbx-pb-2.5 cbx-w-full lg:cbx-w-auto cbx-flex cbx-z-30' data-scroll-sticky
+<div class='cbx-absolute cbx-top-0 cbx-container-site cbx-pt-5 cbx-pb-2.5 cbx-w-full lg:cbx-w-auto cbx-flex cbx-z-30'
+     data-scroll-sticky
      x-data='{menuMobile: false, cartNotificationMobile: false}'>
     <header id="menuMobile" class='cbx-duration-300 cbx-w-full lg:cbx-w-auto lg:cbx-opacity-0 lg:-cbx-translate-y-20'>
         <!-- Header -->
@@ -33,7 +34,8 @@
                 </svg>
 
                 <!-- Menu 2 + Panier -->
-                <div class='cbx-font-display cbx-text-green3 cbx-cursor-pointer cbx-select-none cart-item_count' id='cart-item_count'
+                <div class='cbx-font-display cbx-text-green3 cbx-cursor-pointer cbx-select-none cart-item_count'
+                     id='cart-item_count'
                      @click='cartNotificationMobile = !cartNotificationMobile; menuMobile = false'>
                     {%- if cart.item_count < 100 -%}
                         Panier (<span>{{ cart.item_count }}</span>)
@@ -56,13 +58,37 @@
                         <a href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6'
                            aria-current="page">
                             <!-- Image -->
-                            <div class='cbx-rounded cbx-bg-green6 cbx-w-12 cbx-h-12'></div>
+                            <div class='cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative'>
+                                {% for block in section.blocks %}
+                                    {%- case block.type -%}
+                                        {%- when 'image_du_header_mobile' -%}
+                                            {% if block.settings.nom_du_menu == link.handle %}
+                                                {%- assign image = block.settings.image -%}
+                                                {% if image != blank %}
+                                                    {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
+                                                {% else %}
+                                                    {{ 'image' | placeholder_svg_tag: 'absolute motion-reduce w-full h-full object-cover m-auto bg-gray-100' }}
+                                                {% endif %}
+                                            {% endif %}
+                                    {%- endcase -%}
+                                {% endfor %}
+                            </div>
                             <!-- Title -->
                             <div>
                                 <h4 class='cbx-text-xs cbx-font-display cbx-text-green2'>
                                     {{ link.title | escape }}
                                 </h4>
-                                <p class='cbx-text-xs cbx-text-green4'>Tous nos produits</p>
+                                {% for block in section.blocks %}
+                                    {%- case block.type -%}
+                                        {%- when 'image_du_header_mobile' -%}
+                                            {% if block.settings.nom_du_menu == link.handle %}
+                                                <p class='cbx-text-xs cbx-text-green4'>
+                                                    {{ block.settings.baseline }}
+                                                </p>
+                                            {% endif %}
+                                    {%- endcase -%}
+                                {% endfor %}
+
                             </div>
                         </a>
                     </li>
@@ -444,118 +470,6 @@
         {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
     {%- endif -%}
 {% endcomment %}
-{% javascript %}
-class StickyHeader extends HTMLElement {
-constructor() {
-super();
-}
-
-connectedCallback() {
-this.header = document.querySelector('.section-header');
-this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' ||
-this.getAttribute('data-sticky-type') === 'reduce-logo-size';
-this.headerBounds = {};
-
-this.setHeaderHeight();
-
-window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
-
-if (this.headerIsAlwaysSticky) {
-this.header.classList.add('shopify-section-header-sticky');
-};
-
-this.currentScrollTop = 0;
-this.preventReveal = false;
-this.predictiveSearch = this.querySelector('predictive-search');
-
-this.onScrollHandler = this.onScroll.bind(this);
-this.hideHeaderOnScrollUp = () => this.preventReveal = true;
-
-this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-window.addEventListener('scroll', this.onScrollHandler, false);
-
-this.createObserver();
-}
-
-setHeaderHeight() {
-document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
-}
-
-disconnectedCallback() {
-this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-window.removeEventListener('scroll', this.onScrollHandler);
-}
-
-createObserver() {
-let observer = new IntersectionObserver((entries, observer) => {
-this.headerBounds = entries[0].intersectionRect;
-observer.disconnect();
-});
-
-observer.observe(this.header);
-}
-
-onScroll() {
-const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
-
-if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-this.header.classList.add('scrolled-past-header');
-if (this.preventHide) return;
-requestAnimationFrame(this.hide.bind(this));
-} else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-this.header.classList.add('scrolled-past-header');
-if (!this.preventReveal) {
-requestAnimationFrame(this.reveal.bind(this));
-} else {
-window.clearTimeout(this.isScrolling);
-
-this.isScrolling = setTimeout(() => {
-this.preventReveal = false;
-}, 66);
-
-requestAnimationFrame(this.hide.bind(this));
-}
-} else if (scrollTop <= this.headerBounds.top) {
-this.header.classList.remove('scrolled-past-header');
-requestAnimationFrame(this.reset.bind(this));
-}
-
-this.currentScrollTop = scrollTop;
-}
-
-hide() {
-if (this.headerIsAlwaysSticky) return;
-this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
-this.closeMenuDisclosure();
-this.closeSearchModal();
-}
-
-reveal() {
-if (this.headerIsAlwaysSticky) return;
-this.header.classList.add('shopify-section-header-sticky', 'animate');
-this.header.classList.remove('shopify-section-header-hidden');
-}
-
-reset() {
-if (this.headerIsAlwaysSticky) return;
-this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
-}
-
-closeMenuDisclosure() {
-this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
-this.disclosures.forEach(disclosure => disclosure.close());
-}
-
-closeSearchModal() {
-this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-this.searchModal.close(false);
-}
-}
-
-customElements.define('sticky-header', StickyHeader);
-{% endjavascript %}
 
 <script type="application/ld+json">
   {
@@ -578,6 +492,8 @@ customElements.define('sticky-header', StickyHeader);
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -594,6 +510,7 @@ customElements.define('sticky-header', StickyHeader);
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
 
     </script>
 {%- endif -%}
@@ -613,6 +530,27 @@ customElements.define('sticky-header', StickyHeader);
     }
   ],
   "blocks": [
+    {
+      "name": "Image du header mobile",
+      "type": "image_du_header_mobile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "baseline",
+          "label": "Baseline"
+        },
+        {
+          "type": "text",
+          "id": "nom_du_menu",
+          "label": "Nom du menu cible"
+        },
+        {
+          "type": "image_picker",
+          "label": "Image du menu mobile",
+          "id": "image"
+        }
+      ]
+    },
     {
       "type": "@app"
     }
