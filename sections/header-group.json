@@ -17,15 +17,15 @@
           "type": "image_du_header_mobile",
           "settings": {
             "baseline": "Tous nos produits",
-            "nom_du_menu": "catalogue",
+            "nom_du_menu": "Le catalogue",
             "image": "shopify:\/\/shop_images\/Flex_bd2e1236-1eda-46ce-bd4c-f506a3d5779c.jpg"
           }
         },
         "f6a72ef8-b08f-4d23-91dd-aa2e392b27de": {
           "type": "image_du_header_mobile",
           "settings": {
-            "baseline": "",
-            "nom_du_menu": "contact",
+            "baseline": "Nous contacter",
+            "nom_du_menu": "Contact",
             "image": "shopify:\/\/shop_images\/JUB0709-27.jpg"
           }
         }
