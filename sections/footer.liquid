@@ -96,7 +96,8 @@
                                     <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1">
                                         {%- for link in block.settings.menu.links -%}
                                             <li>
-                                                <a href="{{ link.url }}" class="hover:cbx-text-green4 {% if link.active %} active{% endif %}">
+                                                <a href="{{ link.url }}"
+                                                   class="hover:cbx-text-green4 {% if link.active %} active{% endif %}">
                                                     {{ link.title }}
                                                 </a>
                                             </li>
@@ -123,11 +124,52 @@
                                     <ul class="cbx-font-display lg:cbx-text-sm cbx-text-green5 cbx-flex cbx-flex-col cbx-gap-y-1">
                                         {%- for link in block.settings.menu.links -%}
                                             <li>
-                                                <a href="{{ link.url }}" class="hover:cbx-text-green4 {% if link.active %} active{% endif %}">
+                                                <a href="{{ link.url }}"
+                                                   class="hover:cbx-text-green4 {% if link.active %} active{% endif %}">
                                                     {{ link.title }}
                                                 </a>
                                             </li>
                                         {%- endfor -%}
+                                        {% if block.settings.menu.handle == 'legals' %}
+                                            <li>
+                                                <noscript>
+                                                    {%- form 'localization', id: 'FooterLanguageFormNoScript', class: 'localization-form' -%}
+                                                        <div class="localization-form__select">
+                                                            <h2 class="visually-hidden"
+                                                                id="FooterLanguageLabelNoScript">
+                                                                {{ 'localization.language_label' | t }}
+                                                            </h2>
+                                                            <select class="localization-selector link"
+                                                                    name="locale_code"
+                                                                    aria-labelledby="FooterLanguageLabelNoScript">
+                                                                {%- for language in localization.available_languages -%}
+                                                                    <option
+                                                                            value="{{ language.iso_code }}"
+                                                                            lang="{{ language.iso_code }}"
+                                                                            {%- if language.iso_code == localization.language.iso_code %}
+                                                                                selected
+                                                                            {% endif %}
+                                                                    >
+                                                                        {{ language.endonym_name | capitalize }}
+                                                                    </option>
+                                                                {%- endfor -%}
+                                                            </select>
+                                                            {% render 'icon-caret' %}
+                                                        </div>
+                                                        <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+                                                    {%- endform -%}
+                                                </noscript>
+                                                <localization-form>
+                                                    {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+                                                        <div class="no-js-hidden">
+                                                            {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+                                                        </div>
+                                                    {%- endform -%}
+                                                </localization-form>
+                                                <script src="{{ 'localization-form.js' | asset_url }}"
+                                                        defer="defer"></script>
+                                            </li>
+                                        {% endif %}
                                     </ul>
                                 {%- endif -%}
                         {% endcase %}
