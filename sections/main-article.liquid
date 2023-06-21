@@ -69,10 +69,15 @@
                 </div>
 
             {%- when 'share' -%}
+<<<<<<< Updated upstream
                 <div
                         class="article-template__social-sharing"
                         {{ block.shopify_attributes }}
                 >
+=======
+                <div class="article-template__social-sharing"
+                        {{ block.shopify_attributes }}>
+>>>>>>> Stashed changes
                     {% assign share_url = request.origin | append: article.url %}
                     {% render 'share-button', block: block, share_link: share_url %}
                 </div>
@@ -300,6 +305,10 @@
 
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 </script>
 
 {% schema %}

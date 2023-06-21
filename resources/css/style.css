@@ -268,7 +268,7 @@ textarea {
 }
 
 .shopify-policy__container {
-    @apply cbx-container-site cbx-py-12 cbx-text-center;
+    @apply cbx-container-site cbx-max-w-7xl cbx-mx-auto cbx-py-12 cbx-prose;
 }
 
 @tailwind components;

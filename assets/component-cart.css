@@ -18,7 +18,7 @@ cart-items.is-empty .title-wrapper-with-link,
 .cart__warnings {
   display: none;
   text-align: center;
-  padding: 3rem 0 1rem;
+  padding: 3rem 1rem;
 }
 
 .cart__empty-text {
@@ -185,12 +185,6 @@ cart-items {
   line-height: calc(1 + 1 / var(--font-body-scale));
 }
 
-.tax-note {
-  margin: 2.2rem 0 1.6rem auto;
-  text-align: center;
-  display: block;
-}
-
 .cart__checkout-button {
   max-width: 36rem;
 }
@@ -207,11 +201,6 @@ cart-items {
   .cart__update-button {
     margin-bottom: 0;
     margin-right: 0.8rem;
-  }
-
-  .tax-note {
-    margin-bottom: 2.2rem;
-    text-align: right;
   }
 
   [data-shopify-buttoncontainer] {
