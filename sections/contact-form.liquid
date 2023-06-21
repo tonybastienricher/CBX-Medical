@@ -52,7 +52,7 @@
                                 <li class="">
                                     <div class="cbx-flex cbx-items-center">
                                         <input id="{{ word | append: '_praticien' }}" type="checkbox" value="{{ word }}"
-                                               name="contact[praticien][]"
+                                               name="contact[{{ word | append: '_praticien' }}]"
                                                class="cbx-w-4 cbx-h-4 cbx-rounded-none">
                                         <label for="{{ word | append: '_praticien' }}"
                                                class="cbx-w-full cbx-ml-2">
