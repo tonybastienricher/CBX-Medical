@@ -252,6 +252,9 @@
     }
   },
   "sections": {
+    "pile_cartes": {
+      "related_product": "Verwante producten ({{ products.count }})"
+    },
     "header": {
       "announcement": "Aankondiging",
       "menu": "Menu",
