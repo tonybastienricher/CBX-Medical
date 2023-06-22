@@ -80,12 +80,10 @@
                                 {% for block in section.blocks %}
                                     {%- case block.type -%}
                                         {%- when 'image_du_header_mobile' -%}
-                                            {% if block.settings.nom_du_menu == link.handle %}
-                                                {% if counter == forloop.index0 %}
-                                                    <p class='cbx-text-xs cbx-text-green4'>
-                                                        {{ block.settings.baseline }}
-                                                    </p>
-                                                {% endif %}
+                                            {% if counter == forloop.index0 %}
+                                                <p class='cbx-text-xs cbx-text-green4'>
+                                                    {{ block.settings.baseline }}
+                                                </p>
                                             {% endif %}
                                     {%- endcase -%}
                                 {% endfor %}
@@ -497,6 +495,7 @@
 
 
 
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -513,6 +512,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
 
 
 
