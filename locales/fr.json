@@ -341,6 +341,9 @@
       "carousel": "Carrousel",
       "announcement": "Annonce",
       "announcement_bar": "Barre d’annonces"
+    },
+    "pile_cartes": {
+      "related_product": "Produits associés ({{ related_product }})"
     }
   },
   "localization": {
