@@ -1,23 +1,10 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
-
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
-    }
-  }
-</style>
-
-<div class="template-404 cbx-container-site page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+<div class='cbx-bg-green3 cbx-text-beige cbx-border-b cbx-border-green4'>
+    <div class="template-404 cbx-container-site cbx-min-h-screen cbx-flex cbx-justify-center cbx-items-center">
+        <div>
+            <span class='cbx-text-center cbx-font-display cbx-text-7xl lg:cbx-text-[400px]'>{{ 'templates.404.subtext' | t }}</span>
+            <h1 class="cbx-hidden">
+                {{ 'templates.404.title' | t }}
+            </h1>
+        </div>
+    </div>
 </div>
