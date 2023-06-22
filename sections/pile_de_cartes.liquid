@@ -44,10 +44,11 @@
                                 {% endif %}
 
                                 {%- assign produits = block.settings.produits -%}
-                                {% if produits.count > 0 %}
+                                {%- assign productCount = produits.count -%}
+                                {% if productCount > 0 %}
                                     <div class='cbx-flex cbx-flex-col cbx-pt-10'>
                                         <span class='cbx-text-sm cbx-pb-5'>
-                                            {{ 'sections.pile_cartes.related_product' | t: related_product: produits.count }}
+                                            {{ 'sections.pile_cartes.related_product' | t: related_product: productCount }}
                                         </span>
                                         <ul class='cbx-flex cbx-gap-3'>
                                             {%- for product in produits -%}
@@ -119,10 +120,10 @@
                                     </p>
                                 {% endif %}
                                 {%- assign produits = block.settings.produits -%}
-                                {% if produits.count > 0 %}
+                                {% if productCount > 0 %}
                                     <div class='cbx-pt-5 cbx-flex cbx-flex-col'>
                                         <span class='cbx-text-sm cbx-pb-2.5 cbx-col-span-2 cbx-text-green4'>
-                                            {{ 'sections.pile_cartes.related_product' | t: related_product: produits.count }}
+                                            {{ 'sections.pile_cartes.related_product' | t: related_product: productCount }}
                                         </span>
                                         <ul class='cbx-grid cbx-grid-cols-2 cbx-gap-3'>
                                             {%- for product in produits -%}
