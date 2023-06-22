@@ -53,10 +53,10 @@
              x-transition:leave-end="cbx-opacity-0 -cbx-translate-y-20"
              class='cbx-bg-white cbx-rounded cbx-w-full cbx-max-h-[87vh] cbx-overflow-y-scroll'>
             <ul class='cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite'>
+                {% assign counter = 0 %}
                 {% for link in section.settings.menu.links %}
                     <li>
-                        <a href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6'
-                           aria-current="page">
+                        <a href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6' aria-current="page">
                             <!-- Image -->
                             <div class='cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative'>
                                 {% for block in section.blocks %}
@@ -65,9 +65,13 @@
                                             {% if block.settings.nom_du_menu == link.handle %}
                                                 {%- assign image = block.settings.image -%}
                                                 {% if image != blank %}
-                                                    {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
+                                                    {% if counter == forloop.index0 %}
+                                                        {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
+                                                    {% endif %}
                                                 {% else %}
-                                                    {{ 'image' | placeholder_svg_tag: 'absolute motion-reduce w-full h-full object-cover m-auto bg-gray-100' }}
+                                                    {% if counter == forloop.index0 %}
+                                                        {{ 'image' | placeholder_svg_tag: 'absolute motion-reduce w-full h-full object-cover m-auto bg-gray-100' }}
+                                                    {% endif %}
                                                 {% endif %}
                                             {% endif %}
                                     {%- endcase -%}
@@ -82,16 +86,18 @@
                                     {%- case block.type -%}
                                         {%- when 'image_du_header_mobile' -%}
                                             {% if block.settings.nom_du_menu == link.handle %}
-                                                <p class='cbx-text-xs cbx-text-green4'>
-                                                    {{ block.settings.baseline }}
-                                                </p>
+                                                {% if counter == forloop.index0 %}
+                                                    <p class='cbx-text-xs cbx-text-green4'>
+                                                        {{ block.settings.baseline }}
+                                                    </p>
+                                                {% endif %}
                                             {% endif %}
                                     {%- endcase -%}
                                 {% endfor %}
-
                             </div>
                         </a>
                     </li>
+                    {% assign counter = counter | plus: 1 %}
                 {% endfor %}
             </ul>
         </div>
