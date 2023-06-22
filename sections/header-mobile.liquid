@@ -56,22 +56,17 @@
                 {% assign counter = 0 %}
                 {% for link in section.settings.menu.links %}
                     <li>
-                        <a href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6' aria-current="page">
+                        <a href="{{ link.url }}" class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6'
+                           aria-current="page">
                             <!-- Image -->
                             <div class='cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative'>
                                 {% for block in section.blocks %}
                                     {%- case block.type -%}
                                         {%- when 'image_du_header_mobile' -%}
-                                            {% if block.settings.nom_du_menu == link.handle %}
-                                                {%- assign image = block.settings.image -%}
-                                                {% if image != blank %}
-                                                    {% if counter == forloop.index0 %}
-                                                        {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
-                                                    {% endif %}
-                                                {% else %}
-                                                    {% if counter == forloop.index0 %}
-                                                        {{ 'image' | placeholder_svg_tag: 'absolute motion-reduce w-full h-full object-cover m-auto bg-gray-100' }}
-                                                    {% endif %}
+                                            {%- assign image = block.settings.image -%}
+                                            {% if image != blank %}
+                                                {% if counter == forloop.index0 %}
+                                                    {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
                                                 {% endif %}
                                             {% endif %}
                                     {%- endcase -%}
@@ -500,6 +495,8 @@
   }
 
 
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -516,6 +513,8 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
 
 
     </script>
