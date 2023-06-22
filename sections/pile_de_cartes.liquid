@@ -46,7 +46,9 @@
                                 {%- assign produits = block.settings.produits -%}
                                 {% if produits.count > 0 %}
                                     <div class='cbx-flex cbx-flex-col cbx-pt-10'>
-                                        <span class='cbx-text-sm cbx-pb-5'>Produits associés ({{ produits.count }})</span>
+                                        <span class='cbx-text-sm cbx-pb-5'>
+                                            {{ 'sections.pile_cartes.related_product' | t: related_product: produits.count }}
+                                        </span>
                                         <ul class='cbx-flex cbx-gap-3'>
                                             {%- for product in produits -%}
                                                 <a href='{{ product.url }}'>
@@ -108,7 +110,9 @@
                                  class="answer cbx-text-green5 cbx-text-sm cbx-py-5 cbx-duration-200"
                                  {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
 
-                                <span class='cbx-text-green4'>Détails</span>
+                                <span class='cbx-text-green4'>
+                                    {{ block.settings.sous_titre }}
+                                </span>
                                 {% if block.settings.description != blank %}
                                     <p class='cbx-font-display cbx-text-sm cbx-pt-2.5' style='line-height: 160%;'>
                                         {{ block.settings.description }}
@@ -117,7 +121,9 @@
                                 {%- assign produits = block.settings.produits -%}
                                 {% if produits.count > 0 %}
                                     <div class='cbx-pt-5 cbx-flex cbx-flex-col'>
-                                        <span class='cbx-text-sm cbx-pb-2.5 cbx-col-span-2 cbx-text-green4'>Produits associés ({{ produits.count }})</span>
+                                        <span class='cbx-text-sm cbx-pb-2.5 cbx-col-span-2 cbx-text-green4'>
+                                            {{ 'sections.pile_cartes.related_product' | t: related_product: produits.count }}
+                                        </span>
                                         <ul class='cbx-grid cbx-grid-cols-2 cbx-gap-3'>
                                             {%- for product in produits -%}
                                                 <a class='cbx-w-full' href='{{ product.url }}'>
