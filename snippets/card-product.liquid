@@ -70,12 +70,12 @@
             <!-- Titre -->
             <div class='cbx-flex cbx-flex-col cbx-gap-2 cbx-z-0'>
                 <div class='cbx-flex cbx-flex-col cbx-justify-center lg:cbx-justify-start'>
-                    <h3 class="cbx-font-display cbx-text-xl cbx-text-center lg:cbx-text-left cbx-uppercase cbx-font-medium"
+                    <h3 class="cbx-font-display cbx-text-xl cbx-text-center lg:cbx-text-left cbx-font-medium"
                         id="title-{{ section_id }}-{{ card_product.id }}">
                         {{ card_product.title | escape }}
                     </h3>
                     {% if card_product.metafields.custom.baseline != blank %}
-                        <p class='cbx-uppercase cbx-text-center lg:cbx-text-left' style='font-size: 10px'>
+                        <p class='cbx-text-center lg:cbx-text-left cbx-text-xs cbx-font-display'>
                             {{ card_product.metafields.custom.baseline }}
                         </p>
                     {% endif %}

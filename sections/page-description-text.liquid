@@ -1,0 +1,352 @@
+<div class='{% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %}'>
+    <div class='cbx-container-site cbx-py-10'>
+        <div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5 cbx-gap-20'>
+            <div>
+                <p class='cbx-text-xls cbx-font-display cbx-font-light' style='letter-spacing: -0.22px;'>
+                    {{ section.settings.texte | newline_to_br }}
+                </p>
+            </div>
+            <!-- Description -->
+            <div x-data="{ open: 1 }"
+                 class="description-container cbx-py-5 lg:cbx-pt-0">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+
+                        {%- when 'information' -%}
+
+                            <div class='cbx-flex cbx-flex-col' {{ block.shopify_attributes }}>
+                                <div class='cbx-pt-2.5 lg:cbx-hidden'>
+                                    <span class='cbx-text-sm cbx-pb-2.5 {% render 'text-color', text-color: block.settings.couleur_du_titre %}'>{{ forloop.index | prepend: '0' }} /</span>
+                                </div>
+                                <div class='cbx-flex cbx-flex-col cbx-border-b cbx-border-green5 {% if forloop.index != 1 %}cbx-pt-5{% endif %} cbx-pb-2.5'>
+                                    <div @click="open = {{ forloop.index }}"
+                                         class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-gap-7 cbx-cursor-pointer
+                                     {% render 'text-color', text-color: block.settings.couleur_du_titre %}">
+                                        <div class=''>
+                                            <span class='cbx-font-display'>{{ block.settings.titre }}</span>
+                                        </div>
+                                        <div class='cbx-w-3.5 cbx-h-3.5'>
+                                            <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
+                                                      fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span class='cbx-uppercase cbx-text-xs cbx-font-medium cbx-pt-1 {% render 'text-color', text-color: block.settings.couleur_du_sous_titre %}">'
+                                          style='line-height: 130%; letter-spacing: -0.24px;'>
+                                      {{ block.settings.sous_titre }}
+                                    </span>
+                                </div>
+                                <div x-show="open == {{ forloop.index }}"
+                                     class="answer cbx-py-7 cbx-duration-200"
+                                     {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
+                                    <p style='line-height: 150%; letter-spacing: -0.16px;' class='cbx-font-display {% render 'text-color', text-color: block.settings.couleur_de_description %}'>
+                                        {{ block.settings.description | newline_to_br }}
+                                    </p>
+                                </div>
+                            </div>
+                    {%- endcase -%}
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "description",
+  "class": "description",
+  "max_blocks": 10,
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "couleur_du_background",
+      "label": "Couleur du background",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "beigelight"
+    },
+    {
+      "type": "select",
+      "id": "couleur_du_texte",
+      "label": "Couleur du texte",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "green2"
+    },
+    {
+      "type": "textarea",
+      "id": "texte",
+      "label": "Texte",
+      "default": "Introduction",
+      "placeholder": "Introduction"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Information",
+      "type": "information",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Titre"
+        },
+        {
+          "type": "text",
+          "label": "Titre",
+          "id": "titre"
+        },
+        {
+          "type": "select",
+          "id": "couleur_du_titre",
+          "label": "Couleur du texte",
+          "options": [
+            {
+              "value": "offwhite",
+              "label": "offWhite"
+            },
+            {
+              "value": "beigelight",
+              "label": "beigeLight"
+            },
+            {
+              "value": "beige",
+              "label": "beige"
+            },
+            {
+              "value": "green",
+              "label": "green"
+            },
+            {
+              "value": "green2",
+              "label": "green2"
+            },
+            {
+              "value": "green3",
+              "label": "green3"
+            },
+            {
+              "value": "green4",
+              "label": "green4"
+            },
+            {
+              "value": "green5",
+              "label": "green5"
+            },
+            {
+              "value": "green6",
+              "label": "green6"
+            }
+          ],
+          "default": "green2"
+        },
+        {
+          "type": "header",
+          "content": "Sous titre"
+        },
+        {
+          "type": "text",
+          "label": "Text",
+          "id": "sous_titre"
+        },
+        {
+          "type": "select",
+          "id": "couleur_du_sous_titre",
+          "label": "Couleur du texte",
+          "options": [
+            {
+              "value": "offwhite",
+              "label": "offWhite"
+            },
+            {
+              "value": "beigelight",
+              "label": "beigeLight"
+            },
+            {
+              "value": "beige",
+              "label": "beige"
+            },
+            {
+              "value": "green",
+              "label": "green"
+            },
+            {
+              "value": "green2",
+              "label": "green2"
+            },
+            {
+              "value": "green3",
+              "label": "green3"
+            },
+            {
+              "value": "green4",
+              "label": "green4"
+            },
+            {
+              "value": "green5",
+              "label": "green5"
+            },
+            {
+              "value": "green6",
+              "label": "green6"
+            }
+          ],
+          "default": "green2"
+        },
+        {
+          "type": "header",
+          "content": "Description"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "couleur_de_description",
+          "label": "Couleur du texte",
+          "options": [
+            {
+              "value": "offwhite",
+              "label": "offWhite"
+            },
+            {
+              "value": "beigelight",
+              "label": "beigeLight"
+            },
+            {
+              "value": "beige",
+              "label": "beige"
+            },
+            {
+              "value": "green",
+              "label": "green"
+            },
+            {
+              "value": "green2",
+              "label": "green2"
+            },
+            {
+              "value": "green3",
+              "label": "green3"
+            },
+            {
+              "value": "green4",
+              "label": "green4"
+            },
+            {
+              "value": "green5",
+              "label": "green5"
+            },
+            {
+              "value": "green6",
+              "label": "green6"
+            }
+          ],
+          "default": "green2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "page description texte",
+      "blocks": [
+        {
+          "type": "information"
+        },
+        {
+          "type": "information"
+        },
+        {
+          "type": "information"
+        },
+        {
+          "type": "information"
+        },
+        {
+          "type": "information"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}

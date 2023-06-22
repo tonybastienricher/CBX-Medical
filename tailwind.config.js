@@ -26,7 +26,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'display': ['KH Teka'],
-        body: ['ModelStandard_SemiMono_Variable', 'Roboto']
+        body: ['ModelStandard SemiMono', 'Roboto']
       },
       fontSize: {
         'xss': ['10px', '16px'],
@@ -36,6 +36,7 @@ module.exports = {
       },
       colors: {
         'offWhite': '#EFEFEF',
+        'gris': '#FDFDFD',
         'beigeLight': '#F5F2EB',
         'beige': '#ECE4D5',
         'green': '#1E271D',
@@ -44,6 +45,11 @@ module.exports = {
         'green4': '#6C7668',
         'green5': '#9EA89A',
         'green6': '#DFE1DE'
+      },
+      letterSpacing: {
+        'cbxTitle': '-1px',
+        'cbxWidest': '-.1px',
+        'cbxUltraWidest': '-.36px',
       }
     }
   },

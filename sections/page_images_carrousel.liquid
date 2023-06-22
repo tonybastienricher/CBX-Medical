@@ -1,0 +1,136 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+
+<div class='cbx-mt-7 cbx-mb-20 cbx-flex cbx-gap-2'>
+    <div class="cbx-container-site swiper-container cbx-w-full" style='box-sizing: border-box; overflow: visible;'>
+        <div class="swiper-wrapper">
+            {%- for block in section.blocks -%}
+                {% assign slideNumber = forloop.index %}
+                {%- case block.type -%}
+                    {%- when 'image' -%}
+                        {%- assign image = block.settings.image -%}
+                        <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
+                            <div class='cbx-group cbx-rounded overflow-hidden cbx-relative cbx-h-[90vh]'>
+                                {% if image %}
+                                    {{ image | image_url: width: 4000 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', sizes: '(min-width:1024px) 90vh, (min-width: 750px) 90vh, 100vw', loading: 'lazy' }}
+                                {% else %}
+                                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                                {% endif %}
+
+                                <div class="cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/30 lg:cbx-bg-black/0 group-hover:cbx-bg-black/30 cbx-ease-in-out cbx-duration-300"></div>
+
+                                {% if block.settings.label_de_limage %}
+                                    <span>{{ block.settings.label_de_limage }}</span>
+                                {% endif %}
+                            </div>
+                            <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                                {{ block.settings.lgende | newline_to_br }}
+                            </p>
+                        </div>
+                {%- endcase -%}
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+
+{%- for block in section.blocks -%}
+    {%- case block.type -%}
+
+        {%- when 'image' -%}
+            {%- ##########################################################################
+            # Label: Image
+                    #  eturns: an image object or nil(if no selection has been made)
+                    # Image Properties: https: //shopify.dev/api/liquid/objects#image
+                    # Image Filters: https: //shopify.dev/api/liquid/filters#image_tag, https: //shopify.dev/api/liquid/filters#image_url
+                    ########################################################################## -%}
+            {%- assign image = block.settings.image -%}
+            {{ image | image_url: width: image.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+
+            {%- ##########################################################################
+            # Label: Label de l'image
+      # Returns: a string or an empty object(if nothing has been entered)
+      # Filters: https://shopify.dev/api/liquid/objects#string 
+      ########################################################################## -%}
+      {{ block.settings.label_de_limage }} 
+
+  {%- endcase -%}
+{%- endfor -%}
+
+{% schema %}
+  {
+  "name": "Page images carrousel",
+  "class": "page_images_carrousel",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "label_de_limage",
+          "label": "Label de l'image",
+          "default": "FIG.Close up view"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page images carrousel"
+    }
+  ]
+}  
+{% endschema %}
+
+
+{% javascript %}
+var swiperHero = new Swiper('.swiper-container', {
+slidesPerView: 1.05,
+spaceBetween: 10,
+grabCursor: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+breakpoints: {
+768: {
+slidesPerView: 2.5,
+spaceBetween: 20,
+},
+}
+});
+
+if (Shopify.designMode) {
+// Détecter la sélection d'un bloc
+document.addEventListener('shopify:block:select', function(event) {
+// Vérifier si le bloc sélectionné est lié au slider
+if (event.target.closest('.swiper-container')) {
+// Récupérer le numéro de diapositive à partir des données de l'élément
+var slide = event.target.dataset.slidenumber;
+slide = slide - 1;
+// Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
+if (swiperHero) {
+swiperHero.slideTo(slide);
+}
+}
+});
+
+document.addEventListener('shopify:block:select', function(event) {
+// Recharger le slider SwiperJS ici
+if (swiperHero) {
+swiperHero.update();
+}
+});
+
+}
+
+
+{% endjavascript %}

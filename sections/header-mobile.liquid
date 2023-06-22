@@ -2,11 +2,11 @@
 <div class='cbx-absolute cbx-top-0 cbx-container-site cbx-pt-5 cbx-pb-2.5 cbx-w-full lg:cbx-w-auto cbx-flex cbx-z-30'
      data-scroll-sticky
      x-data='{menuMobile: false, cartNotificationMobile: false}'>
-    <header id="menuMobile" class='cbx-duration-300 cbx-w-full lg:cbx-w-auto lg:cbx-opacity-0 lg:-cbx-translate-y-20'>
+    <header id="menuMobile" class='cbx-duration-300 cbx-w-full lg:cbx-w-auto lg:cbx-opacity-0 lg:-cbx-translate-y-20 cbx-px-2'>
         <!-- Header -->
-        <div class='cbx-bg-white cbx-rounded cbx-mb-2.5 cbx-flex cbx-w-full cbx-relative cbx-z-20'>
+        <div class='cbx-bg-white cbx-rounded cbx-mb-2.5 cbx-flex cbx-w-full cbx-relative cbx-z-20 cbx-border cbx-border-[#F6F6F6]'>
 
-            <div class='cbx-flex cbx-items-center cbx-justify-between cbx-py-4 cbx-px-2 lg:cbx-px-6 cbx-text-xs  cbx-w-full cbx-gap-2.5'>
+            <div class='cbx-flex cbx-items-center cbx-justify-between cbx-py-4 cbx-px-2 lg:cbx-px-6 cbx-text-xs cbx-tracking-cbxWidest cbx-w-full cbx-gap-2.5'>
                 <!-- Menu 1 -->
                 <div class='cbx-font-display cbx-flex cbx-items-center cbx-text-green3 cbx-cursor-pointer'
                      @click='menuMobile = !menuMobile; cartNotificationMobile = false'>
@@ -51,7 +51,7 @@
              x-transition:leave="cbx-ease-in cbx-duration-150"
              x-transition:leave-start="cbx-opacity-100 cbx-translate-y-0"
              x-transition:leave-end="cbx-opacity-0 -cbx-translate-y-20"
-             class='cbx-bg-white cbx-rounded cbx-w-full cbx-max-h-[87vh] cbx-overflow-y-scroll'>
+             class='cbx-bg-white cbx-rounded cbx-w-full cbx-max-h-[87vh] cbx-overflow-y-scroll cbx-border cbx-border-[#F6F6F6]'>
             <ul class='cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite'>
                 {% assign counter = 0 %}
                 {% for link in section.settings.menu.links %}

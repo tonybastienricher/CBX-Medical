@@ -1,0 +1,136 @@
+<div class='cbx-pt-12 cbx-pb-24 {% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %}'>
+    <div class='cbx-container-site'>
+        <div class='cbx-border-t cbx-border-green5 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5'>
+            <h3 class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-text-xs cbx-font-body'>
+                {{ section.settings.titre }}
+            </h3>
+            <div class="cbx-flex cbx-text-green3 cbx-duration-200 cbx-font-display">
+                <p style='line-height: 150%;'>
+                    {{ section.settings.texte | newline_to_br }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Grid text",
+  "class": "grid_text",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "couleur_du_background",
+      "label": "Couleur du background",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "beigelight"
+    },
+    {
+      "type": "select",
+      "id": "couleur_du_texte",
+      "label": "Couleur du texte",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "green2"
+    },
+    {
+      "type": "text",
+      "id": "titre",
+      "label": "Titre",
+      "default": "Introduction",
+      "placeholder": "Introduction"
+    },
+    {
+      "type": "textarea",
+      "id": "texte",
+      "label": "Texte",
+      "default": "Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis.\n\nL'objectif de CBX Medical est de démocratiser et de populariser l’usage des cannabinoïdes dans le traitement du stress, des troubles du sommeil, de la douleur et des problèmes de peau. L'entreprise se distingue par son approche innovante et transparente, sa recherche constante ainsi que son implication dans l’éducation. \n\nEn travaillant en partenariat avec les universités, CBX Medical reste à la pointe des avancées scientifiques et s'efforce d'améliorer continuellement ses produits pour répondre aux besoins des patients. "
+    }
+  ],
+  "presets": [
+    {
+      "name": "Grid text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

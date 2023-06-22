@@ -1,19 +1,19 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 
-<div class='cbx-container-site cbx-hidden lg:cbx-flex cbx-flex-wrap cbx-items-center cbx-justify-center cbx-gap-7 cbx-mb-11'>
+<div class='cbx-container-site cbx-hidden lg:cbx-flex cbx-flex-wrap cbx-items-center cbx-justify-center cbx-gap-7 cbx-mb-20'>
     {%- for block in section.blocks -%}
         <div class='cbx-flex cbx-items-center'>
             {%- case block.type -%}
                 {%- when 'liste' -%}
                     <div class='cbx-w-3 cbx-h-3 cbx-bg-green5 cbx-rounded-sm'></div>
-                    <span class='cbx-pl-4 cbx-font-medium cbx-uppercase cbx-text-xss cbx-tracking-widest' {{ block.shopify_attributes }}>{{ block.settings.texte }}</span>
+                    <span class='cbx-pl-4 cbx-font-display cbx-tracking-cbxWidest' {{ block.shopify_attributes }}>{{ block.settings.texte }}</span>
             {%- endcase -%}
         </div>
     {%- endfor -%}
 </div>
 
-<div class='lg:cbx-hidden swiper-container-liste  cbx-mb-11'>
+<div class='lg:cbx-hidden swiper-container-liste  cbx-mb-20'>
     <div class='swiper-wrapper'>
         {% for block in section.blocks %}
             <div class='swiper-slide'>
@@ -21,7 +21,7 @@
                     {% case block.type %}
                         {% when 'liste' %}
                             <div class='cbx-hidden lg:cbx-flex cbx-w-3 cbx-h-3 cbx-bg-green5 cbx-rounded-sm'></div>
-                            <span class='cbx-pl-4 cbx-text-green3 cbx-text-center cbx-uppercase cbx-text-xss cbx-tracking-widest' {{ block.shopify_attributes }}>{{ block.settings.texte }}</span>
+                            <span class='cbx-pl-4 cbx-text-green3 cbx-text-center cbx-font-display cbx-tracking-cbxWidest' {{ block.shopify_attributes }}>{{ block.settings.texte }}</span>
                     {% endcase %}
                 </div>
             </div>

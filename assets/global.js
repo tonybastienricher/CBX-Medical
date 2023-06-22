@@ -608,10 +608,22 @@ class DeferredMedia extends HTMLElement {
     if (!this.getAttribute('loaded')) {
       const deferredElement = this.querySelector('video, model-viewer, iframe');
       if (deferredElement && deferredElement.nodeName === 'VIDEO' && deferredElement.getAttribute('autoplay') !== null) {
-        // Force autoplay for Safari
-        deferredElement.play().catch(error => {
-          console.error('Autoplay failed:', error);
-        });
+        // Check if the document has received a user interaction
+        const hasUserInteracted = window.matchMedia('(display-mode: standalone)').matches ||
+          window.navigator.userAgent.match(/iPhone|iPod|iPad/) ||
+          window.navigator.userAgent.toLowerCase().includes('android');
+
+        if (hasUserInteracted) {
+          deferredElement.play().catch(error => {
+            console.error('Autoplay failed:', error);
+          });
+        } else {
+          // Show a play button or any other interaction prompt to the user
+          // and handle the play action when the user interacts
+          deferredElement.addEventListener('play', () => {
+            // Handle the play action here
+          });
+        }
       }
       this.setAttribute('loaded', true);
     }

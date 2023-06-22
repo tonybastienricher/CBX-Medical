@@ -10,6 +10,22 @@
     --swiper-pagination-bullet-vertical-gap: 6px;
     */
     --swiper-pagination-bullet-horizontal-gap: 6px;
+    /* Fonts */
+    --kh-60-semi: 500 60px/96% "KH Teka", sans-serif;
+    --kh-48-indent: 300 48px/115% "KH Teka", sans-serif;
+    --kh-48: 400 44px/96% "KH Teka", sans-serif;
+    --kh-36: 400 36px/110% "KH Teka TRIAL", sans-serif;
+    --kh-28: 300 28px/130% "KH Teka TRIAL", sans-serif;
+    --kh-22-regular: 400 22px/150% "KH Teka", sans-serif;
+    --kh-22: 500 22px/130% "KH Teka", sans-serif;
+    --kh-14-medium: 500 14px/140% "KH Teka", sans-serif;
+    --kh-14: 400 14px/180% "KH Teka", sans-serif;
+    --kh-11-regul: 400 11px/130% "KH Teka", sans-serif;
+    --modal-14-semi: 500 14px/140% "ModelStandard SemiMono", sans-serif;
+    --model-14-regul: 500 14px/140% "ModelStandard SemiMono", sans-serif;
+    --model-12-regul: 400 12px/140% "ModelStandard SemiMono", sans-serif;
+    --model-10-maj: 500 10px/130% "ModelStandard SemiMono", sans-serif;
+    --model-10: 500 10px/160% "ModelStandard SemiMono", sans-serif;
 }
 
 @font-face {
@@ -52,7 +68,7 @@
 }
 
 @font-face {
-    font-family: 'ModelStandard_SemiMono_Variable';
+    font-family: 'ModelStandard SemiMono';
     src: url("ModelStandard_SemiMono_Variable.woff2");
     ascent-override: 90%;
 }
@@ -65,11 +81,16 @@
     }
 
     body {
-        @apply cbx-font-body cbx-text-green cbx-bg-offWhite;
+        @apply cbx-font-body cbx-text-green cbx-bg-gris;
+        -webkit-font-smoothing: antialiased;
     }
 
     h1, h2, h3, h4, h5 {
-        @apply cbx-font-display;
+        @apply cbx-font-display cbx-tracking-cbxWidest;
+    }
+
+    p {
+        letter-spacing: -0.01em;
     }
 
     .cbx-container-site {

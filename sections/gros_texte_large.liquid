@@ -1,0 +1,149 @@
+{% liquid
+    case section.settings.text_preset
+        when 'indent_0'
+            assign class = 'cbx-text-3xl lg:cbx-text-7xl cbx-font-light'
+        when 'indent_1'
+            assign class = 'cbx-text-3xl lg:cbx-text-6xl lg:cbx-indent-40 cbx-font-light'
+        else
+            assign class = 'cbx-text-3xl lg:cbx-text-7xl cbx-font-light'
+    endcase
+%}
+
+<div class='{% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %} lg:cbx-pt-40 lg:cbx-pb-14'>
+    <div class='cbx-container-site'>
+        <h2 class='{{ class }}'>
+            {{ section.settings.texte }}
+        </h2>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Gros texte large",
+  "class": "gros_texte_large",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "texte",
+      "label": "Texte",
+      "default": "CBX Medical est le leader belge des solutions thérapeutiques à base de cannabinoïdes."
+    },
+    {
+      "type": "select",
+      "id": "text_preset",
+      "label": "Texte preset",
+      "options": [
+        {
+          "value": "indent_0",
+          "label": "Indent 0"
+        },
+        {
+          "value": "indent_1",
+          "label": "Indent 1"
+        }
+      ],
+      "default": "indent_0"
+    },
+    {
+      "type": "select",
+      "id": "couleur_du_background",
+      "label": "Couleur du background",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "beigelight"
+    },
+    {
+      "type": "select",
+      "id": "couleur_du_texte",
+      "label": "Couleur du texte",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "green2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gros texte large"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,30 @@
+{% comment %}
+
+Usage:
+{% render 'text-color', text-color: text-color %}
+
+{% endcomment %}
+
+{% case text-color %}
+    {% when 'beigeLight' %}
+        cbx-text-beigeLight
+    {% when 'offWhite' %}
+        cbx-text-offWhite
+    {% when 'beige' %}
+        cbx-text-beige
+    {% when 'green' %}
+        cbx-text-green
+    {% when 'green2' %}
+        cbx-text-green2
+    {% when 'green3' %}
+        cbx-text-green3
+    {% when 'green4' %}
+        cbx-text-green4
+    {% when 'green5' %}
+        cbx-text-green5
+    {% when 'green6' %}
+        cbx-text-green6
+    {% else %}
+        cbx-text-beigeLight
+{% endcase %}
+

@@ -1,0 +1,27 @@
+{% comment %}
+
+Usage:
+{% render 'render-video', video: video %}
+
+{% endcomment %}
+
+{%- liquid
+    assign video_id = video.id | default: video_url.id
+    assign video_alt = video.alt | default: description
+    assign alt = 'sections.video.load_video' | t: description: video_alt | escape
+    assign poster = video.preview_image | default: cover_image
+
+    if video != null
+        assign ratio_diff = video.aspect_ratio | minus: poster.aspect_ratio | abs
+        if ratio_diff < 0.01 and ratio_diff > 0
+            assign fix_ratio = true
+        endif
+    endif
+-%}
+
+
+<noscript>
+    {{ video | video_tag: image_size: '1100x', loop: enable_video_looping, controls: true, muted: true }}
+</noscript>
+
+{{ video | video_tag: image_size: '1100x', autoplay: true, loop: true, controls: false, muted: true, class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full'}}

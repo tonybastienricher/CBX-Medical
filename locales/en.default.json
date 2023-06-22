@@ -254,6 +254,9 @@
     }
   },
   "sections": {
+    "pile_cartes": {
+      "related_product": "Produits associés ({{ related_product }})"
+    },
     "announcements": {
       "previous_announcement": "Previous announcement",
       "next_announcement": "Next announcement",

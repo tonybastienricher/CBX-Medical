@@ -15,8 +15,8 @@
     endif
 -%}
 
-<div class="cbx-pb-11">
-    <div class="video-section isolate cbx-container-site">
+<div class="{% if section.settings.padding_bottom %}cbx-pb-20{% endif %}">
+    <div class="video-section isolate {% if section.settings.full_width %}cbx-container-site{% endif %}">
         <noscript>
             <div class="video-section__media" {% if poster != null %} style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
                 {%- if section.settings.video == null and section.settings.video_url != null -%}
@@ -45,7 +45,7 @@
             </div>
         </noscript>
         <deferred-media
-                class="cbx-w-full cbx-min-h-[calc(100vh-110px)] lg:cbx-aspect-video cbx-relative deferred-media no-js-hidden cbx-rounded cbx-overflow-hidden"
+                class="cbx-w-full cbx-min-h-[calc(100vh-110px)] lg:cbx-aspect-video cbx-relative deferred-media no-js-hidden {% if section.settings.full_width %}cbx-rounded {% endif %} cbx-overflow-hidden"
                 data-media-id="{{ video_id }}"
                 {% if poster != null %}style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;" {% endif %}>
 
@@ -121,7 +121,7 @@
                     autoplay: true,
                     loop: true,
                     controls: false,
-                    muted: false,
+                    muted: true,
                     class: 'cbx-absolute cbx-inset-0 cbx-object-cover cbx-w-full cbx-h-full',
                     style: 'z-index:-1'
                     }}
@@ -148,6 +148,18 @@
       "id": "heading",
       "default": "Video",
       "label": "t:sections.video.settings.heading.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Vidéo avec marge",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "padding_bottom",
+      "label": "Padding bas",
+      "default": true
     },
     {
       "type": "header",

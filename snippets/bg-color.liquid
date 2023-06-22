@@ -1,0 +1,30 @@
+{% comment %}
+
+Usage:
+{% render 'bg-color', bg-color: bg-color %}
+
+{% endcomment %}
+
+{% case bg-color %}
+    {% when 'beigeLight' %}
+        cbx-bg-beigeLight
+    {% when 'offWhite' %}
+        cbx-bg-offWhite
+    {% when 'beige' %}
+        cbx-bg-beige
+    {% when 'green' %}
+        cbx-bg-green
+    {% when 'green2' %}
+        cbx-bg-green2
+    {% when 'green3' %}
+        cbx-bg-green3
+    {% when 'green4' %}
+        cbx-bg-green4
+    {% when 'green5' %}
+        cbx-bg-green5
+    {% when 'green6' %}
+        cbx-bg-green6
+    {% else %}
+        cbx-bg-beigeLight
+{% endcase %}
+

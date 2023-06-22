@@ -7,7 +7,7 @@
 -%}
 
 
-<div class='cbx-container-site cbx-mb-11'>
+<div class='cbx-container-site cbx-mb-20'>
     <div class='cbx-w-full cbx-relative {% if isFullscreen == '5050' %}cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2{% else %}cbx-min-h-[calc(100vh-110px)]{% endif %} cbx-overflow-hidden'>
 
 
@@ -80,7 +80,7 @@
                 {%- case block.type -%}
 
                     {%- when 'titre' -%}
-                        <h2 class='cbx-font-display cbx-text-center cbx-text-4xl lg:cbx-text-5xl' {{ block.shopify_attributes }}>
+                        <h2 class='cbx-font-display cbx-text-center cbx-text-4xl lg:cbx-text-5xl cbx-tracking-cbxUltraWidest' {{ block.shopify_attributes }}>
                             {{ block.settings.titre_hero }}
                         </h2>
 

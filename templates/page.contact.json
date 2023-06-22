@@ -4,15 +4,9 @@
       "type": "contact-form",
       "settings": {
         "image_bg": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg",
-<<<<<<< Updated upstream
         "heading": "Nous contacter",
         "description": "Fondée en 2020 par Flora Mer, Jonathan Blondiau et Lionel Quataert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis",
         "liste": ""
-=======
-        "heading": "Professionnel de la santé",
-        "description": "Lorem ipsum Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis",
-        "liste": "Pharmacien\nDocteur\nAmbassadeur"
->>>>>>> Stashed changes
       }
     }
   },
