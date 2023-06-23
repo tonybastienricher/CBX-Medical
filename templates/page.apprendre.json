@@ -239,10 +239,10 @@
     },
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f": {
       "type": "avis",
-      "disabled": true,
       "blocks": {
         "5fbfa4e0-caf3-4b65-9baa-196c1b2a2c41": {
           "type": "avis",
+          "disabled": true,
           "settings": {
             "citation": "“I was so surprised to find that it held so many wonderful items that I never knew I needed. From magical crystals to a wand, it was a truly magical experience that I will never forget.”",
             "auteur": "Maxime Van Santen",
