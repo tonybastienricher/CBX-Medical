@@ -168,10 +168,9 @@
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
-        "sur_titre": "Press & Reviews",
-        "titre": "Les professionels de la santé en parlent"
+        "sur_titre": "Complétez",
+        "titre": "Ceci pourrait également vous plaire"
       }
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
@@ -225,34 +224,6 @@
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
       }
-    },
-    "ca96c47f-ad27-45a6-aa32-39d8c7e8f878": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "homepage",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -261,7 +232,6 @@
     "c1799eff-e8e5-4dbd-b6a5-d03e2e624529",
     "description",
     "related-products",
-    "60f3a61a-722d-4231-8dd3-7ae9e63f7217",
-    "ca96c47f-ad27-45a6-aa32-39d8c7e8f878"
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
   ]
 }
