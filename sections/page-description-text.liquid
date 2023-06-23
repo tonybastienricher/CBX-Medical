@@ -15,9 +15,6 @@
                         {%- when 'information' -%}
 
                             <div class='cbx-flex cbx-flex-col' {{ block.shopify_attributes }}>
-                                <div class='cbx-pt-2.5 lg:cbx-hidden'>
-                                    <span class='cbx-text-sm cbx-pb-2.5 {% render 'text-color', text-color: block.settings.couleur_du_titre %}'>{{ forloop.index | prepend: '0' }} /</span>
-                                </div>
                                 <div class='cbx-flex cbx-flex-col cbx-border-b cbx-border-green5 {% if forloop.index != 1 %}cbx-pt-5{% endif %} cbx-pb-2.5 cbx-cursor-pointer'
                                         @click="open = {{ forloop.index }}">
                                     <div class="question cbx-flex cbx-justify-between cbx-items-center cbx-gap-7
@@ -73,8 +70,8 @@
       "label": "Couleur du background",
       "options": [
         {
-          "value": "Transparent",
-          "label": "transparent"
+          "value": "transparent",
+          "label": "Transparent"
         },
         {
           "value": "offwhite",
