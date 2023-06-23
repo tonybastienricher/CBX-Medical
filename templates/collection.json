@@ -4,8 +4,8 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 9,
-        "enable_filtering": true,
-        "enable_sorting": true
+        "enable_filtering": false,
+        "enable_sorting": false
       }
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
