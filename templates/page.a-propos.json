@@ -30,7 +30,7 @@
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
         "titre": "Introduction",
-        "texte": "Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis.\n\nL'objectif de CBX Medical est de démocratiser et de populariser l’usage des cannabinoïdes dans le traitement du stress, des troubles du sommeil, de la douleur et des problèmes de peau. L'entreprise se distingue par son approche innovante et transparente, sa recherche constante ainsi que son implication dans l’éducation. \n\nEn travaillant en partenariat avec les universités, CBX Medical reste à la pointe des avancées scientifiques et s'efforce d'améliorer continuellement ses produits pour répondre aux besoins des patients. "
+        "texte": "CBX Medical est à l'avant-garde des solutions santé à base de cannabinoïdes. Depuis 2019, nous oeuvrons sans relâche pour concevoir, développer et délivrer des produits de qualité, inspirés des vertus naturelles de la plante de cannabis. Nos produits apportent un soutient viable à la gestion du stress, au sommeil, aux situations douloureuses et affections cutanées.\n \nNous nous distinguons par notre engagement pour l’innovation transparente, tout en restant profondément enracinés dans l’éducation et centré sur le patient. Nous prenons fierté dans notre travail collaboratif avec des universités de renom, nous assurant de rester à la pointe des découvertes scientifiques.\n \nChez CBX, notre passion transcende la mission de notre société. Nous motivons et poussons toutes les industries qui gravitent autour du cannabis à innover ensemble pour que l’humanité puisse s’offrir le plein potentiel du cannabis. Nous voulons démarrer un mouvement international. (une révolution)!"
       }
     },
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e": {
@@ -64,6 +64,8 @@
         "6f10dc8e-659b-449d-95a9-dd98485e229e"
       ],
       "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2"
       }
     },
     "page_description": {
