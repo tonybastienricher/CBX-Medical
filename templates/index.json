@@ -87,7 +87,10 @@
           "canflex",
           "canmove",
           "canshine",
-          "cansmooth"
+          "cansmooth",
+          "canflex-forte",
+          "candrop-cbd-cbg",
+          "cansleep"
         ]
       }
     },
