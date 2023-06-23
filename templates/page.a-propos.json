@@ -74,29 +74,36 @@
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Innovation",
+            "reponse": "Nous nous engageons à repousser les limites de la connaissance et à innover en exploitant le plein potentiel des composées du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des solutions de pointe pour offrir une alternative naturelle toujours plus efficace"
           }
         },
         "e739272e-c943-4558-bdda-16a367ad8aca": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Expertise",
+            "reponse": "Notre équipe, composée d’experts en cannabis médical, de professionnels de la santé et de chercheurs, met un point d’honneur à affiner son expertise tous les jours.. Grâce à leurs connaissances approfondies et à leur longues expériences, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
           }
         },
         "c15a28a2-d464-40bf-97fb-2545cc3f39a4": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Nature",
+            "reponse": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une solution holistique pour soulager sans nuire. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement. (et de maximiser l’impact de l’environnement sur nous ?)"
           }
         },
         "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Empathie",
+            "reponse": "Chez CBX Medical, nous côtoyons quotidiennement des personnes en quête de soulagements. Nous comprenons les tenants et aboutissants de leur situations personnelles , aussi variées soient-elles. Notre compassion nous donne la volonté d’impacter positivement leur confort de vie. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+          }
+        },
+        "31904f96-3045-468f-b245-e9b50de1559f": {
+          "type": "information",
+          "settings": {
+            "question": "Ouverture",
+            "reponse": "Nous croyons en la transparence et favorisons l'ouverture d’esprit, où la collaboration et le partage des connaissances sont essentiels. Nous nous engageons activement avec les professionnels de la santé, les patients et la communauté en général à promouvoir l'éducation, la sensibilisation et la compréhension de la plante et de ses propriétés."
           }
         }
       },
@@ -104,7 +111,8 @@
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc",
         "e739272e-c943-4558-bdda-16a367ad8aca",
         "c15a28a2-d464-40bf-97fb-2545cc3f39a4",
-        "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8"
+        "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8",
+        "31904f96-3045-468f-b245-e9b50de1559f"
       ],
       "settings": {
         "couleur_du_background": "transparent",
