@@ -37,6 +37,7 @@ module.exports = {
       colors: {
         'offWhite': '#EFEFEF',
         'gris': '#FDFDFD',
+        'grisFonce': '#F5F5F5',
         'beigeLight': '#F5F2EB',
         'beige': '#ECE4D5',
         'green': '#1E271D',
