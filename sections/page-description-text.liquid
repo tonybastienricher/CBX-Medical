@@ -18,32 +18,39 @@
                                 <div class='cbx-pt-2.5 lg:cbx-hidden'>
                                     <span class='cbx-text-sm cbx-pb-2.5 {% render 'text-color', text-color: block.settings.couleur_du_titre %}'>{{ forloop.index | prepend: '0' }} /</span>
                                 </div>
-                                <div class='cbx-flex cbx-flex-col cbx-border-b cbx-border-green5 {% if forloop.index != 1 %}cbx-pt-5{% endif %} cbx-pb-2.5'>
-                                    <div @click="open = {{ forloop.index }}"
-                                         class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-gap-7 cbx-cursor-pointer
+                                <div class='cbx-flex cbx-flex-col cbx-border-b cbx-border-green5 {% if forloop.index != 1 %}cbx-pt-5{% endif %} cbx-pb-2.5 cbx-cursor-pointer'
+                                        @click="open = {{ forloop.index }}">
+                                    <div class="question cbx-flex cbx-justify-between cbx-items-center cbx-gap-7
                                      {% render 'text-color', text-color: block.settings.couleur_du_titre %}">
                                         <div class=''>
-                                            <span class='cbx-font-display'>{{ block.settings.titre }}</span>
+                                            <span class='cbx-font-display cbx-tracking-cbxWidest cbx-text-xls'>{{ block.settings.titre }}</span>
                                         </div>
-                                        <div class='cbx-w-3.5 cbx-h-3.5'>
-                                            <svg class='' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        <div class='cbx-duration-200'
+                                             :class="{'cbx-rotate-45' : open == {{ forloop.index }} }">
+                                            <svg class='cbx-w-3.5 cbx-h-3.5 ' width="13" height="13" viewBox="0 0 13 13"
+                                                 fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
                                                       fill="currentColor" />
                                             </svg>
                                         </div>
                                     </div>
+                                    <div>
                                     <span class='cbx-uppercase cbx-text-xs cbx-font-medium cbx-pt-1 {% render 'text-color', text-color: block.settings.couleur_du_sous_titre %}">'
                                           style='line-height: 130%; letter-spacing: -0.24px;'>
                                       {{ block.settings.sous_titre }}
                                     </span>
+                                    </div>
                                 </div>
-                                <div x-show="open == {{ forloop.index }}"
-                                     class="answer cbx-py-7 cbx-duration-200"
+                                <div x-show="open == {{ forloop.index }}" x-collapse
+                                     class="answer cbx-duration-200"
                                      {% if foorloop.index != 1 %}style='display: none;' {% endif %}>
-                                    <p style='line-height: 150%; letter-spacing: -0.16px;' class='cbx-font-display {% render 'text-color', text-color: block.settings.couleur_de_description %}'>
-                                        {{ block.settings.description | newline_to_br }}
-                                    </p>
+                                    <div class='cbx-py-7'>
+                                        <p style='line-height: 150%; letter-spacing: -0.16px;'
+                                           class='cbx-font-display {% render 'text-color', text-color: block.settings.couleur_de_description %}'>
+                                            {{ block.settings.description | newline_to_br }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                     {%- endcase -%}
@@ -56,7 +63,7 @@
 {% schema %}
 {
   "name": "description",
-  "class": "description",
+  "class": "page-description-text",
   "max_blocks": 10,
   "tag": "section",
   "settings": [
@@ -65,6 +72,10 @@
       "id": "couleur_du_background",
       "label": "Couleur du background",
       "options": [
+        {
+          "value": "Transparent",
+          "label": "transparent"
+        },
         {
           "value": "offwhite",
           "label": "offWhite"
@@ -102,7 +113,7 @@
           "label": "green6"
         }
       ],
-      "default": "beigelight"
+      "default": "transparent"
     },
     {
       "type": "select",

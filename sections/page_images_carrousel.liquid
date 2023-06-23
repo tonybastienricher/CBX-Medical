@@ -1,8 +1,9 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 
-<div class='cbx-mt-7 cbx-mb-20 cbx-flex cbx-gap-2'>
-    <div class="cbx-container-site swiper-container cbx-w-full" style='box-sizing: border-box; overflow: visible;'>
+<div class='cbx-mb-20 cbx-flex cbx-gap-2 {% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %}'>
+    <div class="cbx-container-site swiper-container-page-images-carrousel cbx-w-full cbx-relative"
+         style='box-sizing: border-box; overflow: visible;'>
         <div class="swiper-wrapper">
             {%- for block in section.blocks -%}
                 {% assign slideNumber = forloop.index %}
@@ -17,52 +18,142 @@
                                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
                                 {% endif %}
 
-                                <div class="cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/30 lg:cbx-bg-black/0 group-hover:cbx-bg-black/30 cbx-ease-in-out cbx-duration-300"></div>
-
                                 {% if block.settings.label_de_limage %}
                                     <span>{{ block.settings.label_de_limage }}</span>
                                 {% endif %}
                             </div>
-                            <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
-                                {{ block.settings.lgende | newline_to_br }}
-                            </p>
+                            {% if block.settings.label_de_limage != blank %}
+                                <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                                    {{ block.settings.label_de_limage | newline_to_br }}
+                                </p>
+                            {% endif %}
                         </div>
                 {%- endcase -%}
             {%- endfor -%}
         </div>
+        <div class='swiper-button-prev cbx-p-1.5 cbx-rounded cbx-bg-beigeLight cbx-flex cbx-justify-center cbx-items-center'>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector"
+                      d="M8.81249 4.49999C8.81284 4.5739 8.79843 4.64713 8.77009 4.71539C8.74176 4.78365 8.70008 4.84556 8.64749 4.89749L4.54499 8.99999L8.64749 13.1025C8.74685 13.2091 8.80095 13.3502 8.79838 13.4959C8.7958 13.6416 8.73677 13.7806 8.63371 13.8837C8.53065 13.9868 8.39161 14.0458 8.24588 14.0484C8.10016 14.0509 7.95912 13.9969 7.85249 13.8975L3.35249 9.39749C3.24716 9.29202 3.18799 9.14906 3.18799 8.99999C3.18799 8.85093 3.24716 8.70796 3.35249 8.60249L7.85249 4.10249C7.95796 3.99715 8.10093 3.93799 8.24999 3.93799C8.39906 3.93799 8.54202 3.99715 8.64749 4.10249C8.70008 4.15443 8.74176 4.21634 8.77009 4.2846C8.79843 4.35286 8.81284 4.42609 8.81249 4.49999Z"
+                      fill="#464F43" />
+                <path id="Vector_2"
+                      d="M14.8125 9C14.8106 9.14858 14.7507 9.29053 14.6456 9.3956C14.5405 9.50067 14.3986 9.56056 14.25 9.5625L3.75 9.5625C3.60082 9.5625 3.45774 9.50324 3.35225 9.39775C3.24676 9.29226 3.1875 9.14918 3.1875 9C3.1875 8.85082 3.24676 8.70774 3.35225 8.60225C3.45774 8.49676 3.60082 8.4375 3.75 8.4375L14.25 8.4375C14.3986 8.43944 14.5405 8.49933 14.6456 8.6044C14.7507 8.70947 14.8106 8.85142 14.8125 9Z"
+                      fill="#464F43" />
+            </svg>
+        </div>
+        <div class='swiper-button-next cbx-p-1.5 cbx-rounded cbx-bg-beigeLight cbx-flex cbx-justify-center cbx-items-center'>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector"
+                      d="M9.18751 13.5C9.18716 13.4261 9.20157 13.3529 9.22991 13.2846C9.25824 13.2164 9.29992 13.1544 9.35251 13.1025L13.455 9.00001L9.35251 4.89751C9.25315 4.79088 9.19905 4.64984 9.20163 4.50411C9.2042 4.35839 9.26323 4.21935 9.36629 4.11629C9.46935 4.01323 9.60839 3.9542 9.75412 3.95163C9.89984 3.94905 10.0409 4.00315 10.1475 4.10251L14.6475 8.60251C14.7528 8.70798 14.812 8.85094 14.812 9.00001C14.812 9.14907 14.7528 9.29204 14.6475 9.39751L10.1475 13.8975C10.042 14.0028 9.89907 14.062 9.75001 14.062C9.60094 14.062 9.45798 14.0028 9.35251 13.8975C9.29992 13.8456 9.25824 13.7837 9.22991 13.7154C9.20157 13.6471 9.18716 13.5739 9.18751 13.5Z"
+                      fill="#464F43" />
+                <path id="Vector_2"
+                      d="M3.1875 9C3.18944 8.85142 3.24933 8.70947 3.3544 8.6044C3.45947 8.49933 3.60142 8.43944 3.75 8.4375L14.25 8.4375C14.3992 8.4375 14.5423 8.49676 14.6477 8.60225C14.7532 8.70774 14.8125 8.85082 14.8125 9C14.8125 9.14918 14.7532 9.29226 14.6477 9.39775C14.5423 9.50324 14.3992 9.5625 14.25 9.5625L3.75 9.5625C3.60142 9.56056 3.45947 9.50067 3.3544 9.3956C3.24933 9.29053 3.18944 9.14858 3.1875 9Z"
+                      fill="#464F43" />
+            </svg>
+
+        </div>
     </div>
 </div>
 
-
-{%- for block in section.blocks -%}
-    {%- case block.type -%}
-
-        {%- when 'image' -%}
-            {%- ##########################################################################
-            # Label: Image
-                    #  eturns: an image object or nil(if no selection has been made)
-                    # Image Properties: https: //shopify.dev/api/liquid/objects#image
-                    # Image Filters: https: //shopify.dev/api/liquid/filters#image_tag, https: //shopify.dev/api/liquid/filters#image_url
-                    ########################################################################## -%}
-            {%- assign image = block.settings.image -%}
-            {{ image | image_url: width: image.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
-
-            {%- ##########################################################################
-            # Label: Label de l'image
-      # Returns: a string or an empty object(if nothing has been entered)
-      # Filters: https://shopify.dev/api/liquid/objects#string 
-      ########################################################################## -%}
-      {{ block.settings.label_de_limage }} 
-
-  {%- endcase -%}
-{%- endfor -%}
-
 {% schema %}
-  {
+{
   "name": "Page images carrousel",
   "class": "page_images_carrousel",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "select",
+      "id": "couleur_du_background",
+      "label": "Couleur du background",
+      "options": [
+        {
+          "value": "transparent",
+          "label": "Transparent"
+        },
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "transparent"
+    },
+    {
+      "type": "select",
+      "id": "couleur_du_texte",
+      "label": "Couleur du texte",
+      "options": [
+        {
+          "value": "offwhite",
+          "label": "offWhite"
+        },
+        {
+          "value": "beigelight",
+          "label": "beigeLight"
+        },
+        {
+          "value": "beige",
+          "label": "beige"
+        },
+        {
+          "value": "green",
+          "label": "green"
+        },
+        {
+          "value": "green2",
+          "label": "green2"
+        },
+        {
+          "value": "green3",
+          "label": "green3"
+        },
+        {
+          "value": "green4",
+          "label": "green4"
+        },
+        {
+          "value": "green5",
+          "label": "green5"
+        },
+        {
+          "value": "green6",
+          "label": "green6"
+        }
+      ],
+      "default": "green2"
+    }
+  ],
   "blocks": [
     {
       "name": "Image",
@@ -87,24 +178,20 @@
       "name": "Page images carrousel"
     }
   ]
-}  
+}
 {% endschema %}
 
-
 {% javascript %}
-var swiperHero = new Swiper('.swiper-container', {
-slidesPerView: 1.05,
+var swiperPagecarrousel = new Swiper('.swiper-container-page-images-carrousel', {
+slidesPerView: 1,
 spaceBetween: 10,
-grabCursor: true,
-pagination: {
-el: '.swiper-pagination',
-clickable: true,
+navigation: {
+nextEl: '.swiper-button-next',
+prevEl: '.swiper-button-prev',
 },
-breakpoints: {
-768: {
-slidesPerView: 2.5,
-spaceBetween: 20,
-},
+effect: 'fade',
+fadeEffect: {
+crossFade: true
 }
 });
 
@@ -112,21 +199,21 @@ if (Shopify.designMode) {
 // Détecter la sélection d'un bloc
 document.addEventListener('shopify:block:select', function(event) {
 // Vérifier si le bloc sélectionné est lié au slider
-if (event.target.closest('.swiper-container')) {
+if (event.target.closest('.swiper-container-page-images-carrousel')) {
 // Récupérer le numéro de diapositive à partir des données de l'élément
 var slide = event.target.dataset.slidenumber;
 slide = slide - 1;
 // Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
-if (swiperHero) {
-swiperHero.slideTo(slide);
+if (swiperPagecarrousel) {
+swiperPagecarrousel.slideTo(slide);
 }
 }
 });
 
 document.addEventListener('shopify:block:select', function(event) {
 // Recharger le slider SwiperJS ici
-if (swiperHero) {
-swiperHero.update();
+if (swiperPagecarrousel) {
+swiperPagecarrousel.update();
 }
 });
 
