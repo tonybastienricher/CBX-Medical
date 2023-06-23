@@ -239,6 +239,7 @@
     },
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f": {
       "type": "avis",
+      "disabled": true,
       "blocks": {
         "5fbfa4e0-caf3-4b65-9baa-196c1b2a2c41": {
           "type": "avis",
@@ -257,11 +258,31 @@
             "job": "UCL Scientist & General Manage Cadence",
             "lien": ""
           }
+        },
+        "97638024-975c-4ca4-a713-de4eeaab2af9": {
+          "type": "avis",
+          "settings": {
+            "citation": "“I was so surprised to find that it held so many wonderful items that I never knew I needed. From magical crystals to a wand, it was a truly magical experience that I will never forget.”",
+            "auteur": "Maxime Van Santen",
+            "job": "UCL Scientist & General Manage Cadence",
+            "lien": ""
+          }
+        },
+        "a42efbb0-e44e-4628-9764-4da0dd475058": {
+          "type": "avis",
+          "settings": {
+            "citation": "“I was so surprised to find that it held so many wonderful items that I never knew I needed. From magical crystals to a wand, it was a truly magical experience that I will never forget.”",
+            "auteur": "Maxime Van Santen",
+            "job": "UCL Scientist & General Manage Cadence",
+            "lien": ""
+          }
         }
       },
       "block_order": [
         "5fbfa4e0-caf3-4b65-9baa-196c1b2a2c41",
-        "2372ffce-7d75-4d84-ae74-1adf67889769"
+        "2372ffce-7d75-4d84-ae74-1adf67889769",
+        "97638024-975c-4ca4-a713-de4eeaab2af9",
+        "a42efbb0-e44e-4628-9764-4da0dd475058"
       ],
       "settings": {
         "sur_titre": "Press & Reviews",
