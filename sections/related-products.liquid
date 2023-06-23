@@ -1,53 +1,108 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 
-<product-recommendations class="cbx-container-site swiper-container-produits cbx-w-full cbx-mb-20 cbx-relative"
-                         data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}">
+<product-recommendations
+        data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=5">
     {% if recommendations.performed and recommendations.products_count > 0 %}
-        <!-- Title -->
-        <div class='cbx-flex cbx-flex-col cbx-items-center cbx-pb-12 cbx-max-w-xl cbx-mx-auto'>
-            <span class='cbx-text-green5 cbx-pb-2.5'>{{ section.settings.sur_titre }}</span>
-            <h2 class='cbx-text-4xl lg:cbx-text-5xls cbx-font-display cbx-text-green2 cbx-text-center'>
-                {{ section.settings.titre | newline_to_br }}
-            </h2>
-        </div>
+        <div class='cbx-container-site cbx-w-full cbx-mb-20 cbx-relative cbx-flex cbx-flex-col '>
 
-        <div class="swiper-wrapper">
-            {% for recommendation in recommendations.products %}
-                <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
-                    {% render 'card-product',
-                            card_product: product,
-                            show_secondary_image: true,
-                            lazy_load: lazy_load,
-                            section_id: section.id
-                    %}
+
+            <!-- Title -->
+            <div class='cbx-flex cbx-flex-col cbx-pb-12 cbx-max-w-lg'>
+                <span class='cbx-text-green5 cbx-pb-2.5'>{{ section.settings.sur_titre }}</span>
+                <h2 class='cbx-text-4xl lg:cbx-text-5xls cbx-font-display cbx-text-green2'>
+                    {{ section.settings.titre | newline_to_br }}
+                </h2>
+            </div>
+
+            <div class=' swiper-container-produits'>
+                <div class="swiper-wrapper">
+                    {% for recommendation in recommendations.products %}
+                        <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
+                            {% render 'card-product',
+                                    card_product: recommendation,
+                                    show_secondary_image: true,
+                                    lazy_load: lazy_load,
+                                    section_id: section.id
+                            %}
+                        </div>
+                    {%- endfor -%}
+
                 </div>
-            {%- endfor -%}
-
+                <div class='swiper-pagination'></div>
+            </div>
         </div>
-
-        <div class='swiper-pagination'></div>
 
     {% endif %}
 </product-recommendations>
+
+
+{% javascript %}
+var swiperHero = new Swiper('.swiper-container-produits', {
+slidesPerView: 1.2,
+spaceBetween: 6,
+grabCursor: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true,
+},
+breakpoints: {
+550: {
+slidesPerView: 2.2,
+},
+800: {
+slidesPerView: 3.2,
+},
+1000: {
+slidesPerView: 4.2,
+},
+}
+});
+
+if (Shopify.designMode) {
+// Détecter la sélection d'un bloc
+document.addEventListener('shopify:block:select', function(event) {
+// Vérifier si le bloc sélectionné est lié au slider
+if (event.target.closest('.swiper-container')) {
+// Récupérer le numéro de diapositive à partir des données de l'élément
+var slide = event.target.dataset.slidenumber;
+slide = slide - 1;
+// Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
+if (swiperHero) {
+swiperHero.slideTo(slide);
+}
+}
+});
+
+document.addEventListener('shopify:block:select', function(event) {
+// Recharger le slider SwiperJS ici
+if (swiperHero) {
+swiperHero.update();
+}
+});
+
+}
+
+
+{% endjavascript %}
 
 {% schema %}
 {
   "name": "Produits recommandés",
   "tag": "section",
-  "class": "section",
+  "class": "section cbx-overflow-hidden",
   "settings": [
     {
       "type": "text",
       "id": "sur_titre",
       "label": "Sur titre",
-      "default": "Press & Reviews"
+      "default": "Completez"
     },
     {
       "type": "textarea",
       "id": "titre",
       "label": "Titre",
-      "default": "Les professionels de la santé en parlent",
-      "placeholder": "Les professionels de la santé en parlent"
+      "default": "Ceci pourrait également vous plaire",
+      "placeholder": "Ceci pourrait également vous plaire"
     }
   ]
 }

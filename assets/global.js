@@ -1190,6 +1190,28 @@ class ProductRecommendations extends HTMLElement {
           if (html.querySelector('.grid__item')) {
             this.classList.add('product-recommendations--loaded');
           }
+
+          var swiperHero = new Swiper('.swiper-container-produits', {
+            slidesPerView: 1.2,
+            spaceBetween: 6,
+            grabCursor: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
+            breakpoints: {
+              550: {
+                slidesPerView: 2.2
+              },
+              800: {
+                slidesPerView: 3.2
+              },
+              1000: {
+                slidesPerView: 4.2
+              }
+            }
+          });
+
         })
         .catch((e) => {
           console.error(e);
