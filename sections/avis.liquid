@@ -1,3 +1,5 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 <div class='cbx-container-site cbx-mb-28 cbx-mt-20 cbx-flex cbx-flex-col'>
 
     <!-- Title -->
@@ -78,7 +80,7 @@
 // Détecter la sélection d'un bloc
     document.addEventListener('shopify:block:select', function(event) {
 // Vérifier si le bloc sélectionné est lié au slider
-      if (event.target.closest('.swiper-container')) {
+      if (event.target.closest('.swiper-container-avis')) {
 // Récupérer le numéro de diapositive à partir des données de l'élément
         var slide = event.target.dataset.slidenumber;
         slide = slide - 1;
