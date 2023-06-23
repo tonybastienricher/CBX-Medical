@@ -13,7 +13,7 @@
 %}
 
 <div class='{% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %}'>
-    <div class='cbx-container-site cbx-pt-7 cbx-pb-24 cbx-flex {{ alignement }}'>
+    <div class='cbx-hidden cbx-container-site cbx-pt-7 cbx-pb-24 lg:cbx-flex {{ alignement }}'>
 
         {% if image_gauche %}
             <!-- Image 1 -->
@@ -40,11 +40,81 @@
         {% endif %}
 
     </div>
+
+    <div class="cbx-container-site cbx-pt-7 cbx-pb-24 swiper-container-image_gauche_droite cbx-w-full lg:cbx-hidden"
+         style='box-sizing: border-box; overflow: visible;'>
+        <div class="swiper-wrapper">
+            <div class='swiper-slide' data-slideNumber="1" {{ block.shopify_attributes }}>
+                <div class='cbx-group cbx-rounded overflow-hidden cbx-relative cbx-h-[90vh]'>
+                    {% if image_gauche %}
+                        {{ image_gauche | image_url: width: 4000 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', sizes: '(min-width:1024px) 90vh, (min-width: 750px) 90vh, 100vw', loading: 'lazy' }}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                    {% endif %}
+
+                    <div class="cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/30 lg:cbx-bg-black/0 group-hover:cbx-bg-black/30 cbx-ease-in-out cbx-duration-300"></div>
+
+                </div>
+                <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                    {{ section.settings.lgende_de_limage_droite | newline_to_br }}
+                </p>
+            </div>
+            <div class='swiper-slide' data-slideNumber="2" {{ block.shopify_attributes }}>
+                <div class='cbx-group cbx-rounded overflow-hidden cbx-relative cbx-h-[90vh]'>
+                    {% if image_droite %}
+                        {{ image_droite | image_url: width: 4000 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', sizes: '(min-width:1024px) 90vh, (min-width: 750px) 90vh, 100vw', loading: 'lazy' }}
+                    {% else %}
+                        {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                    {% endif %}
+
+                    <div class="cbx-absolute cbx-w-full cbx-h-full cbx-bg-black/30 lg:cbx-bg-black/0 group-hover:cbx-bg-black/30 cbx-ease-in-out cbx-duration-300"></div>
+
+                </div>
+                <p class='cbx-pt-2.5 cbx-text-xs cbx-font-medium cbx-uppercase cbx-text-green4 cbx-leading-tight'>
+                    {{ section.settings.lgende_de_limage_droite | newline_to_br }}
+                </p>
+            </div>
+        </div>
+    </div>
+
 </div>
+
+<script>
+  // Fonction pour vérifier la largeur de l'écran et activer ou détruire le slider
+  function checkScreenSize() {
+    if (window.innerWidth < 1024) {
+      var swiperContainerProductList = new Swiper('.swiper-container-image_gauche_droite', {
+        slidesPerView: 1.05,
+        grabCursor: true,
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+    } else {
+      // Détruire le slider si l'écran est supérieur à 1024 pixels
+      if (typeof swiperContainerProductList !== 'undefined') {
+        swiperContainerProductList.destroy();
+      }
+    }
+  }
+
+  // Vérifier la largeur de l'écran au chargement de la page
+  window.addEventListener('load', function() {
+    checkScreenSize();
+  });
+
+  // Vérifier la largeur de l'écran lors du redimensionnement de la fenêtre
+  window.addEventListener('resize', function() {
+    checkScreenSize();
+  });
+</script>
+
 {% schema %}
 {
   "name": "Image gauche / droite",
-  "class": "gauche_droite",
+  "class": "gauche_droite cbx-overflow-hidden",
   "tag": "section",
   "settings": [
     {
@@ -177,9 +247,6 @@
   ]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
 
 {% javascript %}
 {% endjavascript %}
