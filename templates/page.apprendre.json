@@ -3,7 +3,7 @@
     "gros_texte_large": {
       "type": "gros_texte_large",
       "settings": {
-        "texte": "CBX Medical est le leader belge des solutions thérapeutiques à base de cannabinoïdes.",
+        "texte": "Découvrez l'univers fascinant du chanvre, pilier des solutions innovantes proposées par CBX Medical.",
         "text_preset": "indent_0",
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2"
@@ -29,12 +29,13 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "titre": "Introduction",
-        "texte": "Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis.\n\nL'objectif de CBX Medical est de démocratiser et de populariser l’usage des cannabinoïdes dans le traitement du stress, des troubles du sommeil, de la douleur et des problèmes de peau. L'entreprise se distingue par son approche innovante et transparente, sa recherche constante ainsi que son implication dans l’éducation. \n\nEn travaillant en partenariat avec les universités, CBX Medical reste à la pointe des avancées scientifiques et s'efforce d'améliorer continuellement ses produits pour répondre aux besoins des patients. "
+        "titre": "Apprendre",
+        "texte": "Cette plante extraordinaire, le \"Cannabis Sativa\", est l'une des trois principales variétés de cannabis, avec ses cousins le Cannabis Indica et le Cannabis Ruderalis. Émergeant d'Asie centrale, il a fait son chemin jusqu'à des pays tels que le Mexique, la Colombie, la Thaïlande, et certaines régions d'Afrique. Il se distingue non seulement par ses caractéristiques botaniques uniques, par la plus value écologique de sa culture ainsi que par la diversité de son exploitation : Textile, papier, huile, farine, corde, matériaux de construction et bien évidemment les soins médicinaux\n\nBien que le cannabis soit souvent associé aux effets psychotropes induits par le THC (tétrahydrocannabinol), il est important de reconnaître la richesse de cette plante qui renferme plus d'une centaine de molécules, les cannabinoïdes, dont plusieurs ont des effets bénéfiques avérés.\n\nCes molécules, appelées cannabinoïdes, ont une particularité qui les rend véritablement uniques : elles ont la capacité de se lier et d'interagir avec les récepteurs endocannabinoïdes qui sont omniprésents dans notre corps.\n\nLes études scientifiques actuelles révèlent que le système endocannabinoïde intervient dans la régulation de nombreux autres systèmes corporels, y compris les systèmes nerveux, immunitaire, digestif et neuronal. C'est cette interaction harmonieuse qui contribue à promouvoir les effets bénéfiques sur notre santé, faisant du cannabis sativa un allié de choix pour notre bien-être."
       }
     },
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e": {
       "type": "page_images_carrousel",
+      "disabled": true,
       "blocks": {
         "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6": {
           "type": "image",
@@ -64,10 +65,13 @@
         "6f10dc8e-659b-449d-95a9-dd98485e229e"
       ],
       "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2"
       }
     },
     "page_description": {
       "type": "page-description",
+      "disabled": true,
       "blocks": {
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc": {
           "type": "information",
@@ -115,14 +119,15 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "image_gauche": "shopify:\/\/shop_images\/JUB0709-23.jpg",
+        "image_gauche": "shopify:\/\/shop_images\/IMG_7365.jpg",
         "lgende_de_limage_gauche": "Legend image and dolorem text about brands, values and behind the scene.",
-        "image_droite": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+        "image_droite": "shopify:\/\/shop_images\/IMG_6776.jpg",
         "lgende_de_limage_droite": "Legend image and dolorem text about brands, values and behind the scene."
       }
     },
     "b2cf978c-b9cf-4391-ae13-a437308dd628": {
       "type": "gros_texte_large",
+      "disabled": true,
       "settings": {
         "texte": "Le cannabis est une alternative thérapeutique sérieuse et légitime. Il est temps de lui donner le cadre et les ressources pour en tirer le plein potentiel.",
         "text_preset": "indent_1",
@@ -132,6 +137,7 @@
     },
     "dde8d2b2-0542-40a7-91af-f3ce7810f15e": {
       "type": "image_pleine_largeur",
+      "disabled": true,
       "settings": {
         "couleur_du_background": "green",
         "couleur_du_texte": "green2",
@@ -140,6 +146,7 @@
     },
     "d1ccaff5-c649-43b4-80f0-6e5762517a82": {
       "type": "page-description-text",
+      "disabled": true,
       "blocks": {
         "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-0": {
           "type": "information",
@@ -212,6 +219,7 @@
     },
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b": {
       "type": "image_grid",
+      "disabled": true,
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
@@ -221,6 +229,7 @@
     },
     "5fa1d360-3680-4382-bae2-7f44b6b11e20": {
       "type": "grid_text",
+      "disabled": true,
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
