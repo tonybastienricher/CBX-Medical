@@ -491,11 +491,6 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
-
-
-
-
-
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -512,11 +507,6 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-
-
-
-
-
     </script>
 {%- endif -%}
 
