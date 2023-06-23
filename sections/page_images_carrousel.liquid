@@ -182,7 +182,8 @@
 {% endschema %}
 
 {% javascript %}
-var swiperPagecarrousel = new Swiper('.swiper-container-page-images-carrousel', {
+
+var swiperPageCarrousel = new Swiper('.swiper-container-page-images-carrousel', {
 slidesPerView: 1,
 spaceBetween: 10,
 navigation: {
@@ -204,20 +205,18 @@ if (event.target.closest('.swiper-container-page-images-carrousel')) {
 var slide = event.target.dataset.slidenumber;
 slide = slide - 1;
 // Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
-if (swiperPagecarrousel) {
-swiperPagecarrousel.slideTo(slide);
+if (swiperPageCarrousel) {
+swiperPageCarrousel.slideTo(slide);
 }
 }
 });
 
 document.addEventListener('shopify:block:select', function(event) {
 // Recharger le slider SwiperJS ici
-if (swiperPagecarrousel) {
-swiperPagecarrousel.update();
+if (swiperPageCarrousel) {
+swiperPageCarrousel.update();
 }
 });
 
 }
-
-
 {% endjavascript %}
