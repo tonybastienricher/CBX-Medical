@@ -33,71 +33,34 @@
         "texte": "Cette plante extraordinaire, le \"Cannabis Sativa\", est l'une des trois principales variétés de cannabis, avec ses cousins le Cannabis Indica et le Cannabis Ruderalis. Émergeant d'Asie centrale, il a fait son chemin jusqu'à des pays tels que le Mexique, la Colombie, la Thaïlande, et certaines régions d'Afrique. Il se distingue non seulement par ses caractéristiques botaniques uniques, par la plus value écologique de sa culture ainsi que par la diversité de son exploitation : Textile, papier, huile, farine, corde, matériaux de construction et bien évidemment les soins médicinaux\n\nBien que le cannabis soit souvent associé aux effets psychotropes induits par le THC (tétrahydrocannabinol), il est important de reconnaître la richesse de cette plante qui renferme plus d'une centaine de molécules, les cannabinoïdes, dont plusieurs ont des effets bénéfiques avérés.\n\nCes molécules, appelées cannabinoïdes, ont une particularité qui les rend véritablement uniques : elles ont la capacité de se lier et d'interagir avec les récepteurs endocannabinoïdes qui sont omniprésents dans notre corps.\n\nLes études scientifiques actuelles révèlent que le système endocannabinoïde intervient dans la régulation de nombreux autres systèmes corporels, y compris les systèmes nerveux, immunitaire, digestif et neuronal. C'est cette interaction harmonieuse qui contribue à promouvoir les effets bénéfiques sur notre santé, faisant du cannabis sativa un allié de choix pour notre bien-être."
       }
     },
-    "d787b379-a7c4-4c75-9ce3-855aafe4b29e": {
-      "type": "page_images_carrousel",
-      "disabled": true,
-      "blocks": {
-        "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
-            "label_de_limage": "FIG.Close up view"
-          }
-        },
-        "419c3302-bf63-4556-80a7-dc46aeed6794": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_103.png",
-            "label_de_limage": "FIG.Close up view test"
-          }
-        },
-        "6f10dc8e-659b-449d-95a9-dd98485e229e": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png",
-            "label_de_limage": "FIG.Close up view"
-          }
-        }
-      },
-      "block_order": [
-        "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6",
-        "419c3302-bf63-4556-80a7-dc46aeed6794",
-        "6f10dc8e-659b-449d-95a9-dd98485e229e"
-      ],
-      "settings": {
-        "couleur_du_background": "transparent",
-        "couleur_du_texte": "green2"
-      }
-    },
     "page_description": {
       "type": "page-description",
-      "disabled": true,
       "blocks": {
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Recherche et Développement",
+            "reponse": "Chez CBX Medical, nous sommes conscients du potentiel énorme que représente le cannabis dans le domaine de la santé. En constante évolution, ce secteur a déjà démontré des résultats significatifs en matière de thérapie et de bien-être. Nous voulons être à la pointe de cette révolution. C'est pour cela que nous avons choisi d'investir massivement dans la recherche et le développement (R&D) sur le cannabis."
           }
         },
         "e739272e-c943-4558-bdda-16a367ad8aca": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
-            "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+            "question": "Pourquoi investir dans la R&D sur le cannabis ?",
+            "reponse": "Le cannabis est bien plus qu'une simple plante. Il est l'origine d'un large éventail de produits thérapeutiques capables de transformer la vie de milliers de personnes. Depuis que nous avons débuté cette initiative en 2021 en collaboration avec l'Université Libre de Bruxelles (ULB), notre ambition a toujours été de développer des produits de qualité, sûrs et efficaces. C'est dans cette optique que nous avons récemment reçu des subsides substantiels pour faire avancer nos recherches."
           }
         },
         "c15a28a2-d464-40bf-97fb-2545cc3f39a4": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
+            "question": "Les particularités de notre recherche",
             "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
           }
         },
         "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8": {
           "type": "information",
           "settings": {
-            "question": "Ingredients clés",
+            "question": "Comment nous envisageons l'avenir ?",
             "reponse": "Notre équipe est composée d'experts dans les traitements à base de cannabinoïdes, notamment des professionnels de la santé, des scientifiques et des chercheurs. Grâce à leurs connaissances et à leur expérience approfondies, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
           }
         }
@@ -125,98 +88,6 @@
         "lgende_de_limage_droite": "Legend image and dolorem text about brands, values and behind the scene."
       }
     },
-    "b2cf978c-b9cf-4391-ae13-a437308dd628": {
-      "type": "gros_texte_large",
-      "disabled": true,
-      "settings": {
-        "texte": "Le cannabis est une alternative thérapeutique sérieuse et légitime. Il est temps de lui donner le cadre et les ressources pour en tirer le plein potentiel.",
-        "text_preset": "indent_1",
-        "couleur_du_background": "green",
-        "couleur_du_texte": "green6"
-      }
-    },
-    "dde8d2b2-0542-40a7-91af-f3ce7810f15e": {
-      "type": "image_pleine_largeur",
-      "disabled": true,
-      "settings": {
-        "couleur_du_background": "green",
-        "couleur_du_texte": "green2",
-        "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png"
-      }
-    },
-    "d1ccaff5-c649-43b4-80f0-6e5762517a82": {
-      "type": "page-description-text",
-      "disabled": true,
-      "blocks": {
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-0": {
-          "type": "information",
-          "settings": {
-            "titre": "Informer",
-            "couleur_du_titre": "green6",
-            "sous_titre": "À travers la culture d’un champ de cannabis près de Bruxelles",
-            "couleur_du_sous_titre": "green5",
-            "description": "Nous nous engageons à repousser les limites de la connaissance et à trouver des solutions innovantes qui exploitent le potentiel des composés du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des avancées de pointe dans le domaine des soins thérapeutiques.",
-            "couleur_de_description": "green5"
-          }
-        },
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-1": {
-          "type": "information",
-          "settings": {
-            "titre": "Informer",
-            "couleur_du_titre": "green6",
-            "sous_titre": "À travers la culture d’un champ de cannabis près de Bruxelles",
-            "couleur_du_sous_titre": "green5",
-            "description": "Nous nous engageons à repousser les limites de la connaissance et à trouver des solutions innovantes qui exploitent le potentiel des composés du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des avancées de pointe dans le domaine des soins thérapeutiques.",
-            "couleur_de_description": "green5"
-          }
-        },
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-2": {
-          "type": "information",
-          "settings": {
-            "titre": "Informer",
-            "couleur_du_titre": "green6",
-            "sous_titre": "À travers la culture d’un champ de cannabis près de Bruxelles",
-            "couleur_du_sous_titre": "green5",
-            "description": "Nous nous engageons à repousser les limites de la connaissance et à trouver des solutions innovantes qui exploitent le potentiel des composés du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des avancées de pointe dans le domaine des soins thérapeutiques.",
-            "couleur_de_description": "green5"
-          }
-        },
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-3": {
-          "type": "information",
-          "settings": {
-            "titre": "Informer",
-            "couleur_du_titre": "green6",
-            "sous_titre": "À travers la culture d’un champ de cannabis près de Bruxelles",
-            "couleur_du_sous_titre": "green5",
-            "description": "Nous nous engageons à repousser les limites de la connaissance et à trouver des solutions innovantes qui exploitent le potentiel des composés du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des avancées de pointe dans le domaine des soins thérapeutiques.",
-            "couleur_de_description": "green5"
-          }
-        },
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-4": {
-          "type": "information",
-          "settings": {
-            "titre": "Informer",
-            "couleur_du_titre": "green6",
-            "sous_titre": "À travers la culture d’un champ de cannabis près de Bruxelles",
-            "couleur_du_sous_titre": "green5",
-            "description": "Nous nous engageons à repousser les limites de la connaissance et à trouver des solutions innovantes qui exploitent le potentiel des composés du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des avancées de pointe dans le domaine des soins thérapeutiques.",
-            "couleur_de_description": "green5"
-          }
-        }
-      },
-      "block_order": [
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-0",
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-1",
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-2",
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-3",
-        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-4"
-      ],
-      "settings": {
-        "couleur_du_background": "green",
-        "couleur_du_texte": "green5",
-        "texte": "Créée en 2021, la fondation CBX a pour objectif d'accélérer la création et le développement d'un pôle de compétences belge et européen dédié à la plante de cannabis en exploitant le potentiel du secteur académique.\n\nNée du constat d’un manque criant d’information disponible sur la plante pour les professionels de la santé, ainsi que d’une désinformation générale autour d’elle, Lionel et Jonathan, co-fondateurs de CBX Medical décident de lancer une fondation pour d’agir à trois niveaux: "
-      }
-    },
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b": {
       "type": "image_grid",
       "disabled": true,
@@ -225,16 +96,6 @@
         "couleur_du_texte": "green2",
         "video_1": "shopify:\/\/files\/videos\/-4763-4753-b419-0f51374bd722.mp4",
         "image_2": "shopify:\/\/shop_images\/Rectangle_103.png"
-      }
-    },
-    "5fa1d360-3680-4382-bae2-7f44b6b11e20": {
-      "type": "grid_text",
-      "disabled": true,
-      "settings": {
-        "couleur_du_background": "transparent",
-        "couleur_du_texte": "green2",
-        "titre": "Introduction",
-        "texte": "Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis.\n\nL'objectif de CBX Medical est de démocratiser et de populariser l’usage des cannabinoïdes dans le traitement du stress, des troubles du sommeil, de la douleur et des problèmes de peau. L'entreprise se distingue par son approche innovante et transparente, sa recherche constante ainsi que son implication dans l’éducation. \n\nEn travaillant en partenariat avec les universités, CBX Medical reste à la pointe des avancées scientifiques et s'efforce d'améliorer continuellement ses produits pour répondre aux besoins des patients. "
       }
     },
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f": {
@@ -314,14 +175,9 @@
     "gros_texte_large",
     "video",
     "grid_text",
-    "d787b379-a7c4-4c75-9ce3-855aafe4b29e",
     "page_description",
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
-    "b2cf978c-b9cf-4391-ae13-a437308dd628",
-    "dde8d2b2-0542-40a7-91af-f3ce7810f15e",
-    "d1ccaff5-c649-43b4-80f0-6e5762517a82",
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b",
-    "5fa1d360-3680-4382-bae2-7f44b6b11e20",
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f"
   ]
 }
