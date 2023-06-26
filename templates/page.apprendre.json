@@ -160,40 +160,12 @@
         "padding_bottom": 52
       }
     },
-    "69ccfa34-7950-4a79-9e86-551ec1a9c3dd": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Lionel Quataert",
-            "heading_size": "h1"
-          }
-        },
-        "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p> possède une vaste expérience dans l'entrepreneuriat, le développement des affaires et l'exécution de stratégies. Fort de son expérience internationale dans des pays tels que l'Espagne, la Belgique, le Luxembourg, la France, l'Uruguay et le Paraguay, Lionel a su développer une compréhension approfondie de marchés diversifiés.<\/p><p>Le parcours de Lionel comprend des postes tels que Business Opener et Key Account Manager chez John Martin Sa, ainsi que co-fondateur de FrameALIVE, une start-up dans le secteur audiovisuel. Les réalisations académiques de Lionel comprennent un DIU en cannabis médical de l'Université Paris-Saclay et un master en ingénierie commerciale de la Solvay Brussels School of Economics and Management.<\/p><p><em>\"Nous avons fondé CBX Medical pour mettre sur le marché des produits à base de cannabinoïdes qui peuvent approuvés par les professionnels de la santé. Notre objectif est de fournir des solutions fiables pour les patients et de contribuer à la perception positive et à l'utilisation des cannabinoïdes dans le domaine médical\".<\/em><\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-0",
-        "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-1"
-      ],
+    "39dbfad7-cecd-41bc-8d53-b5da734d7787": {
+      "type": "image_pleine_largeur",
       "settings": {
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "image": "shopify:\/\/shop_images\/JUB3108-15-4000.jpg"
       }
     },
     "1db78928-b479-4293-a930-b461d72cc096": {
@@ -227,7 +199,7 @@
         "61ffe5bf-dc36-4e59-989e-a4c1de04de23"
       ],
       "settings": {
-        "couleur_du_background": "green3",
+        "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
         "titre": "L'équipe CBX Medical"
       }
@@ -242,7 +214,7 @@
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b",
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f",
     "5aece1ca-2f9d-4edf-8e51-c98bd153018a",
-    "69ccfa34-7950-4a79-9e86-551ec1a9c3dd",
+    "39dbfad7-cecd-41bc-8d53-b5da734d7787",
     "1db78928-b479-4293-a930-b461d72cc096"
   ]
 }
