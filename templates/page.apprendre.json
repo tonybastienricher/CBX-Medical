@@ -124,40 +124,12 @@
         "a42efbb0-e44e-4628-9764-4da0dd475058",
         "c1cc4661-4513-423f-bef8-f053616f0b66"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "sur_titre": "Press & Reviews",
         "titre": "Les professionels de la santé en parlent"
-      }
-    },
-    "5aece1ca-2f9d-4edf-8e51-c98bd153018a": {
-      "type": "rich-text",
-      "blocks": {
-        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Les fondateurs",
-            "heading_size": "h0"
-          }
-        },
-        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-0",
-        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-1"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "39dbfad7-cecd-41bc-8d53-b5da734d7787": {
@@ -201,7 +173,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "titre": "L'équipe CBX Medical"
+        "titre": "Les fondateurs —  CBX Medical"
       }
     }
   },
@@ -213,7 +185,6 @@
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b",
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f",
-    "5aece1ca-2f9d-4edf-8e51-c98bd153018a",
     "39dbfad7-cecd-41bc-8d53-b5da734d7787",
     "1db78928-b479-4293-a930-b461d72cc096"
   ]
