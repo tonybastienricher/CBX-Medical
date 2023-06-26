@@ -129,20 +129,51 @@
         "titre": "Les professionels de la santé en parlent"
       }
     },
+    "5aece1ca-2f9d-4edf-8e51-c98bd153018a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Les fondateurs",
+            "heading_size": "h0"
+          }
+        },
+        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-0",
+        "template--19154398937413__5aece1ca-2f9d-4edf-8e51-c98bd153018a-1687804435e0bfdaa2-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "69ccfa34-7950-4a79-9e86-551ec1a9c3dd": {
       "type": "image-with-text",
       "blocks": {
         "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h2"
+            "heading": "Lionel Quataert",
+            "heading_size": "h1"
           }
         },
         "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Lionel Quataert<\/strong> possède une vaste expérience dans l'entrepreneuriat, le développement des affaires et l'exécution de stratégies. Fort de son expérience internationale dans des pays tels que l'Espagne, la Belgique, le Luxembourg, la France, l'Uruguay et le Paraguay, Lionel a su développer une compréhension approfondie de marchés diversifiés.<\/p><p>Le parcours de Lionel comprend des postes tels que Business Opener et Key Account Manager chez John Martin Sa, ainsi que co-fondateur de FrameALIVE, une start-up dans le secteur audiovisuel. Les réalisations académiques de Lionel comprennent un DIU en cannabis médical de l'Université Paris-Saclay et un master en ingénierie commerciale de la Solvay Brussels School of Economics and Management.<\/p><p><em>\"Nous avons fondé CBX Medical pour mettre sur le marché des produits à base de cannabinoïdes qui peuvent approuvés par les professionnels de la santé. Notre objectif est de fournir des solutions fiables pour les patients et de contribuer à la perception positive et à l'utilisation des cannabinoïdes dans le domaine médical\".<\/em><\/p>",
+            "text": "<p> possède une vaste expérience dans l'entrepreneuriat, le développement des affaires et l'exécution de stratégies. Fort de son expérience internationale dans des pays tels que l'Espagne, la Belgique, le Luxembourg, la France, l'Uruguay et le Paraguay, Lionel a su développer une compréhension approfondie de marchés diversifiés.<\/p><p>Le parcours de Lionel comprend des postes tels que Business Opener et Key Account Manager chez John Martin Sa, ainsi que co-fondateur de FrameALIVE, une start-up dans le secteur audiovisuel. Les réalisations académiques de Lionel comprennent un DIU en cannabis médical de l'Université Paris-Saclay et un master en ingénierie commerciale de la Solvay Brussels School of Economics and Management.<\/p><p><em>\"Nous avons fondé CBX Medical pour mettre sur le marché des produits à base de cannabinoïdes qui peuvent approuvés par les professionnels de la santé. Notre objectif est de fournir des solutions fiables pour les patients et de contribuer à la perception positive et à l'utilisation des cannabinoïdes dans le domaine médical\".<\/em><\/p>",
             "text_style": "body"
           }
         }
@@ -164,6 +195,42 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1db78928-b479-4293-a930-b461d72cc096": {
+      "type": "page-description",
+      "blocks": {
+        "e65d317b-ef96-4a89-82ed-4569161d7549": {
+          "type": "information",
+          "settings": {
+            "question": "Lionel Quataert",
+            "reponse": "Chez CBX Medical, nous sommes conscients du potentiel énorme que représente le cannabis dans le domaine de la santé. En constante évolution, ce secteur a déjà démontré des résultats significatifs en matière de thérapie et de bien-être. Nous voulons être à la pointe de cette révolution. C'est pour cela que nous avons choisi d'investir massivement dans la recherche et le développement (R&D) sur le cannabis."
+          }
+        },
+        "1c74ec18-a31d-47a6-82e7-8ec706798496": {
+          "type": "information",
+          "settings": {
+            "question": "Flora Mer",
+            "reponse": "Flora Mer est une bio-ingénieure avec une vaste expérience internationale dans la gestion de projets dans plusieurs secteurs. Elle a travaillé aux États-Unis, en Colombie, en Uruguay, en Italie, en Belgique, en Espagne et en Afrique. Flora s'intéresse particulièrement aux défis professionnels qui combinent le développement durable avec les nouvelles technologies dans les domaines de l'agronomie, de l'agro-industrie, des ressources naturelles et des énergies renouvelables.\n\nFlora et son équipe se consacrent au développement de produits à base de cannabinoïdes en qui les professionnels de la santé peuvent avoir confiance et qui sont disponibles en pharmacie. Leur objectif est d'avoir un impact positif sur les soins et le bien-être des patients.\n\nFlora possède également une expérience professionnelle en tant que chef de projet pour les produits et matériaux biosourcés chez ValBiom, où elle apporte son expertise dans le domaine des ressources durables. Avant cela, elle a travaillé en tant que consultante en environnement et hydrologie, ainsi que dans le domaine des énergies renouvelables en Afrique."
+          }
+        },
+        "61ffe5bf-dc36-4e59-989e-a4c1de04de23": {
+          "type": "information",
+          "settings": {
+            "question": "Jonathan Blondiaux",
+            "reponse": "Jonathan Blondiaux a une expérience professionnelle variée comprenant des postes tels que gestionnaire de compte opérationnel chez Facility Lockers, responsable de produits\/projets chez Krones AG, et maître brasseur chez Les 3 Brasseurs, France. \n\nEn tant que co-fondateur de CBX Medical, Jonathan s'implique dans la création et le développement de l'entreprise."
+          }
+        }
+      },
+      "block_order": [
+        "e65d317b-ef96-4a89-82ed-4569161d7549",
+        "1c74ec18-a31d-47a6-82e7-8ec706798496",
+        "61ffe5bf-dc36-4e59-989e-a4c1de04de23"
+      ],
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "titre": "L'équipe CBX Medical"
+      }
     }
   },
   "order": [
@@ -174,6 +241,8 @@
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b",
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f",
-    "69ccfa34-7950-4a79-9e86-551ec1a9c3dd"
+    "5aece1ca-2f9d-4edf-8e51-c98bd153018a",
+    "69ccfa34-7950-4a79-9e86-551ec1a9c3dd",
+    "1db78928-b479-4293-a930-b461d72cc096"
   ]
 }
