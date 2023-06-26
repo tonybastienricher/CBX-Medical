@@ -127,12 +127,22 @@
             "job": "UCL Scientist & General Manage Cadence",
             "lien": ""
           }
+        },
+        "45fd4cc5-7da7-4568-9de4-9f95d918b7b0": {
+          "type": "avis",
+          "settings": {
+            "citation": "“I was so surprised to find that it held so many wonderful items that I never knew I needed. From magical crystals to a wand, it was a truly magical experience that I will never forget.”",
+            "auteur": "Maxime Van Santen",
+            "job": "UCL Scientist & General Manage Cadence",
+            "lien": ""
+          }
         }
       },
       "block_order": [
         "a42efbb0-e44e-4628-9764-4da0dd475058",
         "c1cc4661-4513-423f-bef8-f053616f0b66",
-        "d439bd29-f154-4387-9b37-17ea46ca65ce"
+        "d439bd29-f154-4387-9b37-17ea46ca65ce",
+        "45fd4cc5-7da7-4568-9de4-9f95d918b7b0"
       ],
       "custom_css": [
 
