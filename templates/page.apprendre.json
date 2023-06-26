@@ -142,7 +142,7 @@
         "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p><strong>Lionel Quataert<\/strong> possède une vaste expérience dans l'entrepreneuriat, le développement des affaires et l'exécution de stratégies. Fort de son expérience internationale dans des pays tels que l'Espagne, la Belgique, le Luxembourg, la France, l'Uruguay et le Paraguay, Lionel a su développer une compréhension approfondie de marchés diversifiés.<\/p><p>Le parcours de Lionel comprend des postes tels que Business Opener et Key Account Manager chez John Martin Sa, ainsi que co-fondateur de FrameALIVE, une start-up dans le secteur audiovisuel. Les réalisations académiques de Lionel comprennent un DIU en cannabis médical de l'Université Paris-Saclay et un master en ingénierie commerciale de la Solvay Brussels School of Economics and Management.<\/p><p><em>\"Nous avons fondé CBX Medical pour mettre sur le marché des produits à base de cannabinoïdes qui peuvent approuvés par les professionnels de la santé. Notre objectif est de fournir des solutions fiables pour les patients et de contribuer à la perception positive et à l'utilisation des cannabinoïdes dans le domaine médical\".<\/em><\/p>",
             "text_style": "body"
           }
         }
@@ -152,10 +152,10 @@
         "template--19154398937413__69ccfa34-7950-4a79-9e86-551ec1a9c3dd-168780413015d7ba7c-1"
       ],
       "settings": {
-        "height": "medium",
-        "desktop_image_width": "medium",
+        "height": "small",
+        "desktop_image_width": "small",
         "layout": "image_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "",
