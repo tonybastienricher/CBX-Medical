@@ -17,7 +17,7 @@
                             <div class='cbx-flex cbx-flex-col' {{ block.shopify_attributes }}>
                                 <button @click="open = {{ forloop.index }}"
                                         class="question cbx-flex cbx-justify-between cbx-items-center {% if forloop.index != 1 %}cbx-pt-5{% endif %} cbx-pb-2.5 cbx-border-b cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
-                                    <span class='cbx-font-display cbx-tracking-cbxWidest cbx-text-xls'>{{ block.settings.question }}</span>
+                                    <span class='cbx-font-display cbx-tracking-cbxWidest cbx-text-xls cbx-text-left'>{{ block.settings.question }}</span>
                                     <div class='cbx-duration-200' :class="{'cbx-rotate-45' : open == {{ forloop.index }} }">
                                         <svg class='cbx-w-3.5 cbx-h-3.5' width="13" height="13" viewBox="0 0 13 13" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
