@@ -16,7 +16,9 @@
           }
         },
         "references": {
-          "type": "references"
+          "type": "references",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -31,7 +33,6 @@
       "type": "featured-collection",
       "settings": {
         "sur_titre": "Découvrez notre catalogue produit",
-        "titre": "",
         "collection": "tous-les-produits"
       }
     }
