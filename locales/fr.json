@@ -296,7 +296,7 @@
       },
       "update": "Mettre à jour",
       "login": {
-        "title": "Vous possédez un compte ?",
+        "title": "Vous possédez un compte?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous<\/a> pour payer plus vite."
       }
     },
@@ -359,7 +359,7 @@
       "view_addresses": "Voir les adresses",
       "return": "Retour aux détails du compte"
     },
-    "account_fallback": "Compte",
+    "account_fallback": "Mon compte",
     "activate_account": {
       "title": "Activer le compte",
       "subtext": "Créez votre mot de passe pour activer le compte.",

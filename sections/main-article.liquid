@@ -1,6 +1,6 @@
-<div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-py-9'>
+<div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pb-9 lg:cbx-py-9'>
     <div class='cbx-flex'>
-        <div class='cbx-w-full cbx-top-0 cbx-sticky cbx-rounded cbx-overflow-hidden cbx-h-screen'>
+        <div class='cbx-w-full cbx-top-0 cbx-sticky cbx-rounded-b lg:cbx-rounded cbx-overflow-hidden cbx-aspect-square lg:cbx-aspect-auto lg:cbx-h-screen'>
             {%- if article.image -%}
                 {% if block.settings.image_height == 'adapt' and article.image %}
                     style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
@@ -26,7 +26,7 @@
             {%- endif -%}
         </div>
     </div>
-    <article class="article cbx-px-12 lg:cbx-px-16" itemscope
+    <article class="article cbx-px-[10px] lg:cbx-px-12 lg:cbx-px-16 cbx-pt-5 lg:cbx-pt-0" itemscope
              itemtype="http://schema.org/BlogPosting">
         {%- for block in section.blocks -%}
         {%- case block.type -%}

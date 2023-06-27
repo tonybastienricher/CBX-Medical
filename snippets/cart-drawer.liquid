@@ -22,10 +22,16 @@
                     <a href="{{ routes.all_products_collection_url }}" class="cbx-btn cbx-btn-vert cbx-w-full">
                         {{ 'general.continue_shopping' | t }}
                     </a>
-                    {%- if shop.customer_accounts_enabled and customer == null -%}
-                        <a href='{{ routes.account_login_url }}'
+                    {%- if shop.customer_accounts_enabled -%}
+                        <a href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
                            class="cbx-btn cbx-btn-green6 cbx-w-full cbx-uppercase">
-                            {{ 'sections.cart.login.title' | t }}
+                            {%- liquid
+                                if customer
+                                    echo 'customer.account_fallback' | t
+                                else
+                                    echo 'customer.log_in' | t
+                                endif
+                            -%}
                         </a>
                     {%- endif -%}
                 </div>
@@ -256,10 +262,16 @@
                         {{ 'sections.cart.checkout' | t }}
                     </button>
 
-                    {%- if shop.customer_accounts_enabled and customer == null -%}
-                        <a href='{{ routes.account_login_url }}'
+                    {%- if shop.customer_accounts_enabled -%}
+                        <a href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
                            class="cbx-btn cbx-btn-green6 cbx-w-full cbx-uppercase">
-                            {{ 'sections.cart.login.title' | t }}
+                            {%- liquid
+                                if customer
+                                    echo 'customer.account_fallback' | t
+                                else
+                                    echo 'customer.log_in' | t
+                                endif
+                            -%}
                         </a>
                     {%- endif -%}
                 </div>
