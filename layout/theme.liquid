@@ -261,8 +261,7 @@
       }
     </script>
 </head>
-
-<body class="">
+<body class="{% if template contains 'account' or template contains 'order' or template contains 'addresses' %}cbx-bg-offWhite{% endif %}">
 <a class="skip-to-content-link button visually-hidden" href="#MainContent">
     {{ 'accessibility.skip_to_text' | t }}
 </a>
@@ -270,7 +269,7 @@
 {% sections 'header-group' %}
 
 <main id="MainContent"
-      class="smooth-scroll content-for-layout focus-none {% unless template contains 'login' or template contains 'register' or template contains '404' or template contains 'article' %}cbx-mt-[88px]{% endunless %} lg:cbx-mt-0"
+      class="smooth-scroll content-for-layout focus-none {% unless template contains 'login' or template contains 'register' or template contains 'reset' or template contains '404' or template contains 'article' %}cbx-mt-[88px]{% endunless %} lg:cbx-mt-0"
       role="main" tabindex="-1">
     {{ content_for_layout }}
 </main>

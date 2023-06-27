@@ -17,7 +17,7 @@
 {% liquid
 
     case template.name
-        when 'product' or 'page' or 'login' or 'register' or 'contact' or '404'
+        when 'product' or 'page' or 'login' or 'register' or 'contact' or '404' or 'reset_password'
             assign position = 'cbx-absolute'
         else
             assign position = 'cbx-relative'
@@ -273,6 +273,7 @@
 
 
 
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -289,6 +290,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
 
 
 

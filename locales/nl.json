@@ -343,6 +343,7 @@
   "customer": {
     "account": {
       "title": "Account",
+      "bonjour": "Hello {{ first_name }},",
       "details": "Accountgegevens",
       "view_addresses": "Adressen bekijken",
       "return": "Terug naar Accountgegevens"

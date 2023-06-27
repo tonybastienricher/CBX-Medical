@@ -290,6 +290,7 @@ textarea {
 /* login / recover */
 
 #ContactForm input,
+.customer input,
 .register-cbx input,
 .login-cbx input {
     @apply cbx-p-2.5 placeholder:cbx-text-green cbx-rounded cbx-text-11 cbx-w-full;
@@ -297,9 +298,35 @@ textarea {
 }
 
 .register-cbx label,
+.customer label,
 .login-cbx label {
     display: none;
 }
+
+.customer div:has(input[type="text"]) label {
+    display: block;
+}
+
+.customer input[type="checkbox"] + label {
+    display: block;
+}
+
+.customer select {
+    @apply cbx-p-2.5 cbx-rounded cbx-text-11 cbx-w-full cbx-border-2 cbx-border-gray-300 cbx-min-w-full;
+}
+
+.customer form {
+    @apply cbx-flex cbx-flex-col cbx-gap-3;
+}
+
+.addresses [aria-expanded='false'] ~ div[id] {
+    display: none;
+}
+
+.addresses [aria-expanded='true'] ~ div[id] {
+    display: block;
+}
+
 
 #ContactForm label {
     @apply cbx-font-display cbx-text-xs cbx-font-medium;

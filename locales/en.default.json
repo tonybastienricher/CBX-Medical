@@ -345,6 +345,7 @@
   "customer": {
     "account": {
       "title": "Account",
+      "bonjour": "Hello {{ first_name }},",
       "details": "Account details",
       "view_addresses": "View addresses",
       "return": "Return to Account details"
