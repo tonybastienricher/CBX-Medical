@@ -427,7 +427,7 @@ article.article h1 {
 }
 
 article.article h2 {
-    @apply cbx-text-3xl;
+    @apply cbx-text-3xl cbx-py-5;
 }
 
 
