@@ -3,16 +3,10 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "featured_image": {
-          "type": "featured_image",
-          "settings": {
-            "image_height": "adapt"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
-            "blog_show_date": true,
+            "blog_show_date": false,
             "blog_show_author": false
           }
         },
@@ -20,18 +14,30 @@
           "type": "content",
           "settings": {
           }
+        },
+        "references": {
+          "type": "references"
         }
       },
       "block_order": [
-        "featured_image",
         "title",
-        "content"
+        "content",
+        "references"
       ],
       "settings": {
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "sur_titre": "Découvrez notre catalogue produit",
+        "titre": "",
+        "collection": "tous-les-produits"
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "featured-collection"
   ]
 }

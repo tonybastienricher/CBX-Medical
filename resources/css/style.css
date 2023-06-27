@@ -10,7 +10,7 @@
     --swiper-pagination-bullet-vertical-gap: 6px;
     */
     --swiper-pagination-bullet-horizontal-gap: 6px;
-    --swiper-navigation-sides-offset : 40px;
+    --swiper-navigation-sides-offset: 40px;
 
     /* Fonts */
     --kh-60-semi: 500 60px/96% "KH Teka", sans-serif;
@@ -375,4 +375,78 @@ textarea {
 
 .price--on-sale .price__sale {
     display: initial;
+}
+
+/* BREADCRUMB */
+
+.breadcrumbs {
+    margin: 0 0 0.625rem;
+}
+
+.breadcrumbs__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs__item {
+    @apply cbx-text-green5 cbx-inline-block cbx-text-xss cbx-uppercase cbx-no-underline;
+}
+
+.breadcrumbs__item:not(:last-child):after {
+    content: '/';
+}
+
+.breadcrumbs__item:last-child {
+    @apply cbx-text-green2;
+}
+
+/* ARTICLE */
+
+article.article {
+    @apply cbx-text-sm cbx-text-green4 cbx-font-display;
+}
+
+article.article h1,
+article.article h2,
+article.article h3,
+article.article h4,
+article.article h5 {
+    @apply cbx-text-green;
+}
+/*
+article.article h2,
+article.article h3,
+article.article h4,
+article.article h5 {
+    @apply cbx-py-10;
+}*/
+
+article.article h1 {
+    @apply cbx-text-6xl cbx-py-10 cbx-pb-5;
+}
+
+article.article h2 {
+    @apply cbx-text-3xl;
+}
+
+
+article.article h3 {
+    @apply cbx-text-xl;
+}
+/*
+article.article p {
+    @apply cbx-pb-5;
+}*/
+
+article.article img {
+    @apply cbx-w-full;
+}
+
+article.article ul {
+    @apply cbx-list-disc cbx-list-inside;
+}
+
+article.article ol {
+    @apply cbx-list-decimal cbx-list-inside;
 }

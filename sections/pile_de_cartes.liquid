@@ -45,7 +45,7 @@
                                         <span class='cbx-text-sm cbx-pb-5'>
                                             {{ 'sections.pile_cartes.related_product' | t: related_product: productCount }}
                                         </span>
-                                        <ul class='cbx-flex cbx-gap-3'>
+                                        <ul class='cbx-flex cbx-flex-wrap cbx-gap-3'>
                                             {%- for product in produits -%}
                                                 <a href='{{ product.url }}'>
 
@@ -184,7 +184,7 @@
           "type": "product_list",
           "id": "produits",
           "label": "Produits",
-          "limit": 2
+          "limit": 3
         }
       ]
     }
