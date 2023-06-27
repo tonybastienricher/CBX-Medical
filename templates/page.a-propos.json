@@ -9,30 +9,6 @@
         "couleur_du_texte": "green2"
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "full_width": false,
-        "padding_bottom": false,
-        "texte_du_bouton": "Découvrez nos produits",
-        "lien_du_bouton": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": ""
-      }
-    },
-    "grid_text": {
-      "type": "grid_text",
-      "settings": {
-        "couleur_du_background": "transparent",
-        "couleur_du_texte": "green2",
-        "titre": "Introduction",
-        "texte": "CBX Medical est à l'avant-garde des solutions santé à base de cannabinoïdes. Depuis 2019, nous oeuvrons sans relâche pour concevoir, développer et délivrer des produits de qualité, inspirés des vertus naturelles de la plante de cannabis. Nos produits apportent un soutient viable à la gestion du stress, au sommeil, aux situations douloureuses et affections cutanées.\n \nNous nous distinguons par notre engagement pour l’innovation transparente, tout en restant profondément enracinés dans l’éducation et centré sur le patient. Nous prenons fierté dans notre travail collaboratif avec des universités de renom, nous assurant de rester à la pointe des découvertes scientifiques.\n \nChez CBX, notre passion transcende la mission de notre société. Nous motivons et poussons toutes les industries qui gravitent autour du cannabis à innover ensemble pour que l’humanité puisse s’offrir le plein potentiel du cannabis. Nous voulons démarrer un mouvement international. (une révolution)!"
-      }
-    },
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e": {
       "type": "page_images_carrousel",
       "blocks": {
@@ -45,6 +21,7 @@
         },
         "419c3302-bf63-4556-80a7-dc46aeed6794": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_103.png",
             "label_de_limage": "FIG.Close up view test"
@@ -52,6 +29,7 @@
         },
         "6f10dc8e-659b-449d-95a9-dd98485e229e": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png",
             "label_de_limage": "FIG.Close up view"
@@ -66,6 +44,30 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2"
+      }
+    },
+    "grid_text": {
+      "type": "grid_text",
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "titre": "Introduction",
+        "texte": "CBX Medical est à l'avant-garde des solutions santé à base de cannabinoïdes. Depuis 2019, nous oeuvrons sans relâche pour concevoir, développer et délivrer des produits de qualité, inspirés des vertus naturelles de la plante de cannabis. Nos produits apportent un soutient viable à la gestion du stress, au sommeil, aux situations douloureuses et affections cutanées.\n \nNous nous distinguons par notre engagement pour l’innovation transparente, tout en restant profondément enracinés dans l’éducation et centré sur le patient. Nous prenons fierté dans notre travail collaboratif avec des universités de renom, nous assurant de rester à la pointe des découvertes scientifiques.\n \nChez CBX, notre passion transcende la mission de notre société. Nous motivons et poussons toutes les industries qui gravitent autour du cannabis à innover ensemble pour que l’humanité puisse s’offrir le plein potentiel du cannabis. Nous voulons démarrer un mouvement international. (une révolution)!"
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "full_width": false,
+        "padding_bottom": false,
+        "texte_du_bouton": "Découvrez nos produits",
+        "lien_du_bouton": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
       }
     },
     "page_description": {
@@ -215,9 +217,9 @@
   },
   "order": [
     "gros_texte_large",
-    "video",
-    "grid_text",
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e",
+    "grid_text",
+    "video",
     "page_description",
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
     "b2cf978c-b9cf-4391-ae13-a437308dd628",
