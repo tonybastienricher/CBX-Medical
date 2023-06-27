@@ -70,8 +70,80 @@
         "description": ""
       }
     },
+    "a4ab763f-a401-4243-b037-e36a2ae3b37b": {
+      "type": "pile_de_cartes",
+      "blocks": {
+        "4667d01f-7358-490d-ad52-4e0b7d343d07": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Innovation",
+            "sous_titre": "Détails",
+            "description": "Nous nous engageons à repousser les limites de la connaissance et à innover en exploitant le plein potentiel des composées du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des solutions de pointe pour offrir une alternative naturelle toujours plus efficace",
+            "produits": [
+
+            ]
+          }
+        },
+        "08de0865-6868-46a8-a0a5-abc2beab2dee": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Expertise",
+            "sous_titre": "Détails",
+            "description": "Notre équipe, composée d’experts en cannabis médical, de professionnels de la santé et de chercheurs, met un point d’honneur à affiner son expertise tous les jours.. Grâce à leurs connaissances approfondies et à leur longues expériences, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité.",
+            "produits": [
+
+            ]
+          }
+        },
+        "f846bb60-0760-4b40-b0e3-a6b69ccee826": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Nature",
+            "sous_titre": "Détails",
+            "description": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une solution holistique pour soulager sans nuire. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement. (et de maximiser l’impact de l’environnement sur nous ?)",
+            "produits": [
+
+            ]
+          }
+        },
+        "ccfafb15-2aa8-45de-a2bd-84d3f4a04907": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Empathie",
+            "sous_titre": "Détails",
+            "description": "Chez CBX Medical, nous côtoyons quotidiennement des personnes en quête de soulagements. Nous comprenons les tenants et aboutissants de leur situations personnelles , aussi variées soient-elles. Notre compassion nous donne la volonté d’impacter positivement leur confort de vie. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin.",
+            "produits": [
+
+            ]
+          }
+        },
+        "f81ddd40-891b-4542-a79c-3f4f9413aaa5": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Ouverture",
+            "sous_titre": "Détails",
+            "description": "Nous croyons en la transparence et favorisons l'ouverture d’esprit, où la collaboration et le partage des connaissances sont essentiels. Nous nous engageons activement avec les professionnels de la santé, les patients et la communauté en général à promouvoir l'éducation, la sensibilisation et la compréhension de la plante et de ses propriétés.",
+            "produits": [
+
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "4667d01f-7358-490d-ad52-4e0b7d343d07",
+        "08de0865-6868-46a8-a0a5-abc2beab2dee",
+        "f846bb60-0760-4b40-b0e3-a6b69ccee826",
+        "ccfafb15-2aa8-45de-a2bd-84d3f4a04907",
+        "f81ddd40-891b-4542-a79c-3f4f9413aaa5"
+      ],
+      "settings": {
+        "sur_titre": "Au Quotidien",
+        "titre": "Comment cbx peut vous aider au quotidien ?"
+      }
+    },
     "page_description": {
       "type": "page-description",
+      "disabled": true,
       "blocks": {
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc": {
           "type": "information",
@@ -220,6 +292,7 @@
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e",
     "grid_text",
     "video",
+    "a4ab763f-a401-4243-b037-e36a2ae3b37b",
     "page_description",
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
     "b2cf978c-b9cf-4391-ae13-a437308dd628",
