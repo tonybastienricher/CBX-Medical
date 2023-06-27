@@ -9,21 +9,6 @@
         "couleur_du_texte": "green2"
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "full_width": false,
-        "padding_bottom": false,
-        "texte_du_bouton": "Découvrez nos produits",
-        "lien_du_bouton": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": ""
-      }
-    },
     "grid_text": {
       "type": "grid_text",
       "settings": {
@@ -79,6 +64,7 @@
     },
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e": {
       "type": "image_gauche_droite",
+      "disabled": true,
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
@@ -86,6 +72,22 @@
         "lgende_de_limage_gauche": "Macro",
         "image_droite": "shopify:\/\/shop_images\/IMG_6776.jpg",
         "lgende_de_limage_droite": "Legend image and dolorem text about brands, values and behind the scene."
+      }
+    },
+    "video": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "full_width": false,
+        "padding_bottom": false,
+        "texte_du_bouton": "Découvrez nos produits",
+        "lien_du_bouton": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
       }
     },
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b": {
@@ -100,6 +102,7 @@
     },
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f": {
       "type": "avis",
+      "disabled": true,
       "blocks": {
         "a42efbb0-e44e-4628-9764-4da0dd475058": {
           "type": "avis",
@@ -199,10 +202,10 @@
   },
   "order": [
     "gros_texte_large",
-    "video",
     "grid_text",
     "page_description",
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
+    "video",
     "c93a9962-07e6-48eb-aa4c-65817bd6c23b",
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f",
     "39dbfad7-cecd-41bc-8d53-b5da734d7787",
