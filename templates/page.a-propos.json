@@ -51,6 +51,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
+        "taille_titre": "style2",
         "titre": "Introduction",
         "texte": "CBX Medical est à l'avant-garde des solutions santé à base de cannabinoïdes. Depuis 2019, nous oeuvrons sans relâche pour concevoir, développer et délivrer des produits de qualité, inspirés des vertus naturelles de la plante de cannabis. Nos produits apportent un soutient viable à la gestion du stress, au sommeil, aux situations douloureuses et affections cutanées.\n \nNous nous distinguons par notre engagement pour l’innovation transparente, tout en restant profondément enracinés dans l’éducation et centré sur le patient. Nous prenons fierté dans notre travail collaboratif avec des universités de renom, nous assurant de rester à la pointe des découvertes scientifiques.\n \nChez CBX, notre passion transcende la mission de notre société. Nous motivons et poussons toutes les industries qui gravitent autour du cannabis à innover ensemble pour que l’humanité puisse s’offrir le plein potentiel du cannabis. Nous voulons démarrer un mouvement international. (une révolution)!"
       }
@@ -191,6 +192,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
+        "taille_titre": "style1",
         "titre": "Nos valeurs"
       }
     },
