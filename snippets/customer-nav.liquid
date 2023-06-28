@@ -1,4 +1,4 @@
-<div class='cbx-row-span-6 cbx-relative'>
+<div class='cbx-row-span-6 cbx-relative cbx-w-full'>
     <div class='cbx-p-5 cbx-bg-white cbx-rounded cbx-sticky cbx-top-10'>
         <h1 class="cbx-text-sm cbx-font-medium cbx-font-body">
             {{ 'customer.account.bonjour' | t: first_name: customer.first_name }}
@@ -6,7 +6,7 @@
 
         <ul class='cbx-text-xs cbx-flex cbx-flex-col cbx-gap-2.5 cbx-pt-5'>
             <li>
-                <a href="{{ routes.account_url }}">{{ 'customer.account.title' | t }}</a>
+                <a href="{{ routes.account_url }}" >{{ 'customer.account.title' | t }}</a>
             </li>
             <li>
                 <a href="{{ routes.account_addresses_url }}">{{ 'customer.account.view_addresses' | t }}</a>

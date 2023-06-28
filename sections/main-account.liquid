@@ -1,6 +1,6 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
-<div class='cbx-container-site cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-3 cbx-gap-3 lg:cbx-max-w-6xl lg:cbx-mx-auto cbx-py-16'>
+<div class='cbx-customer cbx-container-site cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-3 cbx-gap-y-3 lg:cbx-gap-3 lg:cbx-max-w-6xl lg:cbx-mx-auto cbx-py-16'>
 
     <!-- Navigation -->
     {% render 'customer-nav' %}
@@ -14,56 +14,65 @@
 
             {% paginate customer.orders by 20 %}
                 {%- if customer.orders.size > 0 -%}
-                    <table role="table" class="order-history cbx-w-full cbx-table-auto cbx-border-separate cbx-border-spacing-2 cbx-text-xs">
-                        <caption class="visually-hidden">
-                            {{ 'customer.orders.title' | t }}
-                        </caption>
-                        <thead role="rowgroup">
-                        <tr role="row">
-                            <th id="ColumnOrder" scope="col"
-                                role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
-                            <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
-                            <th id="ColumnPayment" scope="col"
-                                role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
-                            <th id="ColumnFulfillment" scope="col" role="columnheader">
-                                {{ 'customer.orders.fulfillment_status' | t }}
-                            </th>
-                            <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
-                        </tr>
-                        </thead>
-                        <tbody role="rowgroup" class=''>
-                        {%- for order in customer.orders -%}
+                    <div class='cbx-relative cbx-overflow-x-auto'>
+                        <table role="table"
+                               class="order-history cbx-w-full cbx-table-auto cbx-border-separate cbx-border-spacing-2 cbx-text-xs">
+                            <caption class="visually-hidden">
+                                {{ 'customer.orders.title' | t }}
+                            </caption>
+                            <thead role="rowgroup">
                             <tr role="row">
-                                <td id="RowOrder"
-                                    role="cell"
-                                    class='cbx-border-b cbx-border-offWhite cbx-border-dashed'
-                                    headers="ColumnOrder"
-                                    data-label="{{ 'customer.orders.order_number' | t }}">
-                                    <a href="{{ order.customer_url }}"
-                                       aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">
-                                        {{ order.name }}
-                                    </a>
-                                </td>
-                                <td headers="RowOrder ColumnDate" role="cell"
-                                    data-label="{{ 'customer.orders.date' | t }}">
-                                    {{ order.created_at | time_tag: format: 'basic' }}
-                                </td>
-                                <td headers="RowOrder ColumnPayment" role="cell"
-                                    data-label="{{ 'customer.orders.payment_status' | t }}">
-                                    {{ order.financial_status_label }}
-                                </td>
-                                <td headers="RowOrder ColumnFulfillment" role="cell"
-                                    data-label="{{ 'customer.orders.fulfillment_status' | t }}">
-                                    {{ order.fulfillment_status_label }}
-                                </td>
-                                <td headers="RowOrder ColumnTotal" role="cell"
-                                    data-label="{{ 'customer.orders.total' | t }}">
-                                    {{ order.total_net_amount | money_with_currency }}
-                                </td>
+                                <th id="ColumnOrder" scope="col" class='cbx-text-left'
+                                    role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
+                                <th id="ColumnDate" scope="col"
+                                    role="columnheader">{{ 'customer.orders.date' | t }}</th>
+                                <th id="ColumnPayment" scope="col"
+                                    role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
+                                <th id="ColumnFulfillment" scope="col" role="columnheader">
+                                    {{ 'customer.orders.fulfillment_status' | t }}
+                                </th>
+                                <th id="ColumnTotal" scope="col"
+                                    role="columnheader">{{ 'customer.orders.total' | t }}</th>
                             </tr>
-                        {%- endfor -%}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody role="rowgroup" class=''>
+                            {%- for order in customer.orders -%}
+                                <tr role="row">
+                                    <td id="RowOrder"
+                                        role="cell"
+                                        class='cbx-border-b cbx-border-offWhite cbx-border-dashed cbx-py-4'
+                                        headers="ColumnOrder"
+                                        data-label="{{ 'customer.orders.order_number' | t }}">
+                                        <a href="{{ order.customer_url }}"
+                                           aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">
+                                            {{ order.name }}
+                                        </a>
+                                    </td>
+                                    <td headers="RowOrder ColumnDate" role="cell"
+                                        class='cbx-border-b cbx-border-offWhite cbx-border-dashed cbx-px-6 cbx-py-4 cbx-text-center'
+                                        data-label="{{ 'customer.orders.date' | t }}">
+                                        {{ order.created_at | time_tag: format: 'basic' }}
+                                    </td>
+                                    <td headers="RowOrder ColumnPayment" role="cell"
+                                        class='cbx-border-b cbx-border-offWhite cbx-border-dashed cbx-px-6 cbx-py-4 cbx-text-center'
+                                        data-label="{{ 'customer.orders.payment_status' | t }}">
+                                        {{ order.financial_status_label }}
+                                    </td>
+                                    <td headers="RowOrder ColumnFulfillment" role="cell"
+                                        class='cbx-border-b cbx-border-offWhite cbx-border-dashed cbx-px-6 cbx-py-4 cbx-text-center'
+                                        data-label="{{ 'customer.orders.fulfillment_status' | t }}">
+                                        {{ order.fulfillment_status_label }}
+                                    </td>
+                                    <td headers="RowOrder ColumnTotal" role="cell"
+                                        class='cbx-border-b cbx-border-offWhite cbx-border-dashed cbx-text-right cbx-py-4'
+                                        data-label="{{ 'customer.orders.total' | t }}">
+                                        {{ order.total_net_amount | money_with_currency }}
+                                    </td>
+                                </tr>
+                            {%- endfor -%}
+                            </tbody>
+                        </table>
+                    </div>
                 {%- else -%}
                     <p>{{ 'customer.orders.none' | t }}</p>
                 {%- endif -%}

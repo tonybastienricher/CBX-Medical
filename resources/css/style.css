@@ -106,6 +106,10 @@
         text-edge: cap;
     }
 
+    .cbx-customer .cbx-btn {
+        padding: 10px 20px;
+    }
+
     .cbx-btn-white {
         @apply cbx-bg-white;
     }
@@ -293,7 +297,7 @@ textarea {
 .customer input,
 .register-cbx input,
 .login-cbx input {
-    @apply cbx-p-2.5 placeholder:cbx-text-green cbx-rounded cbx-text-11 cbx-w-full;
+    @apply cbx-p-2.5 cbx-rounded cbx-text-11 cbx-w-full cbx-text-green;
     border: 1px solid #DBDBDB;
 }
 
@@ -327,6 +331,13 @@ textarea {
     display: block;
 }
 
+table.order-details td {
+    min-width: 80px;
+}
+
+table.order-details td:first-child {
+    white-space: nowrap;
+}
 
 #ContactForm label {
     @apply cbx-font-display cbx-text-xs cbx-font-medium;
@@ -441,6 +452,7 @@ article.article h4,
 article.article h5 {
     @apply cbx-text-green;
 }
+
 /*
 article.article h2,
 article.article h3,
@@ -461,6 +473,7 @@ article.article h2 {
 article.article h3 {
     @apply cbx-text-xl;
 }
+
 /*
 article.article p {
     @apply cbx-pb-5;

@@ -1,16 +1,16 @@
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
-<div class='cbx-container-site cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-3 cbx-gap-3 lg:cbx-max-w-6xl lg:cbx-mx-auto cbx-py-16'
+<div class='cbx-customer cbx-container-site cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-3 cbx-gap-y-3 lg:cbx-gap-3 lg:cbx-max-w-6xl lg:cbx-mx-auto cbx-py-16'
      x-data='{address : false}'>
 
     <!-- Navigation -->
     {% render 'customer-nav' %}
 
-    <!-- Info order -->
-    <div class='cbx-p-5 cbx-bg-white cbx-rounded cbx-col-span-2'>
+    <!-- addresses order -->
+    <div class='cbx-p-5 cbx-bg-white cbx-rounded cbx-col-span-2 cbx-text-sm'>
         {%- paginate customer.addresses by 5 -%}
             <div class="customer addresses section-{{ section.id }}-padding" data-customer-addresses>
                 <div class='cbx-flex cbx-justify-between cbx-items-center'>
-                    <h2>{{ 'customer.addresses.title' | t }}</h2>
+                    <h2 class='cbx-pb-2.5'>{{ 'customer.addresses.title' | t }}</h2>
                     <div>
                         <button @click='address = "new"' type="button" aria-expanded="false" aria-controls="AddAddress"
                                 class='cbx-btn cbx-btn-vert cbx-w-auto'>
@@ -110,7 +110,7 @@
     {%- for address in customer.addresses -%}
         <div id="EditAddress_{{ address.id }}" x-show='address === {{ forloop.index }}'
              class='customer addresses cbx-p-5 cbx-col-span-2 cbx-bg-white cbx-rounded' style='display: none'>
-            <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
+            <h2 class='cbx-pb-2.5'>{{ 'customer.addresses.edit_address' | t }}</h2>
             {%- form 'customer_address', address -%}
                 <div class="">
                     <input
@@ -168,14 +168,12 @@
                     <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
                 </div>
                 <div class="">
-                    <input
-                            type="text"
-                            id="AddressCity_{{ form.id }}"
-                            name="address[city]"
-                            value="{{ form.city }}"
-                            autocomplete="address-level2"
-                            placeholder="{{ 'customer.addresses.city' | t }}"
-                    >
+                    <input type="text"
+                           id="AddressCity_{{ form.id }}"
+                           name="address[city]"
+                           value="{{ form.city }}"
+                           autocomplete="address-level2"
+                           placeholder="{{ 'customer.addresses.city' | t }}">
                     <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
                 </div>
                 <div>
@@ -228,11 +226,12 @@
                 </div>
                 <div class='cbx-flex'>
                     {{ form.set_as_default_checkbox }}
-                    <label for="address_default_address_{{ form.id }}">
+                    <label for="address_default_address_{{ form.id }}"
+                           class='cbx-text-xs'>
                         {{ 'customer.addresses.set_default' | t }}
                     </label>
                 </div>
-                <div class='cbx-flex cbx-justify-between'>
+                <div class='cbx-flex cbx-justify-between cbx-gap-2'>
                     <button class='cbx-btn cbx-btn-vert'>{{ 'customer.addresses.update' | t }}</button>
                     <button class='cbx-btn cbx-btn-green6' @click='address = false;'
                             type="reset">{{ 'customer.addresses.cancel' | t }}</button>
@@ -245,7 +244,7 @@
     <div class='cbx-p-5 cbx-bg-white cbx-rounded cbx-col-span-2 cbx-flex cbx-flex-col cbx-justify-between customer addresses cbx-w-full'
          data-address x-show='address === "new"'>
         <div id="AddAddress">
-            <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+            <h2 id="AddressNewHeading" class='cbx-pb-2.5'>{{ 'customer.addresses.add_new' | t }}</h2>
             {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
                 <div class="">
                     <input type="text"
@@ -275,25 +274,21 @@
                     <label for="AddressCompanyNew">{{ 'customer.addresses.company' | t }}</label>
                 </div>
                 <div class="">
-                    <input
-                            type="text"
-                            id="AddressAddress1New"
-                            name="address[address1]"
-                            value="{{ form.address1 }}"
-                            autocomplete="address-line1"
-                            placeholder="{{ 'customer.addresses.address1' | t }}"
-                    >
+                    <input type="text"
+                           id="AddressAddress1New"
+                           name="address[address1]"
+                           value="{{ form.address1 }}"
+                           autocomplete="address-line1"
+                           placeholder="{{ 'customer.addresses.address1' | t }}">
                     <label for="AddressAddress1New">{{ 'customer.addresses.address1' | t }}</label>
                 </div>
                 <div class="">
-                    <input
-                            type="text"
-                            id="AddressAddress2New"
-                            name="address[address2]"
-                            value="{{ form.address2 }}"
-                            autocomplete="address-line2"
-                            placeholder="{{ 'customer.addresses.address2' | t }}"
-                    >
+                    <input type="text"
+                           id="AddressAddress2New"
+                           name="address[address2]"
+                           value="{{ form.address2 }}"
+                           autocomplete="address-line2"
+                           placeholder="{{ 'customer.addresses.address2' | t }}">
                     <label for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</label>
                 </div>
                 <div class="">
@@ -338,15 +333,13 @@
                     </div>
                 </div>
                 <div class="">
-                    <input
-                            type="text"
-                            id="AddressZipNew"
-                            name="address[zip]"
-                            value="{{ form.zip }}"
-                            autocapitalize="characters"
-                            autocomplete="postal-code"
-                            placeholder="{{ 'customer.addresses.zip' | t }}"
-                    >
+                    <input type="text"
+                           id="AddressZipNew"
+                           name="address[zip]"
+                           value="{{ form.zip }}"
+                           autocapitalize="characters"
+                           autocomplete="postal-code"
+                           placeholder="{{ 'customer.addresses.zip' | t }}">
                     <label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
                 </div>
                 <div class="">
@@ -362,11 +355,13 @@
                 </div>
                 <div class='cbx-flex'>
                     {{ form.set_as_default_checkbox }}
-                    <label for="address_default_address_new">{{ 'customer.addresses.set_default' | t }}</label>
+                    <label for="address_default_address_new"
+                           class='cbx-text-xs'>{{ 'customer.addresses.set_default' | t }}</label>
                 </div>
                 <div class='cbx-flex cbx-flex-col lg:cbx-flex-row cbx-gap-2.5'>
                     <button class='cbx-btn cbx-btn-vert'>{{ 'customer.addresses.add' | t }}</button>
-                    <button type="reset" class='cbx-btn cbx-btn-green6' @click='address = false;'>{{ 'customer.addresses.cancel' | t }}</button>
+                    <button type="reset" class='cbx-btn cbx-btn-green6'
+                            @click='address = false;'>{{ 'customer.addresses.cancel' | t }}</button>
                 </div>
             {%- endform -%}
         </div>
