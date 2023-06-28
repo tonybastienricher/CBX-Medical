@@ -73,27 +73,6 @@
     </div>
 </div>
 
-{% javascript %}
-var swiperArticle = new Swiper('.swiper-container-articles', {
-slidesPerView: 1.2,
-spaceBetween: 6,
-grabCursor: true,
-pagination: {
-el: '.swiper-pagination',
-clickable: true
-},
-breakpoints: {
-550: {
-slidesPerView: 2.2
-},
-800: {
-slidesPerView: 3.2
-}
-}
-});
-
-{% endjavascript %}
-
 {% schema %}
 {
   "name": "Articles similaires",
@@ -136,3 +115,25 @@ slidesPerView: 3.2
   ]
 }
 {% endschema %}
+
+
+{% javascript %}
+var swiperArticle = new Swiper('.swiper-container-articles', {
+slidesPerView: 1.2,
+spaceBetween: 6,
+grabCursor: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true
+},
+breakpoints: {
+550: {
+slidesPerView: 2.2
+},
+800: {
+slidesPerView: 3.2
+}
+}
+});
+
+{% endjavascript %}
