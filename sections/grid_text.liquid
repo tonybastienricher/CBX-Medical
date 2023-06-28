@@ -1,7 +1,7 @@
 <div class='cbx-pt-12 cbx-pb-24 {% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %}'>
     <div class='cbx-container-site'>
         <div class='cbx-border-t cbx-border-green5 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5'>
-            <h3 class='cbx-hidden lg:cbx-flex cbx-uppercase cbx-text-xs cbx-font-body'>
+            <h3 class='cbx-flex cbx-pb-4 {% if section.settings.taille_titre == 'style2' %}cbx-text-3xl{% else %}cbx-uppercase cbx-text-xs cbx-font-body{% endif %}'>
                 {{ section.settings.titre }}
             </h3>
             <div class="cbx-flex cbx-text-green3 cbx-duration-200 cbx-font-display">
@@ -23,7 +23,8 @@
       "type": "select",
       "id": "couleur_du_background",
       "label": "Couleur du background",
-      "options": [{
+      "options": [
+        {
           "value": "transparent",
           "label": "Transparent"
         },
@@ -109,6 +110,22 @@
         }
       ],
       "default": "green2"
+    },
+    {
+      "type": "select",
+      "id": "taille_titre",
+      "label": "Taille du titre",
+      "options": [
+        {
+          "value": "style1",
+          "label": "Style 1"
+        },
+        {
+          "value": "style2",
+          "label": "Style 2"
+        }
+      ],
+      "default": "style1"
     },
     {
       "type": "text",

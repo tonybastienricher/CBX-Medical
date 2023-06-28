@@ -2,9 +2,9 @@
     <div class='cbx-container-site cbx-py-10'>
         <div class='cbx-border-t cbx-border-green5 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pt-5'>
             <div>
-                <span class='cbx-flex cbx-uppercase cbx-text-xs cbx-font-body'>
+                <h2 class='cbx-flex {% if section.settings.taille_titre == 'style2' %}cbx-text-3xl{% else %}cbx-uppercase cbx-text-xs cbx-font-body{% endif %}'>
                     {{ section.settings.titre }}
-                </span>
+                </h2>
             </div>
             <!-- Description -->
             <div x-data="{ open: 1 }"
@@ -18,8 +18,10 @@
                                 <button @click="open = {{ forloop.index }}"
                                         class="question cbx-flex cbx-justify-between cbx-items-center {% if forloop.index != 1 %}cbx-pt-5{% endif %} cbx-pb-2.5 cbx-border-b cbx-border-green5 cbx-gap-7 cbx-cursor-pointer">
                                     <span class='cbx-font-display cbx-tracking-cbxWidest cbx-text-xls cbx-text-left'>{{ block.settings.question }}</span>
-                                    <div class='cbx-duration-200' :class="{'cbx-rotate-45' : open == {{ forloop.index }} }">
-                                        <svg class='cbx-w-3.5 cbx-h-3.5' width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                    <div class='cbx-duration-200'
+                                         :class="{'cbx-rotate-45' : open == {{ forloop.index }} }">
+                                        <svg class='cbx-w-3.5 cbx-h-3.5' width="13" height="13" viewBox="0 0 13 13"
+                                             fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5.33953 12.72V7.48053H0.100098V5.95941H5.33953V0.719971H6.86066V5.95941H12.1001V7.48053H6.86066V12.72H5.33953Z"
                                                   fill="currentColor" />
@@ -141,6 +143,22 @@
         }
       ],
       "default": "green2"
+    },
+    {
+      "type": "select",
+      "id": "taille_titre",
+      "label": "Taille du titre",
+      "options": [
+        {
+          "value": "style1",
+          "label": "Style 1"
+        },
+        {
+          "value": "style2",
+          "label": "Style 2"
+        }
+      ],
+      "default": "style1"
     },
     {
       "type": "text",
