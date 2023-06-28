@@ -25,6 +25,15 @@
       "settings": {
       }
     },
+    "6c09c671-a4a1-4ed9-8628-02802000309c": {
+      "type": "articles_similaires",
+      "settings": {
+        "titre_de_la_section": "Articles similaires",
+        "sparateur": true,
+        "blog": "infos",
+        "nombre_darticle": 5
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -35,6 +44,7 @@
   },
   "order": [
     "main",
+    "6c09c671-a4a1-4ed9-8628-02802000309c",
     "featured-collection"
   ]
 }

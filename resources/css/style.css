@@ -106,12 +106,20 @@
         text-edge: cap;
     }
 
+    .cbx-btn-small {
+        @apply cbx-px-4 cbx-py-1.5;
+    }
+
     .cbx-customer .cbx-btn {
         padding: 10px 20px;
     }
 
     .cbx-btn-white {
         @apply cbx-bg-white;
+    }
+
+    .cbx-btn-black {
+        @apply cbx-bg-black cbx-text-white;
     }
 
     .cbx-btn-beige {

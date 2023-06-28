@@ -1,0 +1,138 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+
+{% assign actuelArticle = article.title %}
+
+<div class='cbx-container-site cbx-w-full cbx-mb-20 cbx-relative'>
+    <div class=' cbx-flex cbx-flex-col {% if section.settings.sparateur %}cbx-border-t cbx-border-green5 cbx-border-dashed{% endif %}'>
+
+        <!-- Title -->
+        <div class='cbx-flex cbx-flex-col cbx-w-full'>
+            {% if section.settings.titre_de_la_section != blank %}
+                <h3 class='cbx-text-green3 cbx-py-5 cbx-text-2xl'
+                    style='letter-spacing: 0.6px;'>{{ section.settings.titre_de_la_section }}</h3>
+            {% endif %}
+        </div>
+
+        <!-- Articles similaires -->
+        <div class=''>
+
+            {%- assign articleCount = 0 -%}
+            {%- assign blog_articles = blog.articles | limit: 5 -%}
+
+            <div class='swiper-container-articles'>
+                <div class="swiper-wrapper">
+                    {%- for article in blog_articles -%}
+                        {% if actuelArticle != article.title %}
+                            {%- if articleCount < section.settings.nombre_darticle -%}
+                                <div class='swiper-slide'
+                                     data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
+                                    <a href="{{ article.url }}">
+                                        <div class='cbx-group cbx-aspect-square cbx-bg-grisFonce cbx-rounded cbx-p-10 cbx-flex cbx-flex-col cbx-overflow-hidden cbx-h-full cbx-border cbx-border-green6'>
+
+                                            <div class='cbx-flex cbx-flex-col cbx-gap-y-5'>
+                                                {%- assign separator = '' -%}
+                                                {%- for tag in article.tags -%}
+                                                    <span class='cbx-uppercase cbx-text-xss cbx-font-medium cbx-text-green2'>{{ tag | append: separator }}</span>
+                                                    {%- assign separator = ', ' -%}
+                                                {%- endfor -%}
+
+                                                <h3 class='cbx-text-lg cbx-font-medium cbx-text-green'
+                                                    style='line-height: 110%; letter-spacing: -.36px'>{{ article.title }}</h3>
+
+                                                <p class='cbx-text-green cbx-text-xss'
+                                                   style='line-height: 160%; letter-spacing: -.3px;'>Lorem ipsum dolor
+                                                    sit
+                                                    amet,
+                                                    consectetur adipisicing elit. Aliquid
+                                                    assumenda,
+                                                    consequuntur culpa delectus deleniti dicta ex harum illum iste minus
+                                                    mollitia
+                                                    nam nobis quas ratione sed similique ut veniam voluptate.
+                                                </p>
+                                            </div>
+
+                                            <div class='cbx-mt-auto'>
+                                            <span class='cbx-btn cbx-btn-small cbx-btn-white group-hover:cbx-btn-black cbx-duration-200'>
+                                                {{ 'sections.articles_similaires.read' | t }}
+                                            </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {%- else -%}
+                                {%- break -%}
+                            {% endif %}
+                            {%- assign articleCount = articleCount | plus: 1 -%}
+                        {% endif %}
+                    {%- endfor -%}
+                </div>
+                <div class='swiper-pagination'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% javascript %}
+var swiperArticle = new Swiper('.swiper-container-articles', {
+slidesPerView: 1.2,
+spaceBetween: 6,
+grabCursor: true,
+pagination: {
+el: '.swiper-pagination',
+clickable: true
+},
+breakpoints: {
+550: {
+slidesPerView: 2.2
+},
+800: {
+slidesPerView: 3.2
+}
+}
+});
+
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Articles similaires",
+  "class": "articles-similaires cbx-overflow-hidden",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titre_de_la_section",
+      "label": "Titre de la section",
+      "default": "Articles similaires",
+      "placeholder": "Articles similaires"
+    },
+    {
+      "type": "checkbox",
+      "id": "sparateur",
+      "label": "Séparateur",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Choix du blog"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
+    },
+    {
+      "type": "number",
+      "id": "nombre_darticle",
+      "label": "Nombre d'article",
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Articles similaires"
+    }
+  ]
+}
+{% endschema %}

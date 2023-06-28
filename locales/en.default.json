@@ -308,6 +308,9 @@
       "onboarding_title": "Blog post",
       "onboarding_content": "Give your customers a summary of your blog post"
     },
+    "articles_similaires": {
+      "read": "Read the article"
+    },
     "featured_collection": {
       "view_all": "View all",
       "view_all_label": "View all products in the {{ collection_name }} collection"
