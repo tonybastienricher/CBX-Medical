@@ -14,6 +14,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
+        "taille_titre": "style2",
         "titre": "Apprendre",
         "texte": "Cette plante extraordinaire, le \"Cannabis Sativa\", est l'une des trois principales variétés de cannabis, avec ses cousins le Cannabis Indica et le Cannabis Ruderalis. Émergeant d'Asie centrale, il a fait son chemin jusqu'à des pays tels que le Mexique, la Colombie, la Thaïlande, et certaines régions d'Afrique. Il se distingue non seulement par ses caractéristiques botaniques uniques, par la plus value écologique de sa culture ainsi que par la diversité de son exploitation : Textile, papier, huile, farine, corde, matériaux de construction et bien évidemment les soins médicinaux\n\nBien que le cannabis soit souvent associé aux effets psychotropes induits par le THC (tétrahydrocannabinol), il est important de reconnaître la richesse de cette plante qui renferme plus d'une centaine de molécules, les cannabinoïdes, dont plusieurs ont des effets bénéfiques avérés.\n\nCes molécules, appelées cannabinoïdes, ont une particularité qui les rend véritablement uniques : elles ont la capacité de se lier et d'interagir avec les récepteurs endocannabinoïdes qui sont omniprésents dans notre corps.\n\nLes études scientifiques actuelles révèlent que le système endocannabinoïde intervient dans la régulation de nombreux autres systèmes corporels, y compris les systèmes nerveux, immunitaire, digestif et neuronal. C'est cette interaction harmonieuse qui contribue à promouvoir les effets bénéfiques sur notre santé, faisant du cannabis sativa un allié de choix pour notre bien-être."
       }
@@ -59,6 +60,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
+        "taille_titre": "style2",
         "titre": "CBX Medical"
       }
     },
@@ -196,6 +198,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
+        "taille_titre": "style2",
         "titre": "Les fondateurs —  CBX Medical"
       }
     }
