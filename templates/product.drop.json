@@ -5,6 +5,7 @@
       "blocks": {
         "46df2e54-59f4-474e-8d92-763ebe7271e8": {
           "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
+          "disabled": true,
           "settings": {
             "stars_fill_color": "#000000",
             "star_size": 15,
@@ -179,6 +180,22 @@
         "alignement": "droite"
       }
     },
+    "16880498615505129a": {
+      "type": "apps",
+      "blocks": {
+        "399829bb-204c-4fd4-aa69-8b292c5fd37b": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "399829bb-204c-4fd4-aa69-8b292c5fd37b"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -237,22 +254,6 @@
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
       }
-    },
-    "16880498615505129a": {
-      "type": "apps",
-      "blocks": {
-        "399829bb-204c-4fd4-aa69-8b292c5fd37b": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "399829bb-204c-4fd4-aa69-8b292c5fd37b"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -260,8 +261,8 @@
     "87f6092e-7d85-4aa1-867f-e35d05425e92",
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
+    "16880498615505129a",
     "related-products",
-    "60f3a61a-722d-4231-8dd3-7ae9e63f7217",
-    "16880498615505129a"
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
   ]
 }
