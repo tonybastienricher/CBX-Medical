@@ -41,7 +41,7 @@
                                                     style='line-height: 110%; letter-spacing: -.36px'>{{ article.title }}</h3>
 
                                                 {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
-                                                    <p class='cbx-text-green cbx-text-xss'
+                                                    <p class='cbx-text-green cbx-text-xs'
                                                        style='line-height: 160%; letter-spacing: -.3px;'>
                                                         {%- if article.excerpt.size > 0 -%}
                                                             {{ article.excerpt | strip_html | truncatewords: 30 }}
