@@ -164,7 +164,23 @@
       ],
       "settings": {
         "illustration_section": "shopify:\/\/shop_images\/DALL_E-2023-06-26-21.06.38.jpg",
-        "alignement": "droite"
+        "alignement": "gauche"
+      }
+    },
+    "1688371480fe417890": {
+      "type": "apps",
+      "blocks": {
+        "efa97e65-7f93-4158-ae07-cfbc87511770": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "efa97e65-7f93-4158-ae07-cfbc87511770"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "related-products": {
@@ -232,6 +248,7 @@
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "c1799eff-e8e5-4dbd-b6a5-d03e2e624529",
     "description",
+    "1688371480fe417890",
     "related-products",
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
   ]
