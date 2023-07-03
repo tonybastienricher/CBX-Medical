@@ -168,6 +168,22 @@
         "alignement": "droite"
       }
     },
+    "16883714357c83a977": {
+      "type": "apps",
+      "blocks": {
+        "c4ffdc9f-eb0c-40c5-ba70-f435021e6634": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "c4ffdc9f-eb0c-40c5-ba70-f435021e6634"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -233,6 +249,7 @@
     "d95fcd0f-5c8a-497b-9197-8cd84ef73e36",
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
+    "16883714357c83a977",
     "related-products",
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
   ]
