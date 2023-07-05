@@ -222,29 +222,85 @@
         "63392352-98b1-4095-ac34-0626ac15cf65": {
           "type": "faq",
           "settings": {
-            "question": "Le CBD est-il légal? ",
-            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+            "question": "Y a-t-il des effets secondaires avec les produits à base de CBD de CBX Medical ?",
+            "rponse": "Les produits à base de CBD de CBX Medical sont bien tolérés, réduisant le stress, l'anxiété et favorisant un sentiment de calme sans effets secondaires significatifs."
           }
         },
         "488d3a7d-8145-4686-95f3-6ec6e8b08e67": {
           "type": "faq",
           "settings": {
-            "question": "Les cannabinoides utilisés dans les produits CBX Medical sont-ils addictifs? ",
-            "rponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+            "question": "Quels sont les effets indésirables potentiels associés à l'utilisation des cannabinoïdes à des fins thérapeutiques ?",
+            "rponse": "Les effets indésirables potentiels associés à l'utilisation des cannabinoïdes à des fins thérapeutiques peuvent inclure la somnolence, des vertiges, des troubles cognitifs, une augmentation de l'appétit, une sécheresse buccale et des effets psychologiques tels que l'anxiété ou la confusion."
           }
         },
         "8128c509-e148-4930-b86b-434786052391": {
           "type": "faq",
           "settings": {
-            "question": "Comment fonctionnent les cannabisnoides?",
-            "rponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+            "question": "Comment les cannabinoïdes sont-ils réglementés dans différents pays en termes d'utilisation médicale?",
+            "rponse": "La réglementation des cannabinoïdes dans différents pays en termes d'utilisation médicale varie. Certains pays ont légalisé l'utilisation médicale des cannabinoïdes, tandis que d'autres ont des réglementations strictes ou les interdisent complètement."
+          }
+        },
+        "8dc8a849-56b6-48ae-998c-5dc9f16b6399": {
+          "type": "faq",
+          "settings": {
+            "question": "Quelles sont les preuves scientifiques actuelles sur l'efficacité des cannabinoïdes dans le traitement de différentes affections?",
+            "rponse": "Les preuves scientifiques actuelles sur l'efficacité des cannabinoïdes dans le traitement de différentes affections sont prometteuses mais limitées. Des études ont montré des effets bénéfiques potentiels dans des domaines tels que la gestion de la douleur, l'épilepsie et les soins palliatifs, mais des recherches supplémentaires sont nécessaires pour établir des preuves solides."
+          }
+        },
+        "96204ad9-3d45-4dc3-a61b-ee00ce1824ea": {
+          "type": "faq",
+          "settings": {
+            "question": "Quelle est la position des autorités sanitaires sur l'utilisation des cannabinoïdes à des fins thérapeutiques?",
+            "rponse": "La position des autorités sanitaires sur l'utilisation des cannabinoïdes à des fins thérapeutiques varie également. Certains pays reconnaissent leur utilité et ont mis en place des réglementations pour encadrer leur utilisation, tandis que d'autres peuvent avoir des restrictions plus sévères ou les interdire."
+          }
+        },
+        "84f52b73-ee43-4824-85b1-63242570b900": {
+          "type": "faq",
+          "settings": {
+            "question": "Quels sont les critères d'éligibilité pour accéder au traitement aux cannabinoïdes à des fins thérapeutiques ?",
+            "rponse": "Les critères d'éligibilité pour accéder au traitement aux cannabinoïdes à des fins thérapeutiques peuvent varier en fonction des réglementations nationales et des recommandations médicales spécifiques. Ils peuvent inclure des conditions médicales spécifiques, des évaluations médicales approfondies et la prise en compte des traitements conventionnels échoués."
+          }
+        },
+        "6d534f9d-c7b8-4dd1-9292-15227f1c52e4": {
+          "type": "faq",
+          "settings": {
+            "question": "Comment les professionnels de la santé sont-ils formés pour prescrire et surveiller l'utilisation des cannabinoïdes à des fins thérapeutiques ?",
+            "rponse": "Les professionnels de la santé sont formés pour prescrire et surveiller l'utilisation des cannabinoïdes à des fins thérapeutiques selon les recommandations et les réglementations en vigueur dans leur pays. Ils peuvent suivre des programmes de formation spécifiques pour se familiariser avec les aspects cliniques, les dosages, les interactions médicamenteuses et la surveillance des patients."
+          }
+        },
+        "34263905-99a9-4643-ac9c-1fdfea192bc2": {
+          "type": "faq",
+          "settings": {
+            "question": "Existe-t-il des protocoles d'essais cliniques spécifiques visant à évaluer l'efficacité des cannabinoïdes dans différents domaines thérapeutiques?",
+            "rponse": "Des protocoles d'essais cliniques spécifiques sont en cours pour évaluer l'efficacité des cannabinoïdes dans différents domaines thérapeutiques. Ces essais cliniques visent à fournir des données scientifiques solides sur l'efficacité, la sécurité et les posologies appropriées des cannabinoïdes pour des affections spécifiques."
+          }
+        },
+        "f4e5d012-2425-49d7-ae47-5eae706c509a": {
+          "type": "faq",
+          "settings": {
+            "question": "Quelles sont les perspectives futures de recherche sur l'utilisation des cannabinoïdes en médecine?",
+            "rponse": "Les perspectives futures de recherche sur l'utilisation des cannabinoïdes en médecine sont vastes. La recherche continue de se concentrer sur l'exploration des mécanismes d'action des cannabinoïdes, l'identification de nouvelles indications médicales, l'évaluation de leur efficacité à long terme et la recherche de formulations améliorées pour une utilisation sûre et efficace."
+          }
+        },
+        "5219fc22-6833-4bc8-a244-76e72ff1d1ff": {
+          "type": "faq",
+          "settings": {
+            "question": "Quelles sont les recommandations en matière de dosage et de surveillance lors de l'utilisation des cannabinoïdes à des fins thérapeutiques?",
+            "rponse": "Les recommandations en matière de dosage et de surveillance lors de l'utilisation des cannabinoïdes à des fins thérapeutiques varient en fonction des réglementations nationales et des recommandations médicales spécifiques. Les professionnels de la santé doivent évaluer attentivement les besoins individuels des patients, surveiller les effets indésirables potentiels et ajuster les dosages en conséquence pour assurer une utilisation sûre et efficace des cannabinoïdes."
           }
         }
       },
       "block_order": [
         "63392352-98b1-4095-ac34-0626ac15cf65",
         "488d3a7d-8145-4686-95f3-6ec6e8b08e67",
-        "8128c509-e148-4930-b86b-434786052391"
+        "8128c509-e148-4930-b86b-434786052391",
+        "8dc8a849-56b6-48ae-998c-5dc9f16b6399",
+        "96204ad9-3d45-4dc3-a61b-ee00ce1824ea",
+        "84f52b73-ee43-4824-85b1-63242570b900",
+        "6d534f9d-c7b8-4dd1-9292-15227f1c52e4",
+        "34263905-99a9-4643-ac9c-1fdfea192bc2",
+        "f4e5d012-2425-49d7-ae47-5eae706c509a",
+        "5219fc22-6833-4bc8-a244-76e72ff1d1ff"
       ],
       "settings": {
         "sur_titre": "Pour les curieux",
