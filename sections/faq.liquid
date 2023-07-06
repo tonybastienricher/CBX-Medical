@@ -19,7 +19,7 @@
 
                         {%- when 'faq' -%}
                             <button @click="open = {{ forloop.index }}"
-                                    class="question cbx-flex cbx-justify-between cbx-items-center cbx-text-xl cbx-font-light cbx-py-2.5 cbx-border-b cbx-border-green3 cbx-gap-7 cbx-cursor-pointer">
+                                    class="question cbx-flex cbx-justify-between cbx-items-end cbx-text-left cbx-text-xl cbx-font-light cbx-py-2.5 cbx-border-b cbx-border-green3 cbx-gap-7 cbx-cursor-pointer">
                                 <span class='cbx-font-display'>{{ block.settings.question }}</span>
                                 <div class='cbx-duration-200' :class="{'cbx-rotate-45' : open == {{ forloop.index }} }">
                                     <svg class='cbx-w-3.5 cbx-h-3.5 ' width="13" height="13" viewBox="0 0 13 13"

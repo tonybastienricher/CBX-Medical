@@ -16,7 +16,7 @@
             {% if section.settings.video == null %}
                 <!-- Image -->
                 {% if image_hero != blank %}
-                    {{ image_hero | image_url: width: 1200 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'lazy' }}
+                    {{ image_hero | image_url: width: 1200 | image_tag: class: 'cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full', loading: 'eager' }}
                 {% else %}
                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
                 {% endif %}
