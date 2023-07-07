@@ -1,0 +1,306 @@
+{
+  "sections": {
+    "gros_texte_large": {
+      "type": "gros_texte_large",
+      "settings": {
+        "texte": "Offrir la pointe de la recherche au plus grand nombre.",
+        "text_preset": "indent_0",
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2"
+      }
+    },
+    "d787b379-a7c4-4c75-9ce3-855aafe4b29e": {
+      "type": "page_images_carrousel",
+      "blocks": {
+        "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
+            "label_de_limage": "FIG.Close up view"
+          }
+        },
+        "419c3302-bf63-4556-80a7-dc46aeed6794": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_103.png",
+            "label_de_limage": "FIG.Close up view test"
+          }
+        },
+        "6f10dc8e-659b-449d-95a9-dd98485e229e": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png",
+            "label_de_limage": "FIG.Close up view"
+          }
+        }
+      },
+      "block_order": [
+        "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6",
+        "419c3302-bf63-4556-80a7-dc46aeed6794",
+        "6f10dc8e-659b-449d-95a9-dd98485e229e"
+      ],
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2"
+      }
+    },
+    "grid_text": {
+      "type": "grid_text",
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "taille_titre": "style2",
+        "titre": "Introduction",
+        "texte": "CBX Medical est à l'avant-garde des solutions santé à base de cannabinoïdes. Depuis 2019, nous oeuvrons sans relâche pour concevoir, développer et délivrer des produits de qualité, inspirés des vertus naturelles de la plante de cannabis. Nos produits apportent un soutient viable à la gestion du stress, au sommeil, aux situations douloureuses et affections cutanées.\n \nNous nous distinguons par notre engagement pour l’innovation transparente, tout en restant profondément enracinés dans l’éducation et centré sur le patient. Nous prenons fierté dans notre travail collaboratif avec des universités de renom, nous assurant de rester à la pointe des découvertes scientifiques.\n \nChez CBX, notre passion transcende la mission de notre société. Nous motivons et poussons toutes les industries qui gravitent autour du cannabis à innover ensemble pour que l’humanité puisse s’offrir le plein potentiel du cannabis. Nous voulons démarrer un mouvement international. (une révolution)!"
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "full_width": false,
+        "padding_bottom": false,
+        "texte_du_bouton": "Découvrez nos produits",
+        "lien_du_bouton": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
+      }
+    },
+    "a4ab763f-a401-4243-b037-e36a2ae3b37b": {
+      "type": "pile_de_cartes",
+      "blocks": {
+        "4667d01f-7358-490d-ad52-4e0b7d343d07": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Innovation",
+            "sous_titre": "Détails",
+            "description": "Nous nous engageons à repousser les limites de la connaissance et à innover en exploitant le plein potentiel des composées du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des solutions de pointe pour offrir une alternative naturelle toujours plus efficace",
+            "produits": [
+
+            ]
+          }
+        },
+        "08de0865-6868-46a8-a0a5-abc2beab2dee": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Expertise",
+            "sous_titre": "Détails",
+            "description": "Notre équipe, composée d’experts en cannabis médical, de professionnels de la santé et de chercheurs, met un point d’honneur à affiner son expertise tous les jours.. Grâce à leurs connaissances approfondies et à leur longues expériences, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité.",
+            "produits": [
+
+            ]
+          }
+        },
+        "f846bb60-0760-4b40-b0e3-a6b69ccee826": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Nature",
+            "sous_titre": "Détails",
+            "description": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une solution holistique pour soulager sans nuire. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement. (et de maximiser l’impact de l’environnement sur nous ?)",
+            "produits": [
+
+            ]
+          }
+        },
+        "ccfafb15-2aa8-45de-a2bd-84d3f4a04907": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Empathie",
+            "sous_titre": "Détails",
+            "description": "Chez CBX Medical, nous côtoyons quotidiennement des personnes en quête de soulagements. Nous comprenons les tenants et aboutissants de leur situations personnelles , aussi variées soient-elles. Notre compassion nous donne la volonté d’impacter positivement leur confort de vie. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin.",
+            "produits": [
+
+            ]
+          }
+        },
+        "f81ddd40-891b-4542-a79c-3f4f9413aaa5": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Ouverture",
+            "sous_titre": "Détails",
+            "description": "Nous croyons en la transparence et favorisons l'ouverture d’esprit, où la collaboration et le partage des connaissances sont essentiels. Nous nous engageons activement avec les professionnels de la santé, les patients et la communauté en général à promouvoir l'éducation, la sensibilisation et la compréhension de la plante et de ses propriétés.",
+            "produits": [
+
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "4667d01f-7358-490d-ad52-4e0b7d343d07",
+        "08de0865-6868-46a8-a0a5-abc2beab2dee",
+        "f846bb60-0760-4b40-b0e3-a6b69ccee826",
+        "ccfafb15-2aa8-45de-a2bd-84d3f4a04907",
+        "f81ddd40-891b-4542-a79c-3f4f9413aaa5"
+      ],
+      "settings": {
+        "sur_titre": "En savoir plus",
+        "titre": "Nos valeurs"
+      }
+    },
+    "page_description": {
+      "type": "page-description",
+      "disabled": true,
+      "blocks": {
+        "e36bb542-b66a-4221-99d3-d8f0af71e9cc": {
+          "type": "information",
+          "settings": {
+            "question": "Innovation",
+            "reponse": "Nous nous engageons à repousser les limites de la connaissance et à innover en exploitant le plein potentiel des composées du cannabis. Grâce à la recherche et au développement menés en collaboration avec les universités, nous nous efforçons de livrer des solutions de pointe pour offrir une alternative naturelle toujours plus efficace"
+          }
+        },
+        "e739272e-c943-4558-bdda-16a367ad8aca": {
+          "type": "information",
+          "settings": {
+            "question": "Expertise",
+            "reponse": "Notre équipe, composée d’experts en cannabis médical, de professionnels de la santé et de chercheurs, met un point d’honneur à affiner son expertise tous les jours.. Grâce à leurs connaissances approfondies et à leur longues expériences, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité."
+          }
+        },
+        "c15a28a2-d464-40bf-97fb-2545cc3f39a4": {
+          "type": "information",
+          "settings": {
+            "question": "Nature",
+            "reponse": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une solution holistique pour soulager sans nuire. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement. (et de maximiser l’impact de l’environnement sur nous ?)"
+          }
+        },
+        "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8": {
+          "type": "information",
+          "settings": {
+            "question": "Empathie",
+            "reponse": "Chez CBX Medical, nous côtoyons quotidiennement des personnes en quête de soulagements. Nous comprenons les tenants et aboutissants de leur situations personnelles , aussi variées soient-elles. Notre compassion nous donne la volonté d’impacter positivement leur confort de vie. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+          }
+        },
+        "31904f96-3045-468f-b245-e9b50de1559f": {
+          "type": "information",
+          "settings": {
+            "question": "Ouverture",
+            "reponse": "Nous croyons en la transparence et favorisons l'ouverture d’esprit, où la collaboration et le partage des connaissances sont essentiels. Nous nous engageons activement avec les professionnels de la santé, les patients et la communauté en général à promouvoir l'éducation, la sensibilisation et la compréhension de la plante et de ses propriétés."
+          }
+        }
+      },
+      "block_order": [
+        "e36bb542-b66a-4221-99d3-d8f0af71e9cc",
+        "e739272e-c943-4558-bdda-16a367ad8aca",
+        "c15a28a2-d464-40bf-97fb-2545cc3f39a4",
+        "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8",
+        "31904f96-3045-468f-b245-e9b50de1559f"
+      ],
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "taille_titre": "style1",
+        "titre": "Nos valeurs"
+      }
+    },
+    "5de5f4df-2909-47c3-b1b2-be98a09eba5e": {
+      "type": "image_gauche_droite",
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "image_gauche": "shopify:\/\/shop_images\/JUB0709-23.jpg",
+        "lgende_de_limage_gauche": "FIG. LAB",
+        "image_droite": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+        "lgende_de_limage_droite": "FIG. LAB"
+      }
+    },
+    "b2cf978c-b9cf-4391-ae13-a437308dd628": {
+      "type": "gros_texte_large",
+      "settings": {
+        "texte": "Le cannabis est une alternative thérapeutique sérieuse et légitime. Il est temps de lui donner le cadre et les ressources pour en tirer le plein potentiel.",
+        "text_preset": "indent_1",
+        "couleur_du_background": "green",
+        "couleur_du_texte": "green6"
+      }
+    },
+    "dde8d2b2-0542-40a7-91af-f3ce7810f15e": {
+      "type": "image_pleine_largeur",
+      "settings": {
+        "couleur_du_background": "green",
+        "couleur_du_texte": "green2",
+        "image": "shopify:\/\/shop_images\/Group_160.jpg"
+      }
+    },
+    "d1ccaff5-c649-43b4-80f0-6e5762517a82": {
+      "type": "page-description-text",
+      "blocks": {
+        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-0": {
+          "type": "information",
+          "settings": {
+            "titre": "Informer",
+            "couleur_du_titre": "green6",
+            "sous_titre": "A travers l culture expérimentale d’un cahamps de cannabis près de Bruxelles",
+            "couleur_du_sous_titre": "green5",
+            "description": "Elle s’engage à déstigmatiser les idées erronées et préconçues qui entourent la plante et à diffuser une information vérifiée et précise vers un large public, afin de promouvoir une compréhension éclairée du sujet. En mettant en avant les diverses applications et les acteurs clés de l'industrie du cannabis en Belgique, elle contribue à sensibiliser le public sur les bénéfices et les opportunités. C’est dans cette optique que CBX lance pour la seconde année consécutive une exposition sur le cannabis et ses bienfaits au sein d’un champs de culture de chanvre. L’objectif est de donner rendez-vous au plus grand nombre à venir se familiariser aux propriétés et bénéfices multiples qu’offrent la plante. La récolte servira également à la fabrication des produits. \n\n“La plante de Cannabis sativa une des seules plantes qui permet de SE SOIGNER, se loger, s’habiller et se nourrir, et se tout en étant respectueuse de l’environnement. “",
+            "couleur_de_description": "green5"
+          }
+        },
+        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-1": {
+          "type": "information",
+          "settings": {
+            "titre": "Accélérer la recherche au niveau européen",
+            "couleur_du_titre": "green6",
+            "sous_titre": "A travers un concours inter-universitaire",
+            "couleur_du_sous_titre": "green5",
+            "description": "La majorité des recherches menées autour de la plante sont issues de centres de recherche situés en Amérique du Nord et en Israël. A travers les Research Awards for Cannabis in Europe (ou concours RACE) qu’elle organise annuellement, la fondation récompense les meilleurs travaux de recherche académique autour de la plante de cannabis. Dix étudiants à travers l’Europe y sont sélectionnés pour présenter leurs travaux devant deux jurys d’experts composés de scientifiques et de professionnels du secteur médical et peut-être remporter la somme de 2.500€ chacun.",
+            "couleur_de_description": "green5"
+          }
+        },
+        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-2": {
+          "type": "information",
+          "settings": {
+            "titre": "Réunir les acteurs du secteurs",
+            "couleur_du_titre": "green6",
+            "sous_titre": "",
+            "couleur_du_sous_titre": "green5",
+            "description": "Tous les acteurs de la filière chanvre mènent un même combat contre les idées reçues autour de la plante et la désinformation du grand public. C’est un combat que chacun mène de son côté, la fondation entend changer cela en favorisant les échanges entre les acteurs. La fondation a vocation à rapprocher les différents acteurs du chanvre et solidifier les liens qui les unissent pour voir naitre un mouvement global.",
+            "couleur_de_description": "green5"
+          }
+        }
+      },
+      "block_order": [
+        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-0",
+        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-1",
+        "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-2"
+      ],
+      "settings": {
+        "couleur_du_background": "green",
+        "couleur_du_texte": "green5",
+        "texte": "Nous croyons en la transparence et favorisons l'ouverture d’esprit, où la collaboration et le partage des connaissances sont essentiels. Nous nous engageons activement avec les professionnels de la santé, les patients et la communauté en général à promouvoir l'éducation, la sensibilisation et la compréhension de la plante et de ses propriétés.Le cannabis est un atout incroyable pour la santé et une réponse durable à plusieurs défis de notre société.\n\nParce qu’iIl est temps de lui donner le cadre et les ressources nécessaire pour son envole, la fondation vise à être le socle d’un mouvement global qui voulant pousser la plante à son apogée pour l’exploiter au maximum en tirer le plein potentiel.\n\nCréée en 2021, la fondation CBX a pour objectif d'accélérer le développement d'un pôle de compétences belge et européen dédié à la plante de cannabis avec l’aide des chercheurs en exploitant le potentiel du secteur académique. Née du constat d’un manque criant d’information disponible sur la plante, ainsi que d’une désinformation générale autour d’elle, Lionel et Jonathan, co-fondateurs de CBX Medical décident de lancer une fondation pour agir à trois niveaux:"
+      }
+    },
+    "c93a9962-07e6-48eb-aa4c-65817bd6c23b": {
+      "type": "image_grid",
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "video_1": "shopify:\/\/files\/videos\/-4763-4753-b419-0f51374bd722.mp4",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_103.png"
+      }
+    },
+    "36284b84-a7a5-48d8-99ca-7c35dc2c07d7": {
+      "type": "featured-collection",
+      "settings": {
+        "sur_titre": "Completez",
+        "collection": "homepage"
+      }
+    }
+  },
+  "order": [
+    "gros_texte_large",
+    "d787b379-a7c4-4c75-9ce3-855aafe4b29e",
+    "grid_text",
+    "video",
+    "a4ab763f-a401-4243-b037-e36a2ae3b37b",
+    "page_description",
+    "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
+    "b2cf978c-b9cf-4391-ae13-a437308dd628",
+    "dde8d2b2-0542-40a7-91af-f3ce7810f15e",
+    "d1ccaff5-c649-43b4-80f0-6e5762517a82",
+    "c93a9962-07e6-48eb-aa4c-65817bd6c23b",
+    "36284b84-a7a5-48d8-99ca-7c35dc2c07d7"
+  ]
+}
