@@ -1,0 +1,267 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "46df2e54-59f4-474e-8d92-763ebe7271e8": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+            "stars_fill_color": "#000000",
+            "star_size": 15,
+            "text_align": "flex-start",
+            "product": "{{product}}",
+            "stars_text_empty": "No reviews"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "59abd3db-bb7f-45e2-af6b-ece656034d41": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "c62c4cac-e956-4702-9df5-61365c8a4ab8": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Contenant",
+            "text_droite": "Multi"
+          }
+        },
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Type",
+            "text_droite": "Huile naturelle de CBD"
+          }
+        },
+        "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
+          "type": "liste",
+          "disabled": true,
+          "settings": {
+            "liste": "Cannabinoides 100% naturels\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
+          }
+        },
+        "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4424990"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "46df2e54-59f4-474e-8d92-763ebe7271e8",
+        "title",
+        "59abd3db-bb7f-45e2-af6b-ece656034d41",
+        "c62c4cac-e956-4702-9df5-61365c8a4ab8",
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
+        "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
+        "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "87f6092e-7d85-4aa1-867f-e35d05425e92": {
+      "type": "liste",
+      "blocks": {
+        "b404f806-9e1f-4522-98af-4841d5323fa9": {
+          "type": "liste",
+          "settings": {
+            "texte": "Usage quotidien"
+          }
+        },
+        "7494885b-394f-427d-b822-cbdff1dd8f12": {
+          "type": "liste",
+          "settings": {
+            "texte": "100% naturel"
+          }
+        },
+        "0b2e3e7d-6ef5-4d23-8ed9-35651fcdb2f4": {
+          "type": "liste",
+          "settings": {
+            "texte": "Effet entourage"
+          }
+        },
+        "c7f649d0-75aa-470a-872d-2d72a176f607": {
+          "type": "liste",
+          "settings": {
+            "texte": "Non psychotrope"
+          }
+        }
+      },
+      "block_order": [
+        "b404f806-9e1f-4522-98af-4841d5323fa9",
+        "7494885b-394f-427d-b822-cbdff1dd8f12",
+        "0b2e3e7d-6ef5-4d23-8ed9-35651fcdb2f4",
+        "c7f649d0-75aa-470a-872d-2d72a176f607"
+      ],
+      "settings": {
+      }
+    },
+    "2d5b7091-607b-47ba-b651-9699bb120112": {
+      "type": "texte-large",
+      "settings": {
+        "sur_titre": "",
+        "texte": "Éveillez votre bien-être avec notre huile All Natural CBD Broad Spectrum, fabriquée en respectant les normes de production les plus strictes."
+      }
+    },
+    "description": {
+      "type": "description",
+      "blocks": {
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
+          "type": "information",
+          "settings": {
+            "question": "Description",
+            "reponse": "Éveillez votre bien-être avec notre huile All Natural CBD Broad Spectrum, fabriquée en respectant les normes de production les plus strictes. Dénuée de tout agent psychotrope et sans risque de dépendance, elle vous offre une solution naturelle pour améliorer votre qualité de vie au quotidien.\n\nLe cannabidiol (CBD), un phytocannabinoïde précieusement extrait de la plante de cannabis sativa, agit en douceur sur votre système endocannabinoïde - un réseau intercellulaire essentiel à votre organisme - sans engendrer d'effets psychotropes ou narcotiques.\n\nChaque flacon contient 10ml de notre formule révolutionnaire à base de CBD. Faites l'expérience du bien-être au naturel et donnez un coup de pouce sain et sûr à votre routine quotidienne."
+          }
+        },
+        "bc58eff4-5c02-4300-a790-79e97bab67c4": {
+          "type": "information",
+          "settings": {
+            "question": "Conseil d'utilisation",
+            "reponse": "Usage externe."
+          }
+        },
+        "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
+          "type": "information",
+          "settings": {
+            "question": "Ingrédients clés",
+            "reponse": "MCT COCONUT OIL, CANNABIS SATIVA LEAF EXTRACT"
+          }
+        },
+        "7a25d582-8819-4428-be22-996b435de475": {
+          "type": "information",
+          "disabled": true,
+          "settings": {
+            "question": "Posologie",
+            "reponse": "Chez CBX Medical, nous comprenons les défis auxquels sont confrontées les personnes en quête de soulagement thérapeutique. Nous abordons notre travail avec empathie, compassion et la volonté d’apporter un impact réel et positif sur la vie de nos patients. Nous nous efforçons de créer un environnement de soutien et de compréhension pour ceux qui en ont besoin."
+          }
+        }
+      },
+      "block_order": [
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
+        "bc58eff4-5c02-4300-a790-79e97bab67c4",
+        "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb",
+        "7a25d582-8819-4428-be22-996b435de475"
+      ],
+      "settings": {
+        "illustration_section": "shopify:\/\/shop_images\/DALL_E-2023-06-26-21.06.38.jpg",
+        "alignement": "droite"
+      }
+    },
+    "16880498615505129a": {
+      "type": "apps",
+      "blocks": {
+        "399829bb-204c-4fd4-aa69-8b292c5fd37b": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "399829bb-204c-4fd4-aa69-8b292c5fd37b"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "sur_titre": "Complétez",
+        "titre": "Ceci pourrait également vous plaire"
+      }
+    },
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
+      "type": "faq",
+      "disabled": true,
+      "blocks": {
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "86f62e39-8086-49f5-a976-09d4c070c26a": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "636880b9-a708-42f4-98a0-a0f075755083": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        }
+      },
+      "block_order": [
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45",
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2",
+        "86f62e39-8086-49f5-a976-09d4c070c26a",
+        "636880b9-a708-42f4-98a0-a0f075755083",
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78"
+      ],
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "87f6092e-7d85-4aa1-867f-e35d05425e92",
+    "2d5b7091-607b-47ba-b651-9699bb120112",
+    "description",
+    "16880498615505129a",
+    "related-products",
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
+  ]
+}
