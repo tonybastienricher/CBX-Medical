@@ -181,6 +181,7 @@
     },
     "16880498615505129a": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "399829bb-204c-4fd4-aa69-8b292c5fd37b": {
           "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
@@ -204,7 +205,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
