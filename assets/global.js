@@ -1066,6 +1066,12 @@ class VariantSelects extends HTMLElement {
         );
         const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
 
+        //CNK
+        const cnkDestination = document.getElementById('cnk');
+        const cnkSource = html.getElementById('cnk');
+
+        if (cnkDestination && cnkSource) cnkDestination.innerHTML = cnkSource.innerHTML;
+
         if (source && destination) destination.innerHTML = source.innerHTML;
         if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
         if (skuSource && skuDestination) {

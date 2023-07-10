@@ -89,11 +89,18 @@
                     {% endif %}
                     {%- when 'information' -%}
                         <div class='product_cbx_information cbx-flex cbx-justify-between cbx-text-sm cbx-py-2' {{ block.shopify_attributes }}>
+                            {% assign text_gauche = block.settings.text_gauche | upcase %}
                             <div>
-                                <span class='cbx-uppercase cbx-font-medium cbx-text-xss'>{{ block.settings.text_gauche }}</span>
+                                <span class='cbx-uppercase cbx-font-medium cbx-text-xss'>{{ text_gauche }}</span>
                             </div>
                             <div>
-                                <span class='cbx-text-xs'>{{ block.settings.text_droite }}</span>
+                                {% if text_gauche == 'CNK' and product.selected_or_first_available_variant.metafields.custom.cnk != blank %}
+                                    <span class='cbx-text-xs' id='cnk'>
+                                        {{ product.selected_or_first_available_variant.metafields.custom.cnk }}
+                                    </span>
+                                {% else %}
+                                    <span class='cbx-text-xs'>{{ block.settings.text_droite }}</span>
+                                {% endif %}
                             </div>
                         </div>
                     {%- when 'text' -%}

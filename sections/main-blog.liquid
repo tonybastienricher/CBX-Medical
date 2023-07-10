@@ -1,53 +1,58 @@
-{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+{% assign current_tags = request.path | split: '/' %}
+{% assign tag_exists = false %}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+{% for tag in current_tags %}
+    {% if tag == 'tagged' %}
+        {% assign tag_exists = true %}
+    {% endif %}
+{% endfor %}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
+{%- paginate blog.articles by 10 -%}
+    <div class="main-blog cbx-container-site">
 
-{%- paginate blog.articles by 6 -%}
-  <div class="main-blog cbx-container-site section-{{ section.id }}-padding">
-    <h1 class="title--primary">
-      {{ blog.title | escape }}
-    </h1>
+        <div class='cbx-pt-4 lg:cbx-pt-8 cbx-flex cbx-justify-between cbx-w-full cbx-overflow-x-auto'>
+            <ul class='cbx-flex cbx-gap-2.5'>
+                {%- for tag in blog.all_tags -%}
+                    <li class='cbx-py-1.5 lg:cbx-py-3 cbx-px-2'>
+                        <a href="{{ blog.url }}/tagged/{{ tag | handle }}"
+                           class='cbx-uppercase cbx-py-1.5 lg:cbx-py-3 cbx-px-4 cbx-rounded-full cbx-bg-white cbx-text-xss cbx-font-medium cbx-duration-200 hover:cbx-bg-green6'>
+                            {{ tag }}
+                        </a>
+                    </li>
+                {%- endfor -%}
+            </ul>
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
-      {%- for article in blog.articles -%}
-        <div
-          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-          {% if settings.animations_reveal_on_scroll %}
-            data-cascade
-            style="--animation-order: {{ forloop.index }};"
-          {% endif %}
-        >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
+            {% if template.name == 'blog' and tag_exists %}
+                <!-- Tous les articles -->
+                <div class='cbx-hidden lg:cbx-flex'>
+                    <a href="{{ blog.url }}"
+                       class='cbx-uppercase cbx-py-1.5 lg:cbx-py-3 cbx-px-4 cbx-rounded-full cbx-bg-white cbx-text-xss cbx-font-medium cbx-duration-200 hover:cbx-bg-green6'>
+                        {{ 'blogs.article.all_article' | t }}
+                    </a>
+                </div>
+            {% endif %}
         </div>
-      {%- endfor -%}
-    </div>
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-  </div>
+        <div class="blog-articles cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-gap-y-2.5 cbx-gap-x-4 cbx-py-8 lg:cbx-py-12">
+            {%- for article in blog.articles -%}
+                <div class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %} data-cascade style="--animation-order: {{ forloop.index }};"{% endif %}>
+                    {%- render 'article-card',
+                            article: article,
+                            media_height: section.settings.image_height,
+                            media_aspect_ratio: article.image.aspect_ratio,
+                            show_image: section.settings.show_image,
+                            show_date: section.settings.show_date,
+                            show_author: section.settings.show_author,
+                            show_excerpt: true
+                    -%}
+                </div>
+            {%- endfor -%}
+        </div>
+        {%- if paginate.pages > 1 -%}
+            {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+    </div>
 {%- endpaginate -%}
 
 {% schema %}

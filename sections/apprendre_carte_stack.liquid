@@ -1,0 +1,129 @@
+Todo :
+- Récupérer les ancres
+- Développer le card stack avec l'autoscroll
+- Développement du système de drawer avec JS pour récupérer l'article.
+
+<div class='cbx-flex cbx-flex-col'>
+
+    <!-- NAV -->
+    <div class='cbx-pt-4 lg:cbx-pt-8 cbx-flex cbx-justify-between cbx-w-full cbx-overflow-x-auto'>
+        <ul class='cbx-flex cbx-gap-2.5'>
+            {%- for tag in blog.all_tags -%}
+                <li class='cbx-py-1.5 lg:cbx-py-3 cbx-px-2'>
+                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}"
+                       class='cbx-uppercase cbx-py-1.5 lg:cbx-py-3 cbx-px-4 cbx-rounded-full cbx-bg-white cbx-text-xss cbx-font-medium cbx-duration-200 hover:cbx-bg-green6'>
+                        {{ tag }}
+                    </a>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+
+    <!-- CARDS -->
+    <div>
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+
+                {%- when 'card' -%}
+                    {%- assign image_de_la_carte = block.settings.image_de_la_carte -%}
+                    {{ image_de_la_carte | image_url: width: image_de_la_carte.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+
+                    {{ block.settings.ancre }}
+
+                    {{ block.settings.chapitre }}
+
+                    {{ block.settings.top_title }}
+
+                    {{ block.settings.titre }}
+
+                    {{ block.settings.description }}
+
+                    {{ block.settings.titre_du_bouton }}
+
+                    {%- assign article_lie = block.settings.article_lie -%}
+                    {{ article_lie.title }}
+                    {{ article_lie.content }}
+
+            {%- endcase -%}
+        {%- endfor -%}
+
+
+    </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "apprendre carte stack",
+  "class": "apprendre_carte_stack",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_de_la_carte",
+          "label": "Image de la carte"
+        },
+        {
+          "type": "text",
+          "id": "ancre",
+          "label": "Ancre",
+          "default": "La recherche",
+          "placeholder": "La recherche"
+        },
+        {
+          "type": "text",
+          "id": "chapitre",
+          "label": "Chapitre",
+          "default": "Chapitre 1",
+          "placeholder": "Chapitre 1"
+        },
+        {
+          "type": "text",
+          "id": "top_title",
+          "label": "Top title",
+          "default": "CBX Medical, acteur de la recherche",
+          "placeholder": "CBX Medical, acteur de la recherche"
+        },
+        {
+          "type": "text",
+          "id": "titre",
+          "label": "Titre",
+          "default": "La recherche pharmaceutique",
+          "placeholder": "La recherche pharmaceutique"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "Bouton"
+        },
+        {
+          "type": "text",
+          "id": "titre_du_bouton",
+          "label": "Titre du bouton",
+          "default": "La biodisponibilité ? ",
+          "placeholder": "La biodisponibilité ? "
+        },
+        {
+          "type": "article",
+          "id": "article_lie",
+          "label": "Article lié"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "apprendre carte stack"
+    }
+  ]
+}
+{% endschema %}
