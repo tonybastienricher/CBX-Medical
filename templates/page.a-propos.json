@@ -196,10 +196,20 @@
         "titre": "Nos valeurs"
       }
     },
+    "61cda7b6-5fce-4bbc-a5ba-4d1a414983c0": {
+      "type": "image_grid",
+      "settings": {
+        "couleur_du_background": "green",
+        "couleur_du_texte": "green2",
+        "image_1": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+        "image_2": "shopify:\/\/shop_images\/JUB0709-23.jpg"
+      }
+    },
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e": {
       "type": "image_gauche_droite",
+      "disabled": true,
       "settings": {
-        "couleur_du_background": "transparent",
+        "couleur_du_background": "green2",
         "couleur_du_texte": "green2",
         "image_gauche": "shopify:\/\/shop_images\/JUB0709-23.jpg",
         "lgende_de_limage_gauche": "FIG. LAB",
@@ -296,6 +306,7 @@
     "video",
     "a4ab763f-a401-4243-b037-e36a2ae3b37b",
     "page_description",
+    "61cda7b6-5fce-4bbc-a5ba-4d1a414983c0",
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
     "b2cf978c-b9cf-4391-ae13-a437308dd628",
     "dde8d2b2-0542-40a7-91af-f3ce7810f15e",
