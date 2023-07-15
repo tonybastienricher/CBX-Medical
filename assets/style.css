@@ -559,6 +559,12 @@ p {
         transform-origin: center top;
     }
 
+@media screen and (max-width: 1024px) {
+        .stack-cards__item {
+            position: relative;
+        }
+    }
+
 .header_position {
     display: none;
     width: 100%;
@@ -812,10 +818,12 @@ textarea {
 
 @media screen and (min-width: 1024px) {
 
+    .apprendre_description ul,
     ul.list-product {
         list-style: none;
     }
 
+    .apprendre_description ul li:before,
     ul.list-product li:before {
         content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
         color: #9EA89A; /* Change the color */
@@ -823,6 +831,11 @@ textarea {
         display: inline-block; /* Needed to add space between the bullet and the text */
         width: 1em; /* Also needed for space (tweak if needed) */
         margin-right: 16px;
+    }
+
+    .apprendre_description ul li:before {
+        margin-right: 0;
+        padding: 8px 0;
     }
 }
 
@@ -1378,6 +1391,14 @@ table.order-details td:first-child {
     padding-bottom: 3rem;
 }
 
+.cbx-pointer-events-none {
+    pointer-events: none;
+}
+
+.cbx-pointer-events-auto {
+    pointer-events: auto;
+}
+
 .cbx-fixed {
     position: fixed;
 }
@@ -1396,6 +1417,11 @@ table.order-details td:first-child {
 
 .cbx-inset-0 {
     inset: 0px;
+}
+
+.cbx-inset-y-0 {
+    top: 0px;
+    bottom: 0px;
 }
 
 .cbx-bottom-0 {
@@ -1510,6 +1536,14 @@ table.order-details td:first-child {
 
 .cbx-mt-20 {
     margin-top: 5rem;
+}
+
+.cbx-mt-5 {
+    margin-top: 1.25rem;
+}
+
+.cbx-mt-6 {
+    margin-top: 1.5rem;
 }
 
 .cbx-mt-7 {
@@ -1660,6 +1694,10 @@ table.order-details td:first-child {
     width: 100%;
 }
 
+.cbx-w-screen {
+    width: 100vw;
+}
+
 .cbx-min-w-\[300px\] {
     min-width: 300px;
 }
@@ -1680,6 +1718,14 @@ table.order-details td:first-child {
     max-width: 421px;
 }
 
+.cbx-max-w-\[459px\] {
+    max-width: 459px;
+}
+
+.cbx-max-w-full {
+    max-width: 100%;
+}
+
 .cbx-max-w-lg {
     max-width: 32rem;
 }
@@ -1690,6 +1736,10 @@ table.order-details td:first-child {
 
 .cbx-max-w-xl {
     max-width: 36rem;
+}
+
+.cbx-flex-1 {
+    flex: 1 1 0%;
 }
 
 .cbx-table-auto {
@@ -1708,6 +1758,16 @@ table.order-details td:first-child {
 
 .-cbx-translate-y-20 {
     --tw-translate-y: -5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cbx-translate-x-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cbx-translate-x-full {
+    --tw-translate-x: 100%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1785,6 +1845,10 @@ table.order-details td:first-child {
     gap: 0.25rem;
 }
 
+.cbx-gap-1\.5 {
+    gap: 0.375rem;
+}
+
 .cbx-gap-2 {
     gap: 0.5rem;
 }
@@ -1811,10 +1875,6 @@ table.order-details td:first-child {
 
 .cbx-gap-7 {
     gap: 1.75rem;
-}
-
-.cbx-gap-1\.5 {
-    gap: 0.375rem;
 }
 
 .cbx-gap-x-1 {
@@ -1898,6 +1958,10 @@ table.order-details td:first-child {
     overflow-y: scroll;
 }
 
+.cbx-whitespace-nowrap {
+    white-space: nowrap;
+}
+
 .cbx-rounded {
     border-radius: 0.25rem;
 }
@@ -1906,16 +1970,16 @@ table.order-details td:first-child {
     border-radius: 10px;
 }
 
+.cbx-rounded-full {
+    border-radius: 9999px;
+}
+
 .cbx-rounded-none {
     border-radius: 0px;
 }
 
 .cbx-rounded-sm {
     border-radius: 0.125rem;
-}
-
-.cbx-rounded-full {
-    border-radius: 9999px;
 }
 
 .cbx-rounded-b {
@@ -2001,6 +2065,11 @@ table.order-details td:first-child {
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.cbx-bg-gray-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .cbx-bg-green {
     --tw-bg-opacity: 1;
     background-color: rgb(30 39 29 / var(--tw-bg-opacity));
@@ -2050,9 +2119,8 @@ table.order-details td:first-child {
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.cbx-bg-red-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+.cbx-bg-opacity-75 {
+    --tw-bg-opacity: 0.75;
 }
 
 .cbx-object-cover {
@@ -2078,10 +2146,6 @@ table.order-details td:first-child {
 
 .cbx-p-5 {
     padding: 1.25rem;
-}
-
-.cbx-p-2 {
-    padding: 0.5rem;
 }
 
 .cbx-px-2 {
@@ -2117,6 +2181,11 @@ table.order-details td:first-child {
 .cbx-px-\[10px\] {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.cbx-px-\[22px\] {
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
 .cbx-py-1 {
@@ -2229,6 +2298,10 @@ table.order-details td:first-child {
     padding-bottom: 1.25rem;
 }
 
+.cbx-pb-6 {
+    padding-bottom: 1.5rem;
+}
+
 .cbx-pb-8 {
     padding-bottom: 2rem;
 }
@@ -2295,10 +2368,6 @@ table.order-details td:first-child {
 
 .cbx-pt-7 {
     padding-top: 1.75rem;
-}
-
-.cbx-pt-8 {
-    padding-top: 2rem;
 }
 
 .cbx-text-left {
@@ -2499,6 +2568,23 @@ table.order-details td:first-child {
     opacity: 1;
 }
 
+.cbx-shadow-xl {
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.cbx-drop-shadow {
+    --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.cbx-transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
 .cbx-delay-100 {
     transition-delay: 100ms;
 }
@@ -2629,6 +2715,19 @@ article.article {
     color: rgb(108 118 104 / var(--tw-text-opacity));
 }
 
+article.drawer-content p {
+    padding-bottom: 1rem;
+    font-family: KH Teka;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(108 118 104 / var(--tw-text-opacity));
+}
+
+article.drawer-content h1,
+article.drawer-content h2,
+article.drawer-content h3,
+article.drawer-content h4,
 article.article h1,
 article.article h2,
 article.article h3,
@@ -2653,6 +2752,13 @@ article.article h1 {
     line-height: 1;
 }
 
+article.drawer-content h1 {
+    padding-bottom: 1.25rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+article.drawer-content h2,
 article.article h2 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -2660,7 +2766,7 @@ article.article h2 {
     line-height: 2.25rem;
 }
 
-
+article.drawer-content h3,
 article.article h3 {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2671,18 +2777,32 @@ article.article p {
     @apply cbx-pb-5;
 }*/
 
+article.drawer-content img,
 article.article img {
     width: 100%;
 }
 
+article.drawer-content ul,
 article.article ul {
     list-style-position: inside;
     list-style-type: disc;
 }
 
+article.drawer-content ol,
 article.article ol {
     list-style-position: inside;
     list-style-type: decimal;
+}
+
+article.drawer-content strong,
+article.article strong {
+    font-weight: 500;
+}
+
+article.drawer-content a,
+article.article a {
+    font-weight: 500;
+    text-decoration-line: underline;
 }
 
 .cbx-group:hover .group-hover\:cbx-btn-black {
@@ -2690,11 +2810,6 @@ article.article ol {
     background-color: rgb(0 0 0 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:cbx-bg-beigeLight:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(245 242 235 / var(--tw-bg-opacity));
 }
 
 .hover\:cbx-bg-green6:hover {
@@ -2768,6 +2883,10 @@ article.article ol {
         grid-column: span 3 / span 3;
     }
 
+    .lg\:cbx-col-span-5 {
+        grid-column: span 5 / span 5;
+    }
+
     .lg\:cbx-row-span-2 {
         grid-row: span 2 / span 2;
     }
@@ -2823,6 +2942,10 @@ article.article ol {
 
     .lg\:cbx-h-screen {
         height: 100vh;
+    }
+
+    .lg\:cbx-min-h-\[80vh\] {
+        min-height: 80vh;
     }
 
     .lg\:cbx-min-h-\[82vh\] {
@@ -2881,6 +3004,10 @@ article.article ol {
         max-width: 45px;
     }
 
+    .lg\:cbx-max-w-\[600px\] {
+        max-width: 600px;
+    }
+
     .lg\:-cbx-translate-y-20 {
         --tw-translate-y: -5rem;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2910,6 +3037,10 @@ article.article ol {
 
     .lg\:cbx-grid-cols-5 {
         grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .lg\:cbx-grid-cols-8 {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
     }
 
     .lg\:cbx-flex-row {
@@ -3016,6 +3147,14 @@ article.article ol {
         padding: 5rem;
     }
 
+    .lg\:cbx-p-3 {
+        padding: 0.75rem;
+    }
+
+    .lg\:cbx-p-3\.5 {
+        padding: 0.875rem;
+    }
+
     .lg\:cbx-px-0 {
         padding-left: 0px;
         padding-right: 0px;
@@ -3051,6 +3190,11 @@ article.article ol {
         padding-bottom: 0.125rem;
     }
 
+    .lg\:cbx-py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
     .lg\:cbx-py-14 {
         padding-top: 3.5rem;
         padding-bottom: 3.5rem;
@@ -3076,11 +3220,6 @@ article.article ol {
         padding-bottom: 2.25rem;
     }
 
-    .lg\:cbx-py-12 {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
     .lg\:cbx-pb-0 {
         padding-bottom: 0px;
     }
@@ -3091,6 +3230,14 @@ article.article ol {
 
     .lg\:cbx-pb-8 {
         padding-bottom: 2rem;
+    }
+
+    .lg\:cbx-pl-16 {
+        padding-left: 4rem;
+    }
+
+    .lg\:cbx-pl-20 {
+        padding-left: 5rem;
     }
 
     .lg\:cbx-pl-\[9vw\] {
@@ -3127,6 +3274,10 @@ article.article ol {
 
     .lg\:cbx-indent-96 {
         text-indent: 24rem;
+    }
+
+    .lg\:cbx-indent-\[390px\] {
+        text-indent: 390px;
     }
 
     .lg\:cbx-text-2xl {

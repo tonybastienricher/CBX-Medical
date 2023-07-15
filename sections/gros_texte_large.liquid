@@ -2,16 +2,22 @@
     case section.settings.text_preset
         when 'indent_0'
             assign class = 'cbx-text-3xl lg:cbx-text-7xl cbx-font-light'
+            assign style = ''
         when 'indent_1'
             assign class = 'cbx-text-3xl lg:cbx-text-6xl lg:cbx-indent-40 cbx-font-light'
+            assign style = ''
+        when 'indent_2'
+            assign class = 'cbx-text-3xl lg:cbx-text-5xl lg:cbx-indent-[390px] cbx-font-light'
+            assign style = 'line-height: 115%; letter-spacing: -.48px'
         else
             assign class = 'cbx-text-3xl lg:cbx-text-7xl cbx-font-light'
+            assign style = ''
     endcase
 %}
 
 <div class='{% render 'bg-color', bg-color: section.settings.couleur_du_background %} {% render 'text-color', text-color: section.settings.couleur_du_texte %} cbx-py-14 lg:cbx-pt-40'>
     <div class='cbx-container-site'>
-        <h2 class='{{ class }}'>
+        <h2 class='{{ class }}' style='{{ style }}'>
             {{ section.settings.texte }}
         </h2>
     </div>
@@ -41,6 +47,10 @@
         {
           "value": "indent_1",
           "label": "Indent 1"
+        },
+        {
+          "value": "indent_2",
+          "label": "Indent 2"
         }
       ],
       "default": "indent_0"

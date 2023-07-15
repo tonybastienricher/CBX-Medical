@@ -164,6 +164,12 @@
         transform-origin: center top;
     }
 
+    @media screen and (max-width: 1024px) {
+        .stack-cards__item {
+            position: relative;
+        }
+    }
+
     .header_position {
         @apply cbx-w-full cbx-hidden lg:cbx-flex cbx-justify-center lg:cbx-relative;
     }
@@ -285,10 +291,12 @@ textarea {
 
 @media screen and (min-width: 1024px) {
 
+    .apprendre_description ul,
     ul.list-product {
         list-style: none;
     }
 
+    .apprendre_description ul li:before,
     ul.list-product li:before {
         content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
         color: #9EA89A; /* Change the color */
@@ -296,6 +304,11 @@ textarea {
         display: inline-block; /* Needed to add space between the bullet and the text */
         width: 1em; /* Also needed for space (tweak if needed) */
         margin-right: 16px;
+    }
+
+    .apprendre_description ul li:before {
+        margin-right: 0;
+        padding: 8px 0;
     }
 }
 
@@ -453,6 +466,14 @@ article.article {
     @apply cbx-text-sm cbx-text-green4 cbx-font-display;
 }
 
+article.drawer-content p {
+    @apply cbx-text-sm cbx-text-green4 cbx-font-display cbx-pb-4;
+}
+
+article.drawer-content h1,
+article.drawer-content h2,
+article.drawer-content h3,
+article.drawer-content h4,
 article.article h1,
 article.article h2,
 article.article h3,
@@ -473,11 +494,16 @@ article.article h1 {
     @apply cbx-text-6xl cbx-py-10 cbx-pb-5;
 }
 
+article.drawer-content h1 {
+    @apply cbx-text-4xl cbx-pb-5;
+}
+
+article.drawer-content h2,
 article.article h2 {
     @apply cbx-text-3xl cbx-py-5;
 }
 
-
+article.drawer-content h3,
 article.article h3 {
     @apply cbx-text-xl;
 }
@@ -487,14 +513,27 @@ article.article p {
     @apply cbx-pb-5;
 }*/
 
+article.drawer-content img,
 article.article img {
     @apply cbx-w-full;
 }
 
+article.drawer-content ul,
 article.article ul {
     @apply cbx-list-disc cbx-list-inside;
 }
 
+article.drawer-content ol,
 article.article ol {
     @apply cbx-list-decimal cbx-list-inside;
+}
+
+article.drawer-content strong,
+article.article strong {
+    @apply cbx-font-medium;
+}
+
+article.drawer-content a,
+article.article a {
+    @apply cbx-underline cbx-font-medium;
 }

@@ -1,56 +1,232 @@
-Todo :
-- Récupérer les ancres
-- Développer le card stack avec l'autoscroll
-- Développement du système de drawer avec JS pour récupérer l'article.
+{% liquid
+    assign ancres = ""
+    for block in section.blocks
+        assign ancres = ancres | append: block.settings.ancre | append: ","
+    endfor
+    assign ancres = ancres | split: ","
+%}
 
-<div class='cbx-flex cbx-flex-col'>
+<script src="{{ 'script_card_stack.js' | asset_url }}" defer></script>
 
-    <!-- NAV -->
-    <div class='cbx-pt-4 lg:cbx-pt-8 cbx-flex cbx-justify-between cbx-w-full cbx-overflow-x-auto'>
-        <ul class='cbx-flex cbx-gap-2.5'>
-            {%- for tag in blog.all_tags -%}
-                <li class='cbx-py-1.5 lg:cbx-py-3 cbx-px-2'>
-                    <a href="{{ blog.url }}/tagged/{{ tag | handle }}"
-                       class='cbx-uppercase cbx-py-1.5 lg:cbx-py-3 cbx-px-4 cbx-rounded-full cbx-bg-white cbx-text-xss cbx-font-medium cbx-duration-200 hover:cbx-bg-green6'>
-                        {{ tag }}
-                    </a>
-                </li>
-            {%- endfor -%}
-        </ul>
+<div x-data="drawer()">
+    <!-- Drawer -->
+    <div class="cbx-relative cbx-z-10" aria-labelledby="slide-over-title" role="dialog"
+         @keydown.window.escape="closeDrawer();"
+         aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="cbx-fixed cbx-inset-0 cbx-bg-gray-500 cbx-bg-opacity-75 cbx-transition-opacity"
+             x-show='isOpen' style='display: none'
+             x-transition:enter="cbx-ease-in-out cbx-duration-300"
+             x-transition:enter-start="cbx-opacity-0"
+             x-transition:enter-end="cbx-opacity-100"
+             x-transition:leave="cbx-ease-in-out cbx-duration-300"
+             x-transition:leave-start="cbx-opacity-100"
+             x-transition:leave-end="cbx-opacity-0"></div>
+
+        <div class="cbx-fixed cbx-inset-0 cbx-overflow-hidden" x-show='isOpen'>
+            <div class="cbx-pointer-events-none cbx-fixed cbx-inset-y-0 cbx-right-0 cbx-flex cbx-max-w-full lg:cbx-pl-16">
+                <div class="cbx-pointer-events-auto cbx-w-screen lg:cbx-max-w-[600px]"
+                     @click.away='closeDrawer();'
+                     x-show='isOpen' style='display: none'
+                     x-transition:enter="cbx-ease-in-out cbx-duration-300"
+                     x-transition:enter-start="cbx-translate-x-full" x-transition:enter-end="cbx-translate-x-0"
+                     x-transition:leave="cbx-ease-in-out cbx-duration-300"
+                     x-transition:leave-start="cbx-translate-x-0" x-transition:leave-end="cbx-translate-x-full">
+                    <div class="cbx-flex cbx-h-full cbx-flex-col cbx-overflow-y-scroll cbx-bg-offWhite cbx-p-10 cbx-shadow-xl">
+
+                        <!-- Close -->
+                        <div class='cbx-w-full'>
+                            <button @click="closeDrawer();" id='close' style='line-height: 100%; letter-spacing: .7px'
+                                    class='cbx-uppercase cbx-py-2.5 cbx-px-4 cbx-rounded-full cbx-bg-white cbx-text-xss cbx-font-medium cbx-duration-200 cbx-text-green cbx-flex cbx-items-center cbx-gap-2.5'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8"
+                                     fill="none">
+                                    <path d="M4 1L1 4L4 7" stroke="#1E271D" />
+                                </svg>
+                                Retour en arrière
+                            </button>
+                        </div>
+
+                        <article class="cbx-relative cbx-mt-6 cbx-flex-1 drawer-content">
+                            <h1></h1>
+                            <div></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- CARDS -->
-    <div>
-        {%- for block in section.blocks -%}
-            {%- case block.type -%}
+    <!-- Section -->
+    <div class='cbx-container-site cbx-flex cbx-flex-col'>
 
-                {%- when 'card' -%}
-                    {%- assign image_de_la_carte = block.settings.image_de_la_carte -%}
-                    {{ image_de_la_carte | image_url: width: image_de_la_carte.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+        <!-- NAV -->
+        <div class='cbx-flex cbx-justify-between cbx-w-full cbx-overflow-x-auto'>
+            <ul class='cbx-flex cbx-gap-2.5'>
+                {%- for ancre in ancres -%}
+                    <li class='cbx-flex'>
+                        <a href="#{{ ancre | downcase | remove: " " }}"
+                           class='cbx-uppercase cbx-py-2.5 cbx-px-4 cbx-rounded-full cbx-bg-white cbx-text-xss cbx-font-medium cbx-duration-200 hover:cbx-bg-green6 cbx-font-display cbx-whitespace-nowrap'>
+                            {{ ancre }}
+                        </a>
+                    </li>
+                {%- endfor -%}
+            </ul>
+        </div>
 
-                    {{ block.settings.ancre }}
+        <!-- CARDS -->
+        <div class='cbx-mb-28 cbx-mt-5'>
+            <ul class="stack-cards js-stack-cards">
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                        {%- when 'card' -%}
+                            <li class="stack-cards__item js-stack-cards__item cbx-h-full lg:cbx-min-h-[80vh] cbx-rounded cbx-bg-white cbx-flex cbx-drop-shadow cbx-mb-10 lg:cbx-mb-0" {{ block.shopify_attributes }}
+                                id='{{ block.settings.ancre | downcase | remove: " " }}'>
 
-                    {{ block.settings.chapitre }}
+                                <div class='cbx-p-5 lg:cbx-p-3.5 lg:cbx-pl-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-8 cbx-w-full'>
+                                    <!-- Content -->
+                                    <div class='lg:cbx-col-span-5 cbx-max-w-[459px] cbx-my-auto cbx-flex cbx-flex-col cbx-py-10'>
+                                        <div class='cbx-pb-2'>
+                                        <span class='cbx-uppercase cbx-py-2.5 cbx-px-4 cbx-rounded-full cbx-bg-offWhite cbx-text-xss cbx-font-medium cbx-font-display'>
+                                            {{ block.settings.chapitre }}
+                                        </span>
+                                        </div>
 
-                    {{ block.settings.top_title }}
+                                        {% if block.settings.top_title != blank %}
+                                            <div class='cbx-pb-5'>
+                                            <span class='cbx-text-xs' style='line-height: 100%; letter-spacing: -.24px'>
+                                                {{ block.settings.top_title }}
+                                            </span>
+                                            </div>
+                                        {% endif %}
 
-                    {{ block.settings.titre }}
+                                        {% if block.settings.titre != blank %}
+                                            <div class='cbx-pb-5'>
+                                                <h2 class='cbx-text-4xl cbx-font-medium'
+                                                    style='line-height: 100%; letter-spacing: -.8px'>
+                                                    {{ block.settings.titre }}
+                                                </h2>
+                                            </div>
+                                        {% endif %}
 
-                    {{ block.settings.description }}
+                                        {% if block.settings.description != blank %}
+                                            <div class='apprendre_description cbx-text-sm cbx-text-green4 cbx-font-display cbx-flex cbx-flex-col cbx-gap-y-2 cbx-pb-6'
+                                                 style='line-height: 160%'>
+                                                {{ block.settings.description }}
+                                            </div>
+                                        {% endif %}
 
-                    {{ block.settings.titre_du_bouton }}
+                                        {% if block.settings.article_lie.id != blank %}
+                                            <div>
+                                                <button class='cbx-flex cbx-rounded-full cbx-bg-green2 cbx-text-offWhite cbx-text-xs cbx-uppercase cbx-px-[22px] cbx-py-3'
+                                                        style='line-height: 140%; letter-spacing: .48px' id='open'
+                                                        @click="openDrawer"
+                                                        data-articleID="{{ block.settings.article_lie.id }}">
+                                                    {{ block.settings.titre_du_bouton }}
+                                                </button>
+                                            </div>
+                                        {% endif %}
+                                    </div>
 
-                    {%- assign article_lie = block.settings.article_lie -%}
-                    {{ article_lie.title }}
-                    {{ article_lie.content }}
+                                    <!-- image -->
+                                    <div class='lg:cbx-col-span-3 cbx-aspect-square lg:cbx-aspect-auto cbx-w-full cbx-h-full cbx-rounded cbx-overflow-hidden cbx-relative cbx-bg-offWhite'>
+                                        {%- assign image_de_la_carte = block.settings.image_de_la_carte -%}
 
-            {%- endcase -%}
-        {%- endfor -%}
 
+                                        {%- if image_de_la_carte -%}
+                                            {% if block.settings.image_height == 'adapt' and image_de_la_carte %}
+                                                style="padding-bottom: {{ 1 | divided_by: image_de_la_carte.aspect_ratio | times: 100 }}%;"
+                                            {% endif %}>
+                                            <img srcset="
+                                              {% if image_de_la_carte.width >= 350 %}{{ image_de_la_carte | image_url: width: 350 }} 350w,{% endif %}
+                                              {% if image_de_la_carte.width >= 750 %}{{ image_de_la_carte | image_url: width: 750 }} 750w,{% endif %}
+                                              {% if image_de_la_carte.width >= 1100 %}{{ image_de_la_carte | image_url: width: 1100 }} 1100w,{% endif %}
+                                              {% if image_de_la_carte.width >= 1500 %}{{ image_de_la_carte | image_url: width: 1500 }} 1500w,{% endif %}
+                                              {% if image_de_la_carte.width >= 2200 %}{{ image_de_la_carte | image_url: width: 2200 }} 2200w,{% endif %}
+                                              {% if image_de_la_carte.width >= 3000 %}{{ image_de_la_carte | image_url: width: 3000 }} 3000w,{% endif %}
+                                              {{ image_de_la_carte | image_url }} {{ image_de_la_carte.width }}w"
+                                                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                                                 src="{{ image_de_la_carte | image_url: width: 1100 }}"
+                                                 loading="eager"
+                                                 class='cbx-absolute cbx-w-full cbx-h-full cbx-object-cover cbx-inset-0'
+                                                 fetchpriority="high"
+                                                 width="{{ image_de_la_carte.width }}"
+                                                 height="{{ image_de_la_carte.height }}"
+                                                 alt="{{ image_de_la_carte.alt | escape }}">
+                                        {% else %}
+                                            {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                                        {%- endif -%}
+
+                                    </div>
+                                </div>
+
+                            </li>
+                    {%- endcase -%}
+                {%- endfor -%}
+            </ul>
+        </div>
 
     </div>
-
 </div>
+
+<script>
+
+  function drawer() {
+    return {
+      isOpen: false,
+      articleID: null,
+      openDrawer(e) {
+        this.articleID = e.target.dataset.articleid;
+        this.fetchArticleByHandle(this.articleID);
+        document.body.classList.add('cbx-overflow-hidden');
+        this.isOpen = true;
+      },
+      closeDrawer() {
+        this.isOpen = false;
+        document.body.classList.remove('cbx-overflow-hidden');
+      },
+      async fetchArticleByHandle(articleID) {
+        let storefrontAccessToken = 'a1f4e076099ac87d74571b1a94489de2';  // Remplacez par votre clé d'accès à l'API Storefront
+        let rootUrl = 'https://cbx-medical.myshopify.com/api/2023-07/graphql.json';  // Remplacez par l'URL de votre boutique
+
+        // Définir la requête GraphQL pour obtenir l'article par handle
+        let query = `
+            {
+              article(id: "gid://shopify/Article/${articleID}") {
+                title,
+                contentHtml
+              }
+            }
+        `;
+
+        try {
+          const response = await fetch(rootUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Shopify-Storefront-Access-Token': storefrontAccessToken
+            },
+            body: JSON.stringify({ query })
+          });
+
+          const data = await response.json();
+
+          const article = data.data.article;
+          // Mettre à jour le contenu du drawer avec les données de l'article
+          const drawerContent = document.querySelector('.drawer-content');
+          drawerContent.innerHTML = `
+                <h1>${article.title}</h1>
+                <div>${article.contentHtml}</div>
+            `;
+
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      }
+
+    };
+  }
+
+</script>
 
 {% schema %}
 {
@@ -63,6 +239,13 @@ Todo :
       "name": "Card",
       "type": "card",
       "settings": [
+        {
+          "type": "text",
+          "id": "top_title",
+          "label": "Top title",
+          "default": "CBX Medical, acteur de la recherche",
+          "placeholder": "CBX Medical, acteur de la recherche"
+        },
         {
           "type": "image_picker",
           "id": "image_de_la_carte",
@@ -81,13 +264,6 @@ Todo :
           "label": "Chapitre",
           "default": "Chapitre 1",
           "placeholder": "Chapitre 1"
-        },
-        {
-          "type": "text",
-          "id": "top_title",
-          "label": "Top title",
-          "default": "CBX Medical, acteur de la recherche",
-          "placeholder": "CBX Medical, acteur de la recherche"
         },
         {
           "type": "text",
