@@ -624,6 +624,13 @@ class DeferredMedia extends HTMLElement {
             // Handle the play action here
           });
         }
+        //Lancement forcé.
+        document.querySelectorAll('video').forEach(video => {
+          video.play().catch(error => {
+            console.error('Video autoplay failed:', error);
+          });
+        });
+
       }
       this.setAttribute('loaded', true);
     }
