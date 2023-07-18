@@ -80,11 +80,13 @@
 @layer base {
     html {
         @apply cbx-scroll-smooth cbx-h-full;
+        height: -webkit-fill-available;
     }
 
     body {
         @apply cbx-font-body cbx-text-green cbx-bg-gris;
         -webkit-font-smoothing: antialiased;
+        min-height: -webkit-fill-available;
     }
 
     h1, h2, h3, h4, h5 {
@@ -193,6 +195,7 @@
     .product_cbx_information a {
         @apply cbx-underline;
     }
+
 }
 
 body.locomotive-active {
@@ -371,6 +374,16 @@ table.order-details td:first-child {
 @tailwind components;
 
 @layer components {
+
+    .localizationHeader li::after {
+        content: "/";
+        margin: 0 0.2rem;
+    }
+
+    .localizationHeader li:last-child::after {
+        content: "";
+    }
+
 }
 
 @tailwind utilities;

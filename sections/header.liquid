@@ -167,6 +167,43 @@
                         </svg>
                     </div>
                 </li>
+                <li class='cbx-text-sm cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer'>
+                    <noscript>
+                        {%- form 'localization', id: 'HeaderLanguageFormNoScript', class: 'localization-form' -%}
+                            <div class="localization-form__select">
+                                <h2 class="visually-hidden"
+                                    id="HeaderLanguageFormNoScript">
+                                    {{ 'localization.language_label' | t }}
+                                </h2>
+                                <select class="localization-selector link"
+                                        name="locale_code"
+                                        aria-labelledby="HeaderLanguageFormNoScript">
+                                    {%- for language in localization.available_languages -%}
+                                        <option
+                                                value="{{ language.iso_code }}"
+                                                lang="{{ language.iso_code }}"
+                                                {%- if language.iso_code == localization.language.iso_code %}
+                                                    selected
+                                                {% endif %}>
+                                            {{ language.endonym_name | capitalize }}
+                                        </option>
+                                    {%- endfor -%}
+                                </select>
+                                {% render 'icon-caret' %}
+                            </div>
+                            <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+                        {%- endform -%}
+                    </noscript>
+                    <localization-form>
+                        {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+                            <div class="no-js-hidden">
+                                {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+                            </div>
+                        {%- endform -%}
+                    </localization-form>
+                    <script src="{{ 'localization-form.js' | asset_url }}"
+                            defer="defer"></script>
+                </li>
             </ul>
 
             <!-- Submenu -->
@@ -274,6 +311,7 @@
 
 
 
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -290,6 +328,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
 
 
 

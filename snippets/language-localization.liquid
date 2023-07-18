@@ -6,7 +6,7 @@
 {%- endcomment -%}
 
 <div class="disclosure">
-    <ul id="{{ localPosition }}List" role="list" class="cbx-flex cbx-uppercase cbx-gap-2">
+    <ul id="{{ localPosition }}List" role="list" class="localizationHeader cbx-flex cbx-uppercase cbx-gap-1">
         {%- for language in localization.available_languages -%}
             {% if language.iso_code != localization.language.iso_code %}
                 <li class="disclosure__item" tabindex="-1">
