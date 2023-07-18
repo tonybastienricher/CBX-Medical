@@ -15,46 +15,75 @@
         "6f71bbb6-199d-4ebc-b1b3-49d8f8fb855f": {
           "type": "card",
           "settings": {
-            "top_title": "CBX Medical, acteur de la recherche",
-            "image_de_la_carte": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
-            "ancre": "La recherche",
+            "top_title": "",
+            "image_de_la_carte": "shopify:\/\/shop_images\/IMG_7365.jpg",
+            "ancre": "La plante",
             "chapitre": "Chapitre 1",
-            "titre": "La recherche pharmaceutique",
-            "description": "<p>En janvier 2023, CBX Medical entame un partenariat de 4 ans avec la faculté de pharmacie de l’ULB. Il s’agit d’un projet de recherche pour augmenter la biodisponibilité des cannabinoïdes.<\/p>",
-            "titre_du_bouton": "La biodisponibilité ?",
+            "titre": "La plante de cannabis",
+            "description": "<p>Cultivé par l'homme depuis plus de 6000 ans, le cannabis est une plante qui permet de nous nourir, de nous loger, de nous habiller et de nous soigner. <\/p><p>Elle apporte des réponses durables aux défis actuels de notre société. <\/p>",
+            "titre_du_bouton": "En savoir plus",
             "article_lie": "infos\/champ-experimental-de-cannabis-carnet-de-bord-3"
           }
         },
         "2dfbd4f1-23c1-4034-b330-4139a0b37176": {
           "type": "card",
           "settings": {
-            "top_title": "CBX Medical, acteur de la recherche",
-            "image_de_la_carte": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg",
-            "ancre": "La recherche",
+            "top_title": "",
+            "image_de_la_carte": "shopify:\/\/shop_images\/Capture_d_ecran_2023-07-18_a_15.06.42.png",
+            "ancre": "Notre organisme",
             "chapitre": "Chapitre 2",
-            "titre": "La recherche pharmaceutique",
-            "description": "<p>Le but de cette recherche est d’optimiser la culture de la plante de chanvre afin d’en valoriser toutes les parties : cannabinoïdes, fibres, chènevottes et graines. Suite à notre étude menée en 2022, nous allons tester les éléments suivants :<\/p><ul><li>Variétés : Felina 32 (CBD), Santhica 27 (CBG)<\/li><li>Densité de semis : 40 kg\/ha, 60 kg\/ha, 90 kg\/ha<\/li><\/ul><p>La faisabilité d’exploitation et les rendements des différentes parties du chanvre qui seront valorisées seront analysés et ce, en fonction des différents facteurs agricoles. L’objectif est d’étudier les pratiques de la culture de chanvre et de partager les résultats avec les acteurs de la filière.<\/p>",
-            "titre_du_bouton": "La biodisponibilité ?",
-            "article_lie": "apprendre\/cannabis-a-usage-medical-mode-dadministration-1"
+            "titre": "Le cannabis et notre organisme",
+            "description": "<p>Après avoir isolé le CBD et le THC en 1964, l'équipe israëlienne du Dr. Raphaël Meloucham a découvert un premier récepteur en 1988 et le premier \"endocannabinoïde\" en 1992... <\/p><p>C'est la découverte du système endocannabinoïde ; un ensemble de récepteurs corporels qui réagit avec des substances chimiques endogènes et exogènes.<\/p>",
+            "titre_du_bouton": "En savoir plus",
+            "article_lie": "apprendre\/le-cannabis-et-notre-organisme"
           }
         },
         "71fe3482-c0a0-441a-9458-d2413c795b25": {
           "type": "card",
           "settings": {
-            "top_title": "CBX Medical, acteur de la recherche",
-            "ancre": "La recherche",
-            "chapitre": "Chapitre 1",
-            "titre": "La recherche pharmaceutique",
-            "description": "",
-            "titre_du_bouton": "La biodisponibilité ?",
-            "article_lie": ""
+            "top_title": "",
+            "image_de_la_carte": "shopify:\/\/shop_images\/Capture_d_ecran_2023-07-17_a_17.31.47.png",
+            "ancre": "Méchanisme",
+            "chapitre": "Chapitre 3",
+            "titre": "Comment ça marche ?",
+            "description": "<p>Les cannabinoïdes influencent notre organisme. Oui mais comment ? Quel est leur action sur les récepteurs ? Comment cela se fait-il que ces molécules biochimiques aient un impact sur notre corps ? <\/p>",
+            "titre_du_bouton": "En savoir plus",
+            "article_lie": "apprendre\/comment-les-cannabinoides-influencent-ils-notre-organisme"
+          }
+        },
+        "ea46033b-95f3-47d8-b456-43714da91b75": {
+          "type": "card",
+          "settings": {
+            "top_title": "Les cannabinoïdes majeurs et mineurs",
+            "image_de_la_carte": "shopify:\/\/shop_images\/weed-cbd.jpg",
+            "ancre": "Majeurs\/mineurs",
+            "chapitre": "Chapitre 4",
+            "titre": "Les cannabinoïdes majeurs et mineurs",
+            "description": "<p>Le cannabidiol, CBD, attire l'attention des journalistes du monde entier. C'est une nouvelle molécule qui fait couler beaucoup d'encre... Mais ettention, la plante de cannabis possède plus d'une centaine d'autre cannabinoïdes dont certains sont très prometteurs pour leur future dans le domaine médicale. <\/p>",
+            "titre_du_bouton": "En savoir plus",
+            "article_lie": "apprendre\/les-cannabinoides-majeurs-et-mineurs"
+          }
+        },
+        "927ca059-ddfa-48b1-be0b-a7941c0109b3": {
+          "type": "card",
+          "settings": {
+            "top_title": "",
+            "image_de_la_carte": "shopify:\/\/shop_images\/molecule-cbd.webp",
+            "ancre": "Le CBD",
+            "chapitre": "Chapitre 5",
+            "titre": "Le CBD, c'est quoi ?",
+            "description": "<p>C'est le cannabinoïde le plus présent dans la plante avec le THC. C'est la molécule de la dernière décennie. tous le monde en parle : les chercheurs, les consommateurs, les gouvernement... Qu'en est-il réellement ? <\/p>",
+            "titre_du_bouton": "En savoir plus",
+            "article_lie": "infos\/le-cannabidiol-un-cannabinoide-a-la-mode"
           }
         }
       },
       "block_order": [
         "6f71bbb6-199d-4ebc-b1b3-49d8f8fb855f",
         "2dfbd4f1-23c1-4034-b330-4139a0b37176",
-        "71fe3482-c0a0-441a-9458-d2413c795b25"
+        "71fe3482-c0a0-441a-9458-d2413c795b25",
+        "ea46033b-95f3-47d8-b456-43714da91b75",
+        "927ca059-ddfa-48b1-be0b-a7941c0109b3"
       ],
       "settings": {
       }
