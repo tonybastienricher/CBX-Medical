@@ -15,23 +15,23 @@
         "6f71bbb6-199d-4ebc-b1b3-49d8f8fb855f": {
           "type": "card",
           "settings": {
+            "top_title": "CBX Medical, acteur de la recherche",
             "image_de_la_carte": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
             "ancre": "La recherche",
             "chapitre": "Chapitre 1",
-            "top_title": "CBX Medical, acteur de la recherche",
             "titre": "La recherche pharmaceutique",
             "description": "<p>En janvier 2023, CBX Medical entame un partenariat de 4 ans avec la faculté de pharmacie de l’ULB. Il s’agit d’un projet de recherche pour augmenter la biodisponibilité des cannabinoïdes.<\/p>",
             "titre_du_bouton": "La biodisponibilité ?",
-            "article_lie": ""
+            "article_lie": "infos\/champ-experimental-de-cannabis-carnet-de-bord-3"
           }
         },
         "2dfbd4f1-23c1-4034-b330-4139a0b37176": {
           "type": "card",
           "settings": {
+            "top_title": "CBX Medical, acteur de la recherche",
             "image_de_la_carte": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg",
             "ancre": "La recherche",
             "chapitre": "Chapitre 2",
-            "top_title": "CBX Medical, acteur de la recherche",
             "titre": "La recherche pharmaceutique",
             "description": "<p>Le but de cette recherche est d’optimiser la culture de la plante de chanvre afin d’en valoriser toutes les parties : cannabinoïdes, fibres, chènevottes et graines. Suite à notre étude menée en 2022, nous allons tester les éléments suivants :<\/p><ul><li>Variétés : Felina 32 (CBD), Santhica 27 (CBG)<\/li><li>Densité de semis : 40 kg\/ha, 60 kg\/ha, 90 kg\/ha<\/li><\/ul><p>La faisabilité d’exploitation et les rendements des différentes parties du chanvre qui seront valorisées seront analysés et ce, en fonction des différents facteurs agricoles. L’objectif est d’étudier les pratiques de la culture de chanvre et de partager les résultats avec les acteurs de la filière.<\/p>",
             "titre_du_bouton": "La biodisponibilité ?",
@@ -41,9 +41,9 @@
         "71fe3482-c0a0-441a-9458-d2413c795b25": {
           "type": "card",
           "settings": {
+            "top_title": "CBX Medical, acteur de la recherche",
             "ancre": "La recherche",
             "chapitre": "Chapitre 1",
-            "top_title": "CBX Medical, acteur de la recherche",
             "titre": "La recherche pharmaceutique",
             "description": "",
             "titre_du_bouton": "La biodisponibilité ?",
