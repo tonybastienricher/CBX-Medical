@@ -198,6 +198,7 @@
     },
     "61cda7b6-5fce-4bbc-a5ba-4d1a414983c0": {
       "type": "image_grid",
+      "disabled": true,
       "settings": {
         "couleur_du_background": "green",
         "couleur_du_texte": "green2",
