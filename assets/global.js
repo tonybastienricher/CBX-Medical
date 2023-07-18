@@ -625,11 +625,13 @@ class DeferredMedia extends HTMLElement {
           });
         }
         //Lancement forcé.
-        document.querySelectorAll('video').forEach(video => {
-          video.play().catch(error => {
-            console.error('Video autoplay failed:', error);
+        setTimeout(function() {
+          document.querySelectorAll('video').forEach(video => {
+            video.play().catch(error => {
+              console.error('Video autoplay failed:', error);
+            });
           });
-        });
+        }, 200);
 
       }
       this.setAttribute('loaded', true);
