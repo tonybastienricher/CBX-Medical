@@ -348,6 +348,9 @@
     },
     "pile_cartes": {
       "related_product": "Produits associés ({{ related_product }})"
+    },
+    "pile_cartes_apprendre" : {
+      "retour" : "Retour en arrière"
     }
   },
   "localization": {

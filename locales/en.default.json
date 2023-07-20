@@ -338,6 +338,9 @@
     },
     "page": {
       "title": "Page title"
+    },
+    "pile_cartes_apprendre" : {
+      "retour" : "Going back"
     }
   },
   "localization": {

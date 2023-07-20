@@ -42,7 +42,7 @@
                                      fill="none">
                                     <path d="M4 1L1 4L4 7" stroke="#1E271D" />
                                 </svg>
-                                Retour en arrière
+                                {{ 'sections.pile_cartes_apprendre.retour' | t }}
                             </button>
                         </div>
 
@@ -74,7 +74,7 @@
         </div>
 
         <!-- CARDS -->
-        <div class='cbx-mb-28 cbx-mt-5'>
+        <div class='cbx-mb-12 cbx-mt-5'>
             <ul class="stack-cards js-stack-cards">
                 {%- for block in section.blocks -%}
                     {%- case block.type -%}
@@ -85,10 +85,8 @@
                                 <div class='cbx-p-5 lg:cbx-p-3.5 lg:cbx-pl-20 cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-8 cbx-w-full'>
                                     <!-- Content -->
                                     <div class='lg:cbx-col-span-5 cbx-max-w-[459px] cbx-my-auto cbx-flex cbx-flex-col cbx-py-10'>
-                                        <div class='cbx-pb-2'>
-                                        <span class='cbx-uppercase cbx-py-2.5 cbx-px-4 cbx-rounded-full cbx-bg-offWhite cbx-text-xss cbx-font-medium cbx-font-display'>
-                                            {{ block.settings.chapitre }}
-                                        </span>
+                                        <div class='{% if block.settings.top_title != blank %}cbx-pb-2{% else %}cbx-pb-5{% endif %} cbx-flex'>
+                                            <span class='cbx-uppercase cbx-py-2 cbx-px-4 cbx-rounded-full cbx-bg-offWhite cbx-text-xss cbx-font-medium cbx-font-display'>{{ block.settings.chapitre }}</span>
                                         </div>
 
                                         {% if block.settings.top_title != blank %}
