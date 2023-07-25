@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
-            "label_de_limage": "FIG.Close up view"
+            "label_de_limage": "L'équipe CBX au grand complet"
           }
         },
         "419c3302-bf63-4556-80a7-dc46aeed6794": {
@@ -296,7 +296,7 @@
     "36284b84-a7a5-48d8-99ca-7c35dc2c07d7": {
       "type": "featured-collection",
       "settings": {
-        "sur_titre": "Completez",
+        "sur_titre": "Nos produits",
         "collection": "homepage"
       }
     }
