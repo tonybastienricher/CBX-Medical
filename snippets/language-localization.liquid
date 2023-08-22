@@ -9,7 +9,7 @@
     <ul id="{{ localPosition }}List" role="list" class="localizationHeader cbx-flex cbx-uppercase cbx-gap-1">
         {%- for language in localization.available_languages -%}
             {% if language.iso_code != localization.language.iso_code %}
-                <li class="disclosure__item" tabindex="-1">
+                <li class="disclosure__item" tabindex="-1" style='max-height: 15px;'>
                     <a class=""
                        href="#"
                        hreflang="{{ language.iso_code }}"
