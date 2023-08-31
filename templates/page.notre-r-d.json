@@ -144,6 +144,21 @@
         "padding_bottom": 36
       }
     },
+    "ac543235-3660-49b8-bd96-e6aaf9a25658": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "full_width": true,
+        "padding_bottom": true,
+        "texte_du_bouton": "Découvrez nos produits",
+        "lien_du_bouton": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "shopify:\/\/files\/videos\/230712_CBX_Capsule_1_v4.mp4 - Fred Louis.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
+      }
+    },
     "e33c5c05-bc80-49a5-aa9c-46be32c12e98": {
       "type": "image-with-text",
       "blocks": {
@@ -194,6 +209,7 @@
     "gros_texte_large",
     "apprendre_cannabinoides",
     "d763e9ff-03d9-47a8-8047-5346ed2a61c5",
+    "ac543235-3660-49b8-bd96-e6aaf9a25658",
     "e33c5c05-bc80-49a5-aa9c-46be32c12e98"
   ]
 }
