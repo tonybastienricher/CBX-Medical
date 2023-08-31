@@ -151,6 +151,51 @@
         "texte": "Chez CBX, nous collaborons étroitement avec les universités pour vous offrir le meilleur de la plante. Nous nous engageons à fournir des produits de qualité supérieure. Tous nos produits sont dispensés et prescrits par des professionnels de la santé qualifiés."
       }
     },
+    "8fc001cd-9496-4ca5-99d4-c88effb3339c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Nos projets R&D<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nous avons récemment eu <strong>le plus gros subside jamais octroyé en belgique pour de la recherche sur la plante de cannabis<\/strong>. C'est un projet en partenariat avec la faculté de pharmacie de l'ULB dont l'objectif est d'augmenter la biodisponibilité des cannabinoïdes sur plusieurs voies d'administration...<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "En savoir plus",
+            "button_link": "shopify:\/\/pages\/notre-r-d"
+          }
+        }
+      },
+      "block_order": [
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1",
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1",
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-08-31_a_16.16.24.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
       "type": "images_carrousel",
       "blocks": {
@@ -307,51 +352,6 @@
         "titre": "Pour les curieux."
       }
     },
-    "8fc001cd-9496-4ca5-99d4-c88effb3339c": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Nos projets R&D<\/strong>",
-            "heading_size": "h1"
-          }
-        },
-        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nous avons récemment eu <strong>le plus gros subside jamais octroyé en belgique pour de la recherche sur la plante de cannabis<\/strong>. C'est un projet en partenariat avec la faculté de pharmacie de l'ULB dont l'objectif est d'augmenter la biodisponibilité des cannabinoïdes sur plusieurs voies d'administration...<\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "En savoir plus",
-            "button_link": "shopify:\/\/pages\/notre-r-d"
-          }
-        }
-      },
-      "block_order": [
-        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1",
-        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1",
-        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-08-31_a_16.16.24.png",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "637d6aaf-7981-44de-9ff6-0eac18b3870e": {
       "type": "image-with-text",
       "blocks": {
@@ -404,9 +404,9 @@
     "1d3c3eb6-0507-4517-8e18-c5afad6fe640",
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
+    "8fc001cd-9496-4ca5-99d4-c88effb3339c",
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a",
     "0fbe5799-3511-42ba-a261-20a13db70f71",
-    "8fc001cd-9496-4ca5-99d4-c88effb3339c",
     "637d6aaf-7981-44de-9ff6-0eac18b3870e"
   ]
 }
