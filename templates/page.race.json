@@ -326,6 +326,7 @@
     },
     "5fa1d360-3680-4382-bae2-7f44b6b11e20": {
       "type": "grid_text",
+      "disabled": true,
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
