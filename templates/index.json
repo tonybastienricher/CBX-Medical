@@ -217,7 +217,6 @@
     },
     "0fbe5799-3511-42ba-a261-20a13db70f71": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "63392352-98b1-4095-ac34-0626ac15cf65": {
           "type": "faq",
@@ -302,9 +301,100 @@
         "f4e5d012-2425-49d7-ae47-5eae706c509a",
         "5219fc22-6833-4bc8-a244-76e72ff1d1ff"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
+      }
+    },
+    "8fc001cd-9496-4ca5-99d4-c88effb3339c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Nos projets R&D<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nous avons récemment eu <strong>le plus gros subside octroyé en belgique pour de la recherche sur la plante de cannabis<\/strong>. L'objectif étant d'augmenter la biodisponibilité des cannabinoïdes sur plusieurs voies d'administration...<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "En savoir plus",
+            "button_link": "shopify:\/\/pages\/notre-r-d"
+          }
+        }
+      },
+      "block_order": [
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1",
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1",
+        "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-08-31_a_16.16.24.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "637d6aaf-7981-44de-9ff6-0eac18b3870e": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-heading-1",
+        "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-text-1",
+        "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -315,6 +405,8 @@
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a",
-    "0fbe5799-3511-42ba-a261-20a13db70f71"
+    "0fbe5799-3511-42ba-a261-20a13db70f71",
+    "8fc001cd-9496-4ca5-99d4-c88effb3339c",
+    "637d6aaf-7981-44de-9ff6-0eac18b3870e"
   ]
 }
