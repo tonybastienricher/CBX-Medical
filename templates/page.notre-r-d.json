@@ -147,9 +147,9 @@
     "ac543235-3660-49b8-bd96-e6aaf9a25658": {
       "type": "video",
       "settings": {
-        "heading": "Video",
-        "full_width": true,
-        "padding_bottom": true,
+        "heading": "",
+        "full_width": false,
+        "padding_bottom": false,
         "texte_du_bouton": "Découvrez nos produits",
         "lien_du_bouton": "",
         "heading_size": "h1",
