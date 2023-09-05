@@ -1,16 +1,37 @@
 {
   "sections": {
+    "a4228dc9-5ab8-43db-b8eb-35c4590dace8": {
+      "type": "gros_texte_large",
+      "settings": {
+        "texte": "Vos patients vous posent des questions sur le CBD ? \nNous vous aidons à leur répondre !",
+        "text_preset": "indent_0",
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2"
+      }
+    },
+    "26cb7220-1ed8-4677-9076-f8f0e114fb17": {
+      "type": "grid_text",
+      "settings": {
+        "couleur_du_background": "transparent",
+        "couleur_du_texte": "green2",
+        "taille_titre": "style2",
+        "titre": "Plus de 1500 médecins et pharmaciens belges formés",
+        "texte": "L’intérêt pour les cannabinoïdes connaît une forte croissance, tout comme les questions que se posent vos patients. Grâce à votre expertise et à la proximité que vous avez avec les patients, vous êtes le mieux placé pour les accompagner au mieux. C’est pourquoi nous nous efforçons de diffuser l'information la plus actuelle, la plus précise et pratique possible."
+      }
+    },
     "form": {
       "type": "contact-form",
       "settings": {
         "image_bg": "shopify:\/\/shop_images\/JUB0709-55.jpg",
-        "heading": "Professionnel de la santé",
-        "description": "Pharmaciens, médecins, vous êtes déjà plus de 1500 en Belgique à nous faire confiance. L’intérêt pour les cannabinoïdes est en croissance constante.  Chez CBX Medical nous mettons un point d’honneur à la qualité et à la transparence. C’est pourquoi nous avons fait le choix dès les débuts de ne distribuer nos produits qu’à travers les professionnels de la santé.  Offrir des produits de confiance n’est qu’une étape du processus ; c'est grâce à votre expertise que les patients pourront être conseillés et guidés de la meilleure manière. <strong>Contactez nous pour une visite médicale ou pour tout autre question.<\/strong>",
+        "heading": "<strong>Contactez-nous pour planifier une visite médicale, organiser une formation ou pour tout autre question<\/strong>",
+        "description": "",
         "liste": "Pharmacien\nDocteur\nKinésithérapeute"
       }
     }
   },
   "order": [
+    "a4228dc9-5ab8-43db-b8eb-35c4590dace8",
+    "26cb7220-1ed8-4677-9076-f8f0e114fb17",
     "form"
   ]
 }
