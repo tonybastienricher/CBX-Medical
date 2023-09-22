@@ -139,56 +139,6 @@
         "padding_bottom": 36
       }
     },
-    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
-      "type": "pile_de_cartes",
-      "blocks": {
-        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0": {
-          "type": "cartes",
-          "settings": {
-            "titre": "Se relaxer",
-            "sous_titre": "Détails",
-            "description": "Détendez-vous et apaisez votre esprit. Qu'il s'agisse de soulager une journée bien remplie ou de favoriser un sommeil réparateur, les cannabinoïdes tels que le CBD, le CBG, le CBN, le CBC et les autres, vous aident à retrouver l'équilibre intérieur dont vous avez besoin en interagissant avec votre corps. Ces composés pourraient réduire le stress, l'anxiété et favoriser une sensation de calme et de détente.",
-            "produits": [
-              "candrop",
-              "cansleep"
-            ]
-          }
-        },
-        "f22f5ad9-b76a-4f1f-b668-870d40d64936": {
-          "type": "cartes",
-          "settings": {
-            "titre": "Bouger",
-            "sous_titre": "Détails",
-            "description": "Expérimentez un nouvel élan de liberté, profitez de votre corps, de toute sa mobilité et sa souplesse grâce à nos solutions innovantes avec cannabinoïdes naturels. Soutenant vos performances physiques et stimulant votre énergie, nos produits pouraient soulager les situations douloureuses. Ils sont idéaux pour les athlètes et tous ceux désirant maintenir un mode de vie actif. Des solutions naturelles pour performer et redécouvrir le plaisir de la mobilité sans contrainte.",
-            "produits": [
-              "canflex-forte",
-              "canmove"
-            ]
-          }
-        },
-        "ccc7be5f-a35a-492e-bfa1-56f80530f0de": {
-          "type": "cartes",
-          "settings": {
-            "titre": "Régénérer",
-            "sous_titre": "Détails",
-            "description": "Prenez soin de votre peau grâce à nos crèmes avec cannabinoïdes. Sans cortisone, elles offrent une solution saine contre les irritations, les crevasses, les démangeaisons, les rougeurs et autres symptômes liés à la peau sèche. L’absence de corticoïde dans nos crèmes en font des solutions naturelles et adéquates avec une utilisation quotidienne. Choisissez le produit qui répond le mieux à vos besoins et profitez d'une régénération complète.",
-            "produits": [
-              "canshine",
-              "cansmooth"
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0",
-        "f22f5ad9-b76a-4f1f-b668-870d40d64936",
-        "ccc7be5f-a35a-492e-bfa1-56f80530f0de"
-      ],
-      "settings": {
-        "sur_titre": "Au Quotidien",
-        "titre": "Comment CBX peut améliorer votre quotidien?"
-      }
-    },
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b": {
       "type": "texte-large",
       "settings": {
@@ -239,6 +189,56 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
+      "type": "pile_de_cartes",
+      "blocks": {
+        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Se relaxer",
+            "sous_titre": "Détails",
+            "description": "Détendez-vous et apaisez votre esprit. Qu'il s'agisse de soulager une journée bien remplie ou de favoriser un sommeil réparateur, les cannabinoïdes tels que le CBD, le CBG, le CBN, le CBC et les autres, vous aident à retrouver l'équilibre intérieur dont vous avez besoin en interagissant avec votre corps. Ces composés pourraient réduire le stress, l'anxiété et favoriser une sensation de calme et de détente.",
+            "produits": [
+              "candrop",
+              "cansleep"
+            ]
+          }
+        },
+        "f22f5ad9-b76a-4f1f-b668-870d40d64936": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Bouger",
+            "sous_titre": "Détails",
+            "description": "Expérimentez un nouvel élan de liberté, profitez de votre corps, de toute sa mobilité et sa souplesse grâce à nos solutions innovantes avec cannabinoïdes naturels. Soutenant vos performances physiques et stimulant votre énergie, nos produits pouraient soulager les situations douloureuses. Ils sont idéaux pour les athlètes et tous ceux désirant maintenir un mode de vie actif. Des solutions naturelles pour performer et redécouvrir le plaisir de la mobilité sans contrainte.",
+            "produits": [
+              "canflex-forte",
+              "canmove"
+            ]
+          }
+        },
+        "ccc7be5f-a35a-492e-bfa1-56f80530f0de": {
+          "type": "cartes",
+          "settings": {
+            "titre": "Régénérer",
+            "sous_titre": "Détails",
+            "description": "Prenez soin de votre peau grâce à nos crèmes avec cannabinoïdes. Sans cortisone, elles offrent une solution saine contre les irritations, les crevasses, les démangeaisons, les rougeurs et autres symptômes liés à la peau sèche. L’absence de corticoïde dans nos crèmes en font des solutions naturelles et adéquates avec une utilisation quotidienne. Choisissez le produit qui répond le mieux à vos besoins et profitez d'une régénération complète.",
+            "produits": [
+              "canshine",
+              "cansmooth"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "0182f75f-9d95-4fc1-b0da-5923a8c7c8c0",
+        "f22f5ad9-b76a-4f1f-b668-870d40d64936",
+        "ccc7be5f-a35a-492e-bfa1-56f80530f0de"
+      ],
+      "settings": {
+        "sur_titre": "Au Quotidien",
+        "titre": "Comment CBX peut améliorer votre quotidien?"
       }
     },
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a": {
@@ -448,9 +448,9 @@
     "32729055-b5cd-476e-a14d-5c9ab9c6c295",
     "1d3c3eb6-0507-4517-8e18-c5afad6fe640",
     "e71ccc1e-f0c5-4172-979c-ff16518d3bb7",
-    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
     "8fc001cd-9496-4ca5-99d4-c88effb3339c",
+    "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "90482c4c-b245-4068-8fa2-6f47ff93eb5a",
     "0fbe5799-3511-42ba-a261-20a13db70f71",
     "637d6aaf-7981-44de-9ff6-0eac18b3870e"
