@@ -94,6 +94,51 @@
         ]
       }
     },
+    "e71ccc1e-f0c5-4172-979c-ff16518d3bb7": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Formations cannabinoïdes<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Vous êtes professionnels de la santé ? Vos patients vous posent des questions sur le CBD ? Nous vous aidons à leur répondre.<\/strong> En plus des séances de formations ouvertes sur notre champ, nous organisons des formations à la demande<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contactez-nous",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-heading-1",
+        "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-text-1",
+        "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-09-22_a_09.29.20.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe": {
       "type": "pile_de_cartes",
       "blocks": {
@@ -402,6 +447,7 @@
     "76a5e5d7-58e5-4fed-89d9-620cc17e4a52",
     "32729055-b5cd-476e-a14d-5c9ab9c6c295",
     "1d3c3eb6-0507-4517-8e18-c5afad6fe640",
+    "e71ccc1e-f0c5-4172-979c-ff16518d3bb7",
     "ba4c609c-e92a-4595-ae6a-bc3ef01a46fe",
     "8bf73b47-02e4-46e5-aea7-7c8e81f6e45b",
     "8fc001cd-9496-4ca5-99d4-c88effb3339c",
