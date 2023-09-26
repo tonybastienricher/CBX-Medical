@@ -17,25 +17,26 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "40 MG CBD"
+            "text_droite": "PEA, Coenzyme Q10, Boswellia & Magnésium"
           }
         },
         "35195ec4-e684-43d1-862b-5195c77a1061": {
           "type": "information",
           "settings": {
             "text_gauche": "Quantité",
-            "text_droite": "125ml"
+            "text_droite": "60 Gélules"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
           "type": "information",
           "settings": {
             "text_gauche": "Type",
-            "text_droite": "Gel refroidissant"
+            "text_droite": "Complément Alimentaire"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e9": {
           "type": "information",
+          "disabled": true,
           "settings": {
             "text_gauche": "Avis",
             "text_droite": "★★★★★ <a href=\"https:\/\/google.fr\" title=\"https:\/\/google.fr\">2522 reviews<\/a>"
@@ -44,7 +45,7 @@
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
           "type": "liste",
           "settings": {
-            "liste": "Cannabinoides 100% naturels\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
+            "liste": "Endo-cannabinoide naturel\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
           }
         },
         "variant_picker": {
@@ -101,7 +102,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "CanFlex Forte est le gel le plus concentré en CBD disponible en pharmacie. Il est fait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi que les personnes âgées ayant envie de faciliter leurs mouvements."
+        "texte": "MetaFibro® est un complément alimentaire disponible en pharmacie et prescrit par des médecins. Il a été dévellopé pour les personnes voulant retrouver la forme, la bonne humeur et refaire des activités qu'ils n'imaginaient pas refaire."
       }
     },
     "description": {
