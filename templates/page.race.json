@@ -160,20 +160,12 @@
         "padding_bottom": 36
       }
     },
-    "video": {
-      "type": "video",
+    "6ebfd449-27b4-4b31-a74c-fead0c25d40e": {
+      "type": "hero",
       "settings": {
-        "heading": "",
-        "full_width": false,
-        "padding_bottom": false,
-        "texte_du_bouton": "Découvrez nos produits",
-        "lien_du_bouton": "",
-        "heading_size": "h1",
-        "enable_video_looping": true,
-        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
-        "video_url": "",
-        "cover_image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-09-22_a_10.07.00.png",
-        "description": ""
+        "alignement": "droite",
+        "disposition": "fullscreen",
+        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4"
       }
     },
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e": {
@@ -492,15 +484,6 @@
         "lgende_de_limage_droite": "Vaincqueur 2022 RACE Autre"
       }
     },
-    "84f33d8e-3f27-4144-bedc-cfa4edbc8beb": {
-      "type": "image_grid",
-      "disabled": true,
-      "settings": {
-        "couleur_du_background": "transparent",
-        "couleur_du_texte": "green2",
-        "image_1": "shopify:\/\/shop_images\/DSC02176.jpg"
-      }
-    },
     "9f5f815d-34ab-4b0f-9e9d-20f3a286bdcd": {
       "type": "image_pleine_largeur",
       "settings": {
@@ -515,7 +498,7 @@
     "2bdef15c-8e50-4a96-96ee-0da3f4073576",
     "22a4d106-2bf5-425c-8d7e-dd8c4a2b11f0",
     "725cbb83-aea2-4994-8fff-c5d3d77b3ae1",
-    "video",
+    "6ebfd449-27b4-4b31-a74c-fead0c25d40e",
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e",
     "grid_text",
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e",
@@ -528,7 +511,6 @@
     "97600274-5f0f-4153-8a2c-9977d500eb9d",
     "b2cf978c-b9cf-4391-ae13-a437308dd628",
     "41183da7-a1b5-40e0-8c39-7df376d0304c",
-    "84f33d8e-3f27-4144-bedc-cfa4edbc8beb",
     "9f5f815d-34ab-4b0f-9e9d-20f3a286bdcd"
   ]
 }
