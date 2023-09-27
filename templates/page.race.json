@@ -162,7 +162,6 @@
     },
     "video": {
       "type": "video",
-      "disabled": true,
       "settings": {
         "heading": "",
         "full_width": false,
@@ -170,7 +169,7 @@
         "texte_du_bouton": "Découvrez nos produits",
         "lien_du_bouton": "",
         "heading_size": "h1",
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": ""
