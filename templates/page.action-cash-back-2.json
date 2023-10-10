@@ -22,7 +22,7 @@
         "template--19136882442565__2bdef15c-8e50-4a96-96ee-0da3f4073576-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Certains patients n'ont pas d'autres alternatives que le CBD, mais vu le coût que l'huile peut représenter, ils sont laissés <strong>seuls face à un choix compliqué<\/strong> : leur portefeuille ou leur santé...<\/p><p>Nous sommes humain et pas  insensibles à leur situation. C'est pourquoi <strong>nous avons décidé de leur rembourser nous-même une partie<\/strong>.<\/p>",
+            "text": "<p>Certains patients n'ont pas d'autres alternatives que le CBD, mais vu le coût que l'huile peut représenter, ils sont parfois laissés <strong>seuls face à un choix compliqué<\/strong> : leur portefeuille ou leur santé...<\/p><p>Nous sommes humain et pas  insensibles à leur situation. C'est pourquoi <strong>nous avons décidé de leur rembourser nous-même une partie<\/strong>.<\/p>",
             "text_style": "body"
           }
         },
@@ -191,7 +191,7 @@
           "type": "information",
           "settings": {
             "question": "Prescripteurs Cash-Back",
-            "reponse": "Nous remboursons partiellement les gens à qui l'huile de CBD a été prescrit par un professionnel de la santé. Pour ce faire, nous distribuons gratuitement aux professionnels de la santé, des prescripteurs spéciaux. Il est indispensable d'avoir une prescription venant de ce prescripteur pour bénéficier de l'action."
+            "reponse": "Nous remboursons partiellement les gens à qui l'huile de CBD a été prescrite par un professionnel de la santé. Pour ce faire, nous distribuons gratuitement aux professionnels de la santé, des prescripteurs spéciaux. Il est indispensable d'avoir une prescription venant de ce prescripteur pour bénéficier de l'action."
           }
         },
         "e739272e-c943-4558-bdda-16a367ad8aca": {
@@ -205,7 +205,7 @@
           "type": "information",
           "settings": {
             "question": "Pratiquement",
-            "reponse": "Le patient doit envoyer par la poste: \n1) la prescription complètée avec ses coordonnées et avec le tampon du professionnel de la santé.\n2) La preuve d'achat de l'huile CanDrop\n3) Le code-barre originel découpé de la boite du produit.\n\nLe tout doit être envoyé à l'adresse suivante : CBX Medical, 94\/b Chaussée de Bruxelles, 1410 Waterloo, Belgique."
+            "reponse": "Le patient doit envoyer par la poste: \n1) La prescription complètée avec ses coordonnées et avec le tampon du professionnel de la santé.\n2) La preuve d'achat de l'huile CanDrop\n3) Le code-barre originel découpé de la boite du produit.\n\nLe tout doit être envoyé à l'adresse suivante : CBX Medical, 94\/b Chaussée de Bruxelles, 1410 Waterloo, Belgique."
           }
         },
         "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8": {
