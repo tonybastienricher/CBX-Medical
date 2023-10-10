@@ -196,12 +196,15 @@
             }
         `;
 
+        let currentLocale = "{{ shop.locale }}";
+
         try {
           const response = await fetch(rootUrl, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'X-Shopify-Storefront-Access-Token': storefrontAccessToken
+              'X-Shopify-Storefront-Access-Token': storefrontAccessToken,
+              'Accept-Language': currentLocale
             },
             body: JSON.stringify({ query })
           });
