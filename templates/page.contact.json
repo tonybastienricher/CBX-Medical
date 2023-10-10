@@ -5,7 +5,7 @@
       "settings": {
         "image_bg": "shopify:\/\/shop_images\/Capture_d_ecran_2023-10-10_a_12.23.20.png",
         "heading": "Votre prescripteur Cash-Back",
-        "description": "Afin de vous envoyer le prescripteur, nous avons beosin de votre adresse postale. Nous l'enverrons seulement au professionnels de la santé concernés.",
+        "description": "Afin de vous envoyer le prescripteur, nous avons besoin de votre adresse postale, veuillez l'indiquer dans la partir \"Commentaire\". Nous l'enverrons seulement aux professionnels de la santé concernés.",
         "liste": "Docteur\nKinésithérapeute\nAutre"
       }
     }
