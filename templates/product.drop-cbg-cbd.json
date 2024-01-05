@@ -132,7 +132,7 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Redécouvrez le plaisir de bouger avec notre huile All Natural CBD Broad Spectrum enrichie au CBG, une solution naturelle qui offre un équilibre parfait entre le CBD et le CBG, chacun présent à une concentration de 5%. \n\nSans aucun agent psychotrope ni risque de dépendance, notre huile harmonise votre bien-être en agissant efficacement sur votre système endocannabinoïde, un réseau intercellulaire vital de votre organisme. Le cannabigérol (CBG), un phytocannabinoïde précieusement extrait de la plante de cannabis sativa, apporte ses bienfaits sans provoquer d'effets psychotropes ou narcotiques.\n\nChaque flacon de Drop CBG + CBD contient 10 ml de cette formule révolutionnaire. Faites l'expérience du bien-être naturel avec Drop CBG + CBD, une solution sûre et équilibrée pour une vie dynamique et épanouie."
+            "reponse": "Redécouvrez le plaisir de bouger avec notre huile All Natural CBD Broad Spectrum enrichie au CBG, une solution naturelle qui offre un équilibre parfait entre le CBD et le CBG, chacun présent à une concentration de 5%. \n\nSans aucun agent psychotrope ni risque de dépendance, notre huile harmonise votre bien-être en agissant efficacement sur votre système endocannabinoïde, un réseau intercellulaire vital de votre organisme. Le cannabigérol (CBG), un phytocannabinoïde précieusement extrait de la plante de cannabis sativa, apporte ses bienfaits sans provoquer d'effets psychotropes ou narcotiques.\n\nChaque flacon de CanDrop CBG + CBD contient 10 ml de cette formule révolutionnaire. Faites l'expérience du bien-être naturel avec CanDrop CBG + CBD, une solution sûre et équilibrée pour une vie dynamique et épanouie."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
@@ -194,7 +194,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -239,6 +238,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
