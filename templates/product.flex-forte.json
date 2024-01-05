@@ -115,7 +115,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Flex Forte est la solution idéale pour les sportifs et personnes actives confrontés à des difficultés de récupération après l'effort, ainsi que pour les seniors souhaitant améliorer leur mobilité."
+        "texte": "CanFlex Forte est la solution idéale pour les sportifs et personnes actives confrontés à des difficultés de récupération après l'effort, ainsi que pour les seniors souhaitant améliorer leur mobilité."
       }
     },
     "description": {
@@ -125,14 +125,14 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Le gel refroidissant Flex Forte, développé par CBX Medical, est une formule unique enrichie en cannabidiol (CBD - 1 000 mg), en arnica, en menthe et en eucalyptus. Spécialement conçu pour rafraîchir les muscles et les articulations fatiguées, il s'agit du gel le plus concentré en CBD disponible en pharmacie.\n\nFlex Forte est la solution idéale pour les sportifs et personnes actives confrontés à des difficultés de récupération après l'effort, ainsi que pour les seniors souhaitant améliorer leur mobilité.\n\nPour optimiser la souplesse des muscles et des articulations, il est recommandé d'appliquer ce gel sur les zones concernées après l'effort.\n\nCe produit contenant du CBD (cannabidiol) est 100% légal, non-psychotrope et non-addictif, offrant une alternative sûre et non-addictive."
+            "reponse": "Le gel refroidissant CanFlex Forte, développé par CBX Medical, est une formule unique enrichie en cannabidiol (CBD - 1 000 mg), en arnica, en menthe et en eucalyptus. Spécialement conçu pour rafraîchir les muscles et les articulations fatiguées, il s'agit du gel le plus concentré en CBD disponible en pharmacie.\n\nCanFlex Forte est la solution idéale pour les sportifs et personnes actives confrontés à des difficultés de récupération après l'effort, ainsi que pour les seniors souhaitant améliorer leur mobilité.\n\nPour optimiser la souplesse des muscles et des articulations, il est recommandé d'appliquer ce gel sur les zones concernées après l'effort.\n\nCe produit contenant du CBD (cannabidiol) est 100% légal, non-psychotrope et non-addictif, offrant une alternative sûre et non-addictive."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
             "question": "Conseil d'application",
-            "reponse": "Appliquez une fine couche de gel refroidissant Flex Forte après vos séances de sport sur les zones souhaitées pour améliorer la souplesse de vos muscles et de vos articulations. Massez doucement la zone pour permettre au gel de pénétrer. Évitez d'appliquer le gel sur des plaies ou des zones de peau irritée afin d'éviter toute irritation supplémentaire. Ce gel contient du CBD. Profitez des bienfaits du CBD en toute tranquillité et assurez-vous une récupération optimale."
+            "reponse": "Appliquez une fine couche de gel refroidissant CanFlex Forte après vos séances de sport sur les zones souhaitées pour améliorer la souplesse de vos muscles et de vos articulations. Massez doucement la zone pour permettre au gel de pénétrer. Évitez d'appliquer le gel sur des plaies ou des zones de peau irritée afin d'éviter toute irritation supplémentaire. Ce gel contient du CBD. Profitez des bienfaits du CBD en toute tranquillité et assurez-vous une récupération optimale."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
@@ -186,7 +186,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -231,6 +230,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
