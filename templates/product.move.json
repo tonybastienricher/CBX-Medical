@@ -122,7 +122,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Découvrez Move, votre allié pour un confort musculaire et articulaire optimal. Ce gel chauffant, enrichi en cannabigérol (CBG) naturel et en boswellia, offre une solution efficace contre les raideurs musculaires et articulaires."
+        "texte": "Découvrez CanMove, votre allié pour un confort musculaire et articulaire optimal. Ce gel chauffant, enrichi en cannabigérol (CBG) naturel et en boswellia, offre une solution efficace contre les raideurs musculaires et articulaires."
       }
     },
     "description": {
@@ -132,7 +132,7 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Découvrez Move, votre allié pour un confort musculaire et articulaire optimal. Ce gel chauffant, enrichi en cannabigérol (CBG) naturel et en boswellia, offre une solution efficace contre les raideurs musculaires et articulaires. \nIl prépare efficacement vos muscles et vos articulations avant l'effort, favorisant une bonne condition physique. Spécialement conçu pour les athlètes qui souhaitent optimiser leur préparation à l'effort, ainsi que pour les personnes actives cherchant à fluidifier leurs mouvements quotidiens, Move est votre atout pour une mobilité sans entraves. Prenez le contrôle de votre bien-être physique avec Move dès aujourd'hui."
+            "reponse": "Découvrez CanMove, votre allié pour un confort musculaire et articulaire optimal. Ce gel chauffant, enrichi en cannabigérol (CBG) naturel et en boswellia, offre une solution efficace contre les raideurs musculaires et articulaires. \nIl prépare efficacement vos muscles et vos articulations avant l'effort, favorisant une bonne condition physique. Spécialement conçu pour les athlètes qui souhaitent optimiser leur préparation à l'effort, ainsi que pour les personnes actives cherchant à fluidifier leurs mouvements quotidiens, CanMove est votre atout pour une mobilité sans entraves. Prenez le contrôle de votre bien-être physique avec CanMove dès aujourd'hui."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
@@ -180,6 +180,7 @@
       "block_order": [
         "c4ffdc9f-eb0c-40c5-ba70-f435021e6634"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -193,7 +194,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -238,6 +238,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."

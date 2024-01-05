@@ -132,14 +132,14 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Le processus de restauration de votre peau commence ici. Profitez des bienfaits de Shine, la crème avec du CBD formulée par CBX Medical : une approche naturelle et sans cortisone dans le traitement des symptômes inconfortables du psoriasis.\n\nCette crème avant-gardiste apaise les irritations cutanées et l'aspect rugueux de la peau. Elle favorise le processus de réparation cellulaire intrinsèque de l'épiderme. Réduisez les prurits et prévenez les signes du psoriasis en incorporant Shine dans votre régime de soins dermiques.\n\nL'un de nos avantages distinctifs réside dans notre technologie liposomale innovante. Cette dernière garantit une absorption ultra-rapide et efficace du cannabidiol (CBD) au niveau de la peau. Enregistré comme dispositif médical de classe I, Shine est largement recommandé par la communauté médicale pour sa fiabilité et son efficacité.\n\n\nNotre produit, formulé avec du CBD (cannabidiol), est sans risque d'addiction et non-psychoactif"
+            "reponse": "Le processus de restauration de votre peau commence ici. Profitez des bienfaits de CanShine, la crème avec du CBD formulée par CBX Medical : une approche naturelle et sans cortisone dans le traitement des symptômes inconfortables du psoriasis.\n\nCette crème avant-gardiste apaise les irritations cutanées et l'aspect rugueux de la peau. Elle favorise le processus de réparation cellulaire intrinsèque de l'épiderme. Réduisez les prurits et prévenez les signes du psoriasis en incorporant CanShine dans votre régime de soins dermiques.\n\nL'un de nos avantages distinctifs réside dans notre technologie liposomale innovante. Cette dernière garantit une absorption ultra-rapide et efficace du cannabidiol (CBD) au niveau de la peau. Enregistré comme dispositif médical de classe I, Shine est largement recommandé par la communauté médicale pour sa fiabilité et son efficacité.\n\n\nNotre produit, formulé avec du CBD (cannabidiol), est sans risque d'addiction et non-psychoactif"
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
             "question": "Conseils d’utilisation",
-            "reponse": "Appliquez une dose\/pression de 0,250 ml de SHINE sur la zone de la peau irritée et\/ou qui démange. Cette quantité est suffisante pour couvrir environ 5x10 cm de surface cutanée.\n\nSi nécessaire, vous pouvez augmenter jusqu'à 6 doses (soit 1,5 ml) par application. Vous pouvez répéter l'application deux fois par jour pour un soulagement maximal.\n\nDans les cas les plus graves, vous pouvez utiliser jusqu'à 10 doses par application pour un apaisement intensif.\nSachez que notre formule avancée a été spécialement conçue pour répondre aux besoins de votre peau, en fournissant un soulagement ciblé et une hydratation en profondeur.\n\nGardez Shine hors de la portée des enfants. Après ouverture, conservez le produit à température ambiante. N'utilisez pas Shine après la date de péremption indiquée sur l'emballage (après EXP)."
+            "reponse": "Appliquez une dose\/pression de 0,250 ml de CanShine sur la zone de la peau irritée et\/ou qui démange. Cette quantité est suffisante pour couvrir environ 5x10 cm de surface cutanée.\n\nSi nécessaire, vous pouvez augmenter jusqu'à 6 doses (soit 1,5 ml) par application. Vous pouvez répéter l'application deux fois par jour pour un soulagement maximal.\n\nDans les cas les plus graves, vous pouvez utiliser jusqu'à 10 doses par application pour un apaisement intensif.\nSachez que notre formule avancée a été spécialement conçue pour répondre aux besoins de votre peau, en fournissant un soulagement ciblé et une hydratation en profondeur.\n\nGardez CanShine hors de la portée des enfants. Après ouverture, conservez le produit à température ambiante. N'utilisez pas CanShine après la date de péremption indiquée sur l'emballage (après EXP)."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
@@ -194,7 +194,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -239,6 +238,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."

@@ -181,6 +181,7 @@
       "block_order": [
         "1b5082f7-bcd7-43f6-a71e-d56a5326ebf1"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
