@@ -83,7 +83,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Revitalisez votre peau avec Smooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons."
+        "texte": "Revitalisez votre peau avec CanSmooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons."
       }
     },
     "c1799eff-e8e5-4dbd-b6a5-d03e2e624529": {
@@ -130,7 +130,7 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Revitalisez votre peau avec Smooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons. Associé à l'Urée à 10%, le CBD offre une protection et un apaisement optimaux aux problèmes cutanés, rendant votre peau plus douce et plus lisse. L’absence de cortisone et son format généreux vous permet une utilisation quotidienne sans compromis. Smooth est un soin sain et récurrent."
+            "reponse": "Revitalisez votre peau avec CanSmooth, notre crème riche en CBD, idéale pour les peaux irritées, rugueuses, ou sujettes aux crevasses et démangeaisons. Associé à l'Urée à 10%, le CBD offre une protection et un apaisement optimaux aux problèmes cutanés, rendant votre peau plus douce et plus lisse. L’absence de cortisone et son format généreux vous permet une utilisation quotidienne sans compromis. CanSmooth est un soin sain et récurrent."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
@@ -179,6 +179,7 @@
       "block_order": [
         "efa97e65-7f93-4158-ae07-cfbc87511770"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -192,7 +193,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -237,6 +237,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."
