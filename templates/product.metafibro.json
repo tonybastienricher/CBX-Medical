@@ -44,7 +44,7 @@
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
           "type": "liste",
           "settings": {
-            "liste": "Endo-cannabinoide naturel\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
+            "liste": "Endo-cannabinoide naturel\nTracabilité totale\nDelivré et prescrit par les professionnels\nFabriqué 100% en Europe"
           }
         },
         "variant_picker": {
@@ -101,7 +101,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "MetaFibro® est un complément alimentaire disponible en pharmacie et prescrit par des médecins. Il a été dévellopé pour les personnes voulant retrouver la forme, la bonne humeur et refaire des activités qu'ils n'imaginaient pas refaire."
+        "texte": "MetaFibro® est un complément alimentaire disponible en pharmacie et prescrit par des médecins. Il a été développé pour les personnes voulant retrouver la forme, la bonne humeur et refaire des activités qu'ils n'imaginaient pas refaire."
       }
     },
     "description": {
