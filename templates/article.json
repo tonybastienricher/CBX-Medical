@@ -33,20 +33,6 @@
       "settings": {
       }
     },
-    "video_NXhHhW": {
-      "type": "video",
-      "settings": {
-        "heading": "Video",
-        "full_width": true,
-        "padding_bottom": true,
-        "texte_du_bouton": "Découvrez nos produits",
-        "lien_du_bouton": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=scwEX-QjqMM",
-        "description": ""
-      }
-    },
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c": {
       "type": "articles_similaires",
       "settings": {
@@ -66,7 +52,6 @@
   },
   "order": [
     "main",
-    "video_NXhHhW",
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c",
     "featured-collection"
   ]
