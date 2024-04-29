@@ -165,6 +165,7 @@
       "settings": {
         "alignement": "droite",
         "disposition": "fullscreen",
+        "image_hero": "shopify:\/\/shop_images\/Captured_ecran2023-11-08a11.28.22.png",
         "video": "shopify:\/\/files\/videos\/CBX RACE 16-9.mp4"
       }
     },
