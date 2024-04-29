@@ -3,6 +3,11 @@
     "main": {
       "type": "main-article",
       "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -10,11 +15,6 @@
             "blog_presentation": "<p>Lorem ipsum Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis<\/p>",
             "blog_show_date": false,
             "blog_show_author": false
-          }
-        },
-        "content": {
-          "type": "content",
-          "settings": {
           }
         },
         "references": {
@@ -26,8 +26,8 @@
         }
       },
       "block_order": [
-        "title",
         "content",
+        "title",
         "references"
       ],
       "settings": {
