@@ -113,7 +113,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Flex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
+        "texte": "CanFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
       }
     },
     "description": {
@@ -123,7 +123,7 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Découvrez Flex, notre gel refroidissant unique composé de cannabidiol (CBD - 100 mg), d'arnica, de menthe et d'eucalyptus. Cette formule développée par CBX Medical offre une sensation de fraîcheur revitalisante aux muscles et aux articulations fatigués.\n\nFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
+            "reponse": "Découvrez CanFlex, notre gel refroidissant unique composé de cannabidiol (CBD - 100 mg), d'arnica, de menthe et d'eucalyptus. Cette formule développée par CBX Medical offre une sensation de fraîcheur revitalisante aux muscles et aux articulations fatigués.\n\nCanFlex est idéal pour les sportifs et personnes actives qui peinent à récupérer après l'effort, ainsi que pour les seniors qui souhaitent gagner en mobilité."
           }
         },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
@@ -171,6 +171,7 @@
       "block_order": [
         "fe59b086-e655-4315-9fca-248691759988"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -184,7 +185,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -229,6 +229,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."

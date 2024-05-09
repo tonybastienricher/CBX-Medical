@@ -3,6 +3,11 @@
     "main": {
       "type": "main-article",
       "blocks": {
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -12,21 +17,17 @@
             "blog_show_author": false
           }
         },
-        "content": {
-          "type": "content",
-          "settings": {
-          }
-        },
         "references": {
           "type": "references",
+          "disabled": true,
           "settings": {
             "blog_references": "<p><\/p>"
           }
         }
       },
       "block_order": [
-        "title",
         "content",
+        "title",
         "references"
       ],
       "settings": {

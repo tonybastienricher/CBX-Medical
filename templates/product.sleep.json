@@ -120,7 +120,7 @@
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Le patch SLEEP avec 20 mg de CBD vous accompagne pour une nuit paisible et régénératrice."
+        "texte": "Le patch CanSleep avec 20 mg de CBD vous accompagne pour une nuit paisible et régénératrice."
       }
     },
     "description": {
@@ -130,7 +130,7 @@
           "type": "information",
           "settings": {
             "question": "Description",
-            "reponse": "Le patch SLEEP avec 20 mg de CBD vous accompagne pour une une nuit paisible et régénératrice. Conçu sur une base scientifique pour une transition paisible à travers les différentes étapes de votre nuit, chaque patch facilite un processus de réveil revitalisé et énergisé. Le patch SLEEP peut être appliqué sur toute surface de peau sèche et exposée, telle que l'intérieur de votre bras ou l'arrière de votre nuque.\n\nPour un résultat optimale, il est conseillé d'appliquer le patch environ 2 heures avant l'heure du coucher et de maintenir son application pour une durée de 24 heures. Reproduisez ce protocole nocturne sur une période de 14 jours pour expérimenter pleinement les bienfaits Sleep de CBX.\n\nChaque lot contient 14 unités offrant deux semaines de sommeil tranquille et non interrompu. \n\nLe patch Sleep au CBD de CBX Medical représente une solution efficace et sécure. Il contient du CBD (cannabidiol), une composante totalement légale, et exempt de propriétés addictives."
+            "reponse": "Le patch CanSleep avec 20 mg de CBD vous accompagne pour une une nuit paisible et régénératrice. Conçu sur une base scientifique pour une transition paisible à travers les différentes étapes de votre nuit, chaque patch facilite un processus de réveil revitalisé et énergisé. Le patch CanSleep peut être appliqué sur toute surface de peau sèche et exposée, telle que l'intérieur de votre bras ou l'arrière de votre nuque.\n\nPour un résultat optimale, il est conseillé d'appliquer le patch environ 2 heures avant l'heure du coucher et de maintenir son application pour une durée de 24 heures. Reproduisez ce protocole nocturne sur une période de 14 jours pour expérimenter pleinement les bienfaits de CanSleep.\n\nChaque lot contient 14 unités offrant deux semaines de sommeil tranquille et non interrompu. \n\nLe patch CanSleep au CBD de CBX Medical représente une solution efficace et sécure. Il contient du CBD (cannabidiol), une composante totalement légale, et exempt de propriétés addictives."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
@@ -170,6 +170,7 @@
       "block_order": [
         "00955326-94d6-4a85-9ee0-3cdec0507964"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }

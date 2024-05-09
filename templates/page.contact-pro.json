@@ -27,11 +27,30 @@
         "description": "",
         "liste": "Pharmacien\nDocteur\nKinésithérapeute"
       }
+    },
+    "3dde3eb3-8629-49df-8609-10aea85ff806": {
+      "type": "gros_texte_large",
+      "settings": {
+        "texte": "Formation dans notre champ",
+        "text_preset": "indent_0",
+        "couleur_du_background": "green",
+        "couleur_du_texte": "offwhite"
+      }
+    },
+    "1cad1d39-3d73-4e8b-b5f2-a6ab9f677984": {
+      "type": "hero",
+      "settings": {
+        "alignement": "droite",
+        "disposition": "fullscreen",
+        "video": "shopify:\/\/files\/videos\/230928_CBX_Edit_v2 (1) (1).mp4"
+      }
     }
   },
   "order": [
     "a4228dc9-5ab8-43db-b8eb-35c4590dace8",
     "26cb7220-1ed8-4677-9076-f8f0e114fb17",
-    "form"
+    "form",
+    "3dde3eb3-8629-49df-8609-10aea85ff806",
+    "1cad1d39-3d73-4e8b-b5f2-a6ab9f677984"
   ]
 }

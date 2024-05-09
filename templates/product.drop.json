@@ -191,6 +191,7 @@
       "block_order": [
         "399829bb-204c-4fd4-aa69-8b292c5fd37b"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -204,7 +205,6 @@
     },
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
       "type": "faq",
-      "disabled": true,
       "blocks": {
         "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
           "type": "faq",
@@ -249,6 +249,7 @@
         "636880b9-a708-42f4-98a0-a0f075755083",
         "0151f032-be6a-4c3b-bce7-9a21878fbf78"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Pour les curieux",
         "titre": "Pour les curieux."

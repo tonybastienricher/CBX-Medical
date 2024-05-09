@@ -3,10 +3,10 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "image_bg": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg",
-        "heading": "Nous contacter",
-        "description": "Fondée en 2020 par Flora Mer, Jonathan Blondiau et Lionel Quataert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis",
-        "liste": ""
+        "image_bg": "shopify:\/\/shop_images\/Capture_d_ecran_2023-10-10_a_12.23.20.png",
+        "heading": "Votre prescripteur Cash-Back",
+        "description": "Afin de vous envoyer le prescripteur, nous avons besoin de votre adresse postale, veuillez l'indiquer dans la partir \"Commentaire\". Nous l'enverrons seulement aux professionnels de la santé concernés.",
+        "liste": "Docteur\nKinésithérapeute\nAutre"
       }
     }
   },

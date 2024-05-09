@@ -17,35 +17,40 @@
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "250Mg CBG"
+            "text_droite": "PEA, Coenzyme Q10, Boswellia & Magnésium"
+          }
+        },
+        "35195ec4-e684-43d1-862b-5195c77a1061": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "Quantité",
+            "text_droite": "60 Gélules"
           }
         },
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8": {
           "type": "information",
           "settings": {
             "text_gauche": "Type",
-            "text_droite": "Gel chauffant"
+            "text_droite": "Complément Alimentaire"
+          }
+        },
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e9": {
+          "type": "information",
+          "settings": {
+            "text_gauche": "CNK",
+            "text_droite": "4731675"
           }
         },
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb": {
           "type": "liste",
-          "disabled": true,
           "settings": {
-            "liste": "Cannabinoides 100% naturels\nTracabilite totale\nDelivres et prescrits par les professionnels\nFabriques 100% en Europe"
+            "liste": "Endo-cannabinoide naturel\nTracabilité totale\nDelivré et prescrit par les professionnels\nFabriqué 100% en Europe"
           }
         },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button"
-          }
-        },
-        "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f": {
-          "type": "information",
-          "settings": {
-            "text_gauche": "CNK",
-            "text_droite": "4394623"
           }
         },
         "buy_buttons": {
@@ -54,26 +59,37 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
+        },
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20": {
+          "type": "text",
+          "settings": {
+            "text": "Commandez aujourd'hui, livré demain",
+            "mobile_visible": false,
+            "show_border": false,
+            "text_style": "uppercase"
+          }
         }
       },
       "block_order": [
         "title",
         "59abd3db-bb7f-45e2-af6b-ece656034d41",
         "c62c4cac-e956-4702-9df5-61365c8a4ab8",
+        "35195ec4-e684-43d1-862b-5195c77a1061",
         "bf44daa8-d56e-4199-bfa4-a5e552a406e8",
+        "bf44daa8-d56e-4199-bfa4-a5e552a406e9",
         "346bef02-4497-4026-8e16-4c2fcfe4bfeb",
         "variant_picker",
-        "eaef6dc7-da47-45a8-9fbe-6132f2b46b7f",
-        "buy_buttons"
+        "buy_buttons",
+        "3ed467b4-b76c-414a-a9a5-51d81ca24f20"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "media_size": "large",
-        "constrain_to_viewport": true,
+        "media_size": "small",
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "stacked",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -81,72 +97,35 @@
         "padding_bottom": 12
       }
     },
-    "d95fcd0f-5c8a-497b-9197-8cd84ef73e36": {
-      "type": "liste",
-      "blocks": {
-        "cb79edd7-c8fd-4342-9c40-12a2580baffc": {
-          "type": "liste",
-          "settings": {
-            "texte": "Usage chronique"
-          }
-        },
-        "03c3577e-a1ba-4d44-b794-5d0b50447e4d": {
-          "type": "liste",
-          "settings": {
-            "texte": "4 plantes"
-          }
-        },
-        "7c0ad136-8792-46cf-a78b-740be0fec09b": {
-          "type": "liste",
-          "settings": {
-            "texte": "CBG agriculture Bio"
-          }
-        },
-        "ece3ff55-274c-4493-aa00-32e6191918d0": {
-          "type": "liste",
-          "settings": {
-            "texte": "Gel chauffant"
-          }
-        }
-      },
-      "block_order": [
-        "cb79edd7-c8fd-4342-9c40-12a2580baffc",
-        "03c3577e-a1ba-4d44-b794-5d0b50447e4d",
-        "7c0ad136-8792-46cf-a78b-740be0fec09b",
-        "ece3ff55-274c-4493-aa00-32e6191918d0"
-      ],
-      "settings": {
-      }
-    },
     "2d5b7091-607b-47ba-b651-9699bb120112": {
       "type": "texte-large",
       "settings": {
         "sur_titre": "",
-        "texte": "Découvrez CanMove, votre allié pour un confort musculaire et articulaire optimal. Ce gel chauffant, enrichi en cannabigérol (CBG) naturel et en boswellia, offre une solution efficace contre les raideurs musculaires et articulaires."
+        "texte": "MetaFibro® est un complément alimentaire disponible en pharmacie et prescrit par des médecins. Il a été développé pour les personnes voulant retrouver la forme, la bonne humeur et refaire des activités qu'ils n'imaginaient pas refaire."
       }
     },
     "description": {
       "type": "description",
       "blocks": {
-        "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
-          "type": "information",
-          "settings": {
-            "question": "Description",
-            "reponse": "Découvrez CanMove, votre allié pour un confort musculaire et articulaire optimal. Ce gel chauffant, enrichi en cannabigérol (CBG) naturel et en boswellia, offre une solution efficace contre les raideurs musculaires et articulaires. \nIl prépare efficacement vos muscles et vos articulations avant l'effort, favorisant une bonne condition physique. Spécialement conçu pour les athlètes qui souhaitent optimiser leur préparation à l'effort, ainsi que pour les personnes actives cherchant à fluidifier leurs mouvements quotidiens, CanMove est votre atout pour une mobilité sans entraves. Prenez le contrôle de votre bien-être physique avec CanMove dès aujourd'hui."
-          }
-        },
         "bc58eff4-5c02-4300-a790-79e97bab67c4": {
           "type": "information",
           "settings": {
-            "question": "Conseils d’utilisation",
-            "reponse": "Appliquer délicatement 2 à 4 fois par jour une fine couche de gel chauffant sur la peau de la zone à traiter et faire pénétrer en massant la zone. Ne pas utiliser sur des plaies ou des zones de peau irritée."
+            "question": "Description",
+            "reponse": "Le complément alimentaire Metafibro® contribue :\n\n● à réduire la fatigue\n● à un métabolisme énergétique normal\n● au fonctionnement normal du système nerveux\n● à protéger les cellules contre le stress oxydatif\n\nPour un esprit clair, un bon moral et donner plus d’énergie mentale, le complément alimentaire révolutionnaire MetaFibro® contient un mélange unique de PEA, de coenzyme Q10, de Boswellia Serrata et de chélate de magnésium hautement biodisponible.\nMetaFibro® est prescrit par des médecins."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
           "type": "information",
           "settings": {
-            "question": "Ingrédients clés",
-            "reponse": "Cannabigérol, Boswellia Serrata Gum, Capiscum Fuitescens Fruite Extract"
+            "question": "Ingredients clés",
+            "reponse": "MetaFibro® contient un mélange unique de PEA, de coenzyme Q10, de Boswellia Serrata et de chélate de magnésium hautement biodisponible"
+          }
+        },
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
+          "type": "information",
+          "settings": {
+            "question": "Conseils d’utilisation",
+            "reponse": "Dose quotidienne recommandée : 2 à 4 gélules par jour, de préférence pendant les repas.\nPrise initiale : 2 gélules matin et soir pendant minimum 15 jours\nPrise d'entretien : 1 gélule le matin et 1 autre le soir"
           }
         },
         "7a25d582-8819-4428-be22-996b435de475": {
@@ -159,36 +138,19 @@
         }
       },
       "block_order": [
-        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
         "bc58eff4-5c02-4300-a790-79e97bab67c4",
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb",
+        "6053cd50-275d-4b9c-81ae-cf85efb083ef",
         "7a25d582-8819-4428-be22-996b435de475"
       ],
       "settings": {
         "alignement": "droite"
       }
     },
-    "16883714357c83a977": {
-      "type": "apps",
-      "blocks": {
-        "c4ffdc9f-eb0c-40c5-ba70-f435021e6634": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "c4ffdc9f-eb0c-40c5-ba70-f435021e6634"
-      ],
-      "disabled": true,
-      "settings": {
-        "include_margins": true
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "sur_titre": "Complétez",
+        "sur_titre": "",
         "titre": "Ceci pourrait également vous plaire"
       }
     },
@@ -247,10 +209,8 @@
   },
   "order": [
     "main",
-    "d95fcd0f-5c8a-497b-9197-8cd84ef73e36",
     "2d5b7091-607b-47ba-b651-9699bb120112",
     "description",
-    "16883714357c83a977",
     "related-products",
     "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
   ]

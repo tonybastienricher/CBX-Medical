@@ -100,8 +100,8 @@
         "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Formations cannabinoïdes<\/strong>",
-            "heading_size": "h2"
+            "heading": "Formations cannabinoïdes",
+            "heading_size": "cbx-text-5xls"
           }
         },
         "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-text-1": {
@@ -152,8 +152,8 @@
         "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Nos projets R&D<\/strong>",
-            "heading_size": "h1"
+            "heading": "Nos projets R&D",
+            "heading_size": "cbx-text-5xls"
           }
         },
         "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1": {
