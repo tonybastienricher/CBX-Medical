@@ -10,7 +10,7 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div class='!cbx-border-0 cbx-fixed cbx-bottom-5 cbx-w-[calc(100vw-20px)] lg:cbx-static lg:cbx-w-full cbx-z-20 lg:cbx-pt-2' {{ block.shopify_attributes }}>
+<div class='!cbx-border-0 cbx-fixed cbx-left-0 cbx-right-0 cbx-m-auto cbx-bottom-5 cbx-w-[calc(100vw-20px)] lg:cbx-static lg:cbx-w-full cbx-z-20 lg:cbx-pt-2' {{ block.shopify_attributes }}>
     {%- if product != blank -%}
         {%- liquid
             assign gift_card_recipient_feature_active = false
@@ -69,6 +69,7 @@
                     -%}
                     <button id="ProductSubmitButton-{{ section_id }}"
                             type="submit"
+                            aria-disabled='false'
                             name="add"
                             class="product-form__submit cbx-btn cbx-btn-vert cbx-w-full cbx-border lg:cbx-border-0 cbx-border-offWhite cbx-rounded"
                             {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}disabled{% endif %}>

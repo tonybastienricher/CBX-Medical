@@ -62,23 +62,24 @@ class CartItems extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'main-cart-items',
-        section: document.getElementById('main-cart-items').dataset.id,
-        selector: '.js-contents'
+        id: 'main-cart-footer-page',
+        section: 'main-cart-footer-page',
+        selector: '.main-cart-footer-page'
+      },
+      {
+        id: 'main-cart-items-page',
+        section: 'main-cart-items-page',
+        selector: '.main-cart-items-page'
+      },
+      {
+        id: 'CartDrawer',
+        section: 'cart-drawer',
+        selector: '.drawer__inner'
       },
       {
         id: 'cart-item_count',
-        section: '#cart-item_count'
-      },
-      /*{
-        id: 'cart-live-region-text',
-        section: 'cart-live-region-text',
-        selector: '.shopify-section'
-      },*/
-      {
-        id: 'main-cart-footer',
-        section: document.getElementById('main-cart-footer').dataset.id,
-        selector: '.js-contents'
+        section: 'cart-item_count',
+        selector: '#cart-item_count'
       }
     ];
   }
@@ -117,8 +118,11 @@ class CartItems extends HTMLElement {
         if (cartDrawerWrapper) cartDrawerWrapper.classList.toggle('is-empty', parsedState.item_count === 0);
 
         this.getSectionsToRender().forEach((section) => {
+          console.log(section);
           const elementToReplaces =
             document.querySelectorAll(section.selector) || document.getElementById(section.id);
+
+          console.log(elementToReplaces);
 
           elementToReplaces.forEach((elementToReplace) => {
             elementToReplace.innerHTML = this.getSectionInnerHTML(

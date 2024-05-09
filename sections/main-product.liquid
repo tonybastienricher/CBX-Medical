@@ -1,4 +1,5 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
@@ -108,7 +109,7 @@
                             {{- block.settings.text -}}
                         </p>
                     {%- when 'title' -%}
-                        <div class='cbx-flex cbx-justify-between cbx-items-end cbx-py-2.5 lg:cbx-py-5'>
+                        <div class='cbx-flex cbx-justify-between cbx-items-end cbx-py-2.5 lg:cbx-py-5 cbx-gap-x-2.5'>
                             <div class="product__title" {{ block.shopify_attributes }}>
                                 <h1 class='cbx-text-3xl lg:cbx-text-6xl	cbx-font-medium cbx-text-green cbx-uppercase'>{{ product.title | escape }}</h1>
                             </div>

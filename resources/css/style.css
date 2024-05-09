@@ -102,7 +102,7 @@
     }
 
     .cbx-btn {
-        @apply cbx-font-medium cbx-p-3 cbx-rounded-full cbx-text-xss cbx-text-center cbx-text-green cbx-uppercase;
+        @apply cbx-font-medium cbx-px-4 cbx-py-2.5 cbx-rounded-full cbx-text-xss cbx-text-center cbx-text-green cbx-uppercase;
         /* Auto layout */
         leading-trim: both;
         text-edge: cap;
@@ -136,6 +136,10 @@
         background: #1E271D;
         width: 100%;
         color: white;
+    }
+
+    .cbx-btn-outline-vert {
+        @apply cbx-border cbx-border-green cbx-text-green hover:cbx-bg-green hover:cbx-text-white;
     }
 
     .cbx-btn-green6 {
@@ -504,7 +508,7 @@ article.article h5 {
 }*/
 
 article.article h1 {
-    @apply cbx-text-6xl cbx-py-10 cbx-pb-5;
+    @apply cbx-text-4xl	lg:cbx-text-6xl cbx-py-10 cbx-pb-5;
 }
 
 article.drawer-content h1 {
@@ -549,4 +553,10 @@ article.article strong {
 article.drawer-content a,
 article.article a {
     @apply cbx-underline cbx-font-medium;
+}
+
+article iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: 100%;
 }

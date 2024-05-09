@@ -5,8 +5,6 @@
   {% render 'cart-drawer' %}
 {% endcomment %}
 
-<script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
     <div id="CartDrawer" class="cart-drawer cbx-p-3 cbx-pt-0 cbx-text-green3">
         <div class="drawer__inner"
@@ -261,19 +259,23 @@
                             name="checkout" form="CartDrawer-Form" {% if cart == empty %} disabled{% endif %}>
                         {{ 'sections.cart.checkout' | t }}
                     </button>
-
-                    {%- if shop.customer_accounts_enabled -%}
-                        <a href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
-                           class="cbx-btn cbx-btn-green6 cbx-w-full cbx-uppercase">
-                            {%- liquid
-                                if customer
-                                    echo 'customer.account_fallback' | t
-                                else
-                                    echo 'customer.log_in' | t
-                                endif
-                            -%}
+                    <div class='cbx-flex cbx-gap-x-2.5'>
+                        {%- if shop.customer_accounts_enabled -%}
+                            <a href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
+                               class="cbx-btn cbx-btn-green6 cbx-w-full cbx-uppercase">
+                                {%- liquid
+                                    if customer
+                                        echo 'customer.account_fallback' | t
+                                    else
+                                        echo 'customer.log_in' | t
+                                    endif
+                                -%}
+                            </a>
+                        {%- endif -%}
+                        <a href='{{ routes.cart_url }}' class='cbx-btn cbx-btn-outline-vert cbx-w-full cbx-uppercase'>
+                            {{ 'sections.cart.cart' | t }}
                         </a>
-                    {%- endif -%}
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,66 @@
+<section id="main-cart-footer-page" aria-labelledby="summary-heading" class="main-cart-footer-page cbx-w-full cbx-flex">
+    <div class="cbx-flex cbx-flex-col cbx-w-full cbx-gap-4">
+        <div class="cbx-rounded-xl cbx-p-4 cbx-bg-gray-100 cbx-w-full">
+            <h2 id="summary-heading" class="cbx-text-xl">
+                Order summary
+            </h2>
+
+            <ul class="cbx-flex cbx-flex-col cbx-py-6">
+                <li class="cbx-w-full cbx-flex cbx-justify-between cbx-py-4">
+                    <span class="">
+                        Original subtotal
+                    </span>
+                    <span class="">
+                        {{ cart.original_total_price | money_with_currency }}
+                    </span>
+                </li>
+                <script>
+                    console.log({{ cart | json }})
+                </script>
+                {% if cart.total_discount > 0 %}
+                    <li class="cbx-w-full cbx-flex cbx-justify-between cbx-border-t cbx-border-gray-200 cbx-py-4">
+                        <span>Total discount</span>
+                        <span>
+                        {{ cart.total_discount | money_with_currency }}
+                    </span>
+                    </li>
+                {% endif %}
+                <li class="cbx-w-full cbx-flex cbx-flex-col cbx-justify-between cbx-border-t cbx-border-gray-200 cbx-py-4">
+                    <span class="">Tax estimate</span>
+                    <span class="cbx-text-sm">{{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}</span>
+                </li>
+                <li class="cbx-w-full cbx-flex cbx-justify-between cbx-border-t cbx-border-gray-200 pt-2 cbx-font-semibold cbx-py-4">
+                    <span>
+                        {{ 'sections.cart.subtotal' | t }}
+                    </span>
+                    <span>{{ cart.total_price | money_with_currency }}</span>
+                </li>
+            </ul>
+            <div class="cbx-flex cbx-w-full">
+                {% if cart == empty %}
+                    <button class="cbx-btn cbx-bg-green cbx-text-white cbx-w-full" disabled>
+                        {{ 'sections.cart.checkout' | t }}
+                    </button>
+                {% else %}
+                    <a href="/checkout" class="cbx-btn cbx-bg-green cbx-text-white  cbx-w-full">
+                        {{ 'sections.cart.checkout' | t }}
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Note -->
+        <div class="cbx-rounded-xl cbx-p-4 cbx-bg-gray-100 cbx-w-full">
+            <h2 id="summary-heading" class="cbx-text-xl">
+                Note de commande
+            </h2>
+
+            <note-order class="cbx-flex cbx-w-full cbx-pt-4">
+                <label for="note" class="cbx-sr-only">Note</label>
+                <textarea class="input-class"
+                        name="note" id="note" rows="6" placeholder="Note">{{ cart.note }}</textarea>
+            </note-order>
+
+        </div>
+    </div>
+</section>

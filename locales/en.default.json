@@ -281,6 +281,7 @@
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
       "checkout": "Check out",
+      "cart": "Cart",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
@@ -339,8 +340,8 @@
     "page": {
       "title": "Page title"
     },
-    "pile_cartes_apprendre" : {
-      "retour" : "Going back"
+    "pile_cartes_apprendre": {
+      "retour": "Going back"
     }
   },
   "localization": {
