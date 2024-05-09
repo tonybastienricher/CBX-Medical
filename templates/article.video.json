@@ -16,19 +16,11 @@
             "blog_show_date": false,
             "blog_show_author": false
           }
-        },
-        "references": {
-          "type": "references",
-          "disabled": true,
-          "settings": {
-            "blog_references": "<p><\/p>"
-          }
         }
       },
       "block_order": [
-        "content",
         "title",
-        "references"
+        "content"
       ],
       "settings": {
       }
