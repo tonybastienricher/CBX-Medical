@@ -28,12 +28,21 @@
             "emplacement": "box2",
             "menu": "footer"
           }
+        },
+        "link_list_d9Q8Ch": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Apprendre",
+            "emplacement": "box2",
+            "menu": "apprendre"
+          }
         }
       },
       "block_order": [
         "footer-0",
         "46889b8d-8103-4082-8537-e13ee4246620",
-        "01aaae93-2037-45f7-a785-ca5dd0a8c7f2"
+        "01aaae93-2037-45f7-a785-ca5dd0a8c7f2",
+        "link_list_d9Q8Ch"
       ],
       "settings": {
         "newsletter_heading": "Inscrivez-vous à notre newsletter",
