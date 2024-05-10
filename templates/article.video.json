@@ -19,8 +19,8 @@
         }
       },
       "block_order": [
-        "title",
-        "content"
+        "content",
+        "title"
       ],
       "settings": {
       }
