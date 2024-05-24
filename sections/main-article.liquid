@@ -1,32 +1,5 @@
 <div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pb-20 lg:cbx-pb-9'>
-    <div class='cbx-flex lg:cbx-order-2'>
-        <div class='cbx-w-full cbx-top-0 cbx-sticky cbx-rounded-b lg:cbx-rounded cbx-overflow-hidden cbx-aspect-square lg:cbx-aspect-auto lg:cbx-h-screen'>
-            {%- if article.image -%}
-                {% if block.settings.image_height == 'adapt' and article.image %}
-                    style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-                {% endif %}>
-                <img srcset="
-                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
-                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
-                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
-                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
-                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
-                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
-                  {{ article.image | image_url }} {{ article.image.width }}w"
-                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                     src="{{ article.image | image_url: width: 1100 }}"
-                     loading="eager"
-                     class='cbx-absolute cbx-w-full cbx-h-full cbx-object-cover cbx-inset-0'
-                     fetchpriority="high"
-                     width="{{ article.image.width }}"
-                     height="{{ article.image.height }}"
-                     alt="{{ article.image.alt | escape }}">
-            {% else %}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
-            {%- endif -%}
-        </div>
-    </div>
-    <article class="article cbx-px-[10px] lg:cbx-px-16 cbx-pt-5 lg:cbx-pt-0 lg:cbx-order-1" itemscope
+    <article class="article cbx-px-[10px] lg:cbx-px-16 cbx-pt-[90px] lg:cbx-pt-0" itemscope
              itemtype="http://schema.org/BlogPosting">
         {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -264,6 +237,33 @@
                 </div>
             {%- endif -%}
     </article>
+    <div class='cbx-flex cbx-pt-6'>
+        <div class='cbx-w-full cbx-top-0 cbx-sticky cbx-rounded-b lg:cbx-rounded cbx-overflow-hidden cbx-aspect-square lg:cbx-aspect-auto lg:cbx-h-screen'>
+            {%- if article.image -%}
+                {% if block.settings.image_height == 'adapt' and article.image %}
+                    style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+                {% endif %}>
+                <img srcset="
+                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ article.image | image_url }} {{ article.image.width }}w"
+                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                     src="{{ article.image | image_url: width: 1100 }}"
+                     loading="eager"
+                     class='cbx-absolute cbx-w-full cbx-h-full cbx-object-cover cbx-inset-0'
+                     fetchpriority="high"
+                     width="{{ article.image.width }}"
+                     height="{{ article.image.height }}"
+                     alt="{{ article.image.alt | escape }}">
+            {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+            {%- endif -%}
+        </div>
+    </div>
 </div>
 
 <script type="application/ld+json">
