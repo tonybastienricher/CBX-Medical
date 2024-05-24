@@ -1,5 +1,5 @@
 <div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pb-20 lg:cbx-pb-9'>
-    <div class='cbx-flex'>
+    <div class='cbx-flex lg:cbx-order-2'>
         <div class='cbx-w-full cbx-top-0 cbx-sticky cbx-rounded-b lg:cbx-rounded cbx-overflow-hidden cbx-aspect-square lg:cbx-aspect-auto lg:cbx-h-screen'>
             {%- if article.image -%}
                 {% if block.settings.image_height == 'adapt' and article.image %}
@@ -26,7 +26,7 @@
             {%- endif -%}
         </div>
     </div>
-    <article class="article cbx-px-[10px] lg:cbx-px-12 lg:cbx-px-16 cbx-pt-5 lg:cbx-pt-0" itemscope
+    <article class="article cbx-px-[10px] lg:cbx-px-16 cbx-pt-5 lg:cbx-pt-0 lg:cbx-order-1" itemscope
              itemtype="http://schema.org/BlogPosting">
         {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -35,7 +35,7 @@
                 {% render block %}
             </div>
         {%- when 'title' -%}
-            <header class="{% if block.settings.blog_divide %}cbx-border-b cbx-border-green5 cbx-border-dashed{% endif %} cbx-flex cbx-flex-col lg:cbx-h-[calc(100vh-108px)] cbx-justify-between"{{ block.shopify_attributes }}>
+            <header class="{% if block.settings.blog_divide %}cbx-border-b cbx-border-green5 cbx-border-dashed{% endif %} cbx-flex cbx-flex-col cbx-justify-between"{{ block.shopify_attributes }}>
                 <div>
                     {% render 'breadcrumb', title: block.settings.breadcrumb %}
                 </div>
