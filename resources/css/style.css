@@ -560,3 +560,13 @@ article iframe {
     aspect-ratio: 16 / 9;
     height: 100%;
 }
+
+
+/* COOKIE BANNER */
+
+.shopify-pc__banner__dialog {
+    font-size: 14px;
+    font-family: 'KH Teka';
+}
+
+/* END COOKIE BANNER */
