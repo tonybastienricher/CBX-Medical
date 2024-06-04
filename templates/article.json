@@ -8,6 +8,12 @@
           "settings": {
           }
         },
+        "image": {
+          "type": "image"
+        },
+        "breadcrumb": {
+          "type": "breadcrumb"
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -26,6 +32,8 @@
         }
       },
       "block_order": [
+        "image",
+        "breadcrumb",
         "title",
         "content",
         "references"

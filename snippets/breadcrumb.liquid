@@ -1,8 +1,8 @@
 {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
     {%- assign t = template | split: '.' | first -%}
 
-    <nav class="breadcrumbs cbx-border-b cbx-border-green5 cbx-border-dashed cbx-pb-2.5" role="navigation" aria-label="breadcrumbs">
-        <ol class="breadcrumbs__list">
+    <nav class="breadcrumbs cbx-pt-4" role="navigation" aria-label="breadcrumbs">
+        <ol class="breadcrumbs__list cbx-flex cbx-gap-1.5">
             {%- case t -%}
                 {%- when 'page' -%}
                     <li class="breadcrumbs__item">

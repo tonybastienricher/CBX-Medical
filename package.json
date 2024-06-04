@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "shopify": "shopify theme dev --store=cbx-medical.myshopify.com",
+    "dev": "shopify theme dev --store=cbx-medical.myshopify.com",
     "watch": "npx mix watch",
     "build": "npx mix --production"
   },

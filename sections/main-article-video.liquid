@@ -1,5 +1,11 @@
-<div class='cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-2 cbx-pb-20 lg:cbx-pb-9'>
-    <article class="article cbx-px-[10px] lg:cbx-px-16 cbx-pt-[90px] lg:cbx-pt-0" itemscope
+<div class='cbx-container-site cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-6 cbx-pb-20 lg:cbx-pb-9 cbx-gap-y-4'>
+    <div class='cbx-relative cbx-h-full cbx-order-2 cbx-hidden lg:cbx-block'>
+        <div class='cbx-top-5 cbx-sticky cbx-w-full cbx-rounded cbx-border cbx-border-green5 cbx-font-display cbx-px-4 cbx-py-6 cbx-text-sm'>
+            <ul id='titres' class='cbx-flex cbx-flex-col cbx-gap-3'>
+            </ul>
+        </div>
+    </div>
+    <article class="article cbx-px-[10px] lg:cbx-px-6 cbx-pt-[90px] lg:cbx-pt-0 lg:cbx-col-span-4 cbx-order-1 lg:cbx-order-2" itemscope
              itemtype="http://schema.org/BlogPosting">
         {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -7,13 +13,58 @@
             <div class="">
                 {% render block %}
             </div>
-        {%- when 'title' -%}
-            <header class="{% if block.settings.blog_divide %}cbx-border-b cbx-border-green5 cbx-border-dashed{% endif %} cbx-flex cbx-flex-col cbx-justify-between"{{ block.shopify_attributes }}>
-                <div>
-                    {% render 'breadcrumb', title: block.settings.breadcrumb %}
+        {% when 'image' %}
+            <div class='cbx-w-full lg:cbx-rounded cbx-overflow-hidden cbx-aspect-video cbx-relative'
+                    {%- if article.image -%}
+                    {% if block.settings.image_height == 'adapt' and article.image %}
+                 style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
+                {% else %}
+                    >
+                {% endif %}
+                <img srcset="
+                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ article.image | image_url }} {{ article.image.width }}w"
+                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                     src="{{ article.image | image_url: width: 1100 }}"
+                     loading="eager"
+                     class='cbx-absolute cbx-w-full cbx-h-full cbx-object-cover cbx-inset-0'
+                     fetchpriority="high"
+                     width="{{ article.image.width }}"
+                     height="{{ article.image.height }}"
+                     alt="{{ article.image.alt | escape }}">
+                {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
+                {%- endif -%}
+            </div>
+        {% when 'breadcrumb' %}
+            <div class='cbx-pt-4 cbx-pb-2.5 cbx-flex cbx-flex-col'>
+                <!-- Tag + date de l'article -->
+                <div class='cbx-flex cbx-flex-col lg:cbx-flex-row cbx-gap-2 cbx-justify-between lg:cbx-items-center '>
+                    {%- if article.tags.size > 0 -%}
+                        <div class='cbx-flex cbx-flex-wrap cbx-gap-2.5'>
+                            {% for tag in article.tags %}
+                                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class='cbx-px-4 cbx-py-1.5 cbx-text-xss cbx-text-center cbx-uppercase cbx-bg-grisFonce hover:cbx-opacity-90 cbx-rounded cbx-border cbx-border-green6 !cbx-no-underline'>
+                                    {{ tag }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    <div class='cbx-flex cbx-gap-2.5'>
+                        <span class='cbx-text-xss cbx-font-body'>{{ article.published_at | time_tag: format: 'date' }} - {{ article.author }}</span>
+                    </div>
                 </div>
+
+                {% render 'breadcrumb', title: block.settings.breadcrumb %}
+            </div>
+        {%- when 'title' -%}
+            <header class="cbx-flex cbx-flex-col cbx-justify-between"{{ block.shopify_attributes }}>
                 <div>
-                    <h1 class="article-template__title" itemprop="headline">
+                    <h1 class="article-template__title !cbx-pt-5" itemprop="headline">
                         {{ article.title | escape }}
                     </h1>
                     {%- if block.settings.blog_show_date -%}
@@ -33,7 +84,7 @@
                 </div>
             </header>
         {%- when 'content' -%}
-            <div class="cbx-py-10 cbx-flex cbx-flex-col cbx-gap-5"
+            <div class="cbx-flex cbx-flex-col cbx-gap-5"
                  itemprop="articleBody" {{ block.shopify_attributes }}>
                 {{ article.content }}
             </div>
@@ -237,46 +288,23 @@
                 </div>
             {%- endif -%}
     </article>
-    <div class='cbx-flex cbx-pt-6'>
-        <div class='cbx-w-full cbx-top-0 cbx-sticky cbx-rounded-b lg:cbx-rounded cbx-overflow-hidden cbx-aspect-video lg:cbx-aspect-auto lg:cbx-h-screen'>
-            {%- if article.image -%}
-                {% if block.settings.image_height == 'adapt' and article.image %}
-                    style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
-                {% endif %}>
-                <img srcset="
-                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
-                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
-                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
-                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
-                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
-                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
-                  {{ article.image | image_url }} {{ article.image.width }}w"
-                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                     src="{{ article.image | image_url: width: 1100 }}"
-                     loading="eager"
-                     class='cbx-absolute cbx-w-full cbx-h-full cbx-object-cover cbx-inset-0'
-                     fetchpriority="high"
-                     width="{{ article.image.width }}"
-                     height="{{ article.image.height }}"
-                     alt="{{ article.image.alt | escape }}">
-            {% else %}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder cbx-absolute cbx-object-cover cbx-inset-0 cbx-w-full cbx-h-full' }}
-            {%- endif -%}
-        </div>
+
+    <div class='cbx-relative cbx-h-full cbx-order-3'>
+        <div class='cbx-top-5 cbx-sticky cbx-rounded cbx-h-[300px] cbx-bg-green5'></div>
     </div>
 </div>
 
 <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Article",
-    "articleBody": {{ article.content | strip_html | json }},
+    {
+      "@context": "http://schema.org",
+      "@type": "Article",
+      "articleBody": {{ article.content | strip_html | json }},
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": {{ request.origin | append: page.url | json }}
     },
     "headline": {{ article.title | json }},
-    {% if article.excerpt != blank %}
+{% if article.excerpt != blank %}
       "description": {{ article.excerpt | strip_html | json }},
     {% endif %}
     {% if article.image %}
@@ -295,10 +323,43 @@
       "name": {{ shop.name | json }}
     }
   }
+</script>
+
+<script>
+  // Sélectionnez tous les titres d'articles
+  let articleTitles = document.querySelectorAll('article :is(h1, h2, h3, h4, h5, h6)');
+
+  // Sélectionnez la liste ul
+  let ulElement = document.getElementById('titres');
+
+  articleTitles.forEach((title, index) => {
+    console.log(title.textContent);
+
+    // Créez une ancre si elle n'existe pas
+    if (!title.id) {
+      title.id = `article-title-${index}`;
+    }
+
+    // Créez un nouvel élément li
+    let liElement = document.createElement('li');
+
+    // Créez un nouvel élément a
+    let aElement = document.createElement('a');
+
+    // Définissez le href de l'élément a pour pointer vers l'ancre du titre
+    aElement.href = `#${title.id}`;
+
+    // Définissez le texte de l'élément a pour être le texte du titre
+    aElement.textContent = title.textContent;
+
+    // Ajoutez l'élément a à l'élément li
+    liElement.appendChild(aElement);
+
+    // Ajoutez l'élément li à la liste ul
+    ulElement.appendChild(liElement);
 
 
-
-
+  });
 </script>
 
 {% schema %}
@@ -311,6 +372,10 @@
       "type": "@app"
     },
     {
+      "type": "image",
+      "name": "Image"
+    },
+    {
       "type": "breadcrumb",
       "name": "Breadcrumb",
       "limit": 1,
@@ -319,7 +384,7 @@
           "type": "text",
           "id": "breadcrumb",
           "label": "Breadcrumb",
-          "default": "Index articles"
+          "default": "Blog"
         }
       ]
     },

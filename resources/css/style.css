@@ -455,10 +455,6 @@ table.order-details td:first-child {
 
 /* BREADCRUMB */
 
-.breadcrumbs {
-    margin: 0 0 0.625rem;
-}
-
 .breadcrumbs__list {
     list-style-type: none;
     margin: 0;
@@ -466,11 +462,12 @@ table.order-details td:first-child {
 }
 
 .breadcrumbs__item {
-    @apply cbx-text-green5 cbx-inline-block cbx-text-xss cbx-uppercase cbx-no-underline;
+    @apply cbx-flex cbx-text-green5 cbx-text-xss cbx-uppercase cbx-no-underline;
 }
 
 .breadcrumbs__item:not(:last-child):after {
     content: '/';
+    padding-left: 4px;
 }
 
 .breadcrumbs__item:last-child {
