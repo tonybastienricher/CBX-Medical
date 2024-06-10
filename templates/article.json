@@ -3,16 +3,16 @@
     "main": {
       "type": "main-article",
       "blocks": {
-        "content": {
-          "type": "content",
+        "image": {
+          "type": "image",
           "settings": {
           }
         },
-        "image": {
-          "type": "image"
-        },
         "breadcrumb": {
-          "type": "breadcrumb"
+          "type": "breadcrumb",
+          "settings": {
+            "breadcrumb": "Blog"
+          }
         },
         "title": {
           "type": "title",
@@ -21,6 +21,11 @@
             "blog_presentation": "<p>Lorem ipsum Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis<\/p>",
             "blog_show_date": false,
             "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
           }
         },
         "references": {
@@ -39,6 +44,41 @@
         "references"
       ],
       "settings": {
+      }
+    },
+    "faq_B9V3MG": {
+      "type": "faq",
+      "blocks": {
+        "faq_aVQB9E": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal? ",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "faq_6xWgzJ": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal? ",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "faq_X8NzGL": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal? ",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        }
+      },
+      "block_order": [
+        "faq_aVQB9E",
+        "faq_6xWgzJ",
+        "faq_X8NzGL"
+      ],
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
       }
     },
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c": {
@@ -60,6 +100,7 @@
   },
   "order": [
     "main",
+    "faq_B9V3MG",
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c",
     "featured-collection"
   ]
