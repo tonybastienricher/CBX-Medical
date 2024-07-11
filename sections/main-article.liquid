@@ -325,7 +325,17 @@
     </article>
 
     <div class='cbx-relative cbx-h-full cbx-order-3'>
-        <div class='cbx-top-5 cbx-sticky cbx-rounded cbx-h-[300px] cbx-bg-green5'></div>
+        <div class='cbx-top-5 cbx-sticky cbx-rounded {% unless section.settings.product %}cbx-h-[300px] cbx-bg-green5{%endunless%}'>
+            {% if section.settings.product %}
+
+            {% render 'card-product',
+                    card_product: section.settings.product,
+                    show_secondary_image: true,
+                    lazy_load: lazy_load,
+                    section_id: section.id
+            %}
+{%endif%}
+        </div>
     </div>
 </div>
 
@@ -402,6 +412,13 @@
   "name": "t:sections.main-article.name",
   "tag": "section",
   "class": "section",
+  "settings": [
+    {
+      "type": "product",
+      "label": "Produit en avant",
+      "id": "product"
+    }
+  ],
   "blocks": [
     {
       "type": "@app"
