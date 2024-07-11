@@ -45,7 +45,7 @@
         "content"
       ],
       "settings": {
-        "product": "cansleep"
+        "product": "{{ article.metafields.custom.produit_en_avant.value }}"
       }
     },
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c": {
