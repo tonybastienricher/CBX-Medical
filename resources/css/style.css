@@ -505,7 +505,7 @@ article.article h5 {
 }*/
 
 article.article h1 {
-    @apply cbx-text-4xl	lg:cbx-text-6xl cbx-py-10 cbx-pb-5;
+    @apply cbx-text-4xl    lg:cbx-text-6xl cbx-py-10 cbx-pb-5;
 }
 
 article.drawer-content h1 {
@@ -567,3 +567,11 @@ article iframe {
 }
 
 /* END COOKIE BANNER */
+
+.social-share-buttons a {
+    @apply cbx-flex cbx-w-8 cbx-h-8 cbx-rounded-full cbx-border cbx-border-green3 cbx-p-1.5 hover:cbx-bg-green3 hover:cbx-text-white cbx-duration-300;
+}
+
+.social-share-buttons a.linkedin-share {
+    @apply cbx-p-2;
+}
