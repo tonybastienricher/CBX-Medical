@@ -65,7 +65,7 @@
                 {% render 'breadcrumb', title: block.settings.breadcrumb %}
             </div>
         {%- when 'title' -%}
-            <header class="{% if block.settings.blog_divide %}cbx-border-b cbx-border-green5 cbx-border-dashed{% endif %} cbx-flex cbx-justify-between"{{ block.shopify_attributes }}>
+            <header class="{% if block.settings.blog_divide %}cbx-border-b cbx-border-green5 cbx-border-dashed{% endif %} cbx-flex cbx-justify-between cbx-gap-2"{{ block.shopify_attributes }}>
                 <div>
                     <h1 class="article-template__title !cbx-pt-5" itemprop="headline">
                         {{ article.title | escape }}
