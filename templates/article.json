@@ -17,6 +17,12 @@
           "settings": {
           }
         },
+        "breadcrumb_nWrnfT": {
+          "type": "breadcrumb",
+          "settings": {
+            "breadcrumb": "Blog"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -30,20 +36,13 @@
           "type": "content",
           "settings": {
           }
-        },
-        "references": {
-          "type": "references",
-          "disabled": true,
-          "settings": {
-            "blog_references": "<p><\/p>"
-          }
         }
       },
       "block_order": [
         "image_wBXw4W",
+        "breadcrumb_nWrnfT",
         "title",
-        "content",
-        "references"
+        "content"
       ],
       "settings": {
       }
