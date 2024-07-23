@@ -1,43 +1,87 @@
 <div class="cbx-px-4 cbx-mx-auto cbx-max-w-7xl cbx-py-4 lg:cbx-py-8 cbx-min-h-[50vh]">
-    <cart-items class="cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-3 cbx-gap-4 lg:cbx-gap-8">
+  <cart-items class="cbx-grid cbx-grid-cols-1 lg:cbx-grid-cols-3 cbx-gap-4 lg:cbx-gap-8">
+    <div class="cbx-flex cbx-flex-wrap cbx-justify-between cbx-items-center lg:cbx-col-span-3 cbx-py-4 lg:cbx-py-8">
+      <h1 class="cbx-text-2xl">{{ 'sections.cart.title' | t }}</h1>
+      <a
+        href="{{ routes.all_products_collection_url }}"
+        class="cbx-btn cbx-bg-green cbx-text-white cbx-flex cbx-flex-row cbx-gap-2 cbx-items-center"
+      >
+        {{ 'general.continue_shopping' | t }}
 
-        <div class="cbx-flex cbx-flex-wrap cbx-justify-between cbx-items-center lg:cbx-col-span-3 cbx-py-4 lg:cbx-py-8">
-            <h1 class="cbx-text-2xl">{{ 'sections.cart.title' | t }}</h1>
-            <a href="{{ routes.all_products_collection_url }}" class="cbx-btn cbx-bg-green cbx-text-white cbx-flex cbx-flex-row cbx-gap-2 cbx-items-center">
-                {{ 'general.continue_shopping' | t }}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="cbx-w-5 cbx-h-5"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+        </svg>
+      </a>
+    </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="currentColor" class="cbx-w-5 cbx-h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-                </svg>
-            </a>
-        </div>
+    {% comment %}
+      <div class="cart__warnings pb-20">
+          <h1 class="text-2xl pb-4">{{ 'sections.cart.empty' | t }}</h1>
+          <a href="{{ routes.all_products_collection_url }}" class="btn btn-vert">
+              {{ 'general.continue_shopping' | t }}
+          </a>
 
-        {% comment %}<div class="cart__warnings pb-20">
-            <h1 class="text-2xl pb-4">{{ 'sections.cart.empty' | t }}</h1>
-            <a href="{{ routes.all_products_collection_url }}" class="btn btn-vert">
-                {{ 'general.continue_shopping' | t }}
-            </a>
+          {%- if shop.customer_accounts_enabled -%}
+              <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
+              <p class="cart__login-paragraph">
+                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+              </p>
+          {%- endif -%}
+      </div>
+    {% endcomment %}
 
-            {%- if shop.customer_accounts_enabled -%}
-                <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
-                <p class="cart__login-paragraph">
-                    {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                </p>
-            {%- endif -%}
-        </div>{% endcomment %}
+    {% render 'main-cart-items-page' %}
 
-        {% render 'main-cart-items-page' %}
-
-        {% render 'main-cart-footer-page' %}
-
-    </cart-items>
+    {% render 'main-cart-footer-page', blocks: section.blocks %}
+  </cart-items>
 </div>
 
 {% schema %}
 {
   "name": "Main cart",
   "settings": [
+    {
+      "type": "header",
+      "content": "Cart"
+    },
+    {
+      "type": "number",
+      "id": "free_shipping_threshold",
+      "label": "Livraison offerte à partir de",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Réassurance",
+      "type": "reinsurance",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "titre",
+          "label": "Titre",
+          "default": "Paiement Sécurisé"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Cb, Visa, Paypal, Apple Pay, \n3X ou 4X sans frais"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}

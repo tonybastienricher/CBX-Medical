@@ -1,80 +1,79 @@
 {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
 
-<div class='cbx-container-site cbx-w-full cbx-mb-20 cbx-relative cbx-flex cbx-flex-col'>
+<div class="cbx-container-site cbx-w-full cbx-mb-20 cbx-relative cbx-flex cbx-flex-col">
+  <!-- Title -->
+  <div class="cbx-flex cbx-flex-col cbx-border-t cbx-border-green5 cbx-border-dashed cbx-w-full">
+    {% if section.settings.sur_titre != blank %}
+      <h3 class="cbx-text-green3 cbx-py-5 cbx-text-2xl" style="letter-spacing: 0.6px;">
+        {{ section.settings.sur_titre }}
+      </h3>
+    {% endif %}
+  </div>
 
-    <!-- Title -->
-    <div class='cbx-flex cbx-flex-col cbx-border-t cbx-border-green5 cbx-border-dashed cbx-w-full'>
-        {% if section.settings.sur_titre != blank %}
-            <h3 class='cbx-text-green3 cbx-py-5 cbx-text-2xl' style='letter-spacing: 0.6px;'>{{ section.settings.sur_titre }}</h3>
-        {% endif %}
-    </div>
-
-    <div class='swiper-container-featured-collection'>
-        <div class="swiper-wrapper">
-            {% for product in section.settings.collection.products %}
-                <div class='swiper-slide' data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
-                    {% render 'card-product',
-                            card_product: product,
-                            show_secondary_image: true,
-                            lazy_load: lazy_load,
-                            section_id: section.id
-                    %}
-                </div>
-            {%- endfor -%}
-
+  <div class="swiper-container-featured-collection">
+    <div class="swiper-wrapper">
+      {% for product in section.settings.collection.products %}
+        <div class="swiper-slide" data-slideNumber="{{ slideNumber }}" {{ block.shopify_attributes }}>
+          {% render 'card-product',
+            card_product: product,
+            show_secondary_image: true,
+            lazy_load: lazy_load,
+            section_id: section.id
+          %}
         </div>
-        <div class='swiper-pagination'></div>
+      {%- endfor -%}
     </div>
+    <div class="swiper-pagination"></div>
+  </div>
 </div>
 
-
 {% javascript %}
-var swiperFeaturedCollection = new Swiper('.swiper-container-featured-collection', {
-slidesPerView: 1.2,
-spaceBetween: 6,
-grabCursor: true,
-pagination: {
-el: '.swiper-pagination',
-clickable: true,
-},
-breakpoints: {
-550: {
-slidesPerView: 2.2,
-},
-800: {
-slidesPerView: 3.2,
-},
-1000: {
-slidesPerView: 4.2,
-},
-}
-});
+  var swiperFeaturedCollection = new Swiper('.swiper-container-featured-collection', {
+    slidesPerView: 1.2,
+    spaceBetween: 6,
+    grabCursor: true,
+    mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      550: {
+        slidesPerView: 2.2,
+      },
+      800: {
+        slidesPerView: 3.2,
+      },
+      1000: {
+        slidesPerView: 4.2,
+        mousewheel: true,
+      },
+    },
+  });
 
-if (Shopify.designMode) {
-// Détecter la sélection d'un bloc
-document.addEventListener('shopify:block:select', function(event) {
-// Vérifier si le bloc sélectionné est lié au slider
-if (event.target.closest('.swiper-container-featured-collection')) {
-// Récupérer le numéro de diapositive à partir des données de l'élément
-var slide = event.target.dataset.slidenumber;
-slide = slide - 1;
-// Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
-if (swiperFeaturedCollection) {
-swiperFeaturedCollection.slideTo(slide);
-}
-}
-});
+  if (Shopify.designMode) {
+    // Détecter la sélection d'un bloc
+    document.addEventListener('shopify:block:select', function (event) {
+      // Vérifier si le bloc sélectionné est lié au slider
+      if (event.target.closest('.swiper-container-featured-collection')) {
+        // Récupérer le numéro de diapositive à partir des données de l'élément
+        var slide = event.target.dataset.slidenumber;
+        slide = slide - 1;
+        // Vérifier si le slider SwiperJS existe et le faire défiler vers la diapositive spécifiée
+        if (swiperFeaturedCollection) {
+          swiperFeaturedCollection.slideTo(slide);
+        }
+      }
+    });
 
-document.addEventListener('shopify:block:select', function(event) {
-// Recharger le slider SwiperJS ici
-if (swiperFeaturedCollection) {
-swiperFeaturedCollection.update();
-}
-});
-
-}
-
+    document.addEventListener('shopify:block:select', function (event) {
+      // Recharger le slider SwiperJS ici
+      if (swiperFeaturedCollection) {
+        swiperFeaturedCollection.update();
+      }
+    });
+  }
 {% endjavascript %}
 
 {% schema %}
@@ -83,10 +82,7 @@ swiperFeaturedCollection.update();
   "tag": "section",
   "class": "section featured-collection cbx-overflow-hidden",
   "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
+    "groups": ["header", "footer"]
   },
   "settings": [
     {

@@ -1,119 +1,81 @@
-if (!customElements.get('quick-add-modal')) {
+if (!customElements.get('quick-add-button')) {
   customElements.define(
-    'quick-add-modal',
-    class QuickAddModal extends ModalDialog {
+    'quick-add-button',
+    class QuickAddButton extends HTMLElement {
       constructor() {
         super();
-        this.modalContent = this.querySelector('[id^="QuickAddInfo-"]');
+        this.form = this.querySelector('form');
+        this.form.querySelector('[name=id]').disabled = false;
+        this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
+        this.submitButton = this.querySelector('[type="submit"]');
+        this.hideErrors = this.dataset.hideErrors === 'true';
       }
 
-      hide(preventFocus = false) {
-        const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-        if (cartNotification) cartNotification.setActiveElement(this.openedBy);
-        this.modalContent.innerHTML = '';
+      onSubmitHandler(evt) {
+        evt.preventDefault();
+        if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
-        if (preventFocus) this.openedBy = null;
-        super.hide();
-      }
+        this.handleErrorMessage();
 
-      show(opener) {
-        opener.setAttribute('aria-disabled', true);
-        opener.classList.add('loading');
-        opener.querySelector('.loading-overlay__spinner').classList.remove('hidden');
+        this.submitButton.setAttribute('aria-disabled', true);
+        this.submitButton.classList.add('loading');
+        this.querySelector('.loading-overlay__spinner').classList.remove('hidden');
 
-        fetch(opener.getAttribute('data-product-url'))
-          .then((response) => response.text())
-          .then((responseText) => {
-            const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
-            this.productElement = responseHTML.querySelector('section[id^="MainProduct-"]');
-            this.preventDuplicatedIDs();
-            this.removeDOMElements();
-            this.setInnerHTML(this.modalContent, this.productElement.innerHTML);
+        const config = fetchConfig('javascript');
+        config.headers['X-Requested-With'] = 'XMLHttpRequest';
+        delete config.headers['Content-Type'];
 
-            if (window.Shopify && Shopify.PaymentButton) {
-              Shopify.PaymentButton.init();
+        const formData = new FormData(this.form);
+        config.body = formData;
+
+        fetch(`${routes.cart_add_url}`, config)
+          .then((response) => response.json())
+          .then((response) => {
+            if (response.status) {
+              publish(PUB_SUB_EVENTS.cartError, {
+                source: 'product-form',
+                productVariantId: formData.get('id'),
+                errors: response.errors || response.description,
+                message: response.message,
+              });
+              this.handleErrorMessage(response.description);
+
+              const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
+              if (!soldOutMessage) return;
+              this.submitButton.setAttribute('aria-disabled', true);
+              this.submitButton.querySelector('span').classList.add('hidden');
+              soldOutMessage.classList.remove('hidden');
+              this.error = true;
+              return;
+            } else if (!this.cart) {
+              window.location = window.routes.cart_url;
+              return;
             }
-
-            if (window.ProductModel) window.ProductModel.loadShopifyXR();
-
-            this.removeGalleryListSemantic();
-            this.updateImageSizes();
-            this.preventVariantURLSwitching();
-            super.show(opener);
+          })
+          .catch((e) => {
+            console.error(e);
           })
           .finally(() => {
-            opener.removeAttribute('aria-disabled');
-            opener.classList.remove('loading');
-            opener.querySelector('.loading-overlay__spinner').classList.add('hidden');
+            this.submitButton.classList.remove('loading');
+            this.querySelector('.loading-overlay__spinner').classList.add('hidden');
+            //reload the page
+            window.location.reload();
           });
       }
 
-      setInnerHTML(element, html) {
-        element.innerHTML = html;
+      handleErrorMessage(errorMessage = false) {
+        if (this.hideErrors) return;
 
-        // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
-        element.querySelectorAll('script').forEach((oldScriptTag) => {
-          const newScriptTag = document.createElement('script');
-          Array.from(oldScriptTag.attributes).forEach((attribute) => {
-            newScriptTag.setAttribute(attribute.name, attribute.value);
-          });
-          newScriptTag.appendChild(document.createTextNode(oldScriptTag.innerHTML));
-          oldScriptTag.parentNode.replaceChild(newScriptTag, oldScriptTag);
-        });
-      }
+        this.errorMessageWrapper =
+          this.errorMessageWrapper || this.querySelector('.product-form__error-message-wrapper');
+        if (!this.errorMessageWrapper) return;
+        this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.product-form__error-message');
 
-      preventVariantURLSwitching() {
-        const variantPicker = this.modalContent.querySelector('variant-radios,variant-selects');
-        if (!variantPicker) return;
+        this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
 
-        variantPicker.setAttribute('data-update-url', 'false');
-      }
-
-      removeDOMElements() {
-        const pickupAvailability = this.productElement.querySelector('pickup-availability');
-        if (pickupAvailability) pickupAvailability.remove();
-
-        const productModal = this.productElement.querySelector('product-modal');
-        if (productModal) productModal.remove();
-
-        const modalDialog = this.productElement.querySelectorAll('modal-dialog');
-        if (modalDialog) modalDialog.forEach((modal) => modal.remove());
-      }
-
-      preventDuplicatedIDs() {
-        const sectionId = this.productElement.dataset.section;
-        this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${sectionId}`);
-        this.productElement.querySelectorAll('variant-selects, variant-radios, product-info').forEach((element) => {
-          element.dataset.originalSection = sectionId;
-        });
-      }
-
-      removeGalleryListSemantic() {
-        const galleryList = this.modalContent.querySelector('[id^="Slider-Gallery"]');
-        if (!galleryList) return;
-
-        galleryList.setAttribute('role', 'presentation');
-        galleryList.querySelectorAll('[id^="Slide-"]').forEach((li) => li.setAttribute('role', 'presentation'));
-      }
-
-      updateImageSizes() {
-        const product = this.modalContent.querySelector('.product');
-        const desktopColumns = product.classList.contains('product--columns');
-        if (!desktopColumns) return;
-
-        const mediaImages = product.querySelectorAll('.product__media img');
-        if (!mediaImages.length) return;
-
-        let mediaImageSizes =
-          '(min-width: 1000px) 715px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)';
-
-        if (product.classList.contains('product--medium')) {
-          mediaImageSizes = mediaImageSizes.replace('715px', '605px');
-        } else if (product.classList.contains('product--small')) {
-          mediaImageSizes = mediaImageSizes.replace('715px', '495px');
+        if (errorMessage) {
+          this.errorMessage.textContent = errorMessage;
         }
-
-        mediaImages.forEach((img) => img.setAttribute('sizes', mediaImageSizes));
       }
     }
   );

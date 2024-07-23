@@ -1,0 +1,15 @@
+<li class="cbx-w-full cbx-flex cbx-flex-col cbx-justify-between cbx-border-t cbx-border-gray-200 cbx-py-4">
+  <div class="cbx-flex cbx-flex-row cbx-justify-between">
+    <span class="cbx-font-display">{{ 'sections.cart.tax_estimate' | t }}</span>
+    <span class="">
+      {%- if livraison_gratuite %}offerte{% else %}{{ prix_livraison | money_with_currency }}{% endif -%}
+    </span>
+  </div>
+  {% unless livraison_gratuite %}
+    <span class="cbx-text-xs pt-1">
+      {{- 'sections.cart.wording_livraison_gratuite_1' | t }}
+      {{ livraison_gratuite_threshold | minus: cart.total_price | money }}
+      {{ 'sections.cart.wording_livraison_gratuite_2' | t -}}
+    </span>
+  {% endunless %}
+</li>
