@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "gros_texte_large": {
@@ -36,13 +45,6 @@
             "reponse": "Le cannabis est bien plus qu'une simple plante. Il est l'origine d'un large éventail de produits thérapeutiques capables de transformer la vie de milliers de personnes. Depuis que nous avons débuté cette initiative en 2021 en collaboration avec l'Université Libre de Bruxelles (ULB), notre ambition a toujours été de développer des produits de qualité, sûrs et efficaces. C'est dans cette optique que nous avons récemment reçu des subsides substantiels pour faire avancer nos recherches."
           }
         },
-        "c15a28a2-d464-40bf-97fb-2545cc3f39a4": {
-          "type": "information",
-          "settings": {
-            "question": "Les particularités de notre recherche",
-            "reponse": "Notre recherche ne serait pas possible sans la collaboration de partenaires clés. Nous avons noué un partenariat avec CODIBEL pour la réalisation de notre R&D à partir de zéro. De plus, pour l'extraction, nous avons choisi de travailler avec VALDIUM, reconnu pour son expertise.\n\nAu cœur de notre démarche se trouve le concours RACE, qui récompense les travaux d'étudiants les plus prometteurs avec un prix de 10 000 €. Cela non seulement stimule l'innovation mais permet également d'approfondir la recherche sur le cannabis."
-          }
-        },
         "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8": {
           "type": "information",
           "settings": {
@@ -54,7 +56,6 @@
       "block_order": [
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc",
         "e739272e-c943-4558-bdda-16a367ad8aca",
-        "c15a28a2-d464-40bf-97fb-2545cc3f39a4",
         "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8"
       ],
       "settings": {
@@ -104,7 +105,6 @@
     },
     "6fcdb322-fbbf-4929-a3b3-4bd3f2e7671f": {
       "type": "avis",
-      "disabled": true,
       "blocks": {
         "a42efbb0-e44e-4628-9764-4da0dd475058": {
           "type": "avis",
@@ -149,6 +149,7 @@
         "d439bd29-f154-4387-9b37-17ea46ca65ce",
         "45fd4cc5-7da7-4568-9de4-9f95d918b7b0"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
