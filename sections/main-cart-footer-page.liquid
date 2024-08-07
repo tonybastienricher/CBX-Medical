@@ -1,1 +1,45 @@
-{% render 'main-cart-footer-page' %}
+{% render 'main-cart-footer-page', blocks: section.blocks  %}
+
+
+{% schema %}
+{
+  "name": "Main cart footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Cart"
+    },
+    {
+      "type": "number",
+      "id": "free_shipping_threshold",
+      "label": "Livraison offerte à partir de",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Réassurance",
+      "type": "reinsurance",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "titre",
+          "label": "Titre",
+          "default": "Paiement Sécurisé"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Cb, Visa, Paypal, Apple Pay, \n3X ou 4X sans frais"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
