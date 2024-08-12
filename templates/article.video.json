@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -25,6 +34,13 @@
       "settings": {
       }
     },
+    "featured_collection_GgVh4Y": {
+      "type": "featured-collection",
+      "settings": {
+        "sur_titre": "Nous avons été à la rencontre du Dr Constant, algologue et  anesthésiste au CHU de Charleroi. Il nous explique comment il utilise les cannabinoïdes et notamment le CBD pour soulager ses patients. Il a pu observer différents effets positifs ! ",
+        "collection": ""
+      }
+    },
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c": {
       "type": "articles_similaires",
       "settings": {
@@ -44,6 +60,7 @@
   },
   "order": [
     "main",
+    "featured_collection_GgVh4Y",
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c",
     "featured-collection"
   ]
