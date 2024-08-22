@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -5,20 +14,20 @@
     "header-mobile": {
       "type": "header-mobile",
       "blocks": {
-        "7fe3f97c-3394-4f73-bd37-9999ed4ecdad": {
-          "type": "image_du_header_mobile",
-          "settings": {
-            "baseline": "CBX Medical",
-            "nom_du_menu": "accueil",
-            "image": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg"
-          }
-        },
         "046f59de-602e-4e09-987f-f28185004c13": {
           "type": "image_du_header_mobile",
           "settings": {
             "baseline": "Tous nos produits",
             "nom_du_menu": "catalogue",
             "image": "shopify:\/\/shop_images\/Flex_bd2e1236-1eda-46ce-bd4c-f506a3d5779c.jpg"
+          }
+        },
+        "7fe3f97c-3394-4f73-bd37-9999ed4ecdad": {
+          "type": "image_du_header_mobile",
+          "settings": {
+            "baseline": "CBX Medical",
+            "nom_du_menu": "accueil",
+            "image": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg"
           }
         },
         "f6a72ef8-b08f-4d23-91dd-aa2e392b27de": {
@@ -47,8 +56,8 @@
         }
       },
       "block_order": [
-        "7fe3f97c-3394-4f73-bd37-9999ed4ecdad",
         "046f59de-602e-4e09-987f-f28185004c13",
+        "7fe3f97c-3394-4f73-bd37-9999ed4ecdad",
         "f6a72ef8-b08f-4d23-91dd-aa2e392b27de",
         "ad54562d-d3dd-4726-a7a9-f84571b09660",
         "3fed6481-0413-4820-bdb2-c7885a131d08"
