@@ -298,8 +298,9 @@
                       {% for block in section.blocks %}
                         {%- case block.type -%}
                           {%- when 'image_sub_header' -%}
-                            {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal
+                            {% if section.settings.menu_droite.handle == block.settings.nom_du_menu_principal
                               and link.handle == block.settings.nom_du_sous_menu
+                              and childlink.handle == block.settings.nom_du_menu
                             %}
                               {%- assign image = block.settings.image -%}
                               {% if image != blank %}
@@ -323,7 +324,7 @@
                       {% for block in section.blocks %}
                         {%- case block.type -%}
                           {%- when 'image_sub_header' -%}
-                            {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal
+                            {% if section.settings.menu_droite.handle == block.settings.nom_du_menu_principal
                               and link.handle == block.settings.nom_du_sous_menu
                             %}
                               <p class="cbx-text-xs cbx-text-green4">
