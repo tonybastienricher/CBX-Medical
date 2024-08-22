@@ -1,276 +1,353 @@
-{% comment %}{%- if shop.customer_accounts_enabled -%}
-                <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                   class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-                    {% render 'icon-account' %}
-                    <span class="visually-hidden">
-            {%- liquid
-                if customer
-                    echo 'customer.account_fallback' | t
-                else
-                    echo 'customer.log_in' | t
-                endif
-            -%}
-          </span>
-                </a>
-            {%- endif -%}{% endcomment %}
+{% comment %}
+  {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+           class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+            {% render 'icon-account' %}
+            <span class="visually-hidden">
+    {%- liquid
+        if customer
+            echo 'customer.account_fallback' | t
+        else
+            echo 'customer.log_in' | t
+        endif
+    -%}
+  </span>
+        </a>
+    {%- endif -%}
+{% endcomment %}
 
 {% liquid
-
-    case template.name
-        when 'product' or 'page' or 'login' or 'register' or 'contact' or '404' or 'reset_password'
-            assign position = 'cbx-absolute'
-        else
-            assign position = 'cbx-relative'
-    endcase
+  case template.name
+    when 'product', 'page', 'login', 'register', 'contact', '404', 'reset_password'
+      assign position = 'cbx-absolute'
+    else
+      assign position = 'cbx-relative'
+  endcase
 %}
 
-
 <!-- Menu desktop -->
-<div class='cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {{ position }}'>
-
-    <div class='cbx-flex cbx-items-center cbx-justify-between cbx-text-sm cbx-w-full cbx-gap-2.5 cbx-relative cbx-tracking-cbxWidest {% if template contains 'login' or template contains 'register' or template contains '404' %}cbx-text-white{% else %}cbx-text-green{% endif %}'
-         x-data='{megaMenu : false, cartNotification : false}' @mousemove.away="megaMenu = false">
-        <!-- Menu 1 -->
-        <div class='cbx-font-display cbx-flex cbx-items-center cbx-cursor-pointer cbx-relative cbx-z-10'>
-            <ul class='cbx-flex cbx-gap-x-5'>
-                {% for link in section.settings.menu_gauche.links %}
-                    {% assign indexMenu = '1' | append: forloop.index %}
-                    <li>
-                        <a href="{{ link.url }}"
-                           class='cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1'
-                           aria-current="page"
-                           {%- if link.links != blank -%}@mouseenter="megaMenu = {{ indexMenu }}"
-                           {% else %}@mouseenter="megaMenu = false"{% endif %}>
-                            <!-- Title -->
-                            {{ link.title | escape }}
-                            {%- if link.links != blank -%}
-                                <div class='cbx-duration-150'
-                                     :class="{'cbx-rotate-180' : megaMenu == {{ indexMenu }} }">
-                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 0.5L4 3.5L7 0.5" stroke="#1E271D" />
-                                    </svg>
-                                </div>
-                            {%- endif -%}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-
-
-            <!-- Submenu -->
-            {% for link in section.settings.menu_gauche.links %}
-                {% assign indexMenu = '1' | append: forloop.index %}
+<div class="cbx-top-0 cbx-container-site cbx-py-2.5 cbx-w-full cbx-flex {{ position }}">
+  <div
+    class="cbx-flex cbx-items-center cbx-justify-between cbx-text-sm cbx-w-full cbx-gap-2.5 cbx-relative cbx-tracking-cbxWidest {% if template contains 'login' or template contains 'register' or template contains '404' %}cbx-text-white{% else %}cbx-text-green{% endif %}"
+    x-data="{megaMenu : false, cartNotification : false}"
+    @mousemove.away="megaMenu = false"
+  >
+    <!-- Menu 1 -->
+    <div class="cbx-font-display cbx-flex cbx-items-center cbx-cursor-pointer cbx-relative cbx-z-10">
+      {% unless template contains 'cart' %}
+        <ul class="cbx-flex cbx-gap-x-5">
+          {% for link in section.settings.menu_gauche.links %}
+            {% assign indexMenu = '1' | append: forloop.index %}
+            <li>
+              <a
+                href="{{ link.url }}"
+                class="cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1"
+                aria-current="page"
                 {%- if link.links != blank -%}
-                    <div x-show="megaMenu === {{ indexMenu }}" style="display: none"
-                         x-transition:enter="cbx-ease-out cbx-duration-300"
-                         x-transition:enter-start="cbx-opacity-0 cbx-translate-y-10"
-                         x-transition:enter-end="cbx-opacity-100 cbx-translate-y-0"
-                         x-transition:leave="cbx-ease-in cbx-duration-150"
-                         x-transition:leave-start="cbx-opacity-100 cbx-translate-y-0"
-                         x-transition:leave-end="cbx-opacity-0 cbx-translate-y-10"
-                         class='cbx-bg-white cbx-rounded cbx-absolute cbx-left-0 cbx-top-11 cbx-max-h-[87vh] cbx-min-w-[300px] cbx-overflow-y-scroll cbx-w-full'>
-                        <ul class='cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite'
-                            @mouseover="megaMenu =  {{ indexMenu }}">
-                            {%- for childlink in link.links -%}
-                                {% assign counter = 0 %}
-                                <li>
-                                    <a href="{{ childlink.url }}"
-                                       class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6'
-                                       aria-current="page">
-                                        <div class='cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative'>
-                                            {% for block in section.blocks %}
-                                                {%- case block.type -%}
-                                                    {%- when 'image_sub_header' -%}
-                                                        {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal and link.handle == block.settings.nom_du_sous_menu %}
-                                                            {%- assign image = block.settings.image -%}
-                                                            {% if image != blank %}
-                                                                test
-                                                                {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
-                                                            {% endif %}
-                                                        {% endif %}
-                                                {%- endcase -%}
-                                            {% endfor %}
-                                        </div>
-                                        <!-- Title -->
-                                        <div>
-                                            <h4 class='cbx-font-display cbx-text-green2'>
-                                                {{ childlink.title | escape }}
-                                            </h4>
-                                            {% for block in section.blocks %}
-                                                {%- case block.type -%}
-                                                    {%- when 'image_sub_header' -%}
-                                                        {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal and link.handle == block.settings.nom_du_sous_menu %}
-                                                            <p class='cbx-text-xs cbx-text-green4'>
-                                                                {{ block.settings.baseline }}
-                                                            </p>
-                                                        {% endif %}
-                                                {%- endcase -%}
-                                            {% endfor %}
-                                        </div>
-                                    </a>
-                                </li>
-                                {% assign counter = counter | plus: 1 %}
-                            {% endfor %}
-                        </ul>
-                    </div>
+                  @mouseenter="megaMenu = {{ indexMenu }}"
+                {% else %}
+                  @mouseenter="megaMenu = false"
                 {% endif %}
-            {% endfor %}
-        </div>
-
-
-        <!-- Logo -->
-        <div class='cbx-absolute cbx-right-0 cbx-left-0 cbx-flex cbx-justify-center'>
-            <a href="{{ routes.root_url }}" class="" rel=''>
-                {% render 'logo_CBX_MEDICAL' %}
-            </a>
-        </div>
-
-        <!-- Menu 2 + Panier -->
-        <div class='cbx-font-display cbx-relative cbx-z-10'>
-            <ul class='cbx-flex cbx-gap-x-5'>
-                {% for link in section.settings.menu_droite.links %}
-                    {% assign indexMenu = '2' | append: forloop.index %}
-                    <li>
-                        <a href="{{ link.url }}"
-                           class='cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1'
-                           aria-current="page"
-                           {%- if link.links != blank -%}@mouseenter="megaMenu = {{ indexMenu }}"
-                           {% else %}@mouseenter="megaMenu = false"{% endif %}>
-                            <!-- Title -->
-                            {{ link.title | escape }}
-                            {%- if link.links != blank -%}
-                                <div class='cbx-duration-150'
-                                     :class="{'cbx-rotate-180' : megaMenu == {{ indexMenu }}}">
-                                    <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 0.5L4 3.5L7 0.5" stroke="#1E271D" />
-                                    </svg>
-                                </div>
-                            {%- endif -%}
-                        </a>
-                    </li>
-                {% endfor %}
-                <li class='cbx-text-sm cbx-font-display cbx-py-4 cbx-h-full cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer'
-                    id="cart-notif"
-                    @click='cartNotification = !cartNotification;'>
-                    <div id='cart-item_count' class='cart-item_count'>
-                        {%- if cart.item_count < 100 -%}
-                            Panier (<span>{{ cart.item_count }}</span>)
-                        {%- endif -%}
-                    </div>
-                    <div class='cbx-duration-150'
-                         :class="{'cbx-rotate-180' : cartNotification}">
-                        <svg width="8" height="5" viewBox="0 0 8 5" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 0.5L4 3.5L7 0.5" stroke="currentColor" />
-                        </svg>
-                    </div>
-                </li>
-                <li class='cbx-text-sm cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer'>
-                    <noscript>
-                        {%- form 'localization', id: 'HeaderLanguageFormNoScript', class: 'localization-form' -%}
-                            <div class="localization-form__select">
-                                <h2 class="visually-hidden"
-                                    id="HeaderLanguageFormNoScript">
-                                    {{ 'localization.language_label' | t }}
-                                </h2>
-                                <select class="localization-selector link"
-                                        name="locale_code"
-                                        aria-labelledby="HeaderLanguageFormNoScript">
-                                    {%- for language in localization.available_languages -%}
-                                        <option
-                                                value="{{ language.iso_code }}"
-                                                lang="{{ language.iso_code }}"
-                                                {%- if language.iso_code == localization.language.iso_code %}
-                                                    selected
-                                                {% endif %}>
-                                            {{ language.endonym_name | capitalize }}
-                                        </option>
-                                    {%- endfor -%}
-                                </select>
-                                {% render 'icon-caret' %}
-                            </div>
-                            <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
-                        {%- endform -%}
-                    </noscript>
-                    <localization-form>
-                        {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-                            <div class="no-js-hidden">
-                                {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
-                            </div>
-                        {%- endform -%}
-                    </localization-form>
-                    <script src="{{ 'localization-form.js' | asset_url }}"
-                            defer="defer"></script>
-                </li>
-            </ul>
-
-            <!-- Submenu -->
-            {% for link in section.settings.menu_droite.links %}
+              >
+                <!-- Title -->
+                {{ link.title | escape }}
                 {%- if link.links != blank -%}
-                    {% assign indexMenu = '2' | append: forloop.index %}
-                    <div x-show="megaMenu == {{ indexMenu }}" style="display: none"
-                         x-transition:enter="cbx-ease-out cbx-duration-300"
-                         x-transition:enter-start="cbx-opacity-0 cbx-translate-y-10"
-                         x-transition:enter-end="cbx-opacity-100 cbx-translate-y-0"
-                         x-transition:leave="cbx-ease-in cbx-duration-150"
-                         x-transition:leave-start="cbx-opacity-100 cbx-translate-y-0"
-                         x-transition:leave-end="cbx-opacity-0 cbx-translate-y-10"
-                         class='cbx-bg-white cbx-rounded cbx-absolute cbx-right-0 cbx-top-11 cbx-max-h-[87vh] cbx-min-w-[300px] cbx-overflow-y-scroll cbx-w-full'>
-                        <ul class='cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite'
-                            @mouseover="megaMenu = {{ indexMenu }}">
-                            {%- for childlink in link.links -%}
-                                {% assign counter = 0 %}
-                                <li>
-                                    <a href="{{ childlink.url }}"
-                                       class='cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6'
-                                       aria-current="page">
-                                        <div class='cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative'>
-                                            {% for block in section.blocks %}
-                                                {%- case block.type -%}
-                                                    {%- when 'image_sub_header' -%}
-                                                        {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal and link.handle == block.settings.nom_du_sous_menu %}
-                                                            {%- assign image = block.settings.image -%}
-                                                            {% if image != blank %}
-                                                                {{ image | image_url: width: '150' | image_tag: class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100', loading: 'lazy' }}
-                                                            {% endif %}
-                                                        {% endif %}
-                                                {%- endcase -%}
-                                            {% endfor %}
-                                        </div>
-                                        <!-- Title -->
-                                        <div>
-                                            <h4 class='cbx-font-display cbx-text-green2'>
-                                                {{ childlink.title | escape }}
-                                            </h4>
-                                            {% for block in section.blocks %}
-                                                {%- case block.type -%}
-                                                    {%- when 'image_sub_header' -%}
-                                                        {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal and link.handle == block.settings.nom_du_sous_menu %}
-                                                            <p class='cbx-text-xs cbx-text-green4'>
-                                                                {{ block.settings.baseline }}
-                                                            </p>
-                                                        {% endif %}
-                                                {%- endcase -%}
-                                            {% endfor %}
-                                        </div>
-                                    </a>
-                                </li>
-                                {% assign counter = counter | plus: 1 %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
+                  <div
+                    class="cbx-duration-150"
+                    :class="{'cbx-rotate-180' : megaMenu == {{ indexMenu }} }"
+                  >
+                    <svg
+                      width="8"
+                      height="5"
+                      viewBox="0 0 8 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 0.5L4 3.5L7 0.5" stroke="#1E271D" />
+                    </svg>
+                  </div>
+                {%- endif -%}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endunless %}
 
-        <!-- Cart Notification -->
-        {% render 'cart-cbx-notifications' %}
+      <!-- Submenu -->
+      {% for link in section.settings.menu_gauche.links %}
+        {% assign indexMenu = '1' | append: forloop.index %}
+        {%- if link.links != blank -%}
+          <div
+            x-show="megaMenu === {{ indexMenu }}"
+            style="display: none"
+            x-transition:enter="cbx-ease-out cbx-duration-300"
+            x-transition:enter-start="cbx-opacity-0 cbx-translate-y-10"
+            x-transition:enter-end="cbx-opacity-100 cbx-translate-y-0"
+            x-transition:leave="cbx-ease-in cbx-duration-150"
+            x-transition:leave-start="cbx-opacity-100 cbx-translate-y-0"
+            x-transition:leave-end="cbx-opacity-0 cbx-translate-y-10"
+            class="cbx-bg-white cbx-rounded cbx-absolute cbx-left-0 cbx-top-11 cbx-max-h-[87vh] cbx-min-w-[300px] cbx-overflow-y-scroll cbx-w-full"
+          >
+            <ul
+              class="cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite"
+              @mouseover="megaMenu =  {{ indexMenu }}"
+            >
+              {%- for childlink in link.links -%}
+                {% assign counter = 0 %}
+                <li>
+                  <a
+                    href="{{ childlink.url }}"
+                    class="cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6"
+                    aria-current="page"
+                  >
+                    <div class="cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative">
+                      {% for block in section.blocks %}
+                        {%- case block.type -%}
+                          {%- when 'image_sub_header' -%}
+                            {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal
+                              and link.handle == block.settings.nom_du_sous_menu
+                            %}
+                              {%- assign image = block.settings.image -%}
+                              {% if image != blank %}
+                                test
+                                {{
+                                  image
+                                  | image_url: width: '150'
+                                  | image_tag:
+                                    class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100',
+                                    loading: 'lazy'
+                                }}
+                              {% endif %}
+                            {% endif %}
+                        {%- endcase -%}
+                      {% endfor %}
+                    </div>
+                    <!-- Title -->
+                    <div>
+                      <h4 class="cbx-font-display cbx-text-green2">
+                        {{ childlink.title | escape }}
+                      </h4>
+                      {% for block in section.blocks %}
+                        {%- case block.type -%}
+                          {%- when 'image_sub_header' -%}
+                            {% if section.settings.menu_gauche.handle == block.settings.nom_du_menu_principal
+                              and link.handle == block.settings.nom_du_sous_menu
+                            %}
+                              <p class="cbx-text-xs cbx-text-green4">
+                                {{ block.settings.baseline }}
+                              </p>
+                            {% endif %}
+                        {%- endcase -%}
+                      {% endfor %}
+                    </div>
+                  </a>
+                </li>
+                {% assign counter = counter | plus: 1 %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
 
-</div>
+    <!-- Logo -->
+    <div class="cbx-absolute cbx-right-0 cbx-left-0 cbx-flex cbx-justify-center">
+      <a href="{{ routes.root_url }}" class="" rel="">
+        {% render 'logo_CBX_MEDICAL' %}
+      </a>
+    </div>
 
+    <!-- Menu 2 + Panier -->
+    <div class="cbx-font-display cbx-relative cbx-z-10">
+      <ul class="cbx-flex cbx-gap-x-5">
+        {% unless template contains 'cart' %}
+          {% for link in section.settings.menu_droite.links %}
+            {% assign indexMenu = '2' | append: forloop.index %}
+            <li>
+              <a
+                href="{{ link.url }}"
+                class="cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1"
+                aria-current="page"
+                {%- if link.links != blank -%}
+                  @mouseenter="megaMenu = {{ indexMenu }}"
+                {% else %}
+                  @mouseenter="megaMenu = false"
+                {% endif %}
+              >
+                <!-- Title -->
+                {{ link.title | escape }}
+                {%- if link.links != blank -%}
+                  <div
+                    class="cbx-duration-150"
+                    :class="{'cbx-rotate-180' : megaMenu == {{ indexMenu }}}"
+                  >
+                    <svg
+                      width="8"
+                      height="5"
+                      viewBox="0 0 8 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M1 0.5L4 3.5L7 0.5" stroke="#1E271D" />
+                    </svg>
+                  </div>
+                {%- endif -%}
+              </a>
+            </li>
+          {% endfor %}
+          <li
+            class="cbx-text-sm cbx-font-display cbx-py-4 cbx-h-full cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer"
+            id="cart-notif"
+            @click="cartNotification = !cartNotification;"
+          >
+            <div id="cart-item_count" class="cart-item_count">
+              {%- if cart.item_count < 100 -%}
+                {{ 'sections.cart.cart' | t }} (<span>{{ cart.item_count }}</span>)
+              {%- endif -%}
+            </div>
+            <div
+              class="cbx-duration-150"
+              :class="{'cbx-rotate-180' : cartNotification}"
+            >
+              <svg
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 0.5L4 3.5L7 0.5" stroke="currentColor" />
+              </svg>
+            </div>
+          </li>
+        {% endunless %}
+        <li class="cbx-text-sm cbx-font-display cbx-py-4 cbx-flex cbx-items-center cbx-gap-x-1 cbx-select-none cbx-cursor-pointer">
+          <noscript>
+            {%- form 'localization', id: 'HeaderLanguageFormNoScript', class: 'localization-form' -%}
+              <div class="localization-form__select">
+                <h2
+                  class="visually-hidden"
+                  id="HeaderLanguageFormNoScript"
+                >
+                  {{ 'localization.language_label' | t }}
+                </h2>
+                <select
+                  class="localization-selector link"
+                  name="locale_code"
+                  aria-labelledby="HeaderLanguageFormNoScript"
+                >
+                  {%- for language in localization.available_languages -%}
+                    <option
+                      value="{{ language.iso_code }}"
+                      lang="{{ language.iso_code }}"
+                      {%- if language.iso_code == localization.language.iso_code %}
+                        selected
+                      {% endif %}
+                    >
+                      {{ language.endonym_name | capitalize }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+                {% render 'icon-caret' %}
+              </div>
+              <button class="button button--tertiary">{{ 'localization.update_language' | t }}</button>
+            {%- endform -%}
+          </noscript>
+          <localization-form>
+            {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+              <div class="no-js-hidden">
+                {%- render 'language-localization', localPosition: 'FooterLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+          <script
+            src="{{ 'localization-form.js' | asset_url }}"
+            defer="defer"
+          ></script>
+        </li>
+      </ul>
+
+      <!-- Submenu -->
+      {% for link in section.settings.menu_droite.links %}
+        {%- if link.links != blank -%}
+          {% assign indexMenu = '2' | append: forloop.index %}
+          <div
+            x-show="megaMenu == {{ indexMenu }}"
+            style="display: none"
+            x-transition:enter="cbx-ease-out cbx-duration-300"
+            x-transition:enter-start="cbx-opacity-0 cbx-translate-y-10"
+            x-transition:enter-end="cbx-opacity-100 cbx-translate-y-0"
+            x-transition:leave="cbx-ease-in cbx-duration-150"
+            x-transition:leave-start="cbx-opacity-100 cbx-translate-y-0"
+            x-transition:leave-end="cbx-opacity-0 cbx-translate-y-10"
+            class="cbx-bg-white cbx-rounded cbx-absolute cbx-right-0 cbx-top-11 cbx-max-h-[87vh] cbx-min-w-[300px] cbx-overflow-y-scroll cbx-w-full"
+          >
+            <ul
+              class="cbx-flex cbx-flex-col cbx-divide-y cbx-divide-offWhite"
+              @mouseover="megaMenu = {{ indexMenu }}"
+            >
+              {%- for childlink in link.links -%}
+                {% assign counter = 0 %}
+                <li>
+                  <a
+                    href="{{ childlink.url }}"
+                    class="cbx-flex cbx-gap-2.5 cbx-items-center cbx-py-4 cbx-px-6"
+                    aria-current="page"
+                  >
+                    <div class="cbx-rounded cbx-overflow-hidden cbx-bg-green6 cbx-w-12 cbx-h-12 cbx-relative">
+                      {% for block in section.blocks %}
+                        {%- case block.type -%}
+                          {%- when 'image_sub_header' -%}
+                            {% if section.settings.menu_droite.handle == block.settings.nom_du_menu_principal
+                              and link.handle == block.settings.nom_du_sous_menu
+                              and childlink.handle == block.settings.nom_du_menu
+                            %}
+                              {%- assign image = block.settings.image -%}
+                              {% if image != blank %}
+                                {{
+                                  image
+                                  | image_url: width: '150'
+                                  | image_tag:
+                                    class: 'cbx-absolute cbx-inset-0 cbx-w-full cbx-h-full cbx-object-cover cbx-bg-gray-100',
+                                    loading: 'lazy'
+                                }}
+                              {% endif %}
+                            {% endif %}
+                        {%- endcase -%}
+                      {% endfor %}
+                    </div>
+                    <!-- Title -->
+                    <div>
+                      <h4 class="cbx-font-display cbx-text-green2">
+                        {{ childlink.title | escape }}
+                      </h4>
+                      {% for block in section.blocks %}
+                        {%- case block.type -%}
+                          {%- when 'image_sub_header' -%}
+                            {% if section.settings.menu_droite.handle == block.settings.nom_du_menu_principal
+                              and link.handle == block.settings.nom_du_sous_menu
+                            %}
+                              <p class="cbx-text-xs cbx-text-green4">
+                                {{ block.settings.baseline }}
+                              </p>
+                            {% endif %}
+                        {%- endcase -%}
+                      {% endfor %}
+                    </div>
+                  </a>
+                </li>
+                {% assign counter = counter | plus: 1 %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Cart Notification -->
+    {% render 'cart-cbx-notifications' %}
+  </div>
+</div>
 
 <script type="application/ld+json">
   {
@@ -296,8 +373,8 @@
 </script>
 
 {%- if request.page_type == 'index' -%}
-    {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
-    <script type="application/ld+json">
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
@@ -309,7 +386,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-    </script>
+  </script>
 {%- endif -%}
 
 {% schema %}

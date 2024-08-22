@@ -1151,9 +1151,9 @@ button.shopify-payment-button__button--unbranded {
 
 /* Button - other */
 
-.button:disabled,
-.button[aria-disabled='true'],
-.button.disabled,
+button:disabled,
+button[aria-disabled='true'],
+button.disabled,
 .quantity__button.disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -1162,35 +1162,6 @@ button.shopify-payment-button__button--unbranded {
 .button--full-width {
     display: flex;
     width: 100%;
-}
-
-.button.loading {
-    color: transparent;
-    position: relative;
-}
-
-@media screen and (forced-colors: active) {
-    .button.loading {
-        color: rgb(var(--color-foreground));
-    }
-}
-
-.button.loading > .loading-overlay__spinner {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.button.loading > .loading-overlay__spinner .spinner {
-    width: fit-content;
-}
-
-.button.loading > .loading-overlay__spinner .path {
-    stroke: rgb(var(--color-button-text));
 }
 
 /* Button - social share */
@@ -1784,6 +1755,70 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 /* component-modal */
+
+/* LOADING SPINNER */
+button.loading span {
+    @apply hidden;
+}
+
+.loading-overlay__spinner {
+    width: 1.5rem;
+    display: flex;
+}
+
+.spinner {
+    animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+.path {
+    stroke-dasharray: 280;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    stroke: black;
+    animation: dash 1.4s ease-in-out infinite;
+}
+
+
+@media screen and (forced-colors: active) {
+    .path {
+        stroke: CanvasText;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 280;
+    }
+    50% {
+        stroke-dashoffset: 75;
+        transform: rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: 280;
+        transform: rotate(450deg);
+    }
+}
+
+button.loading > .loading-overlay__spinner .spinner {
+    width: fit-content;
+}
+
+button.loading > .loading-overlay__spinner .path {
+    stroke: black;
+}
+
+/* END LOADING SPINNER */
+
+
 .modal__toggle {
     list-style-type: none;
 }

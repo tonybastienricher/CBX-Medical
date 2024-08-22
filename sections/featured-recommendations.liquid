@@ -1,0 +1,104 @@
+{% liquid
+  assign product = cart.items.first.product
+%}
+
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+
+<script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
+
+<product-recommendations
+  data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=5"
+>
+  {% if recommendations.performed and recommendations.products_count > 0 %}
+    <div class="cbx-container-site cbx-w-full cbx-mb-20 cbx-relative cbx-flex cbx-flex-col ">
+      <!-- Title -->
+      <div class="cbx-flex cbx-flex-col cbx-border-t cbx-border-green5 cbx-border-dashed cbx-w-full">
+        {% if section.settings.sur_titre != blank %}
+          <h3 class="cbx-text-green3 cbx-py-5 cbx-text-2xl" style="letter-spacing: 0.6px;">
+            {{ section.settings.sur_titre }}
+          </h3>
+        {% endif %}
+      </div>
+
+      <div class="swiper-container-featured-collection">
+        <div class="swiper-wrapper">
+          {% for recommendation in recommendations.products %}
+            <div class="swiper-slide">
+              {%
+                render 'card-product-add-to-cart',
+                card_product: recommendation,
+                show_secondary_image: true,
+                product_form_id: 'product-form-recommendation-' | append: recommendation.id,
+                lazy_load: 'lazy',
+                section_id: section.id
+              %}
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  {% endif %}
+</product-recommendations>
+
+{% javascript %}
+  //Attendre le chargement du dom + 1s
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      console.log('DOMContentLoaded');
+
+      var swiperFeaturedCollection = new Swiper('.swiper-container-featured-collection', {
+        slidesPerView: 1.2,
+        spaceBetween: 6,
+        grabCursor: true,
+        mousewheel: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          550: {
+            slidesPerView: 2.2,
+          },
+          800: {
+            slidesPerView: 3.2,
+          },
+          1000: {
+            slidesPerView: 4.2,
+            mousewheel: true,
+          },
+        },
+      });
+    }, 500);
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:sections.featured-collection.name",
+  "tag": "section",
+  "class": "section featured-collection cbx-overflow-hidden",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "sur_titre",
+      "label": "Sur titre",
+      "default": "Completez"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-collection.presets.name"
+    }
+  ]
+}
+{% endschema %}

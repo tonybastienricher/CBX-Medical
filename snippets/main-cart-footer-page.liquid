@@ -1,66 +1,140 @@
-<section id="main-cart-footer-page" aria-labelledby="summary-heading" class="main-cart-footer-page cbx-w-full cbx-flex">
-    <div class="cbx-flex cbx-flex-col cbx-w-full cbx-gap-4">
-        <div class="cbx-rounded-xl cbx-p-4 cbx-bg-gray-100 cbx-w-full">
-            <h2 id="summary-heading" class="cbx-text-xl">
-                Order summary
-            </h2>
+{% liquid
+  # Livraison grauite à partir de 50€
+  assign livraison_gratuite_threshold = 5000
+  assign livraison_gratuite = false
+  assign prix_livraison = 190
 
-            <ul class="cbx-flex cbx-flex-col cbx-py-6">
-                <li class="cbx-w-full cbx-flex cbx-justify-between cbx-py-4">
-                    <span class="">
-                        Original subtotal
-                    </span>
-                    <span class="">
-                        {{ cart.original_total_price | money_with_currency }}
-                    </span>
-                </li>
-                <script>
-                    console.log({{ cart | json }})
-                </script>
-                {% if cart.total_discount > 0 %}
-                    <li class="cbx-w-full cbx-flex cbx-justify-between cbx-border-t cbx-border-gray-200 cbx-py-4">
-                        <span>Total discount</span>
-                        <span>
-                        {{ cart.total_discount | money_with_currency }}
-                    </span>
-                    </li>
-                {% endif %}
-                <li class="cbx-w-full cbx-flex cbx-flex-col cbx-justify-between cbx-border-t cbx-border-gray-200 cbx-py-4">
-                    <span class="">Tax estimate</span>
-                    <span class="cbx-text-sm">{{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}</span>
-                </li>
-                <li class="cbx-w-full cbx-flex cbx-justify-between cbx-border-t cbx-border-gray-200 pt-2 cbx-font-semibold cbx-py-4">
-                    <span>
-                        {{ 'sections.cart.subtotal' | t }}
-                    </span>
-                    <span>{{ cart.total_price | money_with_currency }}</span>
-                </li>
-            </ul>
-            <div class="cbx-flex cbx-w-full">
-                {% if cart == empty %}
-                    <button class="cbx-btn cbx-bg-green cbx-text-white cbx-w-full" disabled>
-                        {{ 'sections.cart.checkout' | t }}
-                    </button>
-                {% else %}
-                    <a href="/checkout" class="cbx-btn cbx-bg-green cbx-text-white  cbx-w-full">
-                        {{ 'sections.cart.checkout' | t }}
-                    </a>
-                {% endif %}
-            </div>
+  if cart.total_price >= livraison_gratuite_threshold
+    assign livraison_gratuite = true
+  endif
+%}
+
+<section id="main-cart-footer-page" aria-labelledby="summary-heading" class="cbx-w-full cbx-flex">
+  <div class="cbx-flex cbx-flex-col cbx-w-full cbx-gap-4">
+    <div class="cbx-rounded-xl cbx-p-4 cbx-bg-gray-100 cbx-w-full">
+      <h2 id="summary-heading" class="cbx-text-xl cbx-font-display cbx-text-center">
+        {{ 'sections.cart.summary' | t }}
+      </h2>
+
+      <ul id="main-cart-footer-page" class="main-cart-footer-page cbx-flex cbx-flex-col cbx-py-4">
+        <li class="cbx-w-full cbx-flex cbx-justify-between cbx-py-4">
+          <span class="cbx-font-display"> {{ 'sections.cart.original_subtotal' | t }} </span>
+          <span class="">
+            {{ cart.original_total_price | money_with_currency }}
+          </span>
+        </li>
+
+        {% if cart.total_discount > 0 %}
+          <li class="cbx-w-full cbx-flex cbx-justify-between cbx-border-t cbx-border-gray-200 cbx-py-4">
+            <span class="cbx-font-display">{{ 'sections.cart.total_discount' | t }}</span>
+            <span>
+              {{ cart.total_discount | money_with_currency }}
+            </span>
+          </li>
+        {% endif %}
+        {% render 'livraison.liquid',
+          livraison_gratuite_threshold: livraison_gratuite_threshold,
+          livraison_gratuite: livraison_gratuite,
+          prix_livraison: prix_livraison
+        %}
+        <li class="cbx-w-full cbx-flex cbx-justify-between cbx-border-t cbx-border-gray-200 pt-2 cbx-font-semibold cbx-py-4">
+          <span class="cbx-font-display">
+            {{ 'sections.cart.totalPrice' | t }}
+          </span>
+          {% if livraison_gratuite %}
+            <span>{{ cart.total_price | money_with_currency }}</span>
+          {% else %}
+            <span>{{ cart.total_price | plus: prix_livraison | money_with_currency }}</span>
+          {% endif %}
+        </li>
+      </ul>
+
+      <!-- Checkout -->
+      <div class="cbx-flex cbx-w-full">
+        {% if cart == empty %}
+          <button class="cbx-btn cbx-bg-green cbx-text-white cbx-w-full" disabled>
+            {{ 'sections.cart.checkout' | t }}
+          </button>
+        {% else %}
+          <a href="/checkout" class="cbx-btn cbx-bg-green cbx-text-white  cbx-w-full">
+            {{ 'sections.cart.checkout' | t }}
+          </a>
+        {% endif %}
+      </div>
+
+      <!-- Reinsurance -->
+      <div
+        id="reinsuranceCart"
+        class="cbx-border-t cbx-border-[#E9E9E9] cbx-pt-3 cbx-px-2.5 cbx-lg:cbx-px-5"
+      >
+        <div class="swiperReinsuranceCart cbx-overflow-hidden cbx-relative">
+          <div class="swiper-wrapper">
+            {%- for block in blocks -%}
+              {%- case block.type -%}
+                {%- when 'reinsurance' -%}
+                  <div
+                    class="swiper-slide !cbx-flex cbx-items-center cbx-gap-3.5 cbx-w-full cbx-cursor-pointer"
+                    {{ block.shopify_attributes }}
+                  >
+                    {% if block.settings.icon %}
+                      {{
+                        block.settings.icon
+                        | image_url: width: 20
+                        | image_tag:
+                          loading: 'lazy',
+                          fetchpriority: 'auto',
+                          class: 'cbx-w-[25px] cbx-h-[25px]',
+                          sizes: '25px',
+                          widths: '25'
+                      }}
+                    {% endif %}
+                    <div class="cbx-flex cbx-flex-col">
+                      <span class="cbx-text-[#0C0C0C] cbx-font-display">
+                        {{- block.settings.titre -}}
+                      </span>
+                      <p class="cbx-text-xs">
+                        {{ block.settings.description | newline_to_br }}
+                      </p>
+                    </div>
+                  </div>
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
         </div>
-
-        <!-- Note -->
-        <div class="cbx-rounded-xl cbx-p-4 cbx-bg-gray-100 cbx-w-full">
-            <h2 id="summary-heading" class="cbx-text-xl">
-                Note de commande
-            </h2>
-
-            <note-order class="cbx-flex cbx-w-full cbx-pt-4">
-                <label for="note" class="cbx-sr-only">Note</label>
-                <textarea class="input-class"
-                        name="note" id="note" rows="6" placeholder="Note">{{ cart.note }}</textarea>
-            </note-order>
-
-        </div>
+      </div>
     </div>
+
+    <!-- Note -->
+    <div class="cbx-rounded-xl cbx-p-4 cbx-bg-gray-100 cbx-w-full">
+      <h2 id="summary-heading" class="cbx-text-xl">Note de commande</h2>
+
+      <note-order class="cbx-flex cbx-w-full cbx-pt-4">
+        <label for="note" class="cbx-sr-only">Note</label>
+        <textarea
+          class="input-class"
+          name="note"
+          id="note"
+          rows="6"
+          placeholder="Note"
+        >{{ cart.note }}</textarea>
+      </note-order>
+    </div>
+  </div>
 </section>
+
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
+
+<script>
+  const swiperReinsuranceCart = new Swiper('.swiperReinsuranceCart', {
+    allowTouchMove: true,
+
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true,
+    },
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+  });
+</script>
