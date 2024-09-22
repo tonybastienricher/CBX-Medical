@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -139,7 +148,7 @@
           "type": "information",
           "settings": {
             "question": "Conseil d'utilisation",
-            "reponse": "Usage externe."
+            "reponse": "En France et au Pays-Bas : Notre produit est notifié comme complément alimentaire.\n\nEn Belgique : Usage externe."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
@@ -171,16 +180,6 @@
     },
     "16883713676a284987": {
       "type": "apps",
-      "blocks": {
-        "1b5082f7-bcd7-43f6-a71e-d56a5326ebf1": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "1b5082f7-bcd7-43f6-a71e-d56a5326ebf1"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
