@@ -1,18 +1,17 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "46df2e54-59f4-474e-8d92-763ebe7271e8": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "flex-start",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -66,7 +65,6 @@
         }
       },
       "block_order": [
-        "46df2e54-59f4-474e-8d92-763ebe7271e8",
         "title",
         "59abd3db-bb7f-45e2-af6b-ece656034d41",
         "c62c4cac-e956-4702-9df5-61365c8a4ab8",
@@ -149,7 +147,7 @@
           "type": "information",
           "settings": {
             "question": "Conseil d'utilisation",
-            "reponse": "Usage externe."
+            "reponse": "En France et au Pays-Bas : Notre produit est notifié comme complément alimentaire. Commencez par 3 gouttes, 2 fois par jour (CanDrop 10%). \n\nEn Belgique : Usage externe."
           }
         },
         "2ab9bfbf-3924-4c1d-b913-a97b17f1f7eb": {
@@ -181,16 +179,6 @@
     },
     "16880498615505129a": {
       "type": "apps",
-      "blocks": {
-        "399829bb-204c-4fd4-aa69-8b292c5fd37b": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "399829bb-204c-4fd4-aa69-8b292c5fd37b"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
