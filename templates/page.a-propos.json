@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "gros_texte_large": {
@@ -15,7 +24,7 @@
         "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
+            "image": "shopify://shop_images/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
             "label_de_limage": "L'équipe CBX au grand complet"
           }
         },
@@ -23,7 +32,7 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_103.png",
+            "image": "shopify://shop_images/Rectangle_103.png",
             "label_de_limage": "FIG.Close up view test"
           }
         },
@@ -31,7 +40,7 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png",
+            "image": "shopify://shop_images/IMG_20220812_140902_3.png",
             "label_de_limage": "FIG.Close up view"
           }
         }
@@ -67,8 +76,8 @@
         "lien_du_bouton": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video": "shopify://files/videos/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": ""
       }
     },
@@ -91,7 +100,7 @@
           "settings": {
             "titre": "Expertise",
             "sous_titre": "Détails",
-            "description": "Notre équipe, composée d’experts en cannabis médical, de professionnels de la santé et de chercheurs, met un point d’honneur à affiner son expertise tous les jours.. Grâce à leurs connaissances approfondies et à leur longues expériences, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité.",
+            "description": "Notre équipe, composée d’experts en cannabis médical, de professionnels de la santé et de chercheurs, met un point d’honneur à affiner son expertise tous les jours.. Grâce à leurs connaissances approfondies et à leurs longues expériences, nous veillons à ce que nos produits et services répondent aux normes les plus élevées en termes de qualité et d'efficacité.",
             "produits": [
 
             ]
@@ -102,7 +111,7 @@
           "settings": {
             "titre": "Nature",
             "sous_titre": "Détails",
-            "description": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une solution holistique pour soulager sans nuire. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement. (et de maximiser l’impact de l’environnement sur nous ?)",
+            "description": "Nous respectons profondément le pouvoir de la nature et du règne végétal. Notre approche repose sur l'exploitation des bienfaits naturels des composés du cannabis pour offrir une solution holistique pour soulager sans nuire. Nous privilégions des pratiques durables et nous nous efforçons de réduire notre impact sur l'environnement.",
             "produits": [
 
             ]
@@ -203,8 +212,8 @@
       "settings": {
         "couleur_du_background": "green",
         "couleur_du_texte": "green2",
-        "image_1": "shopify:\/\/shop_images\/JUB0709-27.jpg",
-        "image_2": "shopify:\/\/shop_images\/JUB0709-23.jpg"
+        "image_1": "shopify://shop_images/JUB0709-27.jpg",
+        "image_2": "shopify://shop_images/JUB0709-23.jpg"
       }
     },
     "5de5f4df-2909-47c3-b1b2-be98a09eba5e": {
@@ -213,9 +222,9 @@
       "settings": {
         "couleur_du_background": "green2",
         "couleur_du_texte": "green2",
-        "image_gauche": "shopify:\/\/shop_images\/JUB0709-23.jpg",
+        "image_gauche": "shopify://shop_images/JUB0709-23.jpg",
         "lgende_de_limage_gauche": "FIG. LAB",
-        "image_droite": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+        "image_droite": "shopify://shop_images/JUB0709-27.jpg",
         "lgende_de_limage_droite": "FIG. LAB"
       }
     },
@@ -224,7 +233,7 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "image": "shopify:\/\/shop_images\/JUB3108-15-4000.jpg"
+        "image": "shopify://shop_images/JUB3108-15-4000.jpg"
       }
     },
     "1e00d35b-b3f5-418f-ac98-2f3eb5739fa3": {
@@ -278,7 +287,7 @@
       "settings": {
         "couleur_du_background": "green",
         "couleur_du_texte": "green2",
-        "image": "shopify:\/\/shop_images\/Group_160.jpg"
+        "image": "shopify://shop_images/Group_160.jpg"
       }
     },
     "d1ccaff5-c649-43b4-80f0-6e5762517a82": {
@@ -334,8 +343,8 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "video_1": "shopify:\/\/files\/videos\/-4763-4753-b419-0f51374bd722.mp4",
-        "image_2": "shopify:\/\/shop_images\/Rectangle_103.png"
+        "video_1": "shopify://files/videos/-4763-4753-b419-0f51374bd722.mp4",
+        "image_2": "shopify://shop_images/Rectangle_103.png"
       }
     },
     "36284b84-a7a5-48d8-99ca-7c35dc2c07d7": {
