@@ -1,16 +1,16 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo_width": 90,
-    "favicon": "shopify:\/\/shop_images\/android-chrome-512x512.png",
+    "favicon": "shopify://shop_images/android-chrome-512x512.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -135,27 +135,17 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "3667842014806057753": {
-        "type": "shopify:\/\/apps\/one-click-upsell-zipify-ocu\/blocks\/app-embed\/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
+        "type": "shopify://apps/one-click-upsell-zipify-ocu/blocks/app-embed/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "3140817623390692025": {
-        "type": "shopify:\/\/apps\/na-age-verification\/blocks\/agechecker_y1K8NR3dvv\/15fad4c9-4ba9-4c27-8e6c-1f214a81924f",
+        "type": "shopify://apps/na-age-verification/blocks/agechecker_y1K8NR3dvv/15fad4c9-4ba9-4c27-8e6c-1f214a81924f",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "6251270934270006384": {
-        "type": "shopify:\/\/apps\/stape-server-gtm\/blocks\/gtm\/7e13c847-7971-409d-8fe0-29ec14d5f048",
-        "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "color_schemes": {

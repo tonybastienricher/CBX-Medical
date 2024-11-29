@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -5,19 +14,17 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "59abd3db-bb7f-45e2-af6b-ece656034d41": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "c62c4cac-e956-4702-9df5-61365c8a4ab8": {
           "type": "information",
           "settings": {
             "text_gauche": "Contenant",
-            "text_droite": "PEA, Coenzyme Q10, Boswellia & Magnésium"
+            "text_droite": "PEA, Coenzyme Q10, Boswellia, Magnésium, Vitamine E, Vitamine B6"
           }
         },
         "35195ec4-e684-43d1-862b-5195c77a1061": {
@@ -118,7 +125,7 @@
           "type": "information",
           "settings": {
             "question": "Ingredients clés",
-            "reponse": "MetaFibro® contient un mélange unique de PEA, de coenzyme Q10, de Boswellia Serrata et de chélate de magnésium hautement biodisponible"
+            "reponse": "*Bisglycinate de magnésium complex : 142,5mg\t\n* Palmitoyléthanolamine (PEA) : 137,5mg\t\n* Extrait sec de Boswellia serrata (gomme résine) : 87,5mg\t\n* Coenzyme Q10 : 15mg\t\n* D-alpha-tocophérol (vitamine E) : 3mg\n*Chlorhydrate de pyridoxine (vitamine B6): 1,5mg"
           }
         },
         "6053cd50-275d-4b9c-81ae-cf85efb083ef": {
