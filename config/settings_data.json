@@ -146,6 +146,11 @@
         "type": "shopify://apps/na-age-verification/blocks/agechecker_y1K8NR3dvv/15fad4c9-4ba9-4c27-8e6c-1f214a81924f",
         "disabled": false,
         "settings": {}
+      },
+      "14123083684202085021": {
+        "type": "shopify://apps/taggrs-server-side-tracking/blocks/star_rating/dbd54950-2cfd-40dc-92f3-1e13eef2f809",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
