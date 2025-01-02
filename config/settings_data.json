@@ -137,11 +137,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "3667842014806057753": {
-        "type": "shopify://apps/one-click-upsell-zipify-ocu/blocks/app-embed/bfe6e378-b73a-4871-b8d3-7d6ede22678e",
-        "disabled": false,
-        "settings": {}
-      },
       "3140817623390692025": {
         "type": "shopify://apps/na-age-verification/blocks/agechecker_y1K8NR3dvv/15fad4c9-4ba9-4c27-8e6c-1f214a81924f",
         "disabled": false,
@@ -149,6 +144,11 @@
       },
       "14123083684202085021": {
         "type": "shopify://apps/taggrs-server-side-tracking/blocks/star_rating/dbd54950-2cfd-40dc-92f3-1e13eef2f809",
+        "disabled": false,
+        "settings": {}
+      },
+      "6241766537399994015": {
+        "type": "shopify://apps/skeepers-verified-reviews/blocks/brand-widget-block/0cea8051-22ff-4d3e-b394-9a2721507c49",
         "disabled": false,
         "settings": {}
       }
