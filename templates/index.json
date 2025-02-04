@@ -98,13 +98,13 @@
       "settings": {
         "sur_titre": "Les produits du moment",
         "produits_en_vedette": [
+          "metafibro",
           "candrop",
           "canflex",
           "canmove",
           "canflex-forte",
           "candrop-cbd-cbg",
-          "cansleep",
-          "metafibro"
+          "cansleep"
         ]
       }
     },
