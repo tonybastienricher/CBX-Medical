@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "76a5e5d7-58e5-4fed-89d9-620cc17e4a52": {
@@ -19,7 +28,7 @@
           "type": "bouton",
           "settings": {
             "titre_du_bouton": "Découvrez nos produits",
-            "url_du_bouton": "shopify:\/\/collections\/all"
+            "url_du_bouton": "shopify://collections/all"
           }
         },
         "ad73d985-d76f-4a28-a3da-3d2b905c13db": {
@@ -38,7 +47,7 @@
       "settings": {
         "alignement": "gauche",
         "disposition": "fullscreen",
-        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4"
+        "video": "shopify://files/videos/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4"
       }
     },
     "32729055-b5cd-476e-a14d-5c9ab9c6c295": {
@@ -48,6 +57,12 @@
           "type": "liste",
           "settings": {
             "texte": "Cannabinoïdes 100% naturels"
+          }
+        },
+        "liste_kgxgRM": {
+          "type": "liste",
+          "settings": {
+            "texte": "Cannabinoides 100% naturels"
           }
         },
         "42dedf9d-e313-4088-8a1b-98917ffd8a91": {
@@ -71,12 +86,12 @@
       },
       "block_order": [
         "09c5021a-ee6a-4adf-a84b-57c7e0eff400",
+        "liste_kgxgRM",
         "42dedf9d-e313-4088-8a1b-98917ffd8a91",
         "d5e1eb54-464a-400b-a50e-45ca4cac2f31",
         "ca153c95-24e1-4f25-bf23-db1ad5a0d068"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "1d3c3eb6-0507-4517-8e18-c5afad6fe640": {
       "type": "produits_en_vedette",
@@ -86,11 +101,10 @@
           "candrop",
           "canflex",
           "canmove",
-          "canshine",
-          "cansmooth",
           "canflex-forte",
           "candrop-cbd-cbg",
-          "cansleep"
+          "cansleep",
+          "metafibro"
         ]
       }
     },
@@ -107,7 +121,7 @@
         "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Vous êtes professionnels de la santé ? Vos patients vous posent des questions sur le CBD ? Nous vous aidons à leur répondre.<\/strong> En plus des séances de formations ouvertes sur notre champ, nous organisons des formations à la demande<\/p>",
+            "text": "<p><strong>Vous êtes professionnels de la santé ? Vos patients vous posent des questions sur le CBD ? Nous vous aidons à leur répondre.</strong> En plus des séances de formations ouvertes sur notre champ, nous organisons des formations à la demande</p>",
             "text_style": "body"
           }
         },
@@ -115,7 +129,7 @@
           "type": "button",
           "settings": {
             "button_label": "Contactez-nous",
-            "button_link": "shopify:\/\/pages\/pro"
+            "button_link": "shopify://pages/pro"
           }
         }
       },
@@ -125,7 +139,7 @@
         "template--19137022624069__e71ccc1e-f0c5-4172-979c-ff16518d3bb7-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-09-22_a_09.29.20.png",
+        "image": "shopify://shop_images/Capture_d_ecran_2023-09-22_a_09.29.20.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -159,7 +173,7 @@
         "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Nous avons récemment eu <strong>le plus gros subside jamais octroyé en belgique pour de la recherche sur la plante de cannabis<\/strong>. C'est un projet en partenariat avec la faculté de pharmacie de l'ULB dont l'objectif est d'augmenter la biodisponibilité des cannabinoïdes sur plusieurs voies d'administration...<\/p>",
+            "text": "<p>Nous avons récemment eu <strong>le plus gros subside jamais octroyé en belgique pour de la recherche sur la plante de cannabis</strong>. C'est un projet en partenariat avec la faculté de pharmacie de l'ULB dont l'objectif est d'augmenter la biodisponibilité des cannabinoïdes sur plusieurs voies d'administration...</p>",
             "text_style": "body"
           }
         },
@@ -167,7 +181,7 @@
           "type": "button",
           "settings": {
             "button_label": "En savoir plus",
-            "button_link": "shopify:\/\/pages\/notre-r-d"
+            "button_link": "shopify://pages/notre-r-d"
           }
         }
       },
@@ -177,7 +191,7 @@
         "template--19137022624069__8fc001cd-9496-4ca5-99d4-c88effb3339c-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Capture_d_ecran_2023-08-31_a_16.16.24.png",
+        "image": "shopify://shop_images/Capture_d_ecran_2023-08-31_a_16.16.24.png",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -247,7 +261,7 @@
         "e0d94064-71d8-4286-a84f-65082273e509": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/JUB3108-15-4000.jpg",
+            "image": "shopify://shop_images/JUB3108-15-4000.jpg",
             "description": "",
             "texte_du_bouton": "",
             "lien_du_bouton": "",
@@ -257,7 +271,7 @@
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_20220812_140902.jpg",
+            "image": "shopify://shop_images/IMG_20220812_140902.jpg",
             "description": "",
             "texte_du_bouton": "",
             "lien_du_bouton": "",
@@ -267,7 +281,7 @@
         "a0a947a1-dfb2-4176-9116-b802c2f7c5f8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_7365.jpg",
+            "image": "shopify://shop_images/IMG_7365.jpg",
             "description": "",
             "texte_du_bouton": "",
             "lien_du_bouton": "",
@@ -277,7 +291,7 @@
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/JUB0709-23.jpg",
+            "image": "shopify://shop_images/JUB0709-23.jpg",
             "description": "",
             "texte_du_bouton": "",
             "lien_du_bouton": "",
@@ -287,7 +301,7 @@
         "2e12dce0-1d6e-444d-b2ac-1d9460bba512": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
+            "image": "shopify://shop_images/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
             "description": "",
             "texte_du_bouton": "",
             "lien_du_bouton": "",
@@ -302,8 +316,7 @@
         "template--19394639495488__90482c4c-b245-4068-8fa2-6f47ff93eb5a-16862118874a14346c-1",
         "2e12dce0-1d6e-444d-b2ac-1d9460bba512"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "0fbe5799-3511-42ba-a261-20a13db70f71": {
       "type": "faq",
@@ -410,7 +423,7 @@
         "template--19137022624069__637d6aaf-7981-44de-9ff6-0eac18b3870e-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
