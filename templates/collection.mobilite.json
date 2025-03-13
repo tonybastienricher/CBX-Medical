@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 9,
+        "enable_filtering": false,
+        "enable_sorting": false
+      }
+    },
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217": {
+      "type": "faq",
+      "disabled": true,
+      "blocks": {
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "86f62e39-8086-49f5-a976-09d4c070c26a": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "636880b9-a708-42f4-98a0-a0f075755083": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        },
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78": {
+          "type": "faq",
+          "settings": {
+            "question": "Le CBD est-il légal?",
+            "rponse": "Cette solution unique développée par CBX Medical promet de rafraîchir les muscles et les articulations fatiguées. Le gel refroidissant CanFlex Forte est parfait pour les sportifs de 30-45 ans qui peinent à récupérer après l’effort ainsi qu’aux personnes agées ayant envie de faciliter leurs mouvements."
+          }
+        }
+      },
+      "block_order": [
+        "9b8e1f7f-aec7-4396-81e5-e4bf04982d45",
+        "12a3d0d5-c762-4133-9b64-ef5364a5c5a2",
+        "86f62e39-8086-49f5-a976-09d4c070c26a",
+        "636880b9-a708-42f4-98a0-a0f075755083",
+        "0151f032-be6a-4c3b-bce7-9a21878fbf78"
+      ],
+      "settings": {
+        "sur_titre": "Pour les curieux",
+        "titre": "Pour les curieux."
+      }
+    }
+  },
+  "order": [
+    "product-grid",
+    "60f3a61a-722d-4231-8dd3-7ae9e63f7217"
+  ]
+}
