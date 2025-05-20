@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,14 +14,13 @@
       "blocks": {
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "title": {
           "type": "title",
           "settings": {
             "blog_divide": true,
-            "blog_presentation": "<p>Lorem ipsum Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis<\/p>",
+            "blog_presentation": "<p>Lorem ipsum Fondée en 2018 par Flora Mer, Jonathan Blondiau et Lionel Quartaert, la start-up développe et commercialise la meilleure qualité de solutions issus de la plante de cannabis</p>",
             "blog_show_date": false,
             "blog_show_author": false
           }
@@ -31,15 +30,14 @@
         "content",
         "title"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "6b4a76c9-4b6e-4959-a8b9-2d8575f3e85c": {
       "type": "articles_similaires",
       "settings": {
         "titre_de_la_section": "Articles similaires",
         "sparateur": true,
-        "blog": "infos",
+        "blog": "nos-ressources",
         "nombre_darticle": 5
       }
     },
