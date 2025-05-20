@@ -93,7 +93,7 @@
         "produits_en_vedette": [
           "candrop",
           "canflex",
-          "canmove",
+          "canflex-hot-gel",
           "canshine",
           "cansmooth",
           "canflex-cold-gel",
@@ -222,7 +222,7 @@
             "description": "Expérimentez un nouvel élan de liberté, profitez de votre corps, de toute sa mobilité et sa souplesse grâce à nos solutions innovantes avec cannabinoïdes naturels. Soutenant vos performances physiques et stimulant votre énergie, nos produits pouraient soulager les situations douloureuses. Ils sont idéaux pour les athlètes et tous ceux désirant maintenir un mode de vie actif. Des solutions naturelles pour performer et redécouvrir le plaisir de la mobilité sans contrainte.",
             "produits": [
               "canflex-cold-gel",
-              "canmove"
+              "canflex-hot-gel"
             ]
           }
         },
