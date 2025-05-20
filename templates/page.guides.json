@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "gros_texte_large": {
@@ -21,8 +30,8 @@
         "lien_du_bouton": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video": "shopify:\/\/files\/videos\/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video": "shopify://files/videos/CBX Medical - Cannabinoïds for medical professionals_1.mp4.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "description": ""
       }
     },
@@ -39,26 +48,25 @@
     },
     "d787b379-a7c4-4c75-9ce3-855aafe4b29e": {
       "type": "page_images_carrousel",
-      "disabled": true,
       "blocks": {
         "5ef5af6f-1fa4-4f1c-a120-9a5e2a6df3c6": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
+            "image": "shopify://shop_images/WhatsApp_Image_2023-06-20_at_16.35.50.jpg",
             "label_de_limage": "FIG.Close up view"
           }
         },
         "419c3302-bf63-4556-80a7-dc46aeed6794": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_103.png",
+            "image": "shopify://shop_images/Rectangle_103.png",
             "label_de_limage": "FIG.Close up view test"
           }
         },
         "6f10dc8e-659b-449d-95a9-dd98485e229e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png",
+            "image": "shopify://shop_images/IMG_20220812_140902_3.png",
             "label_de_limage": "FIG.Close up view"
           }
         }
@@ -68,6 +76,7 @@
         "419c3302-bf63-4556-80a7-dc46aeed6794",
         "6f10dc8e-659b-449d-95a9-dd98485e229e"
       ],
+      "disabled": true,
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2"
@@ -75,7 +84,6 @@
     },
     "page_description": {
       "type": "page-description",
-      "disabled": true,
       "blocks": {
         "e36bb542-b66a-4221-99d3-d8f0af71e9cc": {
           "type": "information",
@@ -112,6 +120,7 @@
         "c15a28a2-d464-40bf-97fb-2545cc3f39a4",
         "ee020c35-2576-4de0-9c8e-5bd4cb6d9de8"
       ],
+      "disabled": true,
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
@@ -125,9 +134,9 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "image_gauche": "shopify:\/\/shop_images\/JUB0709-23.jpg",
+        "image_gauche": "shopify://shop_images/JUB0709-23.jpg",
         "lgende_de_limage_gauche": "Legend image and dolorem text about brands, values and behind the scene.",
-        "image_droite": "shopify:\/\/shop_images\/JUB0709-27.jpg",
+        "image_droite": "shopify://shop_images/JUB0709-27.jpg",
         "lgende_de_limage_droite": "Legend image and dolorem text about brands, values and behind the scene."
       }
     },
@@ -147,12 +156,11 @@
       "settings": {
         "couleur_du_background": "green",
         "couleur_du_texte": "green2",
-        "image": "shopify:\/\/shop_images\/IMG_20220812_140902_3.png"
+        "image": "shopify://shop_images/IMG_20220812_140902_3.png"
       }
     },
     "d1ccaff5-c649-43b4-80f0-6e5762517a82": {
       "type": "page-description-text",
-      "disabled": true,
       "blocks": {
         "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-0": {
           "type": "information",
@@ -217,6 +225,7 @@
         "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-3",
         "template--19138226716997__d1ccaff5-c649-43b4-80f0-6e5762517a82-1687437147fccaa96f-4"
       ],
+      "disabled": true,
       "settings": {
         "couleur_du_background": "green",
         "couleur_du_texte": "green5",
@@ -229,8 +238,8 @@
       "settings": {
         "couleur_du_background": "transparent",
         "couleur_du_texte": "green2",
-        "video_1": "shopify:\/\/files\/videos\/-4763-4753-b419-0f51374bd722.mp4",
-        "image_2": "shopify:\/\/shop_images\/Rectangle_103.png"
+        "video_1": "shopify://files/videos/-4763-4753-b419-0f51374bd722.mp4",
+        "image_2": "shopify://shop_images/Rectangle_103.png"
       }
     },
     "5fa1d360-3680-4382-bae2-7f44b6b11e20": {
@@ -249,7 +258,7 @@
       "settings": {
         "heading": "Blog posts",
         "heading_size": "h2",
-        "blog": "infos",
+        "blog": "nos-ressources",
         "post_limit": 3,
         "columns_desktop": 3,
         "color_scheme": "",
@@ -263,7 +272,6 @@
     },
     "15a376b9-d203-4c69-a1b3-2e3e3b1bae39": {
       "type": "pile_de_cartes",
-      "disabled": true,
       "blocks": {
         "be294cec-1e3f-4ec3-a089-7be563ac8241": {
           "type": "cartes",
@@ -271,9 +279,7 @@
             "titre": "Se relaxer",
             "sous_titre": "Détails",
             "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
-            "produits": [
-
-            ]
+            "produits": []
           }
         },
         "0543bb1a-46b3-4fd8-b73f-f48fb75a2c09": {
@@ -282,9 +288,7 @@
             "titre": "Se relaxer",
             "sous_titre": "Détails",
             "description": "Les cannabinoïdes ont des propriétés relaxantes et apaisantes, ce qui peut être bénéfique pour réduire le stress, l'anxiété et favoriser une sensation de calme et de détente. Que ce soit après une journée bien remplie ou pour vous aider à mieux dormir, les cannabinoïdes peuvent vous aider à vous relaxer et à retrouver un équilibre intérieur.",
-            "produits": [
-
-            ]
+            "produits": []
           }
         }
       },
@@ -292,6 +296,7 @@
         "be294cec-1e3f-4ec3-a089-7be563ac8241",
         "0543bb1a-46b3-4fd8-b73f-f48fb75a2c09"
       ],
+      "disabled": true,
       "settings": {
         "sur_titre": "Au Quotidien",
         "titre": "Comment cbx peut vous aider au quotidien ?"
@@ -299,7 +304,6 @@
     },
     "1732b22e-4625-4019-b680-3ae2368d18b6": {
       "type": "liste",
-      "disabled": true,
       "blocks": {
         "8fbda83e-1c7d-4cfc-87b1-8f6ec0183d09": {
           "type": "liste",
@@ -311,8 +315,8 @@
       "block_order": [
         "8fbda83e-1c7d-4cfc-87b1-8f6ec0183d09"
       ],
-      "settings": {
-      }
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
